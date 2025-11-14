@@ -1,0 +1,15 @@
+.tab {
+  display: flex;
+  overflow-x: auto;
+  gap: var(--tab-gap);
+}
+
+.tab-content {
+  display: none;
+  border: var(--tab-border);
+  padding: var(--tab-padding);
+  border-radius: var(--tab-border-radius);
+}
+.tab-content.show {
+  display: block;
+}

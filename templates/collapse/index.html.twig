@@ -1,0 +1,130 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello CollapseController!{% endblock %}
+
+{% block body %}
+<div class="container-sm">
+    <div class="d-flex fd-column gap-5">
+
+        {# Intro #}
+        <div class="card p-2">
+            <div class="card-header">
+                <h2>📂 Collapse</h2>
+            </div>
+            <div class="card-body">
+                <p>
+                    A collapse works like an accordion, but with only one panel.
+                    It shows or hides content when you click a trigger, keeping the interface clean and simple.
+                </p>
+            </div>
+        </div>
+
+        {# Quick examples #}
+        <div class="card p-2">
+            <div class="card-header">
+                <h2>💠 Collapse examples</h2>
+            </div>
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-12 col-xs-6">
+                        <div class="collapse">
+                            <button class="collapse-btn btn-primary" data-js="collapse" data-target="#collapse-1">Collapse paragraph</button>
+                            <div class="collapse-body" id="collapse-1">
+                                <p class="p-2">
+                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda minima repellat
+                                    reprehenderit unde? Blanditiis consequatur debitis doloremque, ea eligendi enim est hic, id
+                                    inventore minima non officiis quo unde. Deserunt.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-xs-6">
+                        <div class="collapse">
+                            <button class="collapse-btn btn-primary" data-js="collapse" data-target="#collapse-2">Collapse list</button>
+                            <div class="collapse-body" id="collapse-2">
+                                <ul class="nav-list">
+                                    <li class="nav-item">menu</li>
+                                    <li class="nav-item">menu</li>
+                                    <li class="nav-item">menu</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        {# Default open state #}
+        <div class="card p-2">
+            <div class="card-header">
+                <h2>📂 Default open state</h2>
+            </div>
+            <div class="card-body">
+                <p>
+                    If you want a collapse to be open when the page loads, add the
+                    <code class="text-bold text-primary">.show</code> class directly on the
+                    <code class="text-bold text-primary">.collapse-body</code>.
+                </p>
+                <p class="mt-1">
+                    The JavaScript automatically adds and removes
+                    <code class="text-bold text-primary">.show</code>
+                    when opening or closing the collapse, so setting it in the HTML lets you choose the initial state.
+                </p>
+            </div>
+        </div>
+
+        {# Notes about spacing #}
+        <div class="card p-2">
+            <div class="card-header">
+                <h2>📏 Spacing rules</h2>
+            </div>
+            <div class="card-body">
+                <p>
+                    Do not add any <code class="text-bold text-primary">padding</code> or
+                    <code class="text-bold text-primary">margin</code> directly on
+                    <code class="text-bold text-primary">.collapse-body</code>.<br>
+                    The JavaScript needs this element to have a clean, exact height to open and close smoothly.
+                </p>
+                <p class="mt-1">
+                    If you want spacing, apply it to the content <strong>inside</strong> the collapse body
+                    (for example, on a <code class="text-bold text-primary">p</code>,
+                    <code class="text-bold text-primary">ul</code>, or any inner wrapper),
+                    but never on <code class="text-bold text-primary">.collapse-body</code> itself.
+                </p>
+            </div>
+        </div>
+
+        {# HTML Code #}
+        <div class="card p-2">
+            <div class="card-header">
+                <h2>💻 HTML Code</h2>
+            </div>
+            <div class="card-body">
+                <div class="position-relative">
+                    <button class="btn btn-primary position-top-right z-1 mt-1 mr-1"
+                            onclick="copyCode('code-collapse', this);">Copy
+                    </button>
+                    <div data-js="code" id="code-collapse" class="container-code overflow-auto">
+                        <!-- Collapse -->
+                        <div class="collapse">
+                            <!-- Button -->
+                            <button class="collapse-btn btn-primary" data-js="collapse" data-target="#collapse-demo">
+                                Collapse list
+                            </button>
+                            <!-- Body -->
+                            <div class="collapse-body" id="collapse-demo">
+                                <ul class="nav-list">
+                                    <li class="nav-item">menu</li>
+                                    <li class="nav-item">menu</li>
+                                    <li class="nav-item">menu</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+{% endblock %}

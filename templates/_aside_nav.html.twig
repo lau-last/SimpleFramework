@@ -1,0 +1,32 @@
+<!-- aside -->
+<aside class="nav-side width-nav-side-md" id="aside">
+
+    <!-- button close -->
+    <div class="d-flex jc-end m-1 d-none-md">
+        <button class="btn btn-primary close">Fermer</button>
+    </div>
+
+    <!-- link / logo -->
+    <div class="text-center text-primary fs-1 my-1">
+        <a class="no-underline" href="{{ url('app_main') }}">SimpleCSS</a>
+    </div>
+
+    <!-- aside content -->
+    <nav class="p-1">
+        <div class="collapse mb-half">
+            <button class="collapse-btn btn-primary" data-js="collapse" data-target="#menu-side-1">Menu</button>
+            <div class="collapse-body show" id="menu-side-1">
+                <ul class="nav-list">
+                    <li><a class="nav-item" href="{{ url('app_accordion') }}">Accordion</a></li>
+                    <li><a class="nav-item" href="{{ url('app_alert') }}">Alert</a></li>
+                    <li><a class="nav-item" href="{{ url('app_badge') }}">Badge</a></li>
+                    <li><a class="nav-item" href="{{ url('app_button') }}">Button</a></li>
+                    <li><a class="nav-item" href="{{ url('app_card') }}">Card</a></li>
+                    <li><a class="nav-item" href="{{ url('app_collapse') }}">Collapse</a></li>
+                    <li><a class="nav-item" href="{{ url('app_dialog') }}">Dialog</a></li>
+                    <li><a class="nav-item" href="{{ url('app_dropdown') }}">Dropdown</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</aside>

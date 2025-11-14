@@ -1,0 +1,287 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Dropdown — Demo{% endblock %}
+
+{% block body %}
+    <div class="container-sm">
+        <div class="d-flex fd-column gap-5">
+
+            {# Dropdown #}
+            <div class="card p-2">
+                <div class="card-header">
+                    <h2>⬇️ Dropdown</h2>
+                </div>
+                <div class="card-body">
+                    <p>The dropdown component reveals a small menu anchored to a trigger (usually a button).
+                        It’s commonly used for quick actions and user menus.</p>
+                </div>
+            </div>
+
+            {# Dropdown Examples #}
+            <div class="card p-2">
+                <div class="card-header">
+                    <h2>💠 Dropdown Examples</h2>
+                </div>
+                <div class="card-body">
+                    <div class="row">
+                        {# Dropdown bottom left #}
+                        <div class="col-12 col-md-4">
+                            <div class="card p-2">
+                                <div class="card-body d-flex jc-center ai-center">
+                                    <div class="dropdown">
+                                        <button class="btn btn-primary" data-js="dropdown" data-target="#dropdown-bottom-left">
+                                            bottom left
+                                        </button>
+                                        <div class="dropdown-menu bottom left" id="dropdown-bottom-left">
+                                            <ul class="nav-list">
+                                                <li><a class="nav-item" href="#">Dropdown bottom left menu</a></li>
+                                                <li><a class="nav-item" href="#">Dropdown bottom left menu</a></li>
+                                                <li><a class="nav-item" href="#">Dropdown bottom left menu</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        {# Dropdown bottom center #}
+                        <div class="col-12 col-md-4">
+                            <div class="card p-2">
+                                <div class="card-body d-flex jc-center ai-center">
+                                    <div class="dropdown">
+                                        <button class="btn btn-primary" data-js="dropdown" data-target="#dropdown-bottom-center">
+                                            bottom center
+                                        </button>
+                                        <div class="dropdown-menu bottom center" id="dropdown-bottom-center">
+                                            <ul class="nav-list">
+                                                <li><a class="nav-item" href="#">Dropdown bottom center menu</a></li>
+                                                <li><a class="nav-item" href="#">Dropdown bottom center menu</a></li>
+                                                <li><a class="nav-item" href="#">Dropdown bottom center menu</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        {# Dropdown bottom right #}
+                        <div class="col-12 col-md-4">
+                            <div class="card p-2">
+                                <div class="card-body d-flex jc-center ai-center">
+                                    <div class="dropdown">
+                                        <button class="btn btn-primary" data-js="dropdown" data-target="#dropdown-bottom-right">
+                                            bottom right
+                                        </button>
+                                        <div class="dropdown-menu bottom right" id="dropdown-bottom-right">
+                                            <ul class="nav-list">
+                                                <li><a class="nav-item" href="#">Dropdown bottom right menu</a></li>
+                                                <li><a class="nav-item" href="#">Dropdown bottom right menu</a></li>
+                                                <li><a class="nav-item" href="#">Dropdown bottom right menu</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        {# Dropdown top left #}
+                        <div class="col-12 col-md-4">
+                            <div class="card p-2">
+                                <div class="card-body d-flex jc-center ai-center">
+                                    <div class="dropdown">
+                                        <button class="btn btn-primary" data-js="dropdown" data-target="#dropdown-top-left">
+                                            top left
+                                        </button>
+                                        <div class="dropdown-menu top left" id="dropdown-top-left">
+                                            <ul class="nav-list">
+                                                <li><a class="nav-item" href="#">Dropdown top left menu</a></li>
+                                                <li><a class="nav-item" href="#">Dropdown top left menu</a></li>
+                                                <li><a class="nav-item" href="#">Dropdown top left menu</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        {# Dropdown top center #}
+                        <div class="col-12 col-md-4">
+                            <div class="card p-2">
+                                <div class="card-body d-flex jc-center ai-center">
+                                    <div class="dropdown">
+                                        <button class="btn btn-primary" data-js="dropdown" data-target="#dropdown-top-center">
+                                            top center
+                                        </button>
+                                        <div class="dropdown-menu top center" id="dropdown-top-center">
+                                            <ul class="nav-list">
+                                                <li><a class="nav-item" href="#">Dropdown top center menu</a></li>
+                                                <li><a class="nav-item" href="#">Dropdown top center menu</a></li>
+                                                <li><a class="nav-item" href="#">Dropdown top center menu</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        {# Dropdown top right #}
+                        <div class="col-12 col-md-4">
+                            <div class="card p-2">
+                                <div class="card-body d-flex jc-center ai-center">
+                                    <div class="dropdown">
+                                        <button class="btn btn-primary" data-js="dropdown" data-target="#dropdown-top-right">
+                                            top right
+                                        </button>
+                                        <div class="dropdown-menu top right" id="dropdown-top-right">
+                                            <ul class="nav-list">
+                                                <li><a class="nav-item" href="#">Dropdown top right menu</a></li>
+                                                <li><a class="nav-item" href="#">Dropdown top right menu</a></li>
+                                                <li><a class="nav-item" href="#">Dropdown top right menu</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        {# Dropdown side-left #}
+                        <div class="col-12 col-md-4">
+                            <div class="card p-2">
+                                <div class="card-body d-flex jc-center ai-center">
+                                    <div class="dropdown">
+                                        <button class="btn btn-primary" data-js="dropdown" data-target="#dropdown-side-left">
+                                           side left
+                                        </button>
+                                        <div class="dropdown-menu side-left" id="dropdown-side-left">
+                                            <ul class="nav-list">
+                                                <li><a class="nav-item" href="#">Dropdown side left menu</a></li>
+                                                <li><a class="nav-item" href="#">Dropdown side left menu</a></li>
+                                                <li><a class="nav-item" href="#">Dropdown side left menu</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        {# Dropdown side-right #}
+                        <div class="col-12 col-md-4">
+                            <div class="card p-2">
+                                <div class="card-body d-flex jc-center ai-center">
+                                    <div class="dropdown">
+                                        <button class="btn btn-primary" data-js="dropdown" data-target="#dropdown-side-right">
+                                            side right
+                                        </button>
+                                        <div class="dropdown-menu side-right" id="dropdown-side-right">
+                                            <ul class="nav-list">
+                                                <li><a class="nav-item" href="#">Dropdown side right menu</a></li>
+                                                <li><a class="nav-item" href="#">Dropdown side right menu</a></li>
+                                                <li><a class="nav-item" href="#">Dropdown side right menu</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            {# HTML Code #}
+            <div class="card p-2">
+                <div class="card-header">
+                    <h2>💻 HTML Code</h2>
+                </div>
+                <div class="card-body">
+                    <div class="position-relative">
+                        <button class="btn btn-primary position-top-right z-1 mt-1 mr-1"
+                                onclick="copyCode('code-dropdown', this);">Copy
+                        </button>
+                        <div data-js="code" id="code-dropdown" class="container-code overflow-auto">
+                            <!-- Dropdown -->
+                            <div class="dropdown">
+                                <!-- Button -->
+                                <button class="btn btn-primary" data-js="dropdown" data-target="#dropdown-demo">
+                                    Dropdown
+                                </button>
+                                <!-- Dropdown menu -->
+                                <div class="dropdown-menu" id="dropdown-demo">
+                                    <ul class="nav-list">
+                                        <li><a class="nav-item" href="#">Dropdown menu</a></li>
+                                        <li><a class="nav-item" href="#">Dropdown menu</a></li>
+                                        <li><a class="nav-item" href="#">Dropdown menu</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            {# Position #}
+            <div class="card p-2">
+                <div class="card-header">
+                    <h2>📍Position</h2>
+                </div>
+                <div class="card-body">
+                    <p>
+                        You can choose where the menu appears by adding small position classes.
+                        For example, use
+                        <code class="text-bold text-primary">.top.left</code>
+                        or
+                        <code class="text-bold text-primary">.bottom.right</code>
+                        to place it exactly where you want.
+                        If you don’t put any class, the menu will automatically appear at
+                        <code class="text-bold text-primary">.bottom.left</code>.
+                        Just place these classes right after
+                        <code class="text-bold text-primary">.dropdown-menu</code>.
+                    </p>
+                    <div class="row mt-2">
+                        <div class="col-12 col-xs-4">
+                            <div class="card p-2">
+                                <code class="text-bold text-primary">.left</code>
+                            </div>
+                        </div>
+                        <div class="col-12 col-xs-4">
+                            <div class="card p-2">
+                                <code class="text-bold text-primary">.center</code>
+                            </div>
+                        </div>
+                        <div class="col-12 col-xs-4">
+                            <div class="card p-2">
+                                <code class="text-bold text-primary">.right</code>
+                            </div>
+                        </div>
+                        <div class="col-12 col-xs-4">
+                            <div class="card p-2">
+                                <code class="text-bold text-primary">.top</code>
+                            </div>
+                        </div>
+                        <div class="col-12 col-xs-4">
+                            <div class="card p-2">
+                                <code class="text-bold text-primary">.bottom</code>
+                            </div>
+                        </div>
+                        <div class="col-12 col-xs-4">
+                            <div class="card p-2">
+                                <code class="text-bold text-primary">.side-left</code>
+                            </div>
+                        </div>
+                        <div class="col-12 col-xs-4">
+                            <div class="card p-2">
+                                <code class="text-bold text-primary">.side-right</code>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            {# Variables #}
+            <div class="card p-2">
+                <div class="card-header">
+                    <h2>⚙️ CSS Variables</h2>
+                </div>
+                <div class="card-body">
+                    <ul class="list-unstyled">
+                        <li><code class="text-bold text-primary">--dropdown-menu-box-shadow</code></li>
+                        <li><code class="text-bold text-primary">--dropdown-menu-min-width</code></li>
+                        <li><code class="text-bold text-primary">--dropdown-menu-spacing-margin</code></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

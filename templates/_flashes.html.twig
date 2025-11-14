@@ -1,0 +1,10 @@
+{# templates/_flashes.html.twig #}
+<div class="alert-container">
+    {% for type, messages in app.flashes %}
+        {% for message in messages %}
+            <div class="alert alert-{{ type }}" role="status" data-js="alert">
+                {{ message }}
+            </div>
+        {% endfor %}
+    {% endfor %}
+</div>

@@ -1,0 +1,20 @@
+services:
+  php:
+    container_name: simple-css-js
+    restart: always
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - .:/var/www
+    working_dir: /var/www
+
+  nginx:
+    image: nginx:stable-alpine
+    ports:
+      - "8001:80"
+    volumes:
+      - .:/var/www
+      - ./nginx/default.conf:/etc/nginx/conf.d/default.conf
+    depends_on:
+      - php

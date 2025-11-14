@@ -1,0 +1,33 @@
+.container, .container-lg, .container-md, .container-sm {
+  width: 100%;
+  margin-inline: auto;
+  box-sizing: border-box;
+  max-width: var(--container-width);
+  padding: var(--container-padding);
+}
+.container-sm {
+  max-width: var(--container-width-sm);
+}
+.container-md {
+  max-width: var(--container-width-md);
+}
+.container-lg {
+  max-width: var(--container-width-lg);
+}
+
+.container-fluid, .container-fluid-lg, .container-fluid-md, .container-fluid-sm {
+  max-width: 100%;
+  margin-inline: auto;
+  box-sizing: border-box;
+  width: var(--container-fluid-width);
+  padding: var(--container-fluid-padding);
+}
+.container-fluid-sm {
+  width: var(--container-fluid-width-sm);
+}
+.container-fluid-md {
+  width: var(--container-fluid-width-md);
+}
+.container-fluid-lg {
+  width: var(--container-fluid-width-lg);
+}

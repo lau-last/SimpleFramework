@@ -1,0 +1,225 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello MainController!{% endblock %}
+
+{% block body %}
+    <div class="container-sm">
+        <div class="d-flex fd-column gap-5">
+
+            {# Alert #}
+            <div class="card p-2">
+                <div class="card-header">
+                    <h2>🔔 Alert</h2>
+                </div>
+                <div class="card-body">
+                    <p>Alert system to display messages to your users.</p>
+                </div>
+            </div>
+
+            {# Interactive Demo #}
+            <div class="card p-2">
+                <div class="card-header">
+                    <h2>📺 Interactive Demo</h2>
+                </div>
+                <div class="card-body">
+                    <div class="btn-group">
+                        <button class="btn btn-success" onclick="showAlert('success')">Alert success</button>
+                        <button class="btn btn-info" onclick="showAlert('info')">Alert info</button>
+                        <button class="btn btn-warning" onclick="showAlert('warning')">Alert warning</button>
+                        <button class="btn btn-danger" onclick="showAlert('danger')">Alert danger</button>
+                    </div>
+                    <div id="alert-demo"></div>
+                </div>
+            </div>
+
+            {# Code #}
+            <div class="card p-2">
+                <div class="card-header">
+                    <h2>💻 HTML Code</h2>
+                </div>
+                <div class="card-body">
+                    <div class="position-relative">
+                        <button class="btn btn-primary position-top-right z-1 mt-1 mr-1"
+                                onclick="copyCode('code-alert', this);">Copy
+                        </button>
+                        <div data-js="code" id="code-alert" class="container-code overflow-auto">
+                            <!-- Alert Container -->
+                            <div class="alert-container">
+                                <!-- Alert -->
+                                <div class="alert alert-success" role="status" data-js="alert">
+                                    Alert success
+                                    <button class="close btn btn-success">X</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            {# Positioning #}
+            <div class="card p-2">
+                <div class="card-header">
+                    <h2>📍 Positioning</h2>
+                </div>
+                <div class="card-body">
+                    <p>Use the
+                        <code class="text-bold text-primary">.alert-container</code>
+                        class together with one of the positioning classes:</p>
+                    <br>
+                    If no positioning class is specified, alerts are displayed at the <code
+                        class="text-bold text-primary">.top-center</code> position by default.
+                    <div class="row mt-2">
+                        <div class="col-12 col-xs-4">
+                            <div class="card p-2">
+                                <code class="text-bold text-primary">.top-left</code>
+                            </div>
+                        </div>
+                        <div class="col-12 col-xs-4">
+                            <div class="card p-2">
+                                <code class="text-bold text-primary">.top-center</code>
+                            </div>
+                        </div>
+                        <div class="col-12 col-xs-4">
+                            <div class="card p-2">
+                                <code class="text-bold text-primary">.top-right</code>
+                            </div>
+                        </div>
+                        <div class="col-12 col-xs-4">
+                            <div class="card p-2">
+                                <code class="text-bold text-primary">.bottom-left</code>
+                            </div>
+                        </div>
+                        <div class="col-12 col-xs-4">
+                            <div class="card p-2">
+                                <code class="text-bold text-primary">.bottom-center</code>
+                            </div>
+                        </div>
+                        <div class="col-12 col-xs-4">
+                            <div class="card p-2">
+                                <code class="text-bold text-primary">.bottom-right</code>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            {# Color #}
+            <div class="card p-2">
+                <div class="card-header">
+                    <h2>🎨 Color</h2>
+                </div>
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-12 col-xs-4">
+                            <div class="card p-2 alert-primary">
+                                <code class="text-bold">.alert-primary</code>
+                            </div>
+                        </div>
+                        <div class="col-12 col-xs-4">
+                            <div class="card p-2 alert-secondary">
+                                <code class="text-bold">.alert-secondary</code>
+                            </div>
+                        </div>
+                        <div class="col-12 col-xs-4">
+                            <div class="card p-2 alert-tertiary">
+                                <code class="text-bold">.alert-tertiary</code>
+                            </div>
+                        </div>
+                        <div class="col-12 col-xs-4">
+                            <div class="card p-2 alert-success">
+                                <code class="text-bold">.alert-success</code>
+                            </div>
+                        </div>
+                        <div class="col-12 col-xs-4">
+                            <div class="card p-2 alert-danger">
+                                <code class="text-bold">.alert-danger</code>
+                            </div>
+                        </div>
+                        <div class="col-12 col-xs-4">
+                            <div class="card p-2 alert-warning">
+                                <code class="text-bold">.alert-warning</code>
+                            </div>
+                        </div>
+                        <div class="col-12 col-xs-4">
+                            <div class="card p-2 alert-info">
+                                <code class="text-bold">.alert-info</code>
+                            </div>
+                        </div>
+                        <div class="col-12 col-xs-4">
+                            <div class="card p-2 alert-light">
+                                <code class="text-bold">.alert-light</code>
+                            </div>
+                        </div>
+                        <div class="col-12 col-xs-4">
+                            <div class="card p-2 alert-dark">
+                                <code class="text-bold">.alert-dark</code>
+                            </div>
+                        </div>
+                        <div class="col-12 col-xs-4">
+                            <div class="card p-2 alert-white">
+                                <code class="text-bold">.alert-white</code>
+                            </div>
+                        </div>
+                        <div class="col-12 col-xs-4">
+                            <div class="card p-2 alert-black">
+                                <code class="text-bold">.alert-black</code>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            {# Varibles #}
+            <div class="card p-2">
+                <div class="card-header">
+                    <h2>⚙️ Variables CSS</h2>
+                </div>
+                <div class="card-body">
+                    <ul class="list-unstyled">
+                        <li><code class="text-bold text-primary">--alert-animation</code></li>
+                        <li><code class="text-bold text-primary">--alert-border</code></li>
+                        <li><code class="text-bold text-primary">--alert-border-radius</code></li>
+                        <li><code class="text-bold text-primary">--alert-box-shadow</code></li>
+                        <li><code class="text-bold text-primary">--alert-container-padding-inline</code></li>
+                        <li><code class="text-bold text-primary">--alert-margin</code></li>
+                        <li><code class="text-bold text-primary">--alert-padding</code></li>
+                        <li><code class="text-bold text-primary">--alert-width</code></li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+    </div>
+{% endblock %}
+
+{% block javascripts %}
+    <script>
+        const alertMessages = {
+            danger: '⚠️ An error has occurred!',
+            success: '✓ Operation successful',
+            warning: '⚡ Warning, action required',
+            info: 'ℹ️ Important information'
+        };
+
+        function showAlert(type) {
+            if (!type) return;
+            const container = document.getElementById('alert-demo');
+            if (!container) return;
+            const alert = document.createElement('div');
+            const button = document.createElement('button');
+            alert.className = `alert alert-${type}`;
+            button.className = `close btn btn-${type}`;
+            alert.textContent = alertMessages[type];
+            button.textContent = 'x';
+            alert.appendChild(button);
+            container.appendChild(alert);
+            alert.addEventListener('animationend', () => {
+                alert.remove();
+            });
+            button.addEventListener('click', () => {
+                alert.remove();
+            });
+        }
+    </script>
+{% endblock %}
