@@ -1,0 +1,118 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello FormController!{% endblock %}
+
+{% block body %}
+    <div class="container-sm">
+        <div class="d-flex fd-column gap-5">
+
+            {# Form fields #}
+            <div class="card p-2">
+                <div class="card-header">
+                    <h2>📝 Form fields</h2>
+                </div>
+                <div class="card-body">
+                    <p>
+                        Form fields let users enter, select, or modify data.
+                        They include inputs, textareas, selects, checkboxes, radios, and more.
+                        Each field is designed to stay consistent, accessible, and easy to customize across your
+                        project.
+                    </p>
+                </div>
+            </div>
+
+            {# Form Examples #}
+            <div class="card p-2">
+                <div class="card-header">
+                    <h2>💠 Form Examples</h2>
+                </div>
+
+                <div class="card-body">
+
+                    {# Form (regular) #}
+                    <div class="row">
+                        <div class="col-12 col-md-4">
+                            <!-- Input text -->
+                            <label for="text-regular">Text</label>
+                            <input type="text" id="text-regular" name="text" placeholder="Enter text" class="input-sm">
+                        </div>
+
+                        <div class="col-12 col-md-4">
+                            <!-- Input color -->
+                            <label for="color-regular">Color</label>
+                            <input type="color" id="color-regular" name="color" class="input-sm">
+                        </div>
+
+                        <div class="col-12 col-md-4">
+                            <!-- Form radio -->
+                            <label for="radio-regular">Radio</label>
+                            <input type="radio" id="radio-regular" name="choice" value="yes" class="input-sm">
+                        </div>
+
+                        <div class="col-12 col-md-4">
+                            <!-- Form checkbox -->
+                            <label for="checkbox-regular">Checkbox</label>
+                            <input type="checkbox" id="checkbox-regular" name="checkbox" value="1" class="input-sm">
+                        </div>
+
+                        <div class="col-12 col-md-4">
+                            <!-- Form switch -->
+                            <label class="switch">Wi-Fi
+                                <span class="slide"><input type="checkbox" name="switch"></span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <hr class="my-2">
+
+                    {# Form inline #}
+                    <div class="row">
+
+                        <div class="col-12 col-md-4">
+                            <!-- Input text inline -->
+                            <div class="form-inline">
+                                <label for="text-inline">Text inline</label>
+                                <input type="text" id="text-inline" name="text-inline" placeholder="Enter text"
+                                       class="input">
+                            </div>
+                        </div>
+
+                        <div class="col-12 col-md-4">
+                            <!-- Input color inline -->
+                            <div class="form-inline">
+                                <label for="color-inline">Color inline</label>
+                                <input type="color" id="color-inline" name="color-inline" class="input">
+                            </div>
+                        </div>
+
+                        <div class="col-12 col-md-4">
+                            <!-- Form radio inline -->
+                            <div class="form-inline">
+                                <label for="radio-inline">Radio inline</label>
+                                <input type="radio" id="radio-inline" name="choice-inline" value="yes" class="input">
+                            </div>
+                        </div>
+
+                        <div class="col-12 col-md-4">
+                            <!-- Form checkbox inline -->
+                            <div class="form-inline">
+                                <label for="checkbox-inline">Checkbox inline</label>
+                                <input type="checkbox" id="checkbox-inline" name="checkbox-inline" value="1"
+                                       class="input">
+                            </div>
+                        </div>
+
+                        <div class="col-12 col-md-4">
+                            <!-- Form switch inline -->
+                            <label class="switch-md form-inline">Wi-Fi
+                                <span class="slide"><input type="checkbox" name="switch-inline"></span>
+                            </label>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

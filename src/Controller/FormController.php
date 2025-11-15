@@ -6,11 +6,11 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Attribute\Route;
 
-final class ListController extends AbstractController
+final class FormController extends AbstractController
 {
-    #[Route('/list', name: 'app_list')]
+    #[Route('/form', name: 'app_form')]
     public function index(): Response
     {
-        return $this->render('list/index.html.twig');
+        return $this->render('form/index.html.twig');
     }
 }
