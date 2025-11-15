@@ -28,91 +28,407 @@
                 </div>
 
                 <div class="card-body">
-
-                    {# Form (regular) #}
                     <div class="row">
-                        <div class="col-12 col-md-4">
-                            <!-- Input text -->
-                            <label for="text-regular">Text</label>
-                            <input type="text" id="text-regular" name="text" placeholder="Enter text" class="input-sm">
+                        <!-- 🟦 BASIC TEXT INPUTS -->
+                        <div class="col-12 col-sm-4">
+                            <label for="input-text">Text</label>
+                            <input type="text" id="input-text" name="text" placeholder="Enter text" class="input">
                         </div>
 
-                        <div class="col-12 col-md-4">
-                            <!-- Input color -->
-                            <label for="color-regular">Color</label>
-                            <input type="color" id="color-regular" name="color" class="input-sm">
+                        <div class="col-12 col-sm-4">
+                            <label for="input-password">Password</label>
+                            <input type="password" id="input-password" name="password" class="input">
                         </div>
 
-                        <div class="col-12 col-md-4">
-                            <!-- Form radio -->
-                            <label for="radio-regular">Radio</label>
-                            <input type="radio" id="radio-regular" name="choice" value="yes" class="input-sm">
+                        <div class="col-12 col-sm-4">
+                            <label for="input-email">Email</label>
+                            <input type="email" id="input-email" name="email" autocomplete="email" class="input">
                         </div>
 
-                        <div class="col-12 col-md-4">
-                            <!-- Form checkbox -->
-                            <label for="checkbox-regular">Checkbox</label>
-                            <input type="checkbox" id="checkbox-regular" name="checkbox" value="1" class="input-sm">
+                        <div class="col-12 col-sm-4">
+                            <label for="input-tel">Tel</label>
+                            <input type="tel" id="input-tel" name="tel" autocomplete="tel" class="input">
                         </div>
 
-                        <div class="col-12 col-md-4">
-                            <!-- Form switch -->
-                            <label class="switch">Wi-Fi
-                                <span class="slide"><input type="checkbox" name="switch"></span>
+                        <div class="col-12 col-sm-4">
+                            <label for="input-url">URL</label>
+                            <input type="url" id="input-url" name="url" class="input">
+                        </div>
+
+                        <div class="col-12 col-sm-4">
+                            <label for="input-number">Number</label>
+                            <input type="number" id="input-number" name="number" min="0" max="100" class="input">
+                        </div>
+
+                        <!-- 🟦 DATE & TIME -->
+                        <div class="col-12 col-sm-4">
+                            <label for="input-date">Date</label>
+                            <input type="date" id="input-date" name="date" class="input">
+                        </div>
+
+                        <div class="col-12 col-sm-4">
+                            <label for="input-time">Time</label>
+                            <input type="time" id="input-time" name="time" class="input">
+                        </div>
+
+                        <div class="col-12 col-sm-4">
+                            <label for="input-datetime">Datetime</label>
+                            <input type="datetime-local" id="input-datetime" name="datetime" class="input">
+                        </div>
+
+                        <div class="col-12 col-sm-4">
+                            <label for="input-month">Month</label>
+                            <input type="month" id="input-month" name="month" class="input">
+                        </div>
+
+                        <div class="col-12 col-sm-4">
+                            <label for="input-week">Week</label>
+                            <input type="week" id="input-week" name="week" class="input">
+                        </div>
+
+                        <!-- 🟨 SELECT -->
+                        <div class="col-12 col-sm-4">
+                            <label for="select-regular">Select</label>
+                            <select id="select-regular" name="select" class="select">
+                                <option value="" disabled selected hidden>Select an option…</option>
+                                <option value="1">Option - 1</option>
+                                <option value="2">Option - 2</option>
+                                <option value="3">Option - 3</option>
+                                <option value="4">Option - 4</option>
+                            </select>
+                        </div>
+
+                        <!-- 🟩 SWITCH -->
+                        <div class="col-12 col-sm-4">
+                            <label class="switch">
+                                Wi-Fi
+                                <span class="slide">
+                                    <input type="checkbox" id="switch-wifi" name="switch-wifi">
+                                </span>
                             </label>
                         </div>
-                    </div>
 
-                    <hr class="my-2">
-
-                    {# Form inline #}
-                    <div class="row">
-
-                        <div class="col-12 col-md-4">
-                            <!-- Input text inline -->
-                            <div class="form-inline">
-                                <label for="text-inline">Text inline</label>
-                                <input type="text" id="text-inline" name="text-inline" placeholder="Enter text"
-                                       class="input">
-                            </div>
+                        <!-- 🟥 CHECKABLE INPUTS -->
+                        <div class="col-12 col-sm-4">
+                            <label for="input-radio">Radio</label>
+                            <input type="radio" id="input-radio" name="choice" value="yes" class="input">
                         </div>
 
-                        <div class="col-12 col-md-4">
-                            <!-- Input color inline -->
-                            <div class="form-inline">
-                                <label for="color-inline">Color inline</label>
-                                <input type="color" id="color-inline" name="color-inline" class="input">
-                            </div>
+                        <div class="col-12 col-sm-4">
+                            <label for="input-checkbox">Checkbox</label>
+                            <input type="checkbox" id="input-checkbox" name="checkbox" value="1" class="input">
                         </div>
 
-                        <div class="col-12 col-md-4">
-                            <!-- Form radio inline -->
-                            <div class="form-inline">
-                                <label for="radio-inline">Radio inline</label>
-                                <input type="radio" id="radio-inline" name="choice-inline" value="yes" class="input">
-                            </div>
+                        <!-- 🟧 COLOR -->
+                        <div class="col-12 col-sm-4">
+                            <label for="input-color">Color</label>
+                            <input type="color" id="input-color" name="color" class="input">
                         </div>
 
-                        <div class="col-12 col-md-4">
-                            <!-- Form checkbox inline -->
-                            <div class="form-inline">
-                                <label for="checkbox-inline">Checkbox inline</label>
-                                <input type="checkbox" id="checkbox-inline" name="checkbox-inline" value="1"
-                                       class="input">
-                            </div>
+                        <!-- 🟦 RANGE -->
+                        <div class="col-12 col-sm-4">
+                            <label for="input-range">Range</label>
+                            <input type="range" id="input-range" name="range" class="input">
                         </div>
 
-                        <div class="col-12 col-md-4">
-                            <!-- Form switch inline -->
-                            <label class="switch-md form-inline">Wi-Fi
-                                <span class="slide"><input type="checkbox" name="switch-inline"></span>
-                            </label>
+                        <!-- 🟪 FILE -->
+                        <div class="col-12 col-sm-4">
+                            <label for="input-file">File</label>
+                            <input type="file" id="input-file" name="file" class="input">
+                        </div>
+
+                        <!-- 🟫 TEXTAREA -->
+                        <div class="col-12">
+                            <label for="input-textarea">Message</label>
+                            <textarea id="input-textarea" name="textarea" rows="4" class="textarea"></textarea>
                         </div>
 
                     </div>
-
                 </div>
             </div>
+
+            {# HTML Code #}
+            <div class="card p-2">
+                <div class="card-header">
+                    <h2>💻 HTML Code</h2>
+                </div>
+                <div class="card-body">
+                    <div class="position-relative">
+                        <button class="btn btn-primary position-top-right z-1 mt-1 mr-1"
+                                onclick="copyCode('code-form', this);">Copy
+                        </button>
+                        <div data-js="code" id="code-form" class="container-code overflow-auto">
+                            <!-- 🟦 BASIC TEXT INPUTS -->
+                            <label for="input-text">Text</label>
+                            <input type="text" id="input-text" name="text" placeholder="Enter text" class="input">
+
+                            <label for="input-password">Password</label>
+                            <input type="password" id="input-password" name="password" class="input">
+
+                            <label for="input-email">Email</label>
+                            <input type="email" id="input-email" name="email" autocomplete="email" class="input">
+
+                            <label for="input-tel">Tel</label>
+                            <input type="tel" id="input-tel" name="tel" autocomplete="tel" class="input">
+
+                            <label for="input-url">URL</label>
+                            <input type="url" id="input-url" name="url" class="input">
+
+                            <label for="input-number">Number</label>
+                            <input type="number" id="input-number" name="number" min="0" max="100" class="input">
+
+
+                            <!-- 🟦 DATE & TIME -->
+                            <label for="input-date">Date</label>
+                            <input type="date" id="input-date" name="date" class="input">
+
+                            <label for="input-time">Time</label>
+                            <input type="time" id="input-time" name="time" class="input">
+
+                            <label for="input-datetime">Datetime</label>
+                            <input type="datetime-local" id="input-datetime" name="datetime" class="input">
+
+                            <label for="input-month">Month</label>
+                            <input type="month" id="input-month" name="month" class="input">
+
+                            <label for="input-week">Week</label>
+                            <input type="week" id="input-week" name="week" class="input">
+
+                            <!-- 🟨 SELECT -->
+                            <label for="select-regular">Select</label>
+                            <select id="select-regular" name="select" class="select">
+                                <option value="" disabled selected hidden>Select an option…</option>
+                                <option value="1">Option - 1</option>
+                                <option value="2">Option - 2</option>
+                                <option value="3">Option - 3</option>
+                                <option value="4">Option - 4</option>
+                            </select>
+
+                            <!-- 🟩 SWITCH -->
+                            <label class="switch">
+                                Wi-Fi
+                                <span class="slide">
+                                    <input type="checkbox" id="switch-wifi" name="switch-wifi">
+                                </span>
+                            </label>
+
+                            <!-- 🟥 CHECKABLE INPUTS -->
+                            <label for="input-radio">Radio</label>
+                            <input type="radio" id="input-radio" name="choice" value="yes" class="input">
+
+                            <label for="input-checkbox">Checkbox</label>
+                            <input type="checkbox" id="input-checkbox" name="checkbox" value="1" class="input">
+
+                            <!-- 🟧 COLOR -->
+                            <label for="input-color">Color</label>
+                            <input type="color" id="input-color" name="color" class="input">
+
+                            <!-- 🟦 RANGE -->
+                            <label for="input-range">Range</label>
+                            <input type="range" id="input-range" name="range" class="input">
+
+                            <!-- 🟪 FILE -->
+                            <label for="input-file">File</label>
+                            <input type="file" id="input-file" name="file" class="input">
+
+                            <!-- 🟫 TEXTAREA -->
+                            <label for="input-textarea">Message</label>
+                            <textarea id="input-textarea" name="textarea" rows="4" class="textarea"></textarea>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            {# Input sizes #}
+            <div class="card p-2">
+                <div class="card-header">
+                    <h2>📏 Input sizes</h2>
+                </div>
+                <div class="card-body">
+                    <p>
+                        Inputs come in four predefined sizes:
+                        <code class="text-bold text-primary">.input</code>,
+                        <code class="text-bold text-primary">.input-sm</code>,
+                        <code class="text-bold text-primary">.input-md</code>,
+                        <code class="text-bold text-primary">.input-lg</code>.
+                        Each size class already contains the full input styling, so you only need
+                        to pick the one that fits your layout.
+                    </p>
+
+                    <div class="row mt-2">
+                        <div class="col-12 col-xs-4">
+                            <div class="card p-2">
+                                <code class="text-bold text-primary">.input-sm</code>
+                            </div>
+                        </div>
+                        <div class="col-12 col-xs-4">
+                            <div class="card p-2">
+                                <code class="text-bold text-primary">.input-md</code>
+                            </div>
+                        </div>
+                        <div class="col-12 col-xs-4">
+                            <div class="card p-2">
+                                <code class="text-bold text-primary">.input-lg</code>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            {# Select sizes #}
+            <div class="card p-2">
+                <div class="card-header">
+                    <h2>📏 Select sizes</h2>
+                </div>
+                <div class="card-body">
+                    <p>
+                        Select elements use the same size system as inputs:
+                        <code class="text-bold text-primary">.select</code>,
+                        <code class="text-bold text-primary">.select-sm</code>,
+                        <code class="text-bold text-primary">.select-md</code>,
+                        <code class="text-bold text-primary">.select-lg</code>.
+                        Each class includes the complete select styling, making it easy to use the size
+                        that matches your form layout.
+                    </p>
+
+                    <div class="row mt-2">
+                        <div class="col-12 col-xs-4">
+                            <div class="card p-2">
+                                <code class="text-bold text-primary">.select-sm</code>
+                            </div>
+                        </div>
+                        <div class="col-12 col-xs-4">
+                            <div class="card p-2">
+                                <code class="text-bold text-primary">.select-md</code>
+                            </div>
+                        </div>
+                        <div class="col-12 col-xs-4">
+                            <div class="card p-2">
+                                <code class="text-bold text-primary">.select-lg</code>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            {# Switch sizes #}
+            <div class="card p-2">
+                <div class="card-header">
+                    <h2>📏 Switch sizes</h2>
+                </div>
+                <div class="card-body">
+                    <p>
+                        Switches also include their own predefined sizes:
+                        <code class="text-bold text-primary">.switch</code>,
+                        <code class="text-bold text-primary">.switch-sm</code>,
+                        <code class="text-bold text-primary">.switch-md</code>,
+                        <code class="text-bold text-primary">.switch-lg</code>.
+                        Each size class provides the correct dimensions and animations, so simply choose
+                        the version that fits your interface.
+                    </p>
+
+                    <div class="row mt-2">
+                        <div class="col-12 col-xs-4">
+                            <div class="card p-2">
+                                <code class="text-bold text-primary">.switch-sm</code>
+                            </div>
+                        </div>
+                        <div class="col-12 col-xs-4">
+                            <div class="card p-2">
+                                <code class="text-bold text-primary">.switch-md</code>
+                            </div>
+                        </div>
+                        <div class="col-12 col-xs-4">
+                            <div class="card p-2">
+                                <code class="text-bold text-primary">.switch-lg</code>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            {# Form inline #}
+            <div class="card p-2">
+                <div class="card-header">
+                    <h2>📏 Inline Forms</h2>
+                </div>
+                <div class="card-body">
+                    <p>
+                        By default, labels and inputs are displayed vertically: the label appears above the field.
+                        If you want a horizontal layout instead, <br>wrap your label and input inside
+                        <code class="text-bold text-primary">.form-inline</code>.
+                        This class aligns both elements side by side while keeping the spacing consistent.
+                    </p>
+
+                    <div class="row mt-2">
+                        <div class="col-12 col-xs-6">
+                            <div class="card p-2">
+                                <h5 class="m-0">Default (column)</h5>
+                                <label for="input-text">Text</label>
+                                <input type="text" id="input-text" name="text" placeholder="Enter text" class="input">
+                            </div>
+                        </div>
+
+                        <div class="col-12 col-xs-6">
+                            <div class="card p-2">
+                                <h5 class="m-0">Inline (row)</h5>
+                                <div class="form-inline">
+                                    <label for="color-inline">Color inline</label>
+                                    <input type="color" id="color-inline" name="color" class="input">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            {# Varibles #}
+            <div class="card p-2">
+                <div class="card-header">
+                    <h2>⚙️ Variables CSS</h2>
+                </div>
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-12 col-xs-6">
+                            <ul class="list-unstyled">
+                                <li><code class="text-bold text-primary">--gap-form-inline</code></li>
+                                <li><code class="text-bold text-primary">--input-bg-color</code></li>
+                                <li><code class="text-bold text-primary">--input-border</code></li>
+                                <li><code class="text-bold text-primary">--input-border-radius</code></li>
+                                <li><code class="text-bold text-primary">--input-box-shadow-focus</code></li>
+                                <li><code class="text-bold text-primary">--input-height</code></li>
+                                <li><code class="text-bold text-primary">--input-height-sm</code></li>
+                                <li><code class="text-bold text-primary">--input-height-md</code></li>
+                                <li><code class="text-bold text-primary">--input-height-lg</code></li>
+                                <li><code class="text-bold text-primary">--input-margin</code></li>
+                                <li><code class="text-bold text-primary">--input-padding</code></li>
+                                <li><code class="text-bold text-primary">--input-placeholder-color</code></li>
+                                <li><code class="text-bold text-primary">--input-size</code></li>
+                                <li><code class="text-bold text-primary">--input-size-sm</code></li>
+                                <li><code class="text-bold text-primary">--input-size-md</code></li>
+                                <li><code class="text-bold text-primary">--input-size-lg</code></li>
+                                <li><code class="text-bold text-primary">--input-text-color</code></li>
+                            </ul>
+                        </div>
+                        <div class="col-12 col-xs-6">
+                            <ul class="list-unstyled">
+                                <li><code class="text-bold text-primary">--range-size</code></li>
+                                <li><code class="text-bold text-primary">--range-size-sm</code></li>
+                                <li><code class="text-bold text-primary">--range-size-md</code></li>
+                                <li><code class="text-bold text-primary">--range-size-lg</code></li>
+                                <li><code class="text-bold text-primary">--select-padding</code></li>
+                                <li><code class="text-bold text-primary">--switch-size</code></li>
+                                <li><code class="text-bold text-primary">--switch-size-sm</code></li>
+                                <li><code class="text-bold text-primary">--switch-size-md</code></li>
+                                <li><code class="text-bold text-primary">--switch-size-lg</code></li>
+                                <li><code class="text-bold text-primary">--textarea-padding</code></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
         </div>
     </div>
 {% endblock %}
