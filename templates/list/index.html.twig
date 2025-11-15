@@ -1,0 +1,67 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello ListController!{% endblock %}
+
+{% block body %}
+    <div class="container-sm">
+        <div class="d-flex fd-column gap-5">
+
+            {# Intro #}
+            <div class="card p-2">
+                <div class="card-header">
+                    <h2>📝 List</h2>
+                </div>
+                <div class="card-body">
+                    <p>
+                        Lists display items in a clean, structured way.
+                        They can show navigation links, menus, actions, or simple text.
+                        Keep them consistent for a clear and readable interface.
+                    </p>
+                </div>
+            </div>
+
+            {# Quick examples #}
+            <div class="card p-2">
+                <div class="card-header">
+                    <h2>💠 Collapse examples</h2>
+                </div>
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-12 col-xs-4">
+                            <ul class="list list-warning list-hover">
+                                <li class="list-item">menu</li>
+                                <li class="list-item">menu</li>
+                                <li class="list-item">menu</li>
+                            </ul>
+                        </div>
+                        <div class="col-12 col-xs-4">
+                            <ul class="list list-hover">
+                                <li class="list-item list-primary">menu</li>
+                                <li class="list-item list-secondary">menu</li>
+                                <li class="list-item list-tertiary">menu</li>
+                                <li class="list-item list-success">menu</li>
+                                <li class="list-item list-warning">menu</li>
+                                <li class="list-item list-danger">menu</li>
+                                <li class="list-item list-info">menu</li>
+                                <li class="list-item list-light">menu</li>
+                                <li class="list-item list-dark">menu</li>
+                                <li class="list-item list-white">menu</li>
+                                <li class="list-item list-black">menu</li>
+                            </ul>
+                        </div>
+                        <div class="col-12 col-xs-4">
+                            <ul class="list list-hover">
+                                <li class="list-item">menu</li>
+                                <li class="list-item">menu</li>
+                                <li class="list-item">menu</li>
+                                <li class="list-item">menu</li>
+                                <li class="list-item">menu</li>
+                                <li class="list-item">menu</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
