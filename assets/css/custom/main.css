@@ -1,12 +1,12 @@
 /* md */
 @media (min-width: 76.8rem) {
     /* margin left for the main cause of the navbar aside */
-    .ml-nav-side-width-md {
-        margin-left: var(--nav-side-width);
+    .ml-sidebar-width-md {
+        margin-left: var(--sidebar-width);
     }
     /* showing the navbar aside in md */
-    .width-nav-side-md {
-        width: var(--nav-side-width);
+    .width-sidebar-md {
+        width: var(--sidebar-width);
         transform: translateX(0);
     }
 }

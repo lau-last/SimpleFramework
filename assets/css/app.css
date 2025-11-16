@@ -17,7 +17,8 @@
 @import 'component/dropdown.css';
 @import 'component/form.css';
 @import 'component/list.css';
-@import 'component/nav.css';
+@import 'component/navbar.css';
+@import 'component/sidebar.css';
 @import 'component/tab.css';
 @import 'component/table.css';
 

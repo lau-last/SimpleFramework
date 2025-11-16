@@ -1,0 +1,158 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello NavbarSideController!{% endblock %}
+
+{% block body %}
+    <div class="container-sm">
+        <div class="d-flex fd-column gap-5">
+
+            {# Intro #}
+            <div class="card p-2">
+                <div class="card-header">
+                    <h2>📚 Sidebar</h2>
+                </div>
+                <div class="card-body">
+                    <p>
+                        The sidebar provides persistent access to navigation links, tools, or actions.
+                        It stays aligned to the left or right side of the interface and can be collapsed
+                        to save space and improve focus on the main content.
+                        Use it to organize secondary navigation, dashboard tools, or contextual actions
+                        in a clear, efficient way.
+                    </p>
+                </div>
+            </div>
+
+            {# Quick examples #}
+            <div class="card p-2">
+                <div class="card-header">
+                    <h2>💠 Sidebar examples</h2>
+                </div>
+                <div class="card-body">
+                    <!-- button open -->
+                    <button class="btn btn-primary" data-js="aside" data-target="#aside-right">Open sidebar right
+                    </button>
+                </div>
+            </div>
+
+            {# HTML Code #}
+            <div class="card p-2">
+                <div class="card-header">
+                    <h2>💻 HTML Code</h2>
+                </div>
+                <div class="card-body">
+                    <div class="position-relative">
+                        <button class="btn btn-primary position-top-right z-1 mt-1 mr-1"
+                                onclick="copyCode('code-sidebar', this);">Copy
+                        </button>
+                        <div data-js="code" id="code-sidebar" class="container-code overflow-auto">
+                            <!-- button open -->
+                            <button class="btn btn-primary" data-js="aside" data-target="#aside-right-demo">
+                                Open sidebar right
+                            </button>
+
+                            <!-- aside -->
+                            <aside class="sidebar-right" id="aside-right-demo">
+                                <!-- button close -->
+                                <div class="d-flex jc-end">
+                                    <button class="btn btn-primary text-end close">Close</button>
+                                </div>
+                                <!-- aside content -->
+                                <nav>
+                                    <div class="collapse mb-half">
+                                        <button class="collapse-btn btn-primary" data-js="collapse"
+                                                data-target="#collapse-aside-demo">Menu
+                                        </button>
+                                        <div class="collapse-body show" id="collapse-aside-demo">
+                                            <ul class="list list-hover">
+                                                <li class="list-item">menu</li>
+                                                <li class="list-item">menu</li>
+                                                <li class="list-item">menu</li>
+                                                <li class="list-item">menu</li>
+                                                <li class="list-item">menu</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </nav>
+                            </aside>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            {# Alignment #}
+            <div class="card p-2">
+                <div class="card-header">
+                    <h2>📐 Alignment</h2>
+                </div>
+                <div class="card-body">
+                    <p class="mb-2">
+                        Sidebar placement is handled through utility classes applied directly to the container
+                        (usually an <code class="text-bold text-primary">&lt;aside&gt;</code>, which is the recommended
+                        semantic tag for side navigation).
+                        A sidebar is hidden off-screen by default and becomes visible when the
+                        <code class="text-bold text-primary">.show</code> class is added.
+                        You can choose whether it appears on the left or the right side of the viewport.
+                    </p>
+
+                    <ul class="list-unstyled">
+                        <li>
+                            <code class="text-bold text-primary">.sidebar-left</code> – displays the sidebar on the left side.
+                            It starts translated outside of the viewport and slides in from the left when
+                            <code class="text-bold text-primary">.show</code> is added.
+                        </li>
+                        <li>
+                            <code class="text-bold text-primary">.sidebar-right</code> – displays the sidebar on the right side.
+                            It begins translated outside of the viewport and slides in from the right when
+                            <code class="text-bold text-primary">.show</code> is applied.
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            {# Variables CSS #}
+            <div class="card p-2">
+                <div class="card-header">
+                    <h2>⚙️ Variables CSS</h2>
+                </div>
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-12 col-xs-4">
+                            <ul class="list-unstyled">
+                                <li><code class="text-bold text-primary">--sidebar-border</code></li>
+                                <li><code class="text-bold text-primary">--sidebar-border-radius</code></li>
+                                <li><code class="text-bold text-primary">--sidebar-padding</code></li>
+                                <li><code class="text-bold text-primary">--sidebar-width</code></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- aside -->
+    <aside class="sidebar-right" id="aside-right">
+
+        <!-- button close -->
+        <div class="d-flex jc-end m-1">
+            <button class="btn btn-primary text-end close">Close</button>
+        </div>
+
+        <!-- aside content -->
+        <nav>
+            <div class="collapse mb-half">
+                <button class="collapse-btn btn-primary" data-js="collapse" data-target="#sidebar-3">Menu</button>
+                <div class="collapse-body show" id="sidebar-3">
+                    <ul class="list list-hover">
+                        <li class="list-item">menu</li>
+                        <li class="list-item">menu</li>
+                        <li class="list-item">menu</li>
+                        <li class="list-item">menu</li>
+                        <li class="list-item">menu</li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </aside>
+{% endblock %}

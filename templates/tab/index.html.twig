@@ -1,0 +1,59 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello TabController!{% endblock %}
+
+{% block body %}
+    <div class="container-sm">
+        <div class="d-flex fd-column gap-5">
+
+            {# Intro #}
+            <div class="card p-2">
+                <div class="card-header">
+                    <h2>🗂️ Tabs</h2>
+                </div>
+                <div class="card-body">
+                    <p>
+                        Tabs allow users to switch between different sections of content without leaving the page.
+                        They organise information into clear, accessible panels and make navigation faster and more
+                        efficient. Use tabs when you need to group related content while keeping the interface clean
+                        and compact.
+                    </p>
+                </div>
+            </div>
+
+            {# Tabs #}
+            <div class="card p-2">
+                <div class="card-header">
+                    <h2>💠 Tab examples</h2>
+                </div>
+                <div class="card-body">
+                    <!--Tab-button-->
+                    <div class="tab">
+                        <button class="tab-btn btn-primary active" type="button" data-js="tab" data-target="#tab-1">London</button>
+                        <button class="tab-btn btn-primary" type="button" data-js="tab" data-target="#tab-2">Paris</button>
+                        <button class="tab-btn btn-primary" type="button" data-js="tab" data-target="#tab-3">Tokyo</button>
+                    </div>
+
+                    <!--Tab-content-->
+                    <div class="tab-content show" id="tab-1">
+                        <h3>Tab 1</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio, facere.</p>
+                    </div>
+
+                    <!--Tab-content-->
+                    <div class="tab-content" id="tab-2">
+                        <h3>Tab 2</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio, facere.</p>
+                    </div>
+
+                    <!--Tab-content-->
+                    <div class="tab-content" id="tab-3">
+                        <h3>Tab 3</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio, facere.</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+{% endblock %}

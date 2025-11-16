@@ -1,9 +1,9 @@
 <!-- aside -->
-<aside class="nav-side width-nav-side-md" id="aside">
+<aside class="sidebar-left width-sidebar-md" id="aside">
 
     <!-- button close -->
     <div class="d-flex jc-end m-1 d-none-md">
-        <button class="btn btn-primary close">Fermer</button>
+        <button class="btn btn-primary close">Close</button>
     </div>
 
     <!-- link / logo -->
@@ -12,7 +12,7 @@
     </div>
 
     <!-- aside content -->
-    <nav class="p-1">
+    <nav>
         <div class="collapse mb-half">
             <button class="collapse-btn btn-primary" data-js="collapse" data-target="#menu-side-1">Menu</button>
             <div class="collapse-body show" id="menu-side-1">
@@ -27,6 +27,9 @@
                     <li><a class="list-item" href="{{ url('app_dropdown') }}">Dropdown</a></li>
                     <li><a class="list-item" href="{{ url('app_form') }}">Form</a></li>
                     <li><a class="list-item" href="{{ url('app_list') }}">List</a></li>
+                    <li><a class="list-item" href="{{ url('app_navbar') }}">Navbar</a></li>
+                    <li><a class="list-item" href="{{ url('app_navbar_side') }}">Navbar side</a></li>
+                    <li><a class="list-item" href="{{ url('app_tab') }}">Tab</a></li>
                 </ul>
             </div>
         </div>
