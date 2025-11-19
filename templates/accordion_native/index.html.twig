@@ -9,7 +9,7 @@
             {# Intro #}
             <div class="card p-2">
                 <div class="card-header">
-                    <h2>🗂️ Accordion</h2>
+                    <h2>🗂️ Accordion native</h2>
                 </div>
                 <div class="card-body">
                     <p>
@@ -32,66 +32,44 @@
                 </div>
                 <div class="card-body">
                     <div class="row">
-                        <div class="col-12 col-xs-6">
-                            <section class="accordion">
-                                <div class="accordion-item">
-                                    <button class="accordion-btn btn-primary" data-js="collapse" data-target="#item1">Single</button>
-                                    <div class="accordion-body" id="item1">
-                                        <ul class="list">
+                        <div class="col-12">
+                            <!-- Accordion -->
+                            <section class="accordion-native">
+                                <!-- Accordion item 1 -->
+                                <details class="accordion-item">
+                                    <!-- Accordion button 1 -->
+                                    <summary class="accordion-btn btn-primary">Single</summary>
+                                    <!-- Accordion body 1 -->
+                                    <div class="accordion-body">
+                                        <ul class="list list-hover">
                                             <li class="list-item">menu</li>
                                             <li class="list-item">menu</li>
                                             <li class="list-item">menu</li>
                                         </ul>
                                     </div>
-                                </div>
-                                <div class="accordion-item">
-                                    <button class="accordion-btn btn-primary" data-js="collapse" data-target="#item2">Single</button>
-                                    <div class="accordion-body" id="item2">
-                                        <ul class="list">
-                                            <li class="list-item">menu</li>
-                                            <li class="list-item">menu</li>
-                                            <li class="list-item">menu</li>
-                                        </ul>
-                                    </div>
-                                </div>
-                                <div class="accordion-item">
-                                    <button class="accordion-btn btn-primary" data-js="collapse" data-target="#item3">Single</button>
-                                    <div class="accordion-body" id="item3">
-                                        <ul class="list">
-                                            <li class="list-item">menu</li>
-                                            <li class="list-item">menu</li>
-                                            <li class="list-item">menu</li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </section>
-                        </div>
-                        <div class="col-12 col-xs-6">
-                            <section class="accordion" data-type="multiple">
-                                <div class="accordion-item">
-                                    <button class="accordion-btn btn-primary" data-js="collapse" data-target="#item-multiple1">Multiple</button>
-                                    <div class="accordion-body" id="item-multiple1">
+                                </details>
+                                <!-- Accordion item 2 -->
+                                <details class="accordion-item">
+                                    <!-- Accordion button 2 -->
+                                    <summary class="accordion-btn btn-primary">Single</summary>
+                                    <!-- Accordion body 2 -->
+                                    <div class="accordion-body">
                                         <p class="p-3">
                                             Lorem ipsum dolor sit amet, consectetur adipisicing elit.
                                         </p>
                                     </div>
-                                </div>
-                                <div class="accordion-item">
-                                    <button class="accordion-btn btn-primary" data-js="collapse" data-target="#item-multiple2">Multiple</button>
-                                    <div class="accordion-body" id="item-multiple2">
+                                </details>
+                                <!-- Accordion item 3 -->
+                                <details class="accordion-item">
+                                    <!-- Accordion button 3 -->
+                                    <summary class="accordion-btn btn-primary">Single</summary>
+                                    <!-- Accordion body 3 -->
+                                    <div class="accordion-body">
                                         <p class="p-3">
                                             Lorem ipsum dolor sit amet, consectetur adipisicing elit.
                                         </p>
                                     </div>
-                                </div>
-                                <div class="accordion-item">
-                                    <button class="accordion-btn btn-primary" data-js="collapse" data-target="#item-multiple3">Multiple</button>
-                                    <div class="accordion-body" id="item-multiple3">
-                                        <p class="p-3">
-                                            Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                                        </p>
-                                    </div>
-                                </div>
+                                </details>
                             </section>
                         </div>
                     </div>
@@ -165,46 +143,46 @@
                 <div class="card-body">
                     <div class="position-relative">
                         <button class="btn btn-primary position-top-right z-1 mt-1 mr-1"
-                                onclick="copyCode('code-accordion', this);">Copy
+                                onclick="copyCode('code-accordion-native', this);">Copy
                         </button>
-                        <div data-js="code" id="code-accordion" class="container-code overflow-auto">
+                        <div data-js="code" id="code-accordion-native" class="container-code overflow-auto">
                             <!-- Accordion -->
-                            <section class="accordion">
+                            <section class="accordion-native">
                                 <!-- Accordion item 1 -->
-                                <div class="accordion-item">
+                                <details class="accordion-item">
                                     <!-- Accordion button 1 -->
-                                    <button class="accordion-btn btn-primary" data-js="collapse" data-target="#item-demo1">Single</button>
+                                    <summary class="accordion-btn btn-primary">Single</summary>
                                     <!-- Accordion body 1 -->
-                                    <div class="accordion-body" id="item-demo1">
-                                        <ul class="list">
+                                    <div class="accordion-body">
+                                        <ul class="list list-hover">
                                             <li class="list-item">menu</li>
                                             <li class="list-item">menu</li>
                                             <li class="list-item">menu</li>
                                         </ul>
                                     </div>
-                                </div>
+                                </details>
                                 <!-- Accordion item 2 -->
-                                <div class="accordion-item">
+                                <details class="accordion-item">
                                     <!-- Accordion button 2 -->
-                                    <button class="accordion-btn btn-primary" data-js="collapse" data-target="#item-demo2">Single</button>
+                                    <summary class="accordion-btn btn-primary">Single</summary>
                                     <!-- Accordion body 2 -->
-                                    <div class="accordion-body" id="item-demo2">
+                                    <div class="accordion-body">
                                         <p class="p-3">
                                             Lorem ipsum dolor sit amet, consectetur adipisicing elit.
                                         </p>
                                     </div>
-                                </div>
+                                </details>
                                 <!-- Accordion item 3 -->
-                                <div class="accordion-item">
+                                <details class="accordion-item">
                                     <!-- Accordion button 3 -->
-                                    <button class="accordion-btn btn-primary" data-js="collapse" data-target="#item-demo3">Single</button>
+                                    <summary class="accordion-btn btn-primary">Single</summary>
                                     <!-- Accordion body 3 -->
-                                    <div class="accordion-body" id="item-demo3">
+                                    <div class="accordion-body">
                                         <p class="p-3">
                                             Lorem ipsum dolor sit amet, consectetur adipisicing elit.
                                         </p>
                                     </div>
-                                </div>
+                                </details>
                             </section>
                         </div>
                     </div>

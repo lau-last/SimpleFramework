@@ -23,5 +23,5 @@
   list-style: none;
   display: flex;
   flex-direction: column;
-  gap: var(--list-column-gap);
+  /*gap: var(--list-column-gap);*/
 }
