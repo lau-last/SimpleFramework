@@ -1,34 +1,34 @@
 @charset "UTF-8";
 .accordion,
 .accordion-native {
-    display: inline-block;
-    position: relative;
-    width: 100%;
-    border-width: var(--accordion-border-width);
-    border-style: var(--accordion-border-style);
-    border-color: var(--accordion-border-color);
-    border-radius: var(--accordion-border-radius);
-    background-color: var(--accordion-bg-color);
+  display: inline-block;
+  position: relative;
+  width: 100%;
+  border-width: var(--accordion-border-width);
+  border-style: var(--accordion-border-style);
+  border-color: var(--accordion-border-color);
+  border-radius: var(--accordion-border-radius);
+  background-color: var(--accordion-bg-color);
 }
 .accordion .accordion-item,
 .accordion-native .accordion-item {
-    border: none;
+  border: none;
 }
 .accordion .accordion-item .accordion-btn,
 .accordion-native .accordion-item .accordion-btn {
-    padding: var(--accordion-button-padding);
+  padding: var(--accordion-button-padding);
 }
 .accordion .accordion-item .accordion-btn-sm,
 .accordion-native .accordion-item .accordion-btn-sm {
-    padding: var(--accordion-button-padding-sm);
+  padding: var(--accordion-button-padding-sm);
 }
 .accordion .accordion-item .accordion-btn-md,
 .accordion-native .accordion-item .accordion-btn-md {
-    padding: var(--accordion-button-padding-md);
+  padding: var(--accordion-button-padding-md);
 }
 .accordion .accordion-item .accordion-btn-lg,
 .accordion-native .accordion-item .accordion-btn-lg {
-    padding: var(--accordion-button-padding-lg);
+  padding: var(--accordion-button-padding-lg);
 }
 .accordion .accordion-item:first-child .accordion-btn,
 .accordion .accordion-item:first-child .accordion-btn-sm,
@@ -38,8 +38,8 @@
 .accordion-native .accordion-item:first-child .accordion-btn-sm,
 .accordion-native .accordion-item:first-child .accordion-btn-md,
 .accordion-native .accordion-item:first-child .accordion-btn-lg {
-    border-top-left-radius: calc(var(--accordion-border-radius) - var(--accordion-border-width));
-    border-top-right-radius: calc(var(--accordion-border-radius) - var(--accordion-border-width));
+  border-top-left-radius: calc(var(--accordion-border-radius) - var(--accordion-border-width));
+  border-top-right-radius: calc(var(--accordion-border-radius) - var(--accordion-border-width));
 }
 .accordion .accordion-item:last-child .accordion-btn,
 .accordion .accordion-item:last-child .accordion-btn-sm,
@@ -49,9 +49,9 @@
 .accordion-native .accordion-item:last-child .accordion-btn-sm,
 .accordion-native .accordion-item:last-child .accordion-btn-md,
 .accordion-native .accordion-item:last-child .accordion-btn-lg {
-    border-bottom-left-radius: calc(var(--accordion-border-radius) - var(--accordion-border-width));
-    border-bottom-right-radius: calc(var(--accordion-border-radius) - var(--accordion-border-width));
-    border-bottom: none;
+  border-bottom-left-radius: calc(var(--accordion-border-radius) - var(--accordion-border-width));
+  border-bottom-right-radius: calc(var(--accordion-border-radius) - var(--accordion-border-width));
+  border-bottom: none;
 }
 .accordion .accordion-item .accordion-btn,
 .accordion .accordion-item .accordion-btn-sm,
@@ -61,13 +61,13 @@
 .accordion-native .accordion-item .accordion-btn-sm,
 .accordion-native .accordion-item .accordion-btn-md,
 .accordion-native .accordion-item .accordion-btn-lg {
-    cursor: pointer;
-    width: 100%;
-    border: none;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    border-bottom: var(--accordion-border-width) var(--accordion-border-style) var(--accordion-border-color);
+  cursor: pointer;
+  width: 100%;
+  border: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: var(--accordion-border-width) var(--accordion-border-style) var(--accordion-border-color);
 }
 .accordion .accordion-item .accordion-btn:after,
 .accordion .accordion-item .accordion-btn-sm:after,
@@ -77,8 +77,8 @@
 .accordion-native .accordion-item .accordion-btn-sm:after,
 .accordion-native .accordion-item .accordion-btn-md:after,
 .accordion-native .accordion-item .accordion-btn-lg:after {
-    content: "﹢";
-    margin-left: 0.5rem;
+  content: "﹢";
+  margin-left: 0.5rem;
 }
 .accordion .accordion-item .accordion-btn:focus,
 .accordion .accordion-item .accordion-btn-sm:focus,
@@ -88,53 +88,53 @@
 .accordion-native .accordion-item .accordion-btn-sm:focus,
 .accordion-native .accordion-item .accordion-btn-md:focus,
 .accordion-native .accordion-item .accordion-btn-lg:focus {
-    outline: none;
-    box-shadow: none;
+  outline: none;
+  box-shadow: none;
 }
 .accordion .accordion-item .accordion-body .list,
 .accordion-native .accordion-item .accordion-body .list {
-    border: none;
+  border: none;
 }
 
 .accordion .accordion-item:last-child:has(.accordion-body.show) .accordion-btn,
 .accordion .accordion-item:last-child:has(.accordion-body.show) .accordion-btn-sm,
 .accordion .accordion-item:last-child:has(.accordion-body.show) .accordion-btn-md,
 .accordion .accordion-item:last-child:has(.accordion-body.show) .accordion-btn-lg {
-    border-bottom-left-radius: 0;
-    border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
 }
 .accordion .accordion-item:has(.accordion-body.show) .accordion-btn:after,
 .accordion .accordion-item:has(.accordion-body.show) .accordion-btn-sm:after,
 .accordion .accordion-item:has(.accordion-body.show) .accordion-btn-md:after,
 .accordion .accordion-item:has(.accordion-body.show) .accordion-btn-lg:after {
-    content: "﹣";
+  content: "﹣";
 }
 .accordion .accordion-item .accordion-body {
-    display: none;
+  display: none;
 }
 .accordion .accordion-item .accordion-body.show {
-    display: block;
-    border-bottom: var(--accordion-border-width) var(--accordion-border-style) var(--accordion-border-color);
+  display: block;
+  border-bottom: var(--accordion-border-width) var(--accordion-border-style) var(--accordion-border-color);
 }
 .accordion .accordion-item:last-child .accordion-body.show {
-    border-top: var(--accordion-border-width) var(--accordion-border-style) var(--accordion-border-color);
-    border-bottom: none;
+  border-top: var(--accordion-border-width) var(--accordion-border-style) var(--accordion-border-color);
+  border-bottom: none;
 }
 
 .accordion-native .accordion-item:last-child[open] .accordion-btn,
 .accordion-native .accordion-item:last-child[open] .accordion-btn-sm,
 .accordion-native .accordion-item:last-child[open] .accordion-btn-md,
 .accordion-native .accordion-item:last-child[open] .accordion-btn-lg {
-    border-bottom-left-radius: 0;
-    border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
 }
 .accordion-native .accordion-item[open] .accordion-btn:after,
 .accordion-native .accordion-item[open] .accordion-btn-sm:after,
 .accordion-native .accordion-item[open] .accordion-btn-md:after,
 .accordion-native .accordion-item[open] .accordion-btn-lg:after {
-    content: "﹣";
+  content: "﹣";
 }
 .accordion-native .accordion-item:last-child[open] .accordion-body {
-    border-top: var(--accordion-border-width) var(--accordion-border-style) var(--accordion-border-color);
-    border-bottom: none;
+  border-top: var(--accordion-border-width) var(--accordion-border-style) var(--accordion-border-color);
+  border-bottom: none;
 }

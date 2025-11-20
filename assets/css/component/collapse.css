@@ -1,30 +1,30 @@
 @charset "UTF-8";
 .collapse,
 .collapse-native {
-    display: inline-block;
-    position: relative;
-    width: 100%;
-    border-style: var(--collapse-border-style);
-    border-width: var(--collapse-border-width);
-    border-color: var(--collapse-border-color);
-    border-radius: var(--collapse-border-radius);
-    background-color: var(--collapse-bg-color);
+  display: inline-block;
+  position: relative;
+  width: 100%;
+  border-style: var(--collapse-border-style);
+  border-width: var(--collapse-border-width);
+  border-color: var(--collapse-border-color);
+  border-radius: var(--collapse-border-radius);
+  background-color: var(--collapse-bg-color);
 }
 .collapse .collapse-btn,
 .collapse-native .collapse-btn {
-    padding: var(--collapse-button-padding);
+  padding: var(--collapse-button-padding);
 }
 .collapse .collapse-btn-sm,
 .collapse-native .collapse-btn-sm {
-    padding: var(--collapse-button-padding-sm);
+  padding: var(--collapse-button-padding-sm);
 }
 .collapse .collapse-btn-md,
 .collapse-native .collapse-btn-md {
-    padding: var(--collapse-button-padding-md);
+  padding: var(--collapse-button-padding-md);
 }
 .collapse .collapse-btn-lg,
 .collapse-native .collapse-btn-lg {
-    padding: var(--collapse-button-padding-lg);
+  padding: var(--collapse-button-padding-lg);
 }
 .collapse .collapse-btn,
 .collapse .collapse-btn-sm,
@@ -34,13 +34,13 @@
 .collapse-native .collapse-btn-sm,
 .collapse-native .collapse-btn-md,
 .collapse-native .collapse-btn-lg {
-    width: 100%;
-    cursor: pointer;
-    border: none;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    border-radius: calc(var(--collapse-border-radius) - var(--collapse-border-width));
+  width: 100%;
+  cursor: pointer;
+  border: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: calc(var(--collapse-border-radius) - var(--collapse-border-width));
 }
 .collapse .collapse-btn:after,
 .collapse .collapse-btn-sm:after,
@@ -50,8 +50,8 @@
 .collapse-native .collapse-btn-sm:after,
 .collapse-native .collapse-btn-md:after,
 .collapse-native .collapse-btn-lg:after {
-    content: "﹢";
-    margin-left: 0.5rem;
+  content: "﹢";
+  margin-left: 0.5rem;
 }
 .collapse .collapse-btn:not([class*=outline-]),
 .collapse .collapse-btn-sm:not([class*=outline-]),
@@ -61,7 +61,7 @@
 .collapse-native .collapse-btn-sm:not([class*=outline-]),
 .collapse-native .collapse-btn-md:not([class*=outline-]),
 .collapse-native .collapse-btn-lg:not([class*=outline-]) {
-    border: none;
+  border: none;
 }
 .collapse .collapse-btn:focus,
 .collapse .collapse-btn-sm:focus,
@@ -71,32 +71,32 @@
 .collapse-native .collapse-btn-sm:focus,
 .collapse-native .collapse-btn-md:focus,
 .collapse-native .collapse-btn-lg:focus {
-    outline: none;
-    box-shadow: none;
+  outline: none;
+  box-shadow: none;
 }
 .collapse .collapse-body .list,
 .collapse-native .collapse-body .list {
-    border: none;
+  border: none;
 }
 
 .collapse:has(.collapse-body.show) > .collapse-btn, .collapse:has(.collapse-body.show) > .collapse-btn-sm, .collapse:has(.collapse-body.show) > .collapse-btn-md, .collapse:has(.collapse-body.show) > .collapse-btn-lg {
-    border-bottom-right-radius: 0;
-    border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
 }
 .collapse:has(.collapse-body.show) > .collapse-btn:after, .collapse:has(.collapse-body.show) > .collapse-btn-sm:after, .collapse:has(.collapse-body.show) > .collapse-btn-md:after, .collapse:has(.collapse-body.show) > .collapse-btn-lg:after {
-    content: "﹣";
+  content: "﹣";
 }
 .collapse .collapse-body {
-    display: none;
+  display: none;
 }
 .collapse .collapse-body.show {
-    display: block;
+  display: block;
 }
 
 .collapse-native[open] > .collapse-btn, .collapse-native[open] > .collapse-btn-sm, .collapse-native[open] > .collapse-btn-md, .collapse-native[open] > .collapse-btn-lg {
-    border-bottom-right-radius: 0;
-    border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
 }
 .collapse-native[open] > .collapse-btn:after, .collapse-native[open] > .collapse-btn-sm:after, .collapse-native[open] > .collapse-btn-md:after, .collapse-native[open] > .collapse-btn-lg:after {
-    content: "﹣";
+  content: "﹣";
 }

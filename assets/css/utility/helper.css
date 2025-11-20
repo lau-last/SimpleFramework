@@ -23,5 +23,19 @@
   list-style: none;
   display: flex;
   flex-direction: column;
-  /*gap: var(--list-column-gap);*/
+  gap: var(--list-column-gap);
+}
+
+/* Fit */
+.fit-height {
+  height: fit-content;
+}
+
+.fit-width {
+  width: fit-content;
+}
+
+.fit-size {
+  width: fit-content;
+  height: fit-content;
 }
