@@ -1,0 +1,166 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello TableController!{% endblock %}
+
+{% block body %}
+    <div class="container-sm">
+        <div class="d-flex fd-column gap-5">
+
+            {# Intro #}
+            <div class="card p-2">
+                <div class="card-header">
+                    <h2>📊 Tables</h2>
+                </div>
+                <div class="card-body">
+                    <p>
+                        Tables display structured data in a clear, organised format.
+                        They arrange information into rows and columns, making comparison and analysis easier.
+                        Use tables when you need to present datasets such as lists, inventories, statistics, or any
+                        information that benefits from precise alignment and readability.
+                    </p>
+                </div>
+            </div>
+
+            {# Table #}
+            <div class="card p-2">
+                <div class="card-header">
+                    <h2>💠 Table examples</h2>
+                </div>
+                <div class="card-body">
+                    {# container responsive #}
+                    <div class="table-responsive">
+
+                        {# Table #}
+                        <table class="table table-primary table-hover">
+
+                            {# Table thead #}
+                            <thead>
+                            <tr>
+                                <th>Person</th>
+                                <th>Most interest in</th>
+                                <th>Age</th>
+                            </tr>
+                            </thead>
+
+                            {# Table tbody #}
+                            <tbody>
+                            <tr>
+                                <th>Chris</th>
+                                <td>Lorem ipsum dolor sit Lorem ipsum dolor sit. orem ipsum dolor sit Lorem ipsum dolor sit.
+                                </td>
+                                <td>22</td>
+                            </tr>
+                            <tr>
+                                <th>Dennis</th>
+                                <td>Lorem ipsum dolor sit Lorem ipsum dolor sit. orem ipsum dolor sit Lorem ipsum dolor sit.
+                                </td>
+                                <td>45</td>
+                            </tr>
+                            <tr>
+                                <th>Sarah</th>
+                                <td>Lorem ipsum dolor sit Lorem ipsum dolor sit. orem ipsum dolor sit Lorem ipsum dolor sit.
+                                </td>
+                                <td>29</td>
+                            </tr>
+                            <tr>
+                                <th>Karen</th>
+                                <td>Lorem ipsum dolor sit Lorem ipsum dolor sit. orem ipsum dolor sit Lorem ipsum dolor sit.
+                                </td>
+                                <td>36</td>
+                            </tr>
+                            <tr>
+                                <th>Karen</th>
+                                <td>Lorem ipsum dolor sit Lorem ipsum dolor sit. orem ipsum dolor sit Lorem ipsum dolor sit.
+                                </td>
+                                <td>36</td>
+                            </tr>
+                            </tbody>
+
+                            {# Table tfoot #}
+                            <tfoot>
+                            <tr>
+                                <th>Average age</th>
+                                <td>Lorem ipsum dolor sit Lorem ipsum dolor sit. orem ipsum dolor sit Lorem ipsum dolor sit.
+                                </td>
+                                <td>36</td>
+                            </tr>
+                            </tfoot>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+            {# HTML Code #}
+            <div class="card p-2">
+                <div class="card-header">
+                    <h2>💻 HTML Code</h2>
+                </div>
+                <div class="card-body">
+                    <div class="position-relative">
+                        <button class="btn btn-primary position-top-right z-1 mt-1 mr-1"
+                                onclick="copyCode('code-table', this);">Copy
+                        </button>
+                        <div data-js="code" id="code-table" class="container-code overflow-auto">
+                            <!-- Table -->
+                            <table class="table table-primary table-hover">
+                                <!-- Table thead -->
+                                <thead>
+                                <tr>
+                                    <th>Person</th>
+                                    <th>Most interest in</th>
+                                    <th>Age</th>
+                                </tr>
+                                </thead>
+                                <!-- Table tbody -->
+                                <tbody>
+                                <tr>
+                                    <th>Chris</th>
+                                    <td>Lorem ipsum dolor sit Lorem ipsum dolor sit. orem ipsum dolor sit Lorem ipsum dolor sit.
+                                    </td>
+                                    <td>22</td>
+                                </tr>
+                                <tr>
+                                    <th>Dennis</th>
+                                    <td>Lorem ipsum dolor sit Lorem ipsum dolor sit. orem ipsum dolor sit Lorem ipsum dolor sit.
+                                    </td>
+                                    <td>45</td>
+                                </tr>
+                                <tr>
+                                    <th>Sarah</th>
+                                    <td>Lorem ipsum dolor sit Lorem ipsum dolor sit. orem ipsum dolor sit Lorem ipsum dolor sit.
+                                    </td>
+                                    <td>29</td>
+                                </tr>
+                                <tr>
+                                    <th>Karen</th>
+                                    <td>Lorem ipsum dolor sit Lorem ipsum dolor sit. orem ipsum dolor sit Lorem ipsum dolor sit.
+                                    </td>
+                                    <td>36</td>
+                                </tr>
+                                <tr>
+                                    <th>Karen</th>
+                                    <td>Lorem ipsum dolor sit Lorem ipsum dolor sit. orem ipsum dolor sit Lorem ipsum dolor sit.
+                                    </td>
+                                    <td>36</td>
+                                </tr>
+                                </tbody>
+                                <!-- Table tfoot -->
+                                <tfoot>
+                                <tr>
+                                    <th>Average age</th>
+                                    <td>Lorem ipsum dolor sit Lorem ipsum dolor sit. orem ipsum dolor sit Lorem ipsum dolor sit.
+                                    </td>
+                                    <td>36</td>
+                                </tr>
+                                </tfoot>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+        </div>
+    </div>
+{% endblock %}
