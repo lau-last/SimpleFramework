@@ -6,20 +6,17 @@
     <div class="container-sm">
         <div class="d-flex fd-column gap-5">
 
-            {# Alert #}
+            {# Intro #}
             <div class="card p-2">
                 <div class="card-header">
                     <h2>🔔 Alert</h2>
                 </div>
-                <div class="card-body">
-                    <p>Alert system to display messages to your users.</p>
-                </div>
             </div>
 
-            {# Interactive Demo #}
+            {# Example – DO NOT TOUCH #}
             <div class="card p-2">
                 <div class="card-header">
-                    <h2>📺 Interactive Demo</h2>
+                    <h2>💠 Example</h2>
                 </div>
                 <div class="card-body">
                     <div class="btn-group">
@@ -32,7 +29,7 @@
                 </div>
             </div>
 
-            {# Code #}
+            {# HTML Code #}
             <div class="card p-2">
                 <div class="card-header">
                     <h2>💻 HTML Code</h2>
@@ -43,12 +40,10 @@
                                 onclick="copyCode('code-alert', this);">Copy
                         </button>
                         <div data-js="code" id="code-alert" class="container-code overflow-auto">
-                            <!-- Alert Container -->
                             <div class="alert-container">
-                                <!-- Alert -->
-                                <div class="alert alert-success" role="status" data-js="alert">
-                                    Alert success
-                                    <button class="close btn btn-success">X</button>
+                                <div class="alert alert-success" role="status" aria-live="polite" data-js="alert">
+                                    <p>Alert success</p>
+                                    <button class="close btn btn-success" aria-label="Fermer l’alerte">X</button>
                                 </div>
                             </div>
                         </div>
@@ -62,12 +57,12 @@
                     <h2>📍 Positioning</h2>
                 </div>
                 <div class="card-body">
-                    <p>Use the
-                        <code class="text-bold text-primary">.alert-container</code>
-                        class together with one of the positioning classes:</p>
-                    <br>
-                    If no positioning class is specified, alerts are displayed at the <code
-                        class="text-bold text-primary">.top-center</code> position by default.
+                    <p class="p-1">
+                        Wrap your alerts in <code class="text-bold text-primary">.alert-container</code>.
+                        Add one position class to choose where alerts appear.
+                        If you do not set a position class, alerts use
+                        <code class="text-bold text-primary">.top-center</code> by default.
+                    </p>
                     <div class="row mt-2">
                         <div class="col-12 col-4-xs">
                             <div class="card p-2">
@@ -109,7 +104,10 @@
                     <h2>🎨 Color</h2>
                 </div>
                 <div class="card-body">
-                    <div class="row">
+                    <p class="p-1">
+                        Use <code class="text-bold text-primary">.alert-{color}</code> to set the alert background and text color.
+                    </p>
+                    <div class="row mt-2">
                         <div class="col-12 col-4-xs">
                             <div class="card p-2 alert-primary">
                                 <code class="text-bold">.alert-primary</code>
@@ -165,8 +163,38 @@
                                 <code class="text-bold">.alert-black</code>
                             </div>
                         </div>
-
                     </div>
+                </div>
+            </div>
+
+            {# Note about close button #}
+            <div class="card p-2">
+                <div class="card-header">
+                    <h2>📌 Note close button</h2>
+                </div>
+                <div class="card-body">
+                    <p class="p-1">
+                        Add a button with class <code class="text-bold text-primary">.close</code> inside the alert.
+                        When the user clicks this button, the alert is removed by JavaScript.
+                        The alert element must have <code class="text-bold text-primary">data-js="alert"</code>
+                        so the script can find and remove it.
+                    </p>
+                </div>
+            </div>
+
+            {# Note about animation #}
+            <div class="card p-2">
+                <div class="card-header">
+                    <h2>📌 Note animation</h2>
+                </div>
+                <div class="card-body">
+                    <p class="p-1">
+                        The script listens to the <code class="text-bold text-primary">animationend</code> event on
+                        elements with <code class="text-bold text-primary">data-js="alert"</code>.
+                        When the animation ends, the alert is removed.
+                        Use <code class="text-bold text-primary">--alert-animation</code> to set the CSS animation
+                        (for example a fade-out). If you do not set an animation, alerts will not auto-remove.
+                    </p>
                 </div>
             </div>
 
@@ -176,16 +204,60 @@
                     <h2>⚙️ Variables CSS</h2>
                 </div>
                 <div class="card-body">
-                    <ul class="list-unstyled">
-                        <li><code class="text-bold text-primary">--alert-animation</code></li>
-                        <li><code class="text-bold text-primary">--alert-border</code></li>
-                        <li><code class="text-bold text-primary">--alert-border-radius</code></li>
-                        <li><code class="text-bold text-primary">--alert-box-shadow</code></li>
-                        <li><code class="text-bold text-primary">--alert-container-padding-inline</code></li>
-                        <li><code class="text-bold text-primary">--alert-margin</code></li>
-                        <li><code class="text-bold text-primary">--alert-padding</code></li>
-                        <li><code class="text-bold text-primary">--alert-width</code></li>
-                    </ul>
+                    <table class="table">
+                        <thead>
+                        <tr class="text-left">
+                            <th>Variable</th>
+                            <th>Description</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td><code class="text-bold text-primary">--alert-padding</code></td>
+                            <td>Inner padding of the alert.</td>
+                        </tr>
+                        <tr>
+                            <td><code class="text-bold text-primary">--alert-margin</code></td>
+                            <td>Outer margin between alerts.</td>
+                        </tr>
+                        <tr>
+                            <td><code class="text-bold text-primary">--alert-border-radius</code></td>
+                            <td>Corner radius of the alert.</td>
+                        </tr>
+                        <tr>
+                            <td><code class="text-bold text-primary">--alert-border-color</code></td>
+                            <td>Color of the alert border.</td>
+                        </tr>
+                        <tr>
+                            <td><code class="text-bold text-primary">--alert-border-style</code></td>
+                            <td>Border style (solid, dashed, etc.).</td>
+                        </tr>
+                        <tr>
+                            <td><code class="text-bold text-primary">--alert-border-width</code></td>
+                            <td>Thickness of the alert border.</td>
+                        </tr>
+                        <tr>
+                            <td><code class="text-bold text-primary">--bg-color</code></td>
+                            <td>Background color of the alert.</td>
+                        </tr>
+                        <tr>
+                            <td><code class="text-bold text-primary">--alert-width</code></td>
+                            <td>Width of the alert (e.g. 100% or a fixed value).</td>
+                        </tr>
+                        <tr>
+                            <td><code class="text-bold text-primary">--alert-box-shadow</code></td>
+                            <td>Shadow applied to the alert.</td>
+                        </tr>
+                        <tr>
+                            <td><code class="text-bold text-primary">--alert-animation</code></td>
+                            <td>Animation used when showing or hiding the alert.</td>
+                        </tr>
+                        <tr>
+                            <td><code class="text-bold text-primary">--alert-container-padding-inline</code></td>
+                            <td>Horizontal padding inside <code class="text-bold text-primary">.alert-container</code>.</td>
+                        </tr>
+                        </tbody>
+                    </table>
                 </div>
             </div>
 

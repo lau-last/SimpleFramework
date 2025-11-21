@@ -2,8 +2,9 @@
 <div class="alert-container">
     {% for type, messages in app.flashes %}
         {% for message in messages %}
-            <div class="alert alert-{{ type }}" role="status" data-js="alert">
-                {{ message }}
+            <div class="alert alert-{{ type }}" role="status" aria-live="polite" data-js="alert">
+                <p>{{ message }}</p>
+                <button class="close btn btn-{{ type }}" aria-label="Fermer l’alerte">X</button>
             </div>
         {% endfor %}
     {% endfor %}

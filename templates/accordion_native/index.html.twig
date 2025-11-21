@@ -1,6 +1,6 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Hello AccordionController!{% endblock %}
+{% block title %}Hello AccordionNativeController!{% endblock %}
 
 {% block body %}
     <div class="container-sm">
@@ -8,178 +8,128 @@
 
             {# Intro #}
             <div class="card p-2">
-                <div class="card-header">
+                <div class="d-flex ai-baseline">
                     <h2>🗂️ Accordion native</h2>
-                </div>
-                <div class="card-body">
-                    <p>
-                        An accordion displays multiple panels that can expand or collapse to show content.
-                        It is designed to organize information in a clear and compact way.
-                    </p>
-
-                    <p class="mt-1">
-                        You can use an accordion in two styles:
-                        with only one panel open at a time, or with several panels open simultaneously.
-                        Both approaches keep the layout structured and easy to read.
-                    </p>
+                    <span class="ml-1">(Without JavaScript)</span>
                 </div>
             </div>
 
-            {# Quick examples #}
+            {# Example #}
             <div class="card p-2">
-                <div class="card-header">
-                    <h2>💠 Accordion examples</h2>
+                <div class="card-header d-flex ai-baseline">
+                    <h2>💠 Example</h2>
+                    <span class="ml-1">(Multiple)</span>
                 </div>
                 <div class="card-body">
                     <div class="row">
                         <div class="col-12">
-                            <!-- Accordion -->
-                            <section class="accordion-native">
-                                <!-- Accordion item 1 -->
+                            <div class="accordion-native">
                                 <details class="accordion-item">
-                                    <!-- Accordion button 1 -->
-                                    <summary class="accordion-btn btn-primary">Single</summary>
-                                    <!-- Accordion body 1 -->
+                                    <summary class="accordion-btn btn-primary">
+                                        Multiple
+                                    </summary>
                                     <div class="accordion-body">
-                                        <ul class="list list-hover">
-                                            <li class="list-item">menu</li>
-                                            <li class="list-item">menu</li>
-                                            <li class="list-item">menu</li>
-                                        </ul>
-                                    </div>
-                                </details>
-                                <!-- Accordion item 2 -->
-                                <details class="accordion-item">
-                                    <!-- Accordion button 2 -->
-                                    <summary class="accordion-btn btn-primary">Single</summary>
-                                    <!-- Accordion body 2 -->
-                                    <div class="accordion-body">
-                                        <p class="p-3">
-                                            Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                                        <p class="p-1">
+                                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab dolorem
+                                            doloremque hic ipsam ipsum modi voluptatibus? Amet aperiam fuga minus optio
+                                            velit. Labore mollitia, voluptatibus! Fuga iste natus sit tempora temporibus
+                                            vero! Adipisci delectus distinctio esse fuga maiores necessitatibus neque
+                                            possimus voluptate! Architecto deserunt itaque sequi sint. Alias
+                                            consequuntur culpa ea eligendi fugiat magni porro, quis soluta veniam vero?
+                                            Aut corporis dolores eum eveniet nostrum perferendis quae quaerat qui quis
+                                            rem! Aperiam culpa cupiditate libero minima neque nesciunt optio possimus,
+                                            quae qui tempore. Consequuntur dignissimos doloremque error facilis fugit
+                                            inventore, labore molestiae necessitatibus nemo, nesciunt officia omnis
+                                            pariatur ratione recusandae!
                                         </p>
                                     </div>
                                 </details>
-                                <!-- Accordion item 3 -->
                                 <details class="accordion-item">
-                                    <!-- Accordion button 3 -->
-                                    <summary class="accordion-btn btn-primary">Single</summary>
-                                    <!-- Accordion body 3 -->
+                                    <summary class="accordion-btn btn-primary">
+                                        Multiple
+                                    </summary>
                                     <div class="accordion-body">
-                                        <p class="p-3">
-                                            Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                                        <p class="p-1">
+                                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab dolorem
+                                            doloremque hic ipsam ipsum modi voluptatibus? Amet aperiam fuga minus optio
+                                            velit. Labore mollitia, voluptatibus! Fuga iste natus sit tempora temporibus
+                                            vero! Adipisci delectus distinctio esse fuga maiores necessitatibus neque
+                                            possimus voluptate! Architecto deserunt itaque sequi sint. Alias
+                                            consequuntur culpa ea eligendi fugiat magni porro, quis soluta veniam vero?
+                                            Aut corporis dolores eum eveniet nostrum perferendis quae quaerat qui quis
+                                            rem! Aperiam culpa cupiditate libero minima neque nesciunt optio possimus,
+                                            quae qui tempore. Consequuntur dignissimos doloremque error facilis fugit
+                                            inventore, labore molestiae necessitatibus nemo, nesciunt officia omnis
+                                            pariatur ratione recusandae!
                                         </p>
                                     </div>
                                 </details>
-                            </section>
+                                <details class="accordion-item">
+                                    <summary class="accordion-btn btn-primary">
+                                        Multiple
+                                    </summary>
+                                    <div class="accordion-body">
+                                        <p class="p-1">
+                                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab dolorem
+                                            doloremque hic ipsam ipsum modi voluptatibus? Amet aperiam fuga minus optio
+                                            velit. Labore mollitia, voluptatibus! Fuga iste natus sit tempora temporibus
+                                            vero! Adipisci delectus distinctio esse fuga maiores necessitatibus neque
+                                            possimus voluptate! Architecto deserunt itaque sequi sint. Alias
+                                            consequuntur culpa ea eligendi fugiat magni porro, quis soluta veniam vero?
+                                            Aut corporis dolores eum eveniet nostrum perferendis quae quaerat qui quis
+                                            rem! Aperiam culpa cupiditate libero minima neque nesciunt optio possimus,
+                                            quae qui tempore. Consequuntur dignissimos doloremque error facilis fugit
+                                            inventore, labore molestiae necessitatibus nemo, nesciunt officia omnis
+                                            pariatur ratione recusandae!
+                                        </p>
+                                    </div>
+                                </details>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
 
-            {# Accordion types #}
-            <div class="card p-2">
-                <div class="card-header">
-                    <h2>🗂️ Accordion types</h2>
-                </div>
-                <div class="card-body">
-                    <p>
-                        By default, an accordion only allows one panel to be open at a time.
-                        When you open a new panel, the previous one closes automatically.
-                    </p>
-                    <p class="mt-1">
-                        If you want to allow multiple panels to stay open, add
-                        <code class="text-bold text-primary">data-type="multiple"</code>
-                        to the <code class="text-bold text-primary">.accordion</code> element.
-                    </p>
-                </div>
-            </div>
-
-            {# Default open state #}
-            <div class="card p-2">
-                <div class="card-header">
-                    <h2>📂 Default open state</h2>
-                </div>
-                <div class="card-body">
-                    <p>
-                        If you want an accordion panel to be open when the page loads, add the
-                        <code class="text-bold text-primary">.show</code> class directly on the
-                        <code class="text-bold text-primary">.accordion-body</code>.
-                    </p>
-                    <p class="mt-1">
-                        The JavaScript automatically adds and removes
-                        <code class="text-bold text-primary">.show</code>
-                        when a panel opens or closes, so adding it in the HTML lets you choose the initial state.
-                    </p>
-                </div>
-            </div>
-
-            {# Notes about spacing #}
-            <div class="card p-2">
-                <div class="card-header">
-                    <h2>📏 Spacing rules</h2>
-                </div>
-                <div class="card-body">
-                    <p>
-                        Do not add any <code class="text-bold text-primary">padding</code> or
-                        <code class="text-bold text-primary">margin</code> directly on
-                        <code class="text-bold text-primary">.accordion-body</code>.<br>
-                        This element has its padding and margin forced to <code class="text-bold text-primary">0</code> by default,
-                        so adding spacing on it will have no effect.
-                    </p>
-                    <p class="mt-1">
-                        If you need spacing, apply it to elements <strong>inside</strong> the accordion body
-                        (for example on a <code class="text-bold text-primary">p</code>,
-                        <code class="text-bold text-primary">ul</code>, or an inner wrapper),
-                        but never on <code class="text-bold text-primary">.accordion-body</code> itself.
-                    </p>
-                </div>
-            </div>
-
             {# HTML Code #}
             <div class="card p-2">
-                <div class="card-header">
+                <div class="card-header d-flex ai-baseline">
                     <h2>💻 HTML Code</h2>
+                    <span class="ml-1">(Multiple)</span>
                 </div>
                 <div class="card-body">
                     <div class="position-relative">
                         <button class="btn btn-primary position-top-right z-1 mt-1 mr-1"
-                                onclick="copyCode('code-accordion-native', this);">Copy
+                                onclick="copyCode('code-accordion-native-multiple', this);">Copy
                         </button>
-                        <div data-js="code" id="code-accordion-native" class="container-code overflow-auto">
-                            <!-- Accordion -->
+                        <div data-js="code" id="code-accordion-native-multiple" class="container-code overflow-auto">
                             <section class="accordion-native">
-                                <!-- Accordion item 1 -->
                                 <details class="accordion-item">
-                                    <!-- Accordion button 1 -->
-                                    <summary class="accordion-btn btn-primary">Single</summary>
-                                    <!-- Accordion body 1 -->
+                                    <summary class="accordion-btn btn-primary">
+                                        Multiple
+                                    </summary>
                                     <div class="accordion-body">
-                                        <ul class="list list-hover">
-                                            <li class="list-item">menu</li>
-                                            <li class="list-item">menu</li>
-                                            <li class="list-item">menu</li>
-                                        </ul>
-                                    </div>
-                                </details>
-                                <!-- Accordion item 2 -->
-                                <details class="accordion-item">
-                                    <!-- Accordion button 2 -->
-                                    <summary class="accordion-btn btn-primary">Single</summary>
-                                    <!-- Accordion body 2 -->
-                                    <div class="accordion-body">
-                                        <p class="p-3">
-                                            Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                                        <p class="p-1">
+                                            Some content
                                         </p>
                                     </div>
                                 </details>
-                                <!-- Accordion item 3 -->
                                 <details class="accordion-item">
-                                    <!-- Accordion button 3 -->
-                                    <summary class="accordion-btn btn-primary">Single</summary>
-                                    <!-- Accordion body 3 -->
+                                    <summary class="accordion-btn btn-primary">
+                                        Multiple
+                                    </summary>
                                     <div class="accordion-body">
-                                        <p class="p-3">
-                                            Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                                        <p class="p-1">
+                                            Some content
+                                        </p>
+                                    </div>
+                                </details>
+                                <details class="accordion-item">
+                                    <summary class="accordion-btn btn-primary">
+                                        Multiple
+                                    </summary>
+                                    <div class="accordion-body">
+                                        <p class="p-1">
+                                            Some content
                                         </p>
                                     </div>
                                 </details>
@@ -195,14 +145,24 @@
                     <h2>📏 Sizes</h2>
                 </div>
                 <div class="card-body">
-                    <p>You don’t need to combine
+                    <p>
+                        You don’t need to combine
                         <code class="text-bold text-primary">.accordion-btn</code>
                         with a size class. Each size class (
                         <code class="text-bold text-primary">.accordion-btn-sm</code>,
                         <code class="text-bold text-primary">.accordion-btn-md</code>,
                         <code class="text-bold text-primary">.accordion-btn-lg</code> )
-                        already includes the base accordion-btn style and its own CSS variables.</p>
+                        already includes the base accordion button style and its own padding values.
+                        Just put the wanted size class on the button inside
+                        <code class="text-bold text-primary">.accordion-native</code>
+                        and the height and inner spacing will adapt automatically.
+                    </p>
                     <div class="row mt-2">
+                        <div class="col-12 col-4-xs">
+                            <div class="card p-2">
+                                <code class="text-bold text-primary">.accordion-btn</code>
+                            </div>
+                        </div>
                         <div class="col-12 col-4-xs">
                             <div class="card p-2">
                                 <code class="text-bold text-primary">.accordion-btn-sm</code>
@@ -222,23 +182,100 @@
                 </div>
             </div>
 
-            {# Varibles #}
+            {# Note about colors #}
+            <div class="card p-2">
+                <div class="card-header">
+                    <h2>📌 Note colors</h2>
+                </div>
+                <div class="card-body">
+                    <p class="p-1">
+                        You can use <code class="text-bold text-primary">btn-{color}</code> if you want a hover effect.
+                        If you do not need hover, use <code class="text-bold text-primary">bg-{color}</code> or your own custom class.
+                    </p>
+                </div>
+            </div>
+
+            {# Note about open state #}
+            <div class="card p-2">
+                <div class="card-header">
+                    <h2>📌 Note open state</h2>
+                </div>
+                <div class="card-body">
+                    <p class="p-1">
+                        To keep a panel open on page load, add the
+                        <code class="text-bold text-primary">open</code> attribute on
+                        the <code class="text-bold text-primary">&lt;details&gt;</code> element
+                        with class <code class="text-bold text-primary">.accordion-item</code>.
+                    </p>
+                </div>
+            </div>
+
+            {# Note about how it works #}
+            <div class="card p-2">
+                <div class="card-header">
+                    <h2>📌 Note how it works</h2>
+                </div>
+                <div class="card-body">
+                    <p class="p-1">
+                        Accordion native uses the HTML elements <code class="text-bold text-primary">&lt;details&gt;</code> and
+                        <code class="text-bold text-primary">&lt;summary&gt;</code>. The browser controls the open/close state with the
+                        <code class="text-bold text-primary">open</code> attribute. The CSS updates borders and the plus/minus icon based on this state.
+                    </p>
+                </div>
+            </div>
+
+            {# Variables #}
             <div class="card p-2">
                 <div class="card-header">
                     <h2>⚙️ Variables CSS</h2>
                 </div>
                 <div class="card-body">
-                    <ul class="list-unstyled">
-                        <li><code class="text-bold text-primary">--accordion-bg-color</code></li>
-                        <li><code class="text-bold text-primary">--accordion-border-color</code></li>
-                        <li><code class="text-bold text-primary">--accordion-border-radius</code></li>
-                        <li><code class="text-bold text-primary">--accordion-border-style</code></li>
-                        <li><code class="text-bold text-primary">--accordion-border-width</code></li>
-                        <li><code class="text-bold text-primary">--accordion-button-padding</code></li>
-                        <li><code class="text-bold text-primary">--accordion-button-padding-sm</code></li>
-                        <li><code class="text-bold text-primary">--accordion-button-padding-md</code></li>
-                        <li><code class="text-bold text-primary">--accordion-button-padding-lg</code></li>
-                    </ul>
+                    <table class="table">
+                        <thead>
+                        <tr class="text-left">
+                            <th>Class</th>
+                            <th>Description</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td><code class="text-bold text-primary">--accordion-bg-color</code></td>
+                            <td>Background color of the accordion.</td>
+                        </tr>
+                        <tr>
+                            <td><code class="text-bold text-primary">--accordion-border-color</code></td>
+                            <td>Color of the borders.</td>
+                        </tr>
+                        <tr>
+                            <td><code class="text-bold text-primary">--accordion-border-radius</code></td>
+                            <td>Corner radius.</td>
+                        </tr>
+                        <tr>
+                            <td><code class="text-bold text-primary">--accordion-border-style</code></td>
+                            <td>Border style (solid, dashed, etc.).</td>
+                        </tr>
+                        <tr>
+                            <td><code class="text-bold text-primary">--accordion-border-width</code></td>
+                            <td>Border thickness.</td>
+                        </tr>
+                        <tr>
+                            <td><code class="text-bold text-primary">--accordion-button-padding</code></td>
+                            <td>Default button padding.</td>
+                        </tr>
+                        <tr>
+                            <td><code class="text-bold text-primary">--accordion-button-padding-sm</code></td>
+                            <td>Padding for small buttons.</td>
+                        </tr>
+                        <tr>
+                            <td><code class="text-bold text-primary">--accordion-button-padding-md</code></td>
+                            <td>Padding for medium buttons.</td>
+                        </tr>
+                        <tr>
+                            <td><code class="text-bold text-primary">--accordion-button-padding-lg</code></td>
+                            <td>Padding for large buttons.</td>
+                        </tr>
+                        </tbody>
+                    </table>
                 </div>
             </div>
 
