@@ -11,15 +11,12 @@
                 <div class="card-header">
                     <h2>🏷️ Badge</h2>
                 </div>
-                <div class="card-body">
-                    <p>Badges are small inline elements used to highlight statuses, counts, or metadata.</p>
-                </div>
             </div>
 
             {# Badge Examples #}
             <div class="card p-2">
                 <div class="card-header">
-                    <h2>💠 Badge Examples</h2>
+                    <h2>💠 Examples</h2>
                 </div>
                 <div class="card-body d-flex fd-column gap-1">
                     <div class="badge-group">
@@ -44,8 +41,12 @@
                                 onclick="copyCode('code-badge', this);">Copy
                         </button>
                         <div data-js="code" id="code-badge" class="container-code overflow-auto">
-                            <!-- Badge -->
-                            <span class="badge badge-primary">Badge primary</span>
+                            <span class="badge badge-success">Badge success</span>
+                            <span class="badge outline-success">Badge outline-success</span>
+                            <span class="badge badge-success rounded-pill">Badge success rounded-pill</span>
+                            <span class="badge-sm badge-success">Badge small</span>
+                            <span class="badge-md badge-success">Badge medium</span>
+                            <span class="badge-lg badge-success">Badge large</span>
                         </div>
                     </div>
                 </div>
@@ -57,14 +58,15 @@
                     <h2>📏 Sizes</h2>
                 </div>
                 <div class="card-body">
-                    <p>You don’t need to combine
-                        <code class="text-bold text-primary">.badge</code>
-                        with a size class. Each size class (
-                        <code class="text-bold text-primary">.badge-sm</code>,
-                        <code class="text-bold text-primary">.badge-md</code>,
-                        <code class="text-bold text-primary">.badge-lg</code> )
-                        already includes the base badge style and its own CSS variables.</p>
+                    <p class="p-1">
+                        Each class (<code class="text-bold text-primary">.badge</code>, <code class="text-bold text-primary">.badge-sm</code>, <code class="text-bold text-primary">.badge-md</code>, <code class="text-bold text-primary">.badge-lg</code>) includes the base badge style with its own padding.
+                    </p>
                     <div class="row mt-2">
+                        <div class="col-12 col-4-xs">
+                            <div class="card p-2">
+                                <code class="text-bold text-primary">.badge</code>
+                            </div>
+                        </div>
                         <div class="col-12 col-4-xs">
                             <div class="card p-2">
                                 <code class="text-bold text-primary">.badge-sm</code>
@@ -90,17 +92,18 @@
                     <h2>🧵 Type</h2>
                 </div>
                 <div class="card-body">
-                    <p>Combine any badge with <code class="text-bold text-primary">.outline-{color}</code> for bordered
-                        styles, or <code class="text-bold text-primary">.rounded-pill</code> for softer shapes.</p>
+                    <p class="p-1">
+                        Use <code class="text-bold text-primary">.badge-{color}</code> for solid badge, <code class="text-bold text-primary">.badge-{color}</code> for bordered styles, and <code class="text-bold text-primary">.rounded-pill</code> for softer shapes.
+                    </p>
                     <div class="row mt-2">
                         <div class="col-12 col-4-xs">
                             <div class="card p-2">
-                                <code class="text-bold text-primary">.badge-success</code>
+                                <code class="text-bold text-primary">.badge-{color}</code>
                             </div>
                         </div>
                         <div class="col-12 col-4-xs">
                             <div class="card p-2">
-                                <code class="text-bold text-primary">.outline-success</code>
+                                <code class="text-bold text-primary">.outline-{color}</code>
                             </div>
                         </div>
                         <div class="col-12 col-4-xs">
@@ -118,6 +121,9 @@
                     <h2>🎨 Color</h2>
                 </div>
                 <div class="card-body">
+                    <p class="p-1">
+                        Use <code class="text-bold text-primary">.badge-{color}</code> to set both the background and the matching text color, based on your theme variables.
+                    </p>
                     <div class="row">
                         <div class="col-12 col-4-xs">
                             <div class="card p-2 badge-primary">
@@ -178,20 +184,60 @@
                 </div>
             </div>
 
+            {# Note about badge-group #}
+            <div class="card p-2">
+                <div class="card-header">
+                    <h2>📌 Note badge-group</h2>
+                </div>
+                <div class="card-body">
+                    <p class="p-1">
+                        Use <code class="text-bold text-primary">.badge-group</code> to display several badges on the same line
+                        with consistent spacing.
+                        The container automatically:
+                    </p>
+                </div>
+            </div>
+
             {# Varibles #}
             <div class="card p-2">
                 <div class="card-header">
                     <h2>⚙️ Variables CSS</h2>
                 </div>
                 <div class="card-body">
-                    <ul class="list-unstyled">
-                        <li><code class="text-bold text-primary">--badge-border-radius</code></li>
-                        <li><code class="text-bold text-primary">--badge-group-gap</code></li>
-                        <li><code class="text-bold text-primary">--badge-padding</code></li>
-                        <li><code class="text-bold text-primary">--badge-padding-sm</code></li>
-                        <li><code class="text-bold text-primary">--badge-padding-md</code></li>
-                        <li><code class="text-bold text-primary">--badge-padding-lg</code></li>
-                    </ul>
+                    <table class="table">
+                        <thead>
+                        <tr class="text-left">
+                            <th>Variable</th>
+                            <th>Description</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td><code class="text-bold text-primary">--badge-border-radius</code></td>
+                            <td>Corner radius applied to all badge variants (including sized badges).</td>
+                        </tr>
+                        <tr>
+                            <td><code class="text-bold text-primary">--badge-group-gap</code></td>
+                            <td>Space between badges inside <code class="text-bold text-primary">.badge-group</code>.</td>
+                        </tr>
+                        <tr>
+                            <td><code class="text-bold text-primary">--badge-padding</code></td>
+                            <td>Default padding for the base <code class="text-bold text-primary">.badge</code> size.</td>
+                        </tr>
+                        <tr>
+                            <td><code class="text-bold text-primary">--badge-padding-sm</code></td>
+                            <td>Padding used by <code class="text-bold text-primary">.badge-sm</code>.</td>
+                        </tr>
+                        <tr>
+                            <td><code class="text-bold text-primary">--badge-padding-md</code></td>
+                            <td>Padding used by <code class="text-bold text-primary">.badge-md</code>.</td>
+                        </tr>
+                        <tr>
+                            <td><code class="text-bold text-primary">--badge-padding-lg</code></td>
+                            <td>Padding used by <code class="text-bold text-primary">.badge-lg</code>.</td>
+                        </tr>
+                        </tbody>
+                    </table>
                 </div>
             </div>
 

@@ -1,5 +1,6 @@
 import SyntaxHighlighter from "./js/custom/highlighter.js";
 import { copyCode } from "./js/custom/copy_code.js";
+import "./js/simple-css.min.js";
 
 window.copyCode = copyCode;
 

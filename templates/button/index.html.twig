@@ -6,23 +6,20 @@
     <div class="container-sm">
         <div class="d-flex fd-column gap-5">
 
-            {# Button #}
+            {# Intro #}
             <div class="card p-2">
                 <div class="card-header">
                     <h2>🖱️ Button</h2>
                 </div>
-                <div class="card-body">
-                    <p>Buttons trigger actions and highlight primary operations in your UI.</p>
-                </div>
             </div>
 
-            {# Button Examples #}
+            {# Examples #}
             <div class="card p-2">
                 <div class="card-header">
-                    <h2>💠 Button Examples</h2>
+                    <h2>💠 Example</h2>
                 </div>
                 <div class="card-body d-flex fd-column gap-1">
-                    <div class="badge-group">
+                    <div class="btn-group">
                         <button class="btn btn-success">Button</button>
                         <button class="btn link-success">Button link</button>
                         <button class="btn outline-success">Button outline</button>
@@ -45,8 +42,13 @@
                                 onclick="copyCode('code-button', this);">Copy
                         </button>
                         <div data-js="code" id="code-button" class="container-code overflow-auto">
-                            <!-- Button -->
-                            <button class="btn btn-primary" type="button">Button primary</button>
+                            <button class="btn btn-success">Button</button>
+                            <button class="btn link-success">Button link</button>
+                            <button class="btn outline-success">Button outline</button>
+                            <button class="btn btn-success rounded-pill">Button rounded-pill</button>
+                            <button class="btn btn-success btn-sm">Button small</button>
+                            <button class="btn btn-success btn-md">Button medium</button>
+                            <button class="btn btn-success btn-lg">Button large</button>
                         </div>
                     </div>
                 </div>
@@ -58,14 +60,16 @@
                     <h2>📏 Sizes</h2>
                 </div>
                 <div class="card-body">
-                    <p>You don’t need to combine
-                        <code class="text-bold text-primary">.btn</code>
-                        with a size class. Each size class (
-                        <code class="text-bold text-primary">.btn-sm</code>,
-                        <code class="text-bold text-primary">.btn-md</code>,
-                        <code class="text-bold text-primary">.btn-lg</code> )
-                        already includes the base btn style and its own CSS variables.</p>
+                    <p class="p-1">
+                        Each class (<code class="text-bold text-primary">.btn</code>, <code class="text-bold text-primary">.btn-sm</code>, <code class="text-bold text-primary">.btn-md</code>, <code class="text-bold text-primary">.btn-lg</code>) includes the base button style with its own padding.
+                    </p>
+
                     <div class="row mt-2">
+                        <div class="col-12 col-4-xs">
+                            <div class="card p-2">
+                                <code class="text-bold text-primary">.btn</code>
+                            </div>
+                        </div>
                         <div class="col-12 col-4-xs">
                             <div class="card p-2">
                                 <code class="text-bold text-primary">.btn-sm</code>
@@ -91,8 +95,12 @@
                     <h2>🧵 Type</h2>
                 </div>
                 <div class="card-body">
-                    <p>Combine any button with <code class="text-bold text-primary">.outline-{color}</code> for bordered
-                        styles, or <code class="text-bold text-primary">.rounded-pill</code> for softer shapes.</p>
+
+                    <p class="p-1">
+                        Use <code class="text-bold text-primary">.btn-{color}</code> for solid buttons, <code class="text-bold text-primary">.outline-{color}</code> for bordered styles, and <code class="text-bold text-primary">.rounded-pill</code> for softer shapes.
+                        <code class="text-bold text-primary">.link-{color}</code> gives a minimal, text-styled button using the theme color.
+                    </p>
+
                     <div class="row mt-2">
                         <div class="col-12 col-4-xs">
                             <div class="card p-2">
@@ -124,6 +132,11 @@
                     <h2>🎨 Color</h2>
                 </div>
                 <div class="card-body">
+
+                    <p class="p-1">
+                        Use <code class="text-bold text-primary">.button-{color}</code> to set both the background and the matching text color, based on your theme variables.
+                    </p>
+
                     <div class="row">
                         <div class="col-12 col-4-xs">
                             <div class="card p-2 btn-primary">
@@ -184,25 +197,71 @@
                 </div>
             </div>
 
-            {# Varibles #}
+            {# Note about badge-group #}
+            <div class="card p-2">
+                <div class="card-header">
+                    <h2>📌 Note btn-group</h2>
+                </div>
+                <div class="card-body">
+                    <p class="p-1">
+                        Use <code class="text-bold text-primary">.btn-group</code> to display several button on the same line
+                        with consistent spacing.
+                        The container automatically:
+                    </p>
+                </div>
+            </div>
+
+            {# Variables #}
             <div class="card p-2">
                 <div class="card-header">
                     <h2>⚙️ Variables CSS</h2>
                 </div>
                 <div class="card-body">
-                    <ul class="list-unstyled">
-                        <li><code class="text-bold text-primary">--button-border-radius</code></li>
-                        <li><code class="text-bold text-primary">--button-group-gap</code></li>
-                        <li><code class="text-bold text-primary">--button-padding</code></li>
-                        <li><code class="text-bold text-primary">--button-padding-sm</code></li>
-                        <li><code class="text-bold text-primary">--button-padding-md</code></li>
-                        <li><code class="text-bold text-primary">--button-padding-lg</code></li>
-                    </ul>
+                    <p class="p-1">
+                        These variables control card padding, borders, radius, shadow, and spacing between cards.
+                    </p>
+
+                    <table class="table">
+                        <thead>
+                        <tr class="text-left">
+                            <th>Variable</th>
+                            <th>Description</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td><code class="text-bold text-primary">--card-body-padding</code></td>
+                            <td>Padding applied to the <code class="text-bold text-primary">.card-body</code>.</td>
+                        </tr>
+                        <tr>
+                            <td><code class="text-bold text-primary">--card-footer-padding</code></td>
+                            <td>Padding applied to the <code class="text-bold text-primary">.card-footer</code>.</td>
+                        </tr>
+                        <tr>
+                            <td><code class="text-bold text-primary">--card-header-padding</code></td>
+                            <td>Padding applied to the <code class="text-bold text-primary">.card-header</code>.</td>
+                        </tr>
+                        <tr>
+                            <td><code class="text-bold text-primary">--card-border</code></td>
+                            <td>Full border shorthand for style, width, and color.</td>
+                        </tr>
+                        <tr>
+                            <td><code class="text-bold text-primary">--card-border-radius</code></td>
+                            <td>Corner radius applied to the card container.</td>
+                        </tr>
+                        <tr>
+                            <td><code class="text-bold text-primary">--card-box-shadow</code></td>
+                            <td>Shadow applied around the card.</td>
+                        </tr>
+                        <tr>
+                            <td><code class="text-bold text-primary">--card-group-gap</code></td>
+                            <td>Vertical spacing between cards inside a <code class="text-bold text-primary">.card-group</code>.</td>
+                        </tr>
+                        </tbody>
+                    </table>
                 </div>
             </div>
 
-
         </div>
-
     </div>
 {% endblock %}
