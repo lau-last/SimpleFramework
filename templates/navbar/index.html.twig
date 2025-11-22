@@ -11,19 +11,12 @@
                 <div class="card-header">
                     <h2>🧭 Navbar</h2>
                 </div>
-                <div class="card-body">
-                    <p>
-                        The navigation bar provides quick access to the main sections of your site or application.
-                        It stays visible at the top of the interface and adapts to different screen sizes.
-                        Use it to organize links, actions, or menus in a clear and consistent way.
-                    </p>
-                </div>
             </div>
 
-            {# Quick examples #}
+            {# Examples #}
             <div class="card p-2">
                 <div class="card-header">
-                    <h2>💠 Navbar examples</h2>
+                    <h2>💠 Example</h2>
                 </div>
                 <div class="card-body">
                     <!--Navbar-->
@@ -31,7 +24,12 @@
                         <!-- Logo -->
                         <div>Lorem.</div>
                         <!-- Button for drop menu -->
-                        <button class="navbar-btn btn btn-white" data-js="collapse" data-target="#navbar">Show menu
+                        <button class="navbar-btn btn btn-white"
+                                data-js="collapse"
+                                data-target="#navbar"
+                                aria-controls="navbar"
+                                aria-expanded="false">
+                            Show menu
                         </button>
                         <!-- Collapse for drop menu -->
                         <div class="navbar-collapse" id="navbar">
@@ -63,17 +61,16 @@
                                 onclick="copyCode('code-navbar', this);">Copy
                         </button>
                         <div data-js="code" id="code-navbar" class="container-code overflow-auto">
-                            <!--Navbar-->
                             <nav class="navbar navbar-primary">
-                                <!-- Logo -->
                                 <div>Lorem.</div>
-                                <!-- Button for drop menu -->
-                                <button class="navbar-btn btn btn-white" data-js="collapse" data-target="#navbar-demo">
+                                <button class="navbar-btn btn btn-white"
+                                        data-js="collapse"
+                                        data-target="#navbar-demo"
+                                        aria-controls="navbar-demo"
+                                        aria-expanded="false">
                                     Show menu
                                 </button>
-                                <!-- Collapse for drop menu -->
                                 <div class="navbar-collapse" id="navbar-demo">
-                                    <!-- Navbar list -->
                                     <ul class="navbar-nav">
                                         <li><a href="#">menu</a></li>
                                         <li><a href="#">menu</a></li>
@@ -97,21 +94,17 @@
                     <h2>📏 Sizes</h2>
                 </div>
                 <div class="card-body">
-                    <p>
-                        Navbar size classes control the breakpoint at which the navigation collapses
-                        into a mobile dropdown menu.
-                        Each size (
-                        <code class="text-bold text-primary">.navbar-xs</code>,
-                        <code class="text-bold text-primary">.navbar-sm</code>,
-                        <code class="text-bold text-primary">.navbar-md</code>,
-                        <code class="text-bold text-primary">.navbar-lg</code>,
-                        <code class="text-bold text-primary">.navbar-xl</code>,
-                        <code class="text-bold text-primary">.navbar-xxl</code>
-                        ) includes the base navbar styling and applies its own collapse breakpoint
-                        based on the project's predefined values.
+                    <p class="p-1">
+                        Navbar size classes choose the breakpoint where the menu collapses into a button; each one includes the base navbar style and its own max-width value.
                     </p>
 
                     <div class="row mt-2">
+                        <div class="col-12 col-4-xs">
+                            <div class="card p-2">
+                                <code class="text-bold text-primary">.navbar</code>
+                                <p class="text-sm mt-1">Collapses at 76.8rem</p>
+                            </div>
+                        </div>
                         <div class="col-12 col-4-xs">
                             <div class="card p-2">
                                 <code class="text-bold text-primary">.navbar-xs</code>
@@ -126,13 +119,10 @@
                         </div>
                         <div class="col-12 col-4-xs">
                             <div class="card p-2">
-                                <code class="text-bold text-primary">.navbar .navbar-md</code>
+                                <code class="text-bold text-primary">.navbar-md</code>
                                 <p class="text-sm mt-1">Collapses at 76.8rem</p>
                             </div>
                         </div>
-                    </div>
-
-                    <div class="row mt-2">
                         <div class="col-12 col-4-xs">
                             <div class="card p-2">
                                 <code class="text-bold text-primary">.navbar-lg</code>
@@ -160,47 +150,72 @@
                 <div class="card-header">
                     <h2>📐 Alignment</h2>
                 </div>
+
                 <div class="card-body">
                     <p class="mb-2">
-                        Navbar alignment is controlled by utility classes applied to
+                        Alignment is controlled via classes on
                         <code class="text-bold text-primary">.navbar-collapse</code>.
-                        By default, the navbar content is aligned to the right on desktop
-                        and to the left when collapsed on smaller screens.
-                        You can override this behavior with desktop and <code class="text-bold text-primary">-sm</code> variants.
+                        On desktop, you can align navigation items left, center, or right.
                     </p>
 
-                    <ul class="list-unstyled">
-                        <li>
-                            <code class="text-bold text-primary">.nav-left</code>
-                            / <code class="text-bold text-primary">.nav-start</code> – align navigation to the left on desktop.
-                        </li>
-                        <li>
-                            <code class="text-bold text-primary">.nav-center</code> – center the navigation on desktop.
-                        </li>
-                        <li>
-                            <code class="text-bold text-primary">.nav-right</code>
-                            / <code class="text-bold text-primary">.nav-end</code> – align navigation to the right on desktop.
-                        </li>
-                    </ul>
+                    <div class="row mt-2">
+                        <div class="col-12 col-4-xs">
+                            <div class="card p-2">
+                                <code class="text-bold text-primary">.nav-left</code>
+                                <p class="text-sm mt-1">Aligns items to the left.</p>
+                            </div>
+                        </div>
+
+                        <div class="col-12 col-4-xs">
+                            <div class="card p-2">
+                                <code class="text-bold text-primary">.nav-center</code>
+                                <p class="text-sm mt-1">Centers the navigation.</p>
+                            </div>
+                        </div>
+
+                        <div class="col-12 col-4-xs">
+                            <div class="card p-2">
+                                <code class="text-bold text-primary">.nav-right</code>
+                                <p class="text-sm mt-1">Aligns items to the right.</p>
+                            </div>
+                        </div>
+                    </div>
 
                     <p class="my-2">
-                        The <code class="text-bold text-primary">*-sm</code> variants override the alignment
-                        when the navbar is collapsed (<code>.navbar-collapse.show</code>) at the defined breakpoint:
+                        When the navbar is collapsed (<code class="text-bold text-primary">.navbar-collapse.show</code>),
+                        use the <code class="text-bold text-primary">*-collapse</code> variants to control alignment inside the dropdown.
                     </p>
 
-                    <ul class="list-unstyled">
-                        <li>
-                            <code class="text-bold text-primary">.nav-left-sm</code>
-                            / <code class="text-bold text-primary">.nav-start-sm</code> – left aligned in mobile view.
-                        </li>
-                        <li>
-                            <code class="text-bold text-primary">.nav-center-sm</code> – centered in mobile view.
-                        </li>
-                        <li>
-                            <code class="text-bold text-primary">.nav-right-sm</code>
-                            / <code class="text-bold text-primary">.nav-end-sm</code> – right aligned in mobile view.
-                        </li>
-                    </ul>
+                    <div class="row mt-2">
+
+                        <div class="col-12 col-4-xs">
+                            <div class="card p-2">
+                                <code class="text-bold text-primary">.nav-left-collapse</code>
+                                <p class="text-sm mt-1">
+                                    Aligns items to the left <b>in collapsed mode</b>.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="col-12 col-4-xs">
+                            <div class="card p-2">
+                                <code class="text-bold text-primary">.nav-center-collapse</code>
+                                <p class="text-sm mt-1">
+                                    Centers items <b>in collapsed mode</b>.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="col-12 col-4-xs">
+                            <div class="card p-2">
+                                <code class="text-bold text-primary">.nav-right-collapse</code>
+                                <p class="text-sm mt-1">
+                                    Aligns items to the right <b>in collapsed mode</b>.
+                                </p>
+                            </div>
+                        </div>
+
+                    </div>
                 </div>
             </div>
 
@@ -270,24 +285,68 @@
                 </div>
             </div>
 
+            {# How it works #}
+            <div class="card p-2">
+                <div class="card-header">
+                    <h2>⚙️ How it works</h2>
+                </div>
+                <div class="card-body">
+                    <p class="p-1">
+                        The script listens for clicks on
+                        <code class="text-bold text-primary">[data-js="collapse"]</code>, toggles the
+                        <code class="text-bold text-primary">.show</code> class on
+                        <code class="text-bold text-primary">.navbar-collapse</code>,
+                        and updates <code class="text-bold text-primary">aria-expanded</code>.
+                        Each <code class="text-bold text-primary">.navbar-*</code> class defines the breakpoint
+                        where the navbar switches to collapsed (burger) mode.
+                    </p>
+                </div>
+            </div>
+
             {# Varibles #}
             <div class="card p-2">
                 <div class="card-header">
                     <h2>⚙️ Variables CSS</h2>
                 </div>
                 <div class="card-body">
-                    <div class="row">
-                        <div class="col-12 col-4-xs">
-                            <ul class="list-unstyled">
-                                <li><code class="text-bold text-primary">--navbar-border</code></li>
-                                <li><code class="text-bold text-primary">--navbar-border-radius</code></li>
-                                <li><code class="text-bold text-primary">--navbar-collapse-gap</code></li>
-                                <li><code class="text-bold text-primary">--navbar-nav-gap</code></li>
-                                <li><code class="text-bold text-primary">--navbar-nav-margin</code></li>
-                                <li><code class="text-bold text-primary">--navbar-padding</code></li>
-                            </ul>
-                        </div>
-                    </div>
+                    <p class="p-1">
+                        These variables control navbar border, radius, padding, and spacing between the collapse area and navigation items.
+                    </p>
+
+                    <table class="table">
+                        <thead>
+                        <tr class="text-left">
+                            <th>Variable</th>
+                            <th>Description</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td><code class="text-bold text-primary">--navbar-border</code></td>
+                            <td>Base border definition applied to the navbar container.</td>
+                        </tr>
+                        <tr>
+                            <td><code class="text-bold text-primary">--navbar-border-radius</code></td>
+                            <td>Corner radius of the navbar.</td>
+                        </tr>
+                        <tr>
+                            <td><code class="text-bold text-primary">--navbar-collapse-gap</code></td>
+                            <td>Gap between elements inside <code class="text-bold text-primary">.navbar-collapse</code>.</td>
+                        </tr>
+                        <tr>
+                            <td><code class="text-bold text-primary">--navbar-nav-gap</code></td>
+                            <td>Horizontal or vertical gap between items in <code class="text-bold text-primary">.navbar-nav</code>.</td>
+                        </tr>
+                        <tr>
+                            <td><code class="text-bold text-primary">--navbar-nav-margin</code></td>
+                            <td>Margin applied to <code class="text-bold text-primary">.navbar-nav</code> in mobile layout.</td>
+                        </tr>
+                        <tr>
+                            <td><code class="text-bold text-primary">--navbar-padding</code></td>
+                            <td>Inner padding of the navbar container.</td>
+                        </tr>
+                        </tbody>
+                    </table>
                 </div>
             </div>
 

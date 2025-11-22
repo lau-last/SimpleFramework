@@ -1,6 +1,54 @@
 {% extends 'base.html.twig' %}
 
 {% block title %}Hello TableController!{% endblock %}
+{% block stylesheets %}
+    <style>
+        .table-primary{
+            background: var(--table-primary-color);
+            color: var(--table-text-on-primary);
+        }
+        .table-secondary{
+            background: var(--table-secondary-color);
+            color: var(--table-text-on-secondary);
+        }
+        .table-tertiary{
+            background: var(--table-tertiary-color);
+            color:  var(--table-text-on-tertiary);
+        }
+        .table-success{
+            background: var(--table-success-color);
+            color:  var(--table-text-on-success);
+        }
+        .table-danger{
+            background: var(--table-danger-color);
+            color:  var(--table-text-on-danger);
+        }
+        .table-warning{
+            background: var(--table-warning-color);
+            color:  var(--table-text-on-warning);
+        }
+        .table-info{
+            background: var(--table-info-color);
+            color:  var(--table-text-on-info);
+        }
+        .table-light{
+            background: var(--table-light-color);
+            color:  var(--table-text-on-light);
+        }
+        .table-dark{
+            background: var(--table-dark-color);
+            color:  var(--table-text-on-dark);
+        }
+        .table-white{
+            background: var(--table-white-color);
+            color:  var(--table-text-on-white);
+        }
+        .table-black{
+            background: var(--table-black-color);
+            color:  var(--table-text-on-black);
+        }
+    </style>
+{% endblock %}
 
 {% block body %}
     <div class="container-sm">
@@ -11,28 +59,18 @@
                 <div class="card-header">
                     <h2>📊 Tables</h2>
                 </div>
-                <div class="card-body">
-                    <p>
-                        Tables display structured data in a clear, organised format.
-                        They arrange information into rows and columns, making comparison and analysis easier.
-                        Use tables when you need to present datasets such as lists, inventories, statistics, or any
-                        information that benefits from precise alignment and readability.
-                    </p>
-                </div>
             </div>
 
-            {# Table #}
+            {# Exemple #}
             <div class="card p-2">
                 <div class="card-header">
-                    <h2>💠 Table examples</h2>
+                    <h2>💠 Examples</h2>
                 </div>
                 <div class="card-body">
                     {# container responsive #}
                     <div class="table-responsive">
-
                         {# Table #}
-                        <table class="table table-primary table-hover">
-
+                        <table class="table table-primary table-hover text-left">
                             {# Table thead #}
                             <thead>
                             <tr>
@@ -41,7 +79,6 @@
                                 <th>Age</th>
                             </tr>
                             </thead>
-
                             {# Table tbody #}
                             <tbody>
                             <tr>
@@ -75,7 +112,6 @@
                                 <td>36</td>
                             </tr>
                             </tbody>
-
                             {# Table tfoot #}
                             <tfoot>
                             <tr>
@@ -101,9 +137,7 @@
                                 onclick="copyCode('code-table', this);">Copy
                         </button>
                         <div data-js="code" id="code-table" class="container-code overflow-auto">
-                            <!-- Table -->
                             <table class="table table-primary table-hover">
-                                <!-- Table thead -->
                                 <thead>
                                 <tr>
                                     <th>Person</th>
@@ -111,7 +145,6 @@
                                     <th>Age</th>
                                 </tr>
                                 </thead>
-                                <!-- Table tbody -->
                                 <tbody>
                                 <tr>
                                     <th>Chris</th>
@@ -144,7 +177,6 @@
                                     <td>36</td>
                                 </tr>
                                 </tbody>
-                                <!-- Table tfoot -->
                                 <tfoot>
                                 <tr>
                                     <th>Average age</th>
@@ -159,7 +191,364 @@
                 </div>
             </div>
 
+            {# Color #}
+            <div class="card p-2">
+                <div class="card-header">
+                    <h2>🎨 Color</h2>
+                </div>
+                <div class="card-body">
 
+                    <p class="p-1">
+                        Use <code class="text-bold text-primary">.table-{color}</code> to set both the background and the matching text color, based on your theme variables.
+                    </p>
+
+                    <div class="row">
+                        <div class="col-12 col-4-xs">
+                            <div class="card p-2 table-primary">
+                                <code class="text-bold">.table-primary</code>
+                            </div>
+                        </div>
+                        <div class="col-12 col-4-xs">
+                            <div class="card p-2 table-secondary">
+                                <code class="text-bold">.table-secondary</code>
+                            </div>
+                        </div>
+                        <div class="col-12 col-4-xs">
+                            <div class="card p-2 table-tertiary">
+                                <code class="text-bold">.table-tertiary</code>
+                            </div>
+                        </div>
+                        <div class="col-12 col-4-xs">
+                            <div class="card p-2 table-success">
+                                <code class="text-bold">.table-success</code>
+                            </div>
+                        </div>
+                        <div class="col-12 col-4-xs">
+                            <div class="card p-2 table-danger">
+                                <code class="text-bold">.table-danger</code>
+                            </div>
+                        </div>
+                        <div class="col-12 col-4-xs">
+                            <div class="card p-2 table-warning">
+                                <code class="text-bold">.table-warning</code>
+                            </div>
+                        </div>
+                        <div class="col-12 col-4-xs">
+                            <div class="card p-2 table-info">
+                                <code class="text-bold">.table-info</code>
+                            </div>
+                        </div>
+                        <div class="col-12 col-4-xs">
+                            <div class="card p-2 table-light">
+                                <code class="text-bold">.table-light</code>
+                            </div>
+                        </div>
+                        <div class="col-12 col-4-xs">
+                            <div class="card p-2 table-dark">
+                                <code class="text-bold">.table-dark</code>
+                            </div>
+                        </div>
+                        <div class="col-12 col-4-xs">
+                            <div class="card p-2 table-white">
+                                <code class="text-bold">.table-white</code>
+                            </div>
+                        </div>
+                        <div class="col-12 col-4-xs">
+                            <div class="card p-2 table-black">
+                                <code class="text-bold">.table-black</code>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            {# Options #}
+            <div class="card p-2">
+                <div class="card-header">
+                    <h2>⚙️ Options</h2>
+                </div>
+                <div class="card-body">
+                    <p class="p-1">
+                        Add these optional classes on <code class="text-bold text-primary">.table</code> to change borders, spacing or striping.
+                    </p>
+
+                    <div class="row mt-2">
+                        {# Sizes #}
+                        <div class="col-12 col-4-xs">
+                            <div class="card p-2">
+                                <code class="text-bold text-primary">.table-sm</code>
+                                <p class="text-sm mt-1">Smaller cell padding.</p>
+                            </div>
+                        </div>
+                        <div class="col-12 col-4-xs">
+                            <div class="card p-2">
+                                <code class="text-bold text-primary">.table-md</code>
+                                <p class="text-sm mt-1">Medium padding (custom value).</p>
+                            </div>
+                        </div>
+                        <div class="col-12 col-4-xs">
+                            <div class="card p-2">
+                                <code class="text-bold text-primary">.table-lg</code>
+                                <p class="text-sm mt-1">Larger, more spacious rows.</p>
+                            </div>
+                        </div>
+
+                        {# Borders #}
+                        <div class="col-12 col-4-xs">
+                            <div class="card p-2">
+                                <code class="text-bold text-primary">.table-borderless</code>
+                                <p class="text-sm mt-1">Removes all cell borders.</p>
+                            </div>
+                        </div>
+                        <div class="col-12 col-4-xs">
+                            <div class="card p-2">
+                                <code class="text-bold text-primary">.table-bordered</code>
+                                <p class="text-sm mt-1">Full grid borders on all cells.</p>
+                            </div>
+                        </div>
+
+                        {# Hover #}
+                        <div class="col-12 col-4-xs">
+                            <div class="card p-2">
+                                <code class="text-bold text-primary">.table-hover</code>
+                                <p class="text-sm mt-1">Highlights a row on hover.</p>
+                            </div>
+                        </div>
+
+                        {# Row striping #}
+                        <div class="col-12 col-4-xs">
+                            <div class="card p-2">
+                                <code class="text-bold text-primary">.table-striped</code>
+                                <p class="text-sm mt-1">Stripes odd rows in <code>tbody</code>.</p>
+                            </div>
+                        </div>
+                        <div class="col-12 col-4-xs">
+                            <div class="card p-2">
+                                <code class="text-bold text-primary">.table-striped-even</code>
+                                <p class="text-sm mt-1">Stripes even rows in <code>tbody</code>.</p>
+                            </div>
+                        </div>
+
+                        {# Column striping #}
+                        <div class="col-12 col-4-xs">
+                            <div class="card p-2">
+                                <code class="text-bold text-primary">.table-striped-columns</code>
+                                <p class="text-sm mt-1">Stripes odd columns (head, body, foot).</p>
+                            </div>
+                        </div>
+                        <div class="col-12 col-4-xs">
+                            <div class="card p-2">
+                                <code class="text-bold text-primary">.table-striped-columns-even</code>
+                                <p class="text-sm mt-1">Stripes even columns.</p>
+                            </div>
+                        </div>
+
+                        {# Group divider #}
+                        <div class="col-12 col-4-xs">
+                            <div class="card p-2">
+                                <code class="text-bold text-primary">.table-group-divider</code>
+                                <p class="text-sm mt-1">
+                                    Adds a strong divider above the first row in a group (apply on <code>tbody</code>).
+                                </p>
+                            </div>
+                        </div>
+
+                        {# Responsive wrapper #}
+                        <div class="col-12 col-4-xs">
+                            <div class="card p-2">
+                                <code class="text-bold text-primary">.table-responsive</code>
+                                <p class="text-sm mt-1">
+                                    Wraps the table to enable horizontal scroll on small screens.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            {# Variables CSS #}
+            <div class="card p-2">
+                <div class="card-header">
+                    <h2>⚙️ CSS Variables</h2>
+                </div>
+
+                <div class="card-body">
+                    <p class="p-1">
+                        These variables control borders, padding, hover effects, striping, and table colors.
+                    </p>
+
+                    <table class="table table-sm text-left">
+                        <thead>
+                        <tr>
+                            <th>Variable</th>
+                            <th>Description</th>
+                        </tr>
+                        </thead>
+
+                        <tbody>
+
+                        {# Borders #}
+                        <tr>
+                            <td><code class="text-bold text-primary">--table-border-color</code></td>
+                            <td>Main border color for table cells.</td>
+                        </tr>
+                        <tr>
+                            <td><code class="text-bold text-primary">--table-border-style</code></td>
+                            <td>Common border style (solid, dashed, etc.).</td>
+                        </tr>
+                        <tr>
+                            <td><code class="text-bold text-primary">--table-border-width</code></td>
+                            <td>Default border thickness for cells.</td>
+                        </tr>
+
+                        {# Divider #}
+                        <tr>
+                            <td><code class="text-bold text-primary">--table-border-divider-color</code></td>
+                            <td>Color of group dividers.</td>
+                        </tr>
+                        <tr>
+                            <td><code class="text-bold text-primary">--table-border-divider-width</code></td>
+                            <td>Thickness of group dividers.</td>
+                        </tr>
+                        <tr>
+                            <td><code class="text-bold text-primary">--table-border-divider-style</code></td>
+                            <td>Style of group dividers.</td>
+                        </tr>
+
+                        {# Hover / Striped #}
+                        <tr>
+                            <td><code class="text-bold text-primary">--table-hover-bg-color</code></td>
+                            <td>Background used when hovering a row.</td>
+                        </tr>
+                        <tr>
+                            <td><code class="text-bold text-primary">--table-striped-bg-color</code></td>
+                            <td>Background color for striped rows/columns.</td>
+                        </tr>
+
+                        {# Color variants #}
+                        <tr>
+                            <td><code class="text-bold text-primary">--table-primary-color</code></td>
+                            <td>Primary background mix for themed tables.</td>
+                        </tr>
+                        <tr>
+                            <td><code class="text-bold text-primary">--table-secondary-color</code></td>
+                            <td>Secondary background mix.</td>
+                        </tr>
+                        <tr>
+                            <td><code class="text-bold text-primary">--table-tertiary-color</code></td>
+                            <td>Tertiary background mix.</td>
+                        </tr>
+
+                        <tr>
+                            <td><code class="text-bold text-primary">--table-black-color</code></td>
+                            <td>Black variant background.</td>
+                        </tr>
+                        <tr>
+                            <td><code class="text-bold text-primary">--table-danger-color</code></td>
+                            <td>Danger / error background.</td>
+                        </tr>
+                        <tr>
+                            <td><code class="text-bold text-primary">--table-dark-color</code></td>
+                            <td>Dark variant background.</td>
+                        </tr>
+                        <tr>
+                            <td><code class="text-bold text-primary">--table-info-color</code></td>
+                            <td>Info background.</td>
+                        </tr>
+                        <tr>
+                            <td><code class="text-bold text-primary">--table-light-color</code></td>
+                            <td>Light background variant.</td>
+                        </tr>
+                        <tr>
+                            <td><code class="text-bold text-primary">--table-neutral-color</code></td>
+                            <td>Neutral gray background.</td>
+                        </tr>
+                        <tr>
+                            <td><code class="text-bold text-primary">--table-success-color</code></td>
+                            <td>Success / confirmation background.</td>
+                        </tr>
+                        <tr>
+                            <td><code class="text-bold text-primary">--table-warning-color</code></td>
+                            <td>Warning background.</td>
+                        </tr>
+                        <tr>
+                            <td><code class="text-bold text-primary">--table-white-color</code></td>
+                            <td>White variant background.</td>
+                        </tr>
+
+                        {# Text colors #}
+                        <tr>
+                            <td><code class="text-bold text-primary">--table-text-on-primary</code></td>
+                            <td>Text color on primary background.</td>
+                        </tr>
+                        <tr>
+                            <td><code class="text-bold text-primary">--table-text-on-secondary</code></td>
+                            <td>Text color on secondary background.</td>
+                        </tr>
+                        <tr>
+                            <td><code class="text-bold text-primary">--table-text-on-tertiary</code></td>
+                            <td>Text color on tertiary background.</td>
+                        </tr>
+
+                        <tr>
+                            <td><code class="text-bold text-primary">--table-text-on-black</code></td>
+                            <td>Text color on black variant.</td>
+                        </tr>
+                        <tr>
+                            <td><code class="text-bold text-primary">--table-text-on-danger</code></td>
+                            <td>Text color on danger variant.</td>
+                        </tr>
+                        <tr>
+                            <td><code class="text-bold text-primary">--table-text-on-dark</code></td>
+                            <td>Text color on dark variant.</td>
+                        </tr>
+                        <tr>
+                            <td><code class="text-bold text-primary">--table-text-on-info</code></td>
+                            <td>Text color on info variant.</td>
+                        </tr>
+                        <tr>
+                            <td><code class="text-bold text-primary">--table-text-on-light</code></td>
+                            <td>Text color on light variant.</td>
+                        </tr>
+                        <tr>
+                            <td><code class="text-bold text-primary">--table-text-on-neutral</code></td>
+                            <td>Text color on neutral variant.</td>
+                        </tr>
+                        <tr>
+                            <td><code class="text-bold text-primary">--table-text-on-success</code></td>
+                            <td>Text color on success variant.</td>
+                        </tr>
+                        <tr>
+                            <td><code class="text-bold text-primary">--table-text-on-warning</code></td>
+                            <td>Text color on warning variant.</td>
+                        </tr>
+                        <tr>
+                            <td><code class="text-bold text-primary">--table-text-on-white</code></td>
+                            <td>Text color on white variant.</td>
+                        </tr>
+
+                        {# Padding #}
+                        <tr>
+                            <td><code class="text-bold text-primary">--table-padding</code></td>
+                            <td>Default cell padding.</td>
+                        </tr>
+                        <tr>
+                            <td><code class="text-bold text-primary">--table-padding-sm</code></td>
+                            <td>Padding for <code>.table-sm</code>.</td>
+                        </tr>
+                        <tr>
+                            <td><code class="text-bold text-primary">--table-padding-md</code></td>
+                            <td>Padding for <code>.table-md</code>.</td>
+                        </tr>
+                        <tr>
+                            <td><code class="text-bold text-primary">--table-padding-lg</code></td>
+                            <td>Padding for <code>.table-lg</code>.</td>
+                        </tr>
+
+                        </tbody>
+                    </table>
+                </div>
+            </div>
 
         </div>
     </div>

@@ -11,25 +11,21 @@
                 <div class="card-header">
                     <h2>📚 Sidebar</h2>
                 </div>
-                <div class="card-body">
-                    <p>
-                        The sidebar provides persistent access to navigation links, tools, or actions.
-                        It stays aligned to the left or right side of the interface and can be collapsed
-                        to save space and improve focus on the main content.
-                        Use it to organize secondary navigation, dashboard tools, or contextual actions
-                        in a clear, efficient way.
-                    </p>
-                </div>
             </div>
 
-            {# Quick examples #}
+            {# Examples #}
             <div class="card p-2">
                 <div class="card-header">
-                    <h2>💠 Sidebar examples</h2>
+                    <h2>💠 Example</h2>
                 </div>
                 <div class="card-body">
                     <!-- button open -->
-                    <button class="btn btn-primary" data-js="aside" data-target="#aside-right">Open sidebar right
+                    <button class="btn btn-primary"
+                            data-js="aside"
+                            data-target="#aside-right"
+                            aria-controls="aside-right-demo"
+                            aria-expanded="false">
+                        Open sidebar right
                     </button>
                 </div>
             </div>
@@ -45,22 +41,24 @@
                                 onclick="copyCode('code-sidebar', this);">Copy
                         </button>
                         <div data-js="code" id="code-sidebar" class="container-code overflow-auto">
-                            <!-- button open -->
-                            <button class="btn btn-primary" data-js="aside" data-target="#aside-right-demo">
+                            <button class="btn btn-primary" data-js="aside" data-target="#aside-right-demo" aria-controls="aside-right-demo" aria-expanded="false">
                                 Open sidebar right
                             </button>
 
-                            <!-- aside -->
                             <aside class="sidebar-right" id="aside-right-demo">
-                                <!-- button close -->
-                                <div class="d-flex jc-end">
-                                    <button class="btn btn-primary text-end close">Close</button>
+                                <div class="d-flex jc-end my-1">
+                                    <button class="btn btn-primary close">
+                                        Close
+                                    </button>
                                 </div>
-                                <!-- aside content -->
                                 <nav>
                                     <div class="collapse mb-half">
-                                        <button class="collapse-btn btn-primary" data-js="collapse"
-                                                data-target="#collapse-aside-demo">Menu
+                                        <button class="collapse-btn btn-primary"
+                                                data-js="collapse"
+                                                data-target="#collapse-aside-demo"
+                                                aria-controls="collapse-aside-demo"
+                                                aria-expanded="false">
+                                            Menu
                                         </button>
                                         <div class="collapse-body show" id="collapse-aside-demo">
                                             <ul class="list list-hover">
@@ -86,26 +84,42 @@
                 </div>
                 <div class="card-body">
                     <p class="mb-2">
-                        Sidebar placement is handled through utility classes applied directly to the container
-                        (usually an <code class="text-bold text-primary">&lt;aside&gt;</code>, which is the recommended
-                        semantic tag for side navigation).
-                        A sidebar is hidden off-screen by default and becomes visible when the
-                        <code class="text-bold text-primary">.show</code> class is added.
-                        You can choose whether it appears on the left or the right side of the viewport.
+                        Sidebar side is controlled with utility classes on the container (usually an <code class="text-bold text-primary">&lt;aside&gt;</code>).
+                        The panel is off-canvas by default and becomes visible when the <code class="text-bold text-primary">.show</code> class is added.
                     </p>
 
                     <ul class="list-unstyled">
                         <li>
-                            <code class="text-bold text-primary">.sidebar-left</code> – displays the sidebar on the left side.
-                            It starts translated outside of the viewport and slides in from the left when
-                            <code class="text-bold text-primary">.show</code> is added.
+                            <code class="text-bold text-primary">.sidebar-left</code> – positions the sidebar on the left, translated outside the viewport and sliding in from the left when <code class="text-bold text-primary">.show</code> is added.
                         </li>
                         <li>
-                            <code class="text-bold text-primary">.sidebar-right</code> – displays the sidebar on the right side.
-                            It begins translated outside of the viewport and slides in from the right when
-                            <code class="text-bold text-primary">.show</code> is applied.
+                            <code class="text-bold text-primary">.sidebar-right</code> – positions the sidebar on the right, translated outside the viewport and sliding in from the right when <code class="text-bold text-primary">.show</code> is applied.
                         </li>
                     </ul>
+                </div>
+            </div>
+
+            {# How to use #}
+            <div class="card p-2">
+                <div class="card-header">
+                    <h2>🛠️ How to use</h2>
+                </div>
+                <div class="card-body">
+                    <p class="p-1">
+                        Wrap your content in an <code class="text-bold text-primary">&lt;aside&gt;</code> with <code class="text-bold text-primary">.sidebar-left</code> or <code class="text-bold text-primary">.sidebar-right</code> and a unique <code class="text-bold text-primary">id</code>, trigger it with a button using <code class="text-bold text-primary">data-js="aside"</code> and <code class="text-bold text-primary">data-target="#your-id"</code>, and place a <code class="text-bold text-primary">.close</code> button inside the sidebar to hide it.
+                    </p>
+                </div>
+            </div>
+
+            {# How it works #}
+            <div class="card p-2">
+                <div class="card-header">
+                    <h2>⚙️ How it works</h2>
+                </div>
+                <div class="card-body">
+                    <p class="p-1">
+                        The script listens for clicks on <code class="text-bold text-primary">[data-js="aside"][data-target]</code> and <code class="text-bold text-primary">.close</code>, toggles the <code class="text-bold text-primary">.show</code> class on the targeted sidebar, and updates <code class="text-bold text-primary">aria-expanded</code> on the trigger while CSS handles the fixed position, off-canvas <code class="text-bold text-primary">translateX()</code> and the 0.25s slide animation.
+                    </p>
                 </div>
             </div>
 
@@ -115,16 +129,36 @@
                     <h2>⚙️ Variables CSS</h2>
                 </div>
                 <div class="card-body">
-                    <div class="row">
-                        <div class="col-12 col-4-xs">
-                            <ul class="list-unstyled">
-                                <li><code class="text-bold text-primary">--sidebar-border</code></li>
-                                <li><code class="text-bold text-primary">--sidebar-border-radius</code></li>
-                                <li><code class="text-bold text-primary">--sidebar-padding</code></li>
-                                <li><code class="text-bold text-primary">--sidebar-width</code></li>
-                            </ul>
-                        </div>
-                    </div>
+                    <p class="p-1">
+                        These variables control sidebar width, inner padding, borders and corner radius.
+                    </p>
+
+                    <table class="table">
+                        <thead>
+                        <tr class="text-left">
+                            <th>Variable</th>
+                            <th>Description</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td><code class="text-bold text-primary">--sidebar-border</code></td>
+                            <td>Border definition (color, style, width) used on the visible edge of the sidebar.</td>
+                        </tr>
+                        <tr>
+                            <td><code class="text-bold text-primary">--sidebar-border-radius</code></td>
+                            <td>Corner radius applied to the side facing the page content.</td>
+                        </tr>
+                        <tr>
+                            <td><code class="text-bold text-primary">--sidebar-padding</code></td>
+                            <td>Internal padding applied to the sidebar content area.</td>
+                        </tr>
+                        <tr>
+                            <td><code class="text-bold text-primary">--sidebar-width</code></td>
+                            <td>Fixed width of the sidebar panel when it is shown.</td>
+                        </tr>
+                        </tbody>
+                    </table>
                 </div>
             </div>
 
@@ -135,14 +169,20 @@
     <aside class="sidebar-right" id="aside-right">
 
         <!-- button close -->
-        <div class="d-flex jc-end m-1">
-            <button class="btn btn-primary text-end close">Close</button>
+        <div class="d-flex jc-end my-1">
+            <button class="btn btn-primary close">Close</button>
         </div>
 
         <!-- aside content -->
         <nav>
             <div class="collapse mb-half">
-                <button class="collapse-btn btn-primary" data-js="collapse" data-target="#sidebar-3">Menu</button>
+                <button class="collapse-btn btn-primary"
+                        data-js="collapse"
+                        data-target="#sidebar-3"
+                        aria-controls="sidebar-3"
+                        aria-expanded="false">
+                    Menu
+                </button>
                 <div class="collapse-body show" id="sidebar-3">
                     <ul class="list list-hover">
                         <li class="list-item">menu</li>

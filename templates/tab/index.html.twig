@@ -11,57 +11,59 @@
                 <div class="card-header">
                     <h2>🗂️ Tabs</h2>
                 </div>
-                <div class="card-body">
-                    <p>
-                        Tabs allow users to switch between different sections of content without leaving the page.
-                        They organise information into clear, accessible panels and make navigation faster and more
-                        efficient. Use tabs when you need to group related content while keeping the interface clean
-                        and compact.
-                    </p>
-                </div>
             </div>
 
-            {# Tabs #}
+            {# Example #}
             <div class="card p-2">
                 <div class="card-header">
-                    <h2>💠 Tab examples</h2>
+                    <h2>💠 Examples</h2>
                 </div>
                 <div class="card-body">
                     <!--Tab-button-->
                     <div class="tab">
-                        <button class="tab-btn btn-primary active" type="button" data-js="tab" data-target="#tab-1">Tab 1</button>
-                        <button class="tab-btn btn-primary" type="button" data-js="tab" data-target="#tab-2">Tab 2</button>
-                        <button class="tab-btn btn-primary" type="button" data-js="tab" data-target="#tab-3">Tab 3</button>
-                        <button class="tab-btn btn-primary" type="button" data-js="tab" data-target="#tab-4">Tab 4</button>
-                        <button class="tab-btn btn-primary" type="button" data-js="tab" data-target="#tab-5">Tab 5</button>
+                        <button class="tab-btn btn-primary active" type="button" data-js="tab" data-target="#tab-1"
+                                role="tab" aria-selected="true" aria-controls="tab-1">Tab 1
+                        </button>
+                        <button class="tab-btn btn-primary" type="button" data-js="tab" data-target="#tab-2" role="tab"
+                                aria-selected="false" aria-controls="tab-2">Tab 2
+                        </button>
+                        <button class="tab-btn btn-primary" type="button" data-js="tab" data-target="#tab-3" role="tab"
+                                aria-selected="false" aria-controls="tab-3">Tab 3
+                        </button>
+                        <button class="tab-btn btn-primary" type="button" data-js="tab" data-target="#tab-4" role="tab"
+                                aria-selected="false" aria-controls="tab-4">Tab 4
+                        </button>
+                        <button class="tab-btn btn-primary" type="button" data-js="tab" data-target="#tab-5" role="tab"
+                                aria-selected="false" aria-controls="tab-5">Tab 5
+                        </button>
                     </div>
 
                     <!--Tab-content-->
-                    <div class="tab-content show" id="tab-1">
+                    <div class="tab-content show" id="tab-1" role="tabpanel">
                         <h3>Tab 1</h3>
                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio, facere.</p>
                     </div>
 
                     <!--Tab-content-->
-                    <div class="tab-content" id="tab-2">
+                    <div class="tab-content" id="tab-2" role="tabpanel">
                         <h3>Tab 2</h3>
                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio, facere.</p>
                     </div>
 
                     <!--Tab-content-->
-                    <div class="tab-content" id="tab-3">
+                    <div class="tab-content" id="tab-3" role="tabpanel">
                         <h3>Tab 3</h3>
                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio, facere.</p>
                     </div>
 
                     <!--Tab-content-->
-                    <div class="tab-content" id="tab-4">
+                    <div class="tab-content" id="tab-4" role="tabpanel">
                         <h3>Tab 4</h3>
                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio, facere.</p>
                     </div>
 
                     <!--Tab-content-->
-                    <div class="tab-content" id="tab-5">
+                    <div class="tab-content" id="tab-5" role="tabpanel">
                         <h3>Tab 5</h3>
                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio, facere.</p>
                     </div>
@@ -79,27 +81,45 @@
                                 onclick="copyCode('code-tab', this);">Copy
                         </button>
                         <div data-js="code" id="code-tab" class="container-code overflow-auto">
-                            <!--Tab-button-->
                             <div class="tab">
-                                <button class="tab-btn btn-primary active" type="button" data-js="tab" data-target="#tab-demo-1">Tab 1</button>
-                                <button class="tab-btn btn-primary" type="button" data-js="tab" data-target="#tab-demo-2">Tab 2</button>
-                                <button class="tab-btn btn-primary" type="button" data-js="tab" data-target="#tab-demo-3">Tab 3</button>
+                                <button class="tab-btn btn-primary active"
+                                        type="button"
+                                        data-js="tab"
+                                        data-target="#tab-demo-1"
+                                        role="tab"
+                                        aria-selected="true"
+                                        aria-controls="tab-demo-1">
+                                    Tab 1
+                                </button>
+                                <button class="tab-btn btn-primary"
+                                        type="button"
+                                        data-js="tab"
+                                        data-target="#tab-demo-2"
+                                        role="tab"
+                                        aria-selected="false"
+                                        aria-controls="tab-demo-2">
+                                    Tab 2
+                                </button>
+                                <button class="tab-btn btn-primary"
+                                        type="button"
+                                        data-js="tab"
+                                        data-target="#tab-demo-3"
+                                        role="tab"
+                                        aria-selected="false"
+                                        aria-controls="tab-demo-3">
+                                    Tab 3
+                                </button>
                             </div>
 
-                            <!--Tab-content-->
-                            <div class="tab-content show" id="tab-demo-1">
+                            <div class="tab-content show" id="tab-demo-1" role="tabpanel">
                                 <h3>Tab 1</h3>
                                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio, facere.</p>
                             </div>
-
-                            <!--Tab-content-->
-                            <div class="tab-content" id="tab-demo-2">
+                            <div class="tab-content" id="tab-demo-2" role="tabpanel">
                                 <h3>Tab 2</h3>
                                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio, facere.</p>
                             </div>
-
-                            <!--Tab-content-->
-                            <div class="tab-content" id="tab-demo-3">
+                            <div class="tab-content" id="tab-demo-3" role="tabpanel">
                                 <h3>Tab 3</h3>
                                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio, facere.</p>
                             </div>
@@ -115,19 +135,20 @@
                 </div>
                 <div class="card-body">
                     <p>
-                        You don’t need to combine
-                        <code class="text-bold text-primary">.tab-btn</code>
-                        with a size class.
-                        The base class <code class="text-bold text-primary">.tab-btn</code> already uses the
-                        medium size configuration, identical to
-                        <code class="text-bold text-primary">.tab-btn-md</code>.
-                        Smaller or larger variants (
-                        <code class="text-bold text-primary">.tab-btn-sm</code> and
-                        <code class="text-bold text-primary">.tab-btn-lg</code>
-                        ) come with their own CSS variables.
+                        The base class <code class="text-bold text-primary">.tab-btn</code> already uses
+                        the medium size (same as <code class="text-bold text-primary">.tab-btn-md</code>).
+                        Use <code class="text-bold text-primary">.tab-btn-sm</code> or
+                        <code class="text-bold text-primary">.tab-btn-lg</code> for smaller or larger tabs.
+                        Each size has its own padding variables.
                     </p>
 
                     <div class="row mt-2">
+                        <div class="col-12 col-4-xs">
+                            <div class="card p-2">
+                                <code class="text-bold text-primary">.tab-btn</code>
+                            </div>
+                        </div>
+
                         <div class="col-12 col-4-xs">
                             <div class="card p-2">
                                 <code class="text-bold text-primary">.tab-btn-sm</code>
@@ -136,7 +157,7 @@
 
                         <div class="col-12 col-4-xs">
                             <div class="card p-2">
-                                <code class="text-bold text-primary">.tab-btn / .tab-btn-md</code>
+                                <code class="text-bold text-primary">.tab-btn-md</code>
                             </div>
                         </div>
 
@@ -149,22 +170,92 @@
                 </div>
             </div>
 
-            {# Varibles #}
+            {# How to use #}
             <div class="card p-2">
                 <div class="card-header">
-                    <h2>⚙️ Variables CSS</h2>
+                    <h2>🛠️ How to use</h2>
                 </div>
                 <div class="card-body">
-                    <ul class="list-unstyled">
-                        <li><code class="text-bold text-primary">--tab-button-padding</code></li>
-                        <li><code class="text-bold text-primary">--tab-button-padding-sm</code></li>
-                        <li><code class="text-bold text-primary">--tab-button-padding-md</code></li>
-                        <li><code class="text-bold text-primary">--tab-button-padding-lg</code></li>
-                        <li><code class="text-bold text-primary">--tab-button-radius</code></li>
-                        <li><code class="text-bold text-primary">--tab-content-border</code></li>
-                        <li><code class="text-bold text-primary">--tab-content-border-radius</code></li>
-                        <li><code class="text-bold text-primary">--tab-content-padding</code></li>
-                    </ul>
+                    <p class="p-1">
+                        Place all tab buttons inside the same container
+                        (a single <code class="text-bold text-primary">.tab</code> element, for example).
+                        Each button must use
+                        <code class="text-bold text-primary">data-js="tab"</code>
+                        and target a panel through
+                        <code class="text-bold text-primary">data-target</code>.
+                        Each panel needs a matching <code class="text-bold text-primary">id</code>
+                        and the class <code class="text-bold text-primary">.tab-content</code>.
+                        The initial visible panel should include the
+                        <code class="text-bold text-primary">.show</code> class.
+                    </p>
+                </div>
+            </div>
+
+            {# How it works #}
+            <div class="card p-2">
+                <div class="card-header">
+                    <h2>⚙️ How it works</h2>
+                </div>
+                <div class="card-body">
+                    <p class="p-1">
+                        When a tab button is clicked, the script identifies its target panel through
+                        <code class="text-bold text-primary">data-target</code>, hides all panels,
+                        removes <code class="text-bold text-primary">.active</code> from all buttons,
+                        then shows the selected panel by adding
+                        <code class="text-bold text-primary">.show</code> and marks the clicked button
+                        as active. Only one panel is visible at a time.
+                    </p>
+                </div>
+            </div>
+
+            {# Variables #}
+            <div class="card p-2">
+                <div class="card-header">
+                    <h2>⚙️ CSS Variables</h2>
+                </div>
+                <div class="card-body">
+                    <table class="table">
+                        <thead>
+                        <tr class="text-left">
+                            <th>Variable</th>
+                            <th>Description</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td><code class="text-bold text-primary">--tab-button-padding</code></td>
+                            <td>Default button padding.</td>
+                        </tr>
+                        <tr>
+                            <td><code class="text-bold text-primary">--tab-button-padding-sm</code></td>
+                            <td>Padding for <code>.tab-btn-sm</code>.</td>
+                        </tr>
+                        <tr>
+                            <td><code class="text-bold text-primary">--tab-button-padding-md</code></td>
+                            <td>Padding for <code>.tab-btn-md</code> (default).</td>
+                        </tr>
+                        <tr>
+                            <td><code class="text-bold text-primary">--tab-button-padding-lg</code></td>
+                            <td>Padding for <code>.tab-btn-lg</code>.</td>
+                        </tr>
+                        <tr>
+                            <td><code class="text-bold text-primary">--tab-button-radius</code></td>
+                            <td>Border radius for tab buttons.</td>
+                        </tr>
+                        <tr>
+                            <td><code class="text-bold text-primary">--tab-content-border</code></td>
+                            <td>Border applied to content panels.</td>
+                        </tr>
+                        <tr>
+                            <td><code class="text-bold text-primary">--tab-content-border-radius</code></td>
+                            <td>Radius for content panels.</td>
+                        </tr>
+                        <tr>
+                            <td><code class="text-bold text-primary">--tab-content-padding</code></td>
+                            <td>Inner spacing of content panels.</td>
+                        </tr>
+                        </tbody>
+                    </table>
                 </div>
             </div>
 

@@ -6,75 +6,27 @@
     <div class="container-sm">
         <div class="d-flex fd-column gap-5">
 
-            {# Dialog #}
+            {# Intro #}
             <div class="card p-2">
                 <div class="card-header">
                     <h2>💬 Dialog</h2>
                 </div>
-                <div class="card-body">
-                    <p>The dialog component displays important information or requires user interaction before
-                        continuing. It’s often used for confirmations, forms, or alerts.</p>
-                </div>
             </div>
 
-            {# Dialog Examples #}
+            {# Examples #}
             <div class="card p-2">
                 <div class="card-header">
-                    <h2>💠 Dialog Examples</h2>
+                    <h2>💠 Examples</h2>
                 </div>
                 <div class="card-body">
                     <div class="btn-group">
-                        <button class="btn btn-tertiary" data-js="dialog" data-target="#modal">Open Dialog Simple
+                        <button class="btn btn-tertiary" data-js="dialog" data-target="#modal">
+                            Open Dialog Simple
                         </button>
-                        <button class="btn btn-tertiary" data-js="dialog" data-target="#modal-first">Open First Dialog
+                        <button class="btn btn-tertiary" data-js="dialog" data-target="#modal-first">
+                            Open Double Dialog
                         </button>
                     </div>
-                </div>
-            </div>
-
-            {# How the examples are built #}
-            <div class="card p-2">
-                <div class="card-header">
-                    <h2>🔎 How the examples are built</h2>
-                </div>
-
-                <div class="card-body d-flex fd-column gap-1">
-
-                    <div>
-                        <h5 class="m-0">Dialog 1</h5>
-                        <p class="mt-1">
-                            The dialog uses the base <code class="text-bold text-primary">.dialog</code> class.<br>
-                            It contains three main sections:
-                            <code class="text-bold text-primary">.dialog-header</code>,
-                            <code class="text-bold text-primary">.dialog-body</code>,
-                            and <code class="text-bold text-primary">.dialog-footer</code>.
-                        </p>
-                    </div>
-
-                    <div>
-                        <h5 class="m-0">Dialog 2</h5>
-                        <p class="mt-1">
-                            This dialog adds <code class="text-bold text-primary">.border-y</code> on the
-                            <code class="text-bold text-primary">.dialog-body</code> to visually separate its
-                            content.<br>
-                            The button inside the footer has
-                            <code class="text-bold text-primary">.btn-primary</code> and uses
-                            <code class="text-bold text-primary">data-js="dialog"</code> +
-                            <code class="text-bold text-primary">data-target="#modal-second"</code> to open the next
-                            dialog.</p>
-                    </div>
-
-                    <div>
-                        <h5 class="m-0">Dialog 3</h5>
-                        <p class="mt-1">
-                            The third dialog applies <code class="text-bold text-primary">.bg-danger</code> and
-                            <code class="text-bold text-primary">.border-danger</code> directly to the
-                            <code class="text-bold text-primary">.dialog</code> element.<br>
-                            The footer button uses <code class="text-bold text-primary">.btn-white</code> to contrast
-                            with the red background.
-                        </p>
-                    </div>
-
                 </div>
             </div>
 
@@ -89,27 +41,70 @@
                                 onclick="copyCode('code-dialog', this);">Copy
                         </button>
                         <div data-js="code" id="code-dialog" class="container-code overflow-auto">
-                            <!-- Button for open dialog -->
-                            <button class="btn btn-primary" data-js="dialog" data-target="#modal-demo">Open Dialog
-                                Simple
+                            <!-- Button for open dialog simple -->
+                            <button class="btn btn-tertiary" data-js="dialog" data-target="#modal-demo">
+                                Open Dialog Simple
                             </button>
-                            <!-- Dialog -->
-                            <dialog class="dialog" id="modal-demo">
-                                <!-- Dialog header -->
+                            <!-- Dialog 1 -->
+                            <dialog class="dialog" id="modal-demo" aria-modal="true">
                                 <div class="dialog-header">
                                     <h3>Dialog Title</h3>
                                 </div>
-                                <!-- Dialog body -->
                                 <div class="dialog-body">
                                     <p>This is a basic dialog example. You can include any content here.</p>
                                 </div>
-                                <!-- Dialog footer -->
                                 <div class="dialog-footer">
-                                    <button class="btn btn-primary close">Close</button>
+                                    <button class="btn close">Close</button>
+                                </div>
+                            </dialog>
+
+                            <!-- Button for open double dialog -->
+                            <button class="btn btn-tertiary" data-js="dialog" data-target="#second-modal-demo">
+                                Open Double Dialog
+                            </button>
+                            <!-- Dialog 2 -->
+                            <dialog class="dialog" id="second-modal-demo" aria-modal="true">
+                                <div class="dialog-header">
+                                    <h3>First Dialog</h3>
+                                </div>
+                                <div class="dialog-body border-y">
+                                    <p>This is the first dialog.</p>
+                                </div>
+                                <div class="dialog-footer">
+                                    <button class="btn btn-primary close" data-js="dialog" data-target="#modal-second">
+                                        Open second dialog
+                                    </button>
+                                </div>
+                            </dialog>
+                            <!-- Dialog 3 -->
+                            <dialog class="dialog bg-danger border-danger" id="third-modal-demo" aria-modal="true">
+                                <div class="dialog-header">
+                                    <h3>Second Dialog</h3>
+                                </div>
+                                <div class="dialog-body">
+                                    <p>This is the second dialog.</p>
+                                </div>
+                                <div class="dialog-footer">
+                                    <button class="btn btn-white close">Close</button>
                                 </div>
                             </dialog>
                         </div>
                     </div>
+                </div>
+            </div>
+
+            {# How to use #}
+            <div class="card p-2">
+                <div class="card-header">
+                    <h2>🧩 How to use</h2>
+                </div>
+                <div class="card-body">
+                    <p class="p-1">
+                        Add <code class="text-bold text-primary">data-js="dialog"</code> to a button and set
+                        <code class="text-bold text-primary">data-target</code> to the dialog ID. When clicked, the script opens
+                        the dialog and closes it when the user clicks an element with <code class="text-bold text-primary">.close</code>
+                        or presses ESC. Add <code class="text-bold text-primary">aria-modal="true"</code> manually for accessibility.
+                    </p>
                 </div>
             </div>
 
@@ -119,16 +114,52 @@
                     <h2>⚙️ Variables CSS</h2>
                 </div>
                 <div class="card-body">
-                    <ul class="list-unstyled">
-                        <li><code class="text-bold text-primary">--dialog-body-padding</code></li>
-                        <li><code class="text-bold text-primary">--dialog-header-padding</code></li>
-                        <li><code class="text-bold text-primary">--dialog-footer-padding</code></li>
-                        <li><code class="text-bold text-primary">--dialog-backdrop-color</code></li>
-                        <li><code class="text-bold text-primary">--dialog-border</code></li>
-                        <li><code class="text-bold text-primary">--dialog-border-radius</code></li>
-                        <li><code class="text-bold text-primary">--dialog-padding</code></li>
-                        <li><code class="text-bold text-primary">--dialog-width</code></li>
-                    </ul>
+                    <p class="p-1">
+                        These variables control dialog spacing, borders, radius, width and backdrop color.
+                    </p>
+
+                    <table class="table">
+                        <thead>
+                        <tr class="text-left">
+                            <th>Variable</th>
+                            <th>Description</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td><code class="text-bold text-primary">--dialog-body-padding</code></td>
+                            <td>Padding applied to the <code class="text-bold text-primary">.dialog-body</code>.</td>
+                        </tr>
+                        <tr>
+                            <td><code class="text-bold text-primary">--dialog-header-padding</code></td>
+                            <td>Padding applied to the <code class="text-bold text-primary">.dialog-header</code>.</td>
+                        </tr>
+                        <tr>
+                            <td><code class="text-bold text-primary">--dialog-footer-padding</code></td>
+                            <td>Padding applied to the <code class="text-bold text-primary">.dialog-footer</code>.</td>
+                        </tr>
+                        <tr>
+                            <td><code class="text-bold text-primary">--dialog-backdrop-color</code></td>
+                            <td>Color used for the modal backdrop behind the dialog.</td>
+                        </tr>
+                        <tr>
+                            <td><code class="text-bold text-primary">--dialog-border</code></td>
+                            <td>Border style, width and color applied to the dialog container.</td>
+                        </tr>
+                        <tr>
+                            <td><code class="text-bold text-primary">--dialog-border-radius</code></td>
+                            <td>Corner radius applied to the dialog container.</td>
+                        </tr>
+                        <tr>
+                            <td><code class="text-bold text-primary">--dialog-padding</code></td>
+                            <td>General padding for the dialog container.</td>
+                        </tr>
+                        <tr>
+                            <td><code class="text-bold text-primary">--dialog-width</code></td>
+                            <td>Fixed or maximum width of the dialog window.</td>
+                        </tr>
+                        </tbody>
+                    </table>
                 </div>
             </div>
 
@@ -138,19 +169,43 @@
                     <h2>🔔 Events</h2>
                 </div>
                 <div class="card-body">
-                    <ul class="list-unstyled">
-                        <li><code class="text-bold text-primary">dialog:beforeOpen</code></li>
-                        <li><code class="text-bold text-primary">dialog:afterOpen</code></li>
-                        <li><code class="text-bold text-primary">dialog:beforeClose</code></li>
-                        <li><code class="text-bold text-primary">dialog:afterClose</code></li>
-                    </ul>
+                    <p class="p-1">
+                        These custom events let you run code before or after the dialog opens or closes.
+                    </p>
+
+                    <table class="table">
+                        <thead>
+                        <tr class="text-left">
+                            <th>Event</th>
+                            <th>Description</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td><code class="text-bold text-primary">dialog:beforeOpen</code></td>
+                            <td>Fires just before the dialog starts opening.</td>
+                        </tr>
+                        <tr>
+                            <td><code class="text-bold text-primary">dialog:afterOpen</code></td>
+                            <td>Fires right after the dialog is fully opened.</td>
+                        </tr>
+                        <tr>
+                            <td><code class="text-bold text-primary">dialog:beforeClose</code></td>
+                            <td>Fires just before the dialog starts closing.</td>
+                        </tr>
+                        <tr>
+                            <td><code class="text-bold text-primary">dialog:afterClose</code></td>
+                            <td>Fires right after the dialog is fully closed.</td>
+                        </tr>
+                        </tbody>
+                    </table>
                 </div>
             </div>
 
         </div>
     </div>
 
-    <dialog class="dialog" id="modal">
+    <dialog class="dialog" id="modal" aria-modal="true">
         <div class="dialog-header">
             <h3>Dialog Title</h3>
         </div>
@@ -161,7 +216,7 @@
             <button class="btn close">Close</button>
         </div>
     </dialog>
-    <dialog class="dialog" id="modal-first">
+    <dialog class="dialog" id="modal-first" aria-modal="true">
         <div class="dialog-header">
             <h3>First Dialog</h3>
         </div>
@@ -169,11 +224,12 @@
             <p>This is the first dialog.</p>
         </div>
         <div class="dialog-footer">
-            <button class="btn btn-primary close" data-js="dialog" data-target="#modal-second">Open second dialog
+            <button class="btn btn-primary close" data-js="dialog" data-target="#modal-second">
+                Open second dialog
             </button>
         </div>
     </dialog>
-    <dialog class="dialog bg-danger border-danger" id="modal-second">
+    <dialog class="dialog bg-danger border-danger" id="modal-second" aria-modal="true">
         <div class="dialog-header">
             <h3>Second Dialog</h3>
         </div>

@@ -6,21 +6,18 @@
     <div class="container-sm">
         <div class="d-flex fd-column gap-5">
 
-            {# Dropdown #}
+            {# Intro #}
             <div class="card p-2">
-                <div class="card-header">
+                <div class="card-header d-flex ai-baseline">
                     <h2>⬇️ Dropdown</h2>
-                </div>
-                <div class="card-body">
-                    <p>The dropdown component reveals a small menu anchored to a trigger (usually a button).
-                        It’s commonly used for quick actions and user menus.</p>
+                    <span class="ml-1">(With JavaScript)</span>
                 </div>
             </div>
 
-            {# Dropdown Examples #}
+            {# Examples #}
             <div class="card p-2">
                 <div class="card-header">
-                    <h2>💠 Dropdown Examples</h2>
+                    <h2>💠 Examples</h2>
                 </div>
                 <div class="card-body">
                     <div class="row">
@@ -28,8 +25,12 @@
                         <div class="col-12 col-4-md">
                             <div class="card p-2">
                                 <div class="card-body d-flex jc-center ai-center">
-                                    <section class="dropdown">
-                                        <button class="btn btn-primary" data-js="dropdown" data-target="#dropdown-bottom-left">
+                                    <div class="dropdown">
+                                        <button class="btn btn-primary"
+                                                data-js="dropdown"
+                                                data-target="#dropdown-bottom-left"
+                                                aria-controls="dropdown-bottom-left"
+                                                aria-expanded="false">
                                             bottom left
                                         </button>
                                         <div class="dropdown-menu bottom left" id="dropdown-bottom-left">
@@ -39,7 +40,7 @@
                                                 <li><a class="list-item" href="#">Dropdown bottom left menu</a></li>
                                             </ul>
                                         </div>
-                                    </section>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -48,7 +49,11 @@
                             <div class="card p-2">
                                 <div class="card-body d-flex jc-center ai-center">
                                     <section class="dropdown">
-                                        <button class="btn btn-primary" data-js="dropdown" data-target="#dropdown-bottom-center">
+                                        <button class="btn btn-primary"
+                                                data-js="dropdown"
+                                                data-target="#dropdown-bottom-center"
+                                                aria-controls="dropdown-bottom-center"
+                                                aria-expanded="false">
                                             bottom center
                                         </button>
                                         <div class="dropdown-menu bottom center" id="dropdown-bottom-center">
@@ -67,7 +72,11 @@
                             <div class="card p-2">
                                 <div class="card-body d-flex jc-center ai-center">
                                     <section class="dropdown">
-                                        <button class="btn btn-primary" data-js="dropdown" data-target="#dropdown-bottom-right">
+                                        <button class="btn btn-primary"
+                                                data-js="dropdown"
+                                                data-target="#dropdown-bottom-right"
+                                                aria-controls="dropdown-bottom-right"
+                                                aria-expanded="false">
                                             bottom right
                                         </button>
                                         <div class="dropdown-menu bottom right" id="dropdown-bottom-right">
@@ -86,7 +95,11 @@
                             <div class="card p-2">
                                 <div class="card-body d-flex jc-center ai-center">
                                     <section class="dropdown">
-                                        <button class="btn btn-primary" data-js="dropdown" data-target="#dropdown-top-left">
+                                        <button class="btn btn-primary"
+                                                data-js="dropdown"
+                                                data-target="#dropdown-top-left"
+                                                aria-controls="dropdown-top-left"
+                                                aria-expanded="false">
                                             top left
                                         </button>
                                         <div class="dropdown-menu top left" id="dropdown-top-left">
@@ -105,7 +118,11 @@
                             <div class="card p-2">
                                 <div class="card-body d-flex jc-center ai-center">
                                     <section class="dropdown">
-                                        <button class="btn btn-primary" data-js="dropdown" data-target="#dropdown-top-center">
+                                        <button class="btn btn-primary"
+                                                data-js="dropdown"
+                                                data-target="#dropdown-top-center"
+                                                aria-controls="dropdown-top-center"
+                                                aria-expanded="false">
                                             top center
                                         </button>
                                         <div class="dropdown-menu top center" id="dropdown-top-center">
@@ -124,7 +141,11 @@
                             <div class="card p-2">
                                 <div class="card-body d-flex jc-center ai-center">
                                     <section class="dropdown">
-                                        <button class="btn btn-primary" data-js="dropdown" data-target="#dropdown-top-right">
+                                        <button class="btn btn-primary"
+                                                data-js="dropdown"
+                                                data-target="#dropdown-top-right"
+                                                aria-controls="dropdown-top-right"
+                                                aria-expanded="false">
                                             top right
                                         </button>
                                         <div class="dropdown-menu top right" id="dropdown-top-right">
@@ -143,8 +164,12 @@
                             <div class="card p-2">
                                 <div class="card-body d-flex jc-center ai-center">
                                     <section class="dropdown">
-                                        <button class="btn btn-primary" data-js="dropdown" data-target="#dropdown-side-left">
-                                           side left
+                                        <button class="btn btn-primary"
+                                                data-js="dropdown"
+                                                data-target="#dropdown-side-left"
+                                                aria-controls="dropdown-side-left"
+                                                aria-expanded="false">
+                                            side left
                                         </button>
                                         <div class="dropdown-menu side-left" id="dropdown-side-left">
                                             <ul class="list list-hover">
@@ -162,7 +187,11 @@
                             <div class="card p-2">
                                 <div class="card-body d-flex jc-center ai-center">
                                     <section class="dropdown">
-                                        <button class="btn btn-primary" data-js="dropdown" data-target="#dropdown-side-right">
+                                        <button class="btn btn-primary"
+                                                data-js="dropdown"
+                                                data-target="#dropdown-side-right"
+                                                aria-controls="dropdown-side-right"
+                                                aria-expanded="false">
                                             side right
                                         </button>
                                         <div class="dropdown-menu side-right" id="dropdown-side-right">
@@ -191,21 +220,22 @@
                                 onclick="copyCode('code-dropdown', this);">Copy
                         </button>
                         <div data-js="code" id="code-dropdown" class="container-code overflow-auto">
-                            <!-- Dropdown -->
-                            <section class="dropdown">
-                                <!-- Button -->
-                                <button class="btn btn-primary" data-js="dropdown" data-target="#dropdown-demo">
-                                    Dropdown
+                            <div class="dropdown">
+                                <button class="btn btn-primary"
+                                        data-js="dropdown"
+                                        data-target="#dropdown-bottom-left"
+                                        aria-controls="dropdown-bottom-left"
+                                        aria-expanded="false">
+                                    bottom left
                                 </button>
-                                <!-- Dropdown menu -->
-                                <div class="dropdown-menu" id="dropdown-demo">
+                                <div class="dropdown-menu bottom left" id="dropdown-bottom-left">
                                     <ul class="list list-hover">
-                                        <li><a class="list-item" href="#">Dropdown menu</a></li>
-                                        <li><a class="list-item" href="#">Dropdown menu</a></li>
-                                        <li><a class="list-item" href="#">Dropdown menu</a></li>
+                                        <li><a class="list-item" href="#">Dropdown bottom left menu</a></li>
+                                        <li><a class="list-item" href="#">Dropdown bottom left menu</a></li>
+                                        <li><a class="list-item" href="#">Dropdown bottom left menu</a></li>
                                     </ul>
                                 </div>
-                            </section>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -217,7 +247,7 @@
                     <h2>📍Position</h2>
                 </div>
                 <div class="card-body">
-                    <p>
+                    <p class="p-1">
                         You can choose where the menu appears by adding small position classes.
                         For example, use
                         <code class="text-bold text-primary">.top.left</code>
@@ -269,17 +299,52 @@
                 </div>
             </div>
 
+            {# How to use #}
+            <div class="card p-2">
+                <div class="card-header">
+                    <h2>📌 How to use</h2>
+                </div>
+                <div class="card-body">
+                    <p class="p-1">
+                        Add <code class="text-bold text-primary">data-js="dropdown"</code> on the button and set <code
+                            class="text-bold text-primary">data-target</code> to the menu ID. The script toggles <code
+                            class="text-bold text-primary">aria-expanded</code> automatically.
+                    </p>
+                </div>
+            </div>
+
             {# Variables #}
             <div class="card p-2">
                 <div class="card-header">
                     <h2>⚙️ CSS Variables</h2>
                 </div>
                 <div class="card-body">
-                    <ul class="list-unstyled">
-                        <li><code class="text-bold text-primary">--dropdown-menu-box-shadow</code></li>
-                        <li><code class="text-bold text-primary">--dropdown-menu-min-width</code></li>
-                        <li><code class="text-bold text-primary">--dropdown-menu-spacing-margin</code></li>
-                    </ul>
+                    <p class="p-1">
+                        These variables control dropdown spacing, minimum width, and shadow.
+                    </p>
+
+                    <table class="table">
+                        <thead>
+                        <tr class="text-left">
+                            <th>Variable</th>
+                            <th>Description</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td><code class="text-bold text-primary">--dropdown-menu-box-shadow</code></td>
+                            <td>Shadow applied to the dropdown menu.</td>
+                        </tr>
+                        <tr>
+                            <td><code class="text-bold text-primary">--dropdown-menu-min-width</code></td>
+                            <td>Minimum width applied to the dropdown menu.</td>
+                        </tr>
+                        <tr>
+                            <td><code class="text-bold text-primary">--dropdown-menu-spacing-margin</code></td>
+                            <td>Space between the trigger and the dropdown menu.</td>
+                        </tr>
+                        </tbody>
+                    </table>
                 </div>
             </div>
         </div>

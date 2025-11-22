@@ -6,21 +6,18 @@
     <div class="container-sm">
         <div class="d-flex fd-column gap-5">
 
-            {# Dropdown #}
+            {# Intro #}
             <div class="card p-2">
-                <div class="card-header">
+                <div class="card-header d-flex ai-baseline">
                     <h2>⬇️ Dropdown native</h2>
-                </div>
-                <div class="card-body">
-                    <p>The dropdown component reveals a small menu anchored to a trigger (usually a button).
-                        It’s commonly used for quick actions and user menus.</p>
+                    <span class="ml-1">(Without JavaScript)</span>
                 </div>
             </div>
 
-            {# Dropdown Examples #}
+            {# Examples #}
             <div class="card p-2">
                 <div class="card-header">
-                    <h2>💠 Dropdown Examples</h2>
+                    <h2>💠 Examples</h2>
                 </div>
                 <div class="card-body">
                     <div class="row">
@@ -191,13 +188,10 @@
                                 onclick="copyCode('code-dropdown-native', this);">Copy
                         </button>
                         <div data-js="code" id="code-dropdown-native" class="container-code overflow-auto">
-                            <!-- Dropdown -->
                             <details class="dropdown-native">
-                                <!-- Button -->
                                 <summary class="btn btn-primary">
                                     Dropdown
                                 </summary>
-                                <!-- Dropdown menu -->
                                 <div class="dropdown-menu">
                                     <ul class="list list-hover">
                                         <li><a class="list-item" href="#">Dropdown menu</a></li>
@@ -217,7 +211,7 @@
                     <h2>📍Position</h2>
                 </div>
                 <div class="card-body">
-                    <p>
+                    <p class="p-1">
                         You can choose where the menu appears by adding small position classes.
                         For example, use
                         <code class="text-bold text-primary">.top.left</code>
@@ -275,11 +269,32 @@
                     <h2>⚙️ CSS Variables</h2>
                 </div>
                 <div class="card-body">
-                    <ul class="list-unstyled">
-                        <li><code class="text-bold text-primary">--dropdown-menu-box-shadow</code></li>
-                        <li><code class="text-bold text-primary">--dropdown-menu-min-width</code></li>
-                        <li><code class="text-bold text-primary">--dropdown-menu-spacing-margin</code></li>
-                    </ul>
+                    <p class="p-1">
+                        These variables control dropdown spacing, minimum width, and shadow.
+                    </p>
+
+                    <table class="table">
+                        <thead>
+                        <tr class="text-left">
+                            <th>Variable</th>
+                            <th>Description</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td><code class="text-bold text-primary">--dropdown-menu-box-shadow</code></td>
+                            <td>Shadow applied to the dropdown menu.</td>
+                        </tr>
+                        <tr>
+                            <td><code class="text-bold text-primary">--dropdown-menu-min-width</code></td>
+                            <td>Minimum width applied to the dropdown menu.</td>
+                        </tr>
+                        <tr>
+                            <td><code class="text-bold text-primary">--dropdown-menu-spacing-margin</code></td>
+                            <td>Space between the trigger and the dropdown menu.</td>
+                        </tr>
+                        </tbody>
+                    </table>
                 </div>
             </div>
         </div>

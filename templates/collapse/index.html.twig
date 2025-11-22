@@ -8,87 +8,34 @@
 
             {# Intro #}
             <div class="card p-2">
-                <div class="card-header">
+                <div class="card-header d-flex ai-baseline">
                     <h2>📂 Collapse</h2>
-                </div>
-                <div class="card-body">
-                    <p>
-                        A collapse works like an accordion, but with only one panel.
-                        It shows or hides content when you click a trigger, keeping the interface clean and simple.
-                    </p>
+                    <span class="ml-1">(With JavaScript)</span>
                 </div>
             </div>
 
-            {# Quick examples #}
+            {# Example #}
             <div class="card p-2">
                 <div class="card-header">
-                    <h2>💠 Examples</h2>
+                    <h2>💠 Example</h2>
                 </div>
                 <div class="card-body">
                     <div class="row">
-                        <div class="col-12 col-6-xs">
-                            <section class="collapse">
-                                <button class="collapse-btn btn-primary" data-js="collapse" data-target="#collapse-1">Collapse paragraph</button>
+                        <div class="col-12">
+                            <div class="collapse">
+                                <button class="collapse-btn btn-primary" data-js="collapse" data-target="#collapse-1" aria-controls="collapse-1" aria-expanded="false">Collapse</button>
                                 <div class="collapse-body" id="collapse-1">
-                                    <p class="p-2">
+                                    <p class="p-1">
                                         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda minima repellat
+                                        reprehenderit unde? Blanditiis consequatur debitis doloremque, ea eligendi enim est hic, id
+                                        inventore minima non officiis quo unde. Deserunt. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda minima repellat
                                         reprehenderit unde? Blanditiis consequatur debitis doloremque, ea eligendi enim est hic, id
                                         inventore minima non officiis quo unde. Deserunt.
                                     </p>
                                 </div>
-                            </section>
-                        </div>
-                        <div class="col-12 col-6-xs">
-                            <section class="collapse">
-                                <button class="collapse-btn btn-primary" data-js="collapse" data-target="#collapse-2">Collapse list</button>
-                                <div class="collapse-body" id="collapse-2">
-                                    <ul class="list">
-                                        <li class="list-item">menu</li>
-                                        <li class="list-item">menu</li>
-                                        <li class="list-item">menu</li>
-                                    </ul>
-                                </div>
-                            </section>
+                            </div>
                         </div>
                     </div>
-                </div>
-            </div>
-
-            {# Default open state #}
-            <div class="card p-2">
-                <div class="card-header">
-                    <h2>📂 Default open state</h2>
-                </div>
-                <div class="card-body">
-                    <p>
-                        To have a collapse open when the page loads, add the
-                        <code class="text-bold text-primary">.show</code> class to the
-                        <code class="text-bold text-primary">.collapse-body</code> in your HTML.
-                    </p>
-                    <p class="mt-1">
-                        The JavaScript then adds or removes
-                        <code class="text-bold text-primary">.show</code>
-                        when toggling the collapse, so the class in the markup only defines the initial state.
-                    </p>
-                </div>
-            </div>
-
-            {# Notes about spacing #}
-            <div class="card p-2">
-                <div class="card-header">
-                    <h2>📏 Spacing rules</h2>
-                </div>
-                <div class="card-body">
-                    <p>
-                        Do not set <code class="text-bold text-primary">padding</code> or
-                        <code class="text-bold text-primary">margin</code> on
-                        <code class="text-bold text-primary">.collapse-body</code>, as this container is reset and spacing there will not be applied as expected.
-                    </p>
-                    <p class="mt-1">
-                        Apply spacing to elements inside the body (for example on a <code class="text-bold text-primary">p</code>,
-                        <code class="text-bold text-primary">ul</code> or an inner wrapper), not on
-                        <code class="text-bold text-primary">.collapse-body</code> itself.
-                    </p>
                 </div>
             </div>
 
@@ -103,21 +50,16 @@
                                 onclick="copyCode('code-collapse', this);">Copy
                         </button>
                         <div data-js="code" id="code-collapse" class="container-code overflow-auto">
-                            <!-- Collapse -->
-                            <section class="collapse">
-                                <!-- Collapse button -->
-                                <button class="collapse-btn btn-primary" data-js="collapse" data-target="#collapse-demo">
-                                    Collapse list
-                                </button>
-                                <!-- Collapse body -->
-                                <div class="collapse-body" id="collapse-demo">
-                                    <ul class="list">
-                                        <li class="list-item">menu</li>
-                                        <li class="list-item">menu</li>
-                                        <li class="list-item">menu</li>
-                                    </ul>
+                            <div class="collapse">
+                                <button class="collapse-btn btn-primary" data-js="collapse" data-target="#collapse-1" aria-controls="collapse-1" aria-expanded="false">Collapse</button>
+                                <div class="collapse-body" id="collapse-1">
+                                    <p class="p-1">
+                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda minima repellat
+                                        reprehenderit unde? Blanditiis consequatur debitis doloremque, ea eligendi enim est hic, id
+                                        inventore minima non officiis quo unde. Deserunt.
+                                    </p>
                                 </div>
-                            </section>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -129,12 +71,18 @@
                     <h2>📏 Sizes</h2>
                 </div>
                 <div class="card-body">
-                    <p>
-                        Each size class (<code class="text-bold text-primary">.collapse-btn-sm</code>,
+                    <p class="p-1">
+                        Each size class (<code class="text-bold text-primary">.collapse-btn</code>,
+                        <code class="text-bold text-primary">.collapse-btn-sm</code>,
                         <code class="text-bold text-primary">.collapse-btn-md</code>,
-                        <code class="text-bold text-primary">.collapse-btn-lg</code>) includes the base collapse button style with its own padding.
+                        <code class="text-bold text-primary">.collapse-btn-lg</code>) includes the base collapse button style with its own padding values.
                     </p>
                     <div class="row mt-2">
+                        <div class="col-12 col-4-xs">
+                            <div class="card p-2">
+                                <code class="text-bold text-primary">.collapse-btn</code>
+                            </div>
+                        </div>
                         <div class="col-12 col-4-xs">
                             <div class="card p-2">
                                 <code class="text-bold text-primary">.collapse-btn-sm</code>
@@ -154,6 +102,52 @@
                 </div>
             </div>
 
+            {# How to use #}
+            <div class="card p-2">
+                <div class="card-header">
+                    <h2>🧩 How to use</h2>
+                </div>
+                <div class="card-body">
+                    <p class="p-1">
+                        Add <code class="text-bold text-primary">data-js="collapse"</code> to the button and set
+                        <code class="text-bold text-primary">data-target</code> to the ID of the matching
+                        <code class="text-bold text-primary">.collapse-body</code>. The script toggles the panel and updates
+                        <code class="text-bold text-primary">aria-expanded</code> automatically.
+                    </p>
+                </div>
+            </div>
+
+            {# Note open state #}
+            <div class="card p-2">
+                <div class="card-header">
+                    <h2>📌 Default open state</h2>
+                </div>
+                <div class="card-body">
+                    <p class="p-1">
+                        To open a collapse by default, add the
+                        <code class="text-bold text-primary">.show</code> class to the
+                        <code class="text-bold text-primary">.collapse-body</code> in your HTML.
+                    </p>
+                </div>
+            </div>
+
+            {# Notes about spacing #}
+            <div class="card p-2">
+                <div class="card-header">
+                    <h2>📌 Note spacing rules</h2>
+                </div>
+                <div class="card-body">
+                    <p class="p-1">
+                        Do not set <code class="text-bold text-primary">padding</code> or
+                        <code class="text-bold text-primary">margin</code> on
+                        <code class="text-bold text-primary">.collapse-body</code>, as this container is reset and spacing there will not behave as expected.
+                        Add spacing to elements inside the body (for example a <code class="text-bold text-primary">p</code>,
+                        <code class="text-bold text-primary">ul</code> or an inner wrapper), not on
+                        <code class="text-bold text-primary">.collapse-body</code> itself.
+                    </p>
+                </div>
+            </div>
+
             {# Varibles #}
             <div class="card p-2">
                 <div class="card-header">
@@ -161,7 +155,7 @@
                 </div>
                 <div class="card-body">
                     <p class="p-1">
-                        These variables control collapse background, borders and button padding.
+                        These variables control the collapse container background, borders, and the padding of collapse buttons.
                     </p>
 
                     <table class="table">
@@ -182,7 +176,7 @@
                         </tr>
                         <tr>
                             <td><code class="text-bold text-primary">--collapse-border-color</code></td>
-                            <td>Border color of the collapse container.</td>
+                            <td>Border color used by the collapse container.</td>
                         </tr>
                         <tr>
                             <td><code class="text-bold text-primary">--collapse-border-style</code></td>
