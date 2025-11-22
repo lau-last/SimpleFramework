@@ -369,7 +369,10 @@
                 <div class="card-body">
                     <p class="p-1">
                         The script listens to <code class="text-bold text-primary">submit</code> events on forms with
-                        <code class="text-bold text-primary">data-js="validate"</code>, uses the browser’s native <code class="text-bold text-primary">checkValidity()</code>, and prevents submit if the form is invalid while adding <code class="text-bold text-primary">.validated</code> so CSS can style valid and invalid fields.
+                        <code class="text-bold text-primary">data-js="validate"</code>, uses the browser’s native <code
+                            class="text-bold text-primary">checkValidity()</code>, and prevents submit if the form is
+                        invalid while adding <code class="text-bold text-primary">.validated</code> so CSS can style
+                        valid and invalid fields.
                     </p>
                 </div>
             </div>
@@ -381,7 +384,11 @@
                 </div>
                 <div class="card-body">
                     <p class="p-1">
-                        Add <code class="text-bold text-primary">data-js="validate"</code> to your form, set <code class="text-bold text-primary">required</code> or other HTML constraints on fields, and wrap each label–field pair in <code class="text-bold text-primary">.form-control</code>. Use the <code class="text-bold text-primary">novalidate</code> attribute on the form if you want to disable native browser error popups and let the component handle validation UI.
+                        Add <code class="text-bold text-primary">data-js="validate"</code> to your form, set <code
+                            class="text-bold text-primary">required</code> or other HTML constraints on fields, and wrap
+                        each label–field pair in <code class="text-bold text-primary">.form-control</code>. Use the
+                        <code class="text-bold text-primary">novalidate</code> attribute on the form if you want to
+                        disable native browser error popups and let the component handle validation UI.
                     </p>
                 </div>
             </div>
@@ -392,154 +399,156 @@
                     <h2>⚙️ Variables CSS</h2>
                 </div>
                 <div class="card-body">
-                    <p class="p-1">These variables control input size, spacing, borders, colors, and extra elements like range, select and switch.</p>
+                    <p class="p-1">These variables control input size, spacing, borders, colors, and extra elements like
+                        range, select and switch.</p>
+                    <div class="table-responsive">
+                        <table class="table">
+                            <thead>
+                            <tr class="text-left">
+                                <th>Variable</th>
+                                <th>Description</th>
+                            </tr>
+                            </thead>
+                            <tbody>
 
-                    <table class="table">
-                        <thead>
-                        <tr class="text-left">
-                            <th>Variable</th>
-                            <th>Description</th>
-                        </tr>
-                        </thead>
-                        <tbody>
+                            <tr>
+                                <td><code class="text-bold text-primary">--gap-form-inline</code></td>
+                                <td>Gap between inline form elements.</td>
+                            </tr>
 
-                        <tr>
-                            <td><code class="text-bold text-primary">--gap-form-inline</code></td>
-                            <td>Gap between inline form elements.</td>
-                        </tr>
+                            <tr>
+                                <td><code class="text-bold text-primary">--input-bg-color</code></td>
+                                <td>Input background color.</td>
+                            </tr>
 
-                        <tr>
-                            <td><code class="text-bold text-primary">--input-bg-color</code></td>
-                            <td>Input background color.</td>
-                        </tr>
+                            <tr>
+                                <td><code class="text-bold text-primary">--input-border</code></td>
+                                <td>Full input border (color, width, style).</td>
+                            </tr>
 
-                        <tr>
-                            <td><code class="text-bold text-primary">--input-border</code></td>
-                            <td>Full input border (color, width, style).</td>
-                        </tr>
+                            <tr>
+                                <td><code class="text-bold text-primary">--input-border-radius</code></td>
+                                <td>Corner radius of the input.</td>
+                            </tr>
 
-                        <tr>
-                            <td><code class="text-bold text-primary">--input-border-radius</code></td>
-                            <td>Corner radius of the input.</td>
-                        </tr>
+                            <tr>
+                                <td><code class="text-bold text-primary">--input-box-shadow-focus</code></td>
+                                <td>Shadow applied when the input is focused.</td>
+                            </tr>
 
-                        <tr>
-                            <td><code class="text-bold text-primary">--input-box-shadow-focus</code></td>
-                            <td>Shadow applied when the input is focused.</td>
-                        </tr>
+                            <tr>
+                                <td><code class="text-bold text-primary">--input-height</code></td>
+                                <td>Default input height.</td>
+                            </tr>
 
-                        <tr>
-                            <td><code class="text-bold text-primary">--input-height</code></td>
-                            <td>Default input height.</td>
-                        </tr>
+                            <tr>
+                                <td><code class="text-bold text-primary">--input-height-sm</code></td>
+                                <td>Height for small inputs.</td>
+                            </tr>
 
-                        <tr>
-                            <td><code class="text-bold text-primary">--input-height-sm</code></td>
-                            <td>Height for small inputs.</td>
-                        </tr>
+                            <tr>
+                                <td><code class="text-bold text-primary">--input-height-md</code></td>
+                                <td>Height for medium inputs.</td>
+                            </tr>
 
-                        <tr>
-                            <td><code class="text-bold text-primary">--input-height-md</code></td>
-                            <td>Height for medium inputs.</td>
-                        </tr>
+                            <tr>
+                                <td><code class="text-bold text-primary">--input-height-lg</code></td>
+                                <td>Height for large inputs.</td>
+                            </tr>
 
-                        <tr>
-                            <td><code class="text-bold text-primary">--input-height-lg</code></td>
-                            <td>Height for large inputs.</td>
-                        </tr>
+                            <tr>
+                                <td><code class="text-bold text-primary">--input-margin</code></td>
+                                <td>Space below the input inside <code>.form-control</code>.</td>
+                            </tr>
 
-                        <tr>
-                            <td><code class="text-bold text-primary">--input-margin</code></td>
-                            <td>Space below the input inside <code>.form-control</code>.</td>
-                        </tr>
+                            <tr>
+                                <td><code class="text-bold text-primary">--input-padding</code></td>
+                                <td>Internal padding of the input.</td>
+                            </tr>
 
-                        <tr>
-                            <td><code class="text-bold text-primary">--input-padding</code></td>
-                            <td>Internal padding of the input.</td>
-                        </tr>
+                            <tr>
+                                <td><code class="text-bold text-primary">--input-placeholder-color</code></td>
+                                <td>Placeholder text color.</td>
+                            </tr>
 
-                        <tr>
-                            <td><code class="text-bold text-primary">--input-placeholder-color</code></td>
-                            <td>Placeholder text color.</td>
-                        </tr>
+                            <tr>
+                                <td><code class="text-bold text-primary">--input-size</code></td>
+                                <td>Default font size inside inputs.</td>
+                            </tr>
 
-                        <tr>
-                            <td><code class="text-bold text-primary">--input-size</code></td>
-                            <td>Default font size inside inputs.</td>
-                        </tr>
+                            <tr>
+                                <td><code class="text-bold text-primary">--input-size-sm</code></td>
+                                <td>Font size for small inputs.</td>
+                            </tr>
 
-                        <tr>
-                            <td><code class="text-bold text-primary">--input-size-sm</code></td>
-                            <td>Font size for small inputs.</td>
-                        </tr>
+                            <tr>
+                                <td><code class="text-bold text-primary">--input-size-md</code></td>
+                                <td>Font size for medium inputs.</td>
+                            </tr>
 
-                        <tr>
-                            <td><code class="text-bold text-primary">--input-size-md</code></td>
-                            <td>Font size for medium inputs.</td>
-                        </tr>
+                            <tr>
+                                <td><code class="text-bold text-primary">--input-size-lg</code></td>
+                                <td>Font size for large inputs.</td>
+                            </tr>
 
-                        <tr>
-                            <td><code class="text-bold text-primary">--input-size-lg</code></td>
-                            <td>Font size for large inputs.</td>
-                        </tr>
+                            <tr>
+                                <td><code class="text-bold text-primary">--input-text-color</code></td>
+                                <td>Input text color.</td>
+                            </tr>
 
-                        <tr>
-                            <td><code class="text-bold text-primary">--input-text-color</code></td>
-                            <td>Input text color.</td>
-                        </tr>
+                            <tr>
+                                <td><code class="text-bold text-primary">--range-size</code></td>
+                                <td>Height of the range slider.</td>
+                            </tr>
 
-                        <tr>
-                            <td><code class="text-bold text-primary">--range-size</code></td>
-                            <td>Height of the range slider.</td>
-                        </tr>
+                            <tr>
+                                <td><code class="text-bold text-primary">--range-size-sm</code></td>
+                                <td>Height for small sliders.</td>
+                            </tr>
 
-                        <tr>
-                            <td><code class="text-bold text-primary">--range-size-sm</code></td>
-                            <td>Height for small sliders.</td>
-                        </tr>
+                            <tr>
+                                <td><code class="text-bold text-primary">--range-size-md</code></td>
+                                <td>Height for medium sliders.</td>
+                            </tr>
 
-                        <tr>
-                            <td><code class="text-bold text-primary">--range-size-md</code></td>
-                            <td>Height for medium sliders.</td>
-                        </tr>
+                            <tr>
+                                <td><code class="text-bold text-primary">--range-size-lg</code></td>
+                                <td>Height for large sliders.</td>
+                            </tr>
 
-                        <tr>
-                            <td><code class="text-bold text-primary">--range-size-lg</code></td>
-                            <td>Height for large sliders.</td>
-                        </tr>
+                            <tr>
+                                <td><code class="text-bold text-primary">--select-padding</code></td>
+                                <td>Padding inside select elements.</td>
+                            </tr>
 
-                        <tr>
-                            <td><code class="text-bold text-primary">--select-padding</code></td>
-                            <td>Padding inside select elements.</td>
-                        </tr>
+                            <tr>
+                                <td><code class="text-bold text-primary">--switch-size</code></td>
+                                <td>Base size of the switch component.</td>
+                            </tr>
 
-                        <tr>
-                            <td><code class="text-bold text-primary">--switch-size</code></td>
-                            <td>Base size of the switch component.</td>
-                        </tr>
+                            <tr>
+                                <td><code class="text-bold text-primary">--switch-size-sm</code></td>
+                                <td>Size for small switches.</td>
+                            </tr>
 
-                        <tr>
-                            <td><code class="text-bold text-primary">--switch-size-sm</code></td>
-                            <td>Size for small switches.</td>
-                        </tr>
+                            <tr>
+                                <td><code class="text-bold text-primary">--switch-size-md</code></td>
+                                <td>Size for medium switches.</td>
+                            </tr>
 
-                        <tr>
-                            <td><code class="text-bold text-primary">--switch-size-md</code></td>
-                            <td>Size for medium switches.</td>
-                        </tr>
+                            <tr>
+                                <td><code class="text-bold text-primary">--switch-size-lg</code></td>
+                                <td>Size for large switches.</td>
+                            </tr>
 
-                        <tr>
-                            <td><code class="text-bold text-primary">--switch-size-lg</code></td>
-                            <td>Size for large switches.</td>
-                        </tr>
+                            <tr>
+                                <td><code class="text-bold text-primary">--textarea-padding</code></td>
+                                <td>Padding inside textareas.</td>
+                            </tr>
 
-                        <tr>
-                            <td><code class="text-bold text-primary">--textarea-padding</code></td>
-                            <td>Padding inside textareas.</td>
-                        </tr>
-
-                        </tbody>
-                    </table>
+                            </tbody>
+                        </table>
+                    </div>
                 </div>
             </div>
 

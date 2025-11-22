@@ -23,13 +23,19 @@
                     <div class="row">
                         <div class="col-12">
                             <div class="collapse">
-                                <button class="collapse-btn btn-primary" data-js="collapse" data-target="#collapse-1" aria-controls="collapse-1" aria-expanded="false">Collapse</button>
+                                <button class="collapse-btn btn-primary" data-js="collapse" data-target="#collapse-1"
+                                        aria-controls="collapse-1" aria-expanded="false">Collapse
+                                </button>
                                 <div class="collapse-body" id="collapse-1">
                                     <p class="p-1">
-                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda minima repellat
-                                        reprehenderit unde? Blanditiis consequatur debitis doloremque, ea eligendi enim est hic, id
-                                        inventore minima non officiis quo unde. Deserunt. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda minima repellat
-                                        reprehenderit unde? Blanditiis consequatur debitis doloremque, ea eligendi enim est hic, id
+                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda minima
+                                        repellat
+                                        reprehenderit unde? Blanditiis consequatur debitis doloremque, ea eligendi enim
+                                        est hic, id
+                                        inventore minima non officiis quo unde. Deserunt. Lorem ipsum dolor sit amet,
+                                        consectetur adipisicing elit. Assumenda minima repellat
+                                        reprehenderit unde? Blanditiis consequatur debitis doloremque, ea eligendi enim
+                                        est hic, id
                                         inventore minima non officiis quo unde. Deserunt.
                                     </p>
                                 </div>
@@ -51,11 +57,15 @@
                         </button>
                         <div data-js="code" id="code-collapse" class="container-code overflow-auto">
                             <div class="collapse">
-                                <button class="collapse-btn btn-primary" data-js="collapse" data-target="#collapse-1" aria-controls="collapse-1" aria-expanded="false">Collapse</button>
+                                <button class="collapse-btn btn-primary" data-js="collapse" data-target="#collapse-1"
+                                        aria-controls="collapse-1" aria-expanded="false">Collapse
+                                </button>
                                 <div class="collapse-body" id="collapse-1">
                                     <p class="p-1">
-                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda minima repellat
-                                        reprehenderit unde? Blanditiis consequatur debitis doloremque, ea eligendi enim est hic, id
+                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda minima
+                                        repellat
+                                        reprehenderit unde? Blanditiis consequatur debitis doloremque, ea eligendi enim
+                                        est hic, id
                                         inventore minima non officiis quo unde. Deserunt.
                                     </p>
                                 </div>
@@ -75,7 +85,8 @@
                         Each size class (<code class="text-bold text-primary">.collapse-btn</code>,
                         <code class="text-bold text-primary">.collapse-btn-sm</code>,
                         <code class="text-bold text-primary">.collapse-btn-md</code>,
-                        <code class="text-bold text-primary">.collapse-btn-lg</code>) includes the base collapse button style with its own padding values.
+                        <code class="text-bold text-primary">.collapse-btn-lg</code>) includes the base collapse button
+                        style with its own padding values.
                     </p>
                     <div class="row mt-2">
                         <div class="col-12 col-4-xs">
@@ -111,7 +122,8 @@
                     <p class="p-1">
                         Add <code class="text-bold text-primary">data-js="collapse"</code> to the button and set
                         <code class="text-bold text-primary">data-target</code> to the ID of the matching
-                        <code class="text-bold text-primary">.collapse-body</code>. The script toggles the panel and updates
+                        <code class="text-bold text-primary">.collapse-body</code>. The script toggles the panel and
+                        updates
                         <code class="text-bold text-primary">aria-expanded</code> automatically.
                     </p>
                 </div>
@@ -140,8 +152,10 @@
                     <p class="p-1">
                         Do not set <code class="text-bold text-primary">padding</code> or
                         <code class="text-bold text-primary">margin</code> on
-                        <code class="text-bold text-primary">.collapse-body</code>, as this container is reset and spacing there will not behave as expected.
-                        Add spacing to elements inside the body (for example a <code class="text-bold text-primary">p</code>,
+                        <code class="text-bold text-primary">.collapse-body</code>, as this container is reset and
+                        spacing there will not behave as expected.
+                        Add spacing to elements inside the body (for example a <code
+                            class="text-bold text-primary">p</code>,
                         <code class="text-bold text-primary">ul</code> or an inner wrapper), not on
                         <code class="text-bold text-primary">.collapse-body</code> itself.
                     </p>
@@ -155,55 +169,62 @@
                 </div>
                 <div class="card-body">
                     <p class="p-1">
-                        These variables control the collapse container background, borders, and the padding of collapse buttons.
+                        These variables control the collapse container background, borders, and the padding of collapse
+                        buttons.
                     </p>
-
-                    <table class="table">
-                        <thead>
-                        <tr class="text-left">
-                            <th>Variable</th>
-                            <th>Description</th>
-                        </tr>
-                        </thead>
-                        <tbody>
-                        <tr>
-                            <td><code class="text-bold text-primary">--collapse-bg-color</code></td>
-                            <td>Background color of the <code class="text-bold text-primary">.collapse</code> container.</td>
-                        </tr>
-                        <tr>
-                            <td><code class="text-bold text-primary">--collapse-border-radius</code></td>
-                            <td>Corner radius applied to the outer <code class="text-bold text-primary">.collapse</code>.</td>
-                        </tr>
-                        <tr>
-                            <td><code class="text-bold text-primary">--collapse-border-color</code></td>
-                            <td>Border color used by the collapse container.</td>
-                        </tr>
-                        <tr>
-                            <td><code class="text-bold text-primary">--collapse-border-style</code></td>
-                            <td>Border style (solid, dashed, etc.) used on the collapse.</td>
-                        </tr>
-                        <tr>
-                            <td><code class="text-bold text-primary">--collapse-border-width</code></td>
-                            <td>Border thickness of the collapse container.</td>
-                        </tr>
-                        <tr>
-                            <td><code class="text-bold text-primary">--collapse-button-padding</code></td>
-                            <td>Default padding for the <code class="text-bold text-primary">.collapse-btn</code>.</td>
-                        </tr>
-                        <tr>
-                            <td><code class="text-bold text-primary">--collapse-button-padding-sm</code></td>
-                            <td>Padding used by <code class="text-bold text-primary">.collapse-btn-sm</code>.</td>
-                        </tr>
-                        <tr>
-                            <td><code class="text-bold text-primary">--collapse-button-padding-md</code></td>
-                            <td>Padding used by <code class="text-bold text-primary">.collapse-btn-md</code>.</td>
-                        </tr>
-                        <tr>
-                            <td><code class="text-bold text-primary">--collapse-button-padding-lg</code></td>
-                            <td>Padding used by <code class="text-bold text-primary">.collapse-btn-lg</code>.</td>
-                        </tr>
-                        </tbody>
-                    </table>
+                    <div class="table-responsive">
+                        <table class="table">
+                            <thead>
+                            <tr class="text-left">
+                                <th>Variable</th>
+                                <th>Description</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td><code class="text-bold text-primary">--collapse-bg-color</code></td>
+                                <td>Background color of the <code class="text-bold text-primary">.collapse</code>
+                                    container.
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><code class="text-bold text-primary">--collapse-border-radius</code></td>
+                                <td>Corner radius applied to the outer <code
+                                        class="text-bold text-primary">.collapse</code>.
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><code class="text-bold text-primary">--collapse-border-color</code></td>
+                                <td>Border color used by the collapse container.</td>
+                            </tr>
+                            <tr>
+                                <td><code class="text-bold text-primary">--collapse-border-style</code></td>
+                                <td>Border style (solid, dashed, etc.) used on the collapse.</td>
+                            </tr>
+                            <tr>
+                                <td><code class="text-bold text-primary">--collapse-border-width</code></td>
+                                <td>Border thickness of the collapse container.</td>
+                            </tr>
+                            <tr>
+                                <td><code class="text-bold text-primary">--collapse-button-padding</code></td>
+                                <td>Default padding for the <code class="text-bold text-primary">.collapse-btn</code>.
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><code class="text-bold text-primary">--collapse-button-padding-sm</code></td>
+                                <td>Padding used by <code class="text-bold text-primary">.collapse-btn-sm</code>.</td>
+                            </tr>
+                            <tr>
+                                <td><code class="text-bold text-primary">--collapse-button-padding-md</code></td>
+                                <td>Padding used by <code class="text-bold text-primary">.collapse-btn-md</code>.</td>
+                            </tr>
+                            <tr>
+                                <td><code class="text-bold text-primary">--collapse-button-padding-lg</code></td>
+                                <td>Padding used by <code class="text-bold text-primary">.collapse-btn-lg</code>.</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
                 </div>
             </div>
 

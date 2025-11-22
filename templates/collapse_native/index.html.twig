@@ -82,7 +82,8 @@
                         Each size class (<code class="text-bold text-primary">.collapse-btn</code>,
                         <code class="text-bold text-primary">.collapse-btn-sm</code>,
                         <code class="text-bold text-primary">.collapse-btn-md</code>,
-                        <code class="text-bold text-primary">.collapse-btn-lg</code>) applies the base collapse button style with its own padding.
+                        <code class="text-bold text-primary">.collapse-btn-lg</code>) applies the base collapse button
+                        style with its own padding.
                     </p>
                     <div class="row mt-2">
                         <div class="col-12 col-4-xs">
@@ -117,7 +118,8 @@
                 <div class="card-body">
                     <p class="p-1">
                         To open a native collapse by default, add the <code class="text-bold text-primary">open</code>
-                        attribute on the <code class="text-bold text-primary">&lt;details class="collapse-native"&gt;</code> element.
+                        attribute on the <code class="text-bold text-primary">&lt;details
+                            class="collapse-native"&gt;</code> element.
                         The browser then manages the open and closed state when the user clicks the
                         <code class="text-bold text-primary">&lt;summary&gt;</code>, without any JavaScript.
                     </p>
@@ -133,8 +135,10 @@
                     <p class="p-1">
                         Avoid setting <code class="text-bold text-primary">padding</code> or
                         <code class="text-bold text-primary">margin</code> directly on
-                        <code class="text-bold text-primary">.collapse-body</code>, as this container is meant to stay layout-neutral.
-                        Add spacing to elements inside the body (for example a <code class="text-bold text-primary">p</code>,
+                        <code class="text-bold text-primary">.collapse-body</code>, as this container is meant to stay
+                        layout-neutral.
+                        Add spacing to elements inside the body (for example a <code
+                            class="text-bold text-primary">p</code>,
                         <code class="text-bold text-primary">ul</code> or an inner wrapper), not on
                         <code class="text-bold text-primary">.collapse-body</code> itself.
                     </p>
@@ -150,53 +154,61 @@
                     <p class="p-1">
                         These variables control the appearance of native collapses and their trigger buttons.
                     </p>
-
-                    <table class="table">
-                        <thead>
-                        <tr class="text-left">
-                            <th>Variable</th>
-                            <th>Description</th>
-                        </tr>
-                        </thead>
-                        <tbody>
-                        <tr>
-                            <td><code class="text-bold text-primary">--collapse-bg-color</code></td>
-                            <td>Background color of the <code class="text-bold text-primary">.collapse-native</code> container.</td>
-                        </tr>
-                        <tr>
-                            <td><code class="text-bold text-primary">--collapse-border-radius</code></td>
-                            <td>Corner radius applied to the outer <code class="text-bold text-primary">.collapse-native</code>.</td>
-                        </tr>
-                        <tr>
-                            <td><code class="text-bold text-primary">--collapse-border-color</code></td>
-                            <td>Border color used by the native collapse container.</td>
-                        </tr>
-                        <tr>
-                            <td><code class="text-bold text-primary">--collapse-border-style</code></td>
-                            <td>Border style (solid, dashed, etc.) used on the native collapse.</td>
-                        </tr>
-                        <tr>
-                            <td><code class="text-bold text-primary">--collapse-border-width</code></td>
-                            <td>Border thickness of the <code class="text-bold text-primary">.collapse-native</code> container.</td>
-                        </tr>
-                        <tr>
-                            <td><code class="text-bold text-primary">--collapse-button-padding</code></td>
-                            <td>Default padding for the <code class="text-bold text-primary">.collapse-btn</code> in native collapses.</td>
-                        </tr>
-                        <tr>
-                            <td><code class="text-bold text-primary">--collapse-button-padding-sm</code></td>
-                            <td>Padding used by <code class="text-bold text-primary">.collapse-btn-sm</code>.</td>
-                        </tr>
-                        <tr>
-                            <td><code class="text-bold text-primary">--collapse-button-padding-md</code></td>
-                            <td>Padding used by <code class="text-bold text-primary">.collapse-btn-md</code>.</td>
-                        </tr>
-                        <tr>
-                            <td><code class="text-bold text-primary">--collapse-button-padding-lg</code></td>
-                            <td>Padding used by <code class="text-bold text-primary">.collapse-btn-lg</code>.</td>
-                        </tr>
-                        </tbody>
-                    </table>
+                    <div class="table-responsive">
+                        <table class="table">
+                            <thead>
+                            <tr class="text-left">
+                                <th>Variable</th>
+                                <th>Description</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td><code class="text-bold text-primary">--collapse-bg-color</code></td>
+                                <td>Background color of the <code class="text-bold text-primary">.collapse-native</code>
+                                    container.
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><code class="text-bold text-primary">--collapse-border-radius</code></td>
+                                <td>Corner radius applied to the outer <code class="text-bold text-primary">.collapse-native</code>.
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><code class="text-bold text-primary">--collapse-border-color</code></td>
+                                <td>Border color used by the native collapse container.</td>
+                            </tr>
+                            <tr>
+                                <td><code class="text-bold text-primary">--collapse-border-style</code></td>
+                                <td>Border style (solid, dashed, etc.) used on the native collapse.</td>
+                            </tr>
+                            <tr>
+                                <td><code class="text-bold text-primary">--collapse-border-width</code></td>
+                                <td>Border thickness of the <code class="text-bold text-primary">.collapse-native</code>
+                                    container.
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><code class="text-bold text-primary">--collapse-button-padding</code></td>
+                                <td>Default padding for the <code class="text-bold text-primary">.collapse-btn</code> in
+                                    native collapses.
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><code class="text-bold text-primary">--collapse-button-padding-sm</code></td>
+                                <td>Padding used by <code class="text-bold text-primary">.collapse-btn-sm</code>.</td>
+                            </tr>
+                            <tr>
+                                <td><code class="text-bold text-primary">--collapse-button-padding-md</code></td>
+                                <td>Padding used by <code class="text-bold text-primary">.collapse-btn-md</code>.</td>
+                            </tr>
+                            <tr>
+                                <td><code class="text-bold text-primary">--collapse-button-padding-lg</code></td>
+                                <td>Padding used by <code class="text-bold text-primary">.collapse-btn-lg</code>.</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
                 </div>
             </div>
 

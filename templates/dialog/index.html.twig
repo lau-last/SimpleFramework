@@ -71,7 +71,7 @@
                                     <p>This is the first dialog.</p>
                                 </div>
                                 <div class="dialog-footer">
-                                    <button class="btn btn-primary close" data-js="dialog" data-target="#modal-second">
+                                    <button class="btn btn-primary close" data-js="dialog" data-target="#third-modal-demo">
                                         Open second dialog
                                     </button>
                                 </div>
@@ -101,10 +101,74 @@
                 <div class="card-body">
                     <p class="p-1">
                         Add <code class="text-bold text-primary">data-js="dialog"</code> to a button and set
-                        <code class="text-bold text-primary">data-target</code> to the dialog ID. When clicked, the script opens
-                        the dialog and closes it when the user clicks an element with <code class="text-bold text-primary">.close</code>
-                        or presses ESC. Add <code class="text-bold text-primary">aria-modal="true"</code> manually for accessibility.
+                        <code class="text-bold text-primary">data-target</code> to the dialog ID. When clicked, the
+                        script opens
+                        the dialog and closes it when the user clicks an element with <code
+                            class="text-bold text-primary">.close</code>
+                        or presses ESC. Add <code class="text-bold text-primary">aria-modal="true"</code> manually for
+                        accessibility.
                     </p>
+                </div>
+            </div>
+
+            {# Dialog Sizes #}
+            <div class="card p-2">
+                <div class="card-header">
+                    <h2>📏 Dialog sizes</h2>
+                </div>
+
+                <div class="card-body">
+                    <p class="p-1">
+                        Each class (<code class="text-bold text-primary">.dialog</code>,
+                        <code class="text-bold text-primary">.dialog-sm</code>,
+                        <code class="text-bold text-primary">.dialog-md</code>,
+                        <code class="text-bold text-primary">.dialog-lg</code>)
+                        controls the <span class="text-bold">maximum width</span> of the dialog.<br>
+                        The width is responsive: it never exceeds
+                        <code class="text-bold text-primary">95vw</code> on small screens.
+                    </p>
+
+                    <div class="row mt-2">
+                        <div class="col-12 col-4-xs">
+                            <div class="card p-2">
+                                <code class="text-bold text-primary">.dialog</code>
+                                <p class="mt-1">
+                                    Default dialog size<br>
+                                    <small>Responsive full-width on mobile.</small>
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="col-12 col-4-xs">
+                            <div class="card p-2">
+                                <code class="text-bold text-primary">.dialog-sm</code>
+                                <p class="mt-1">
+                                    Small dialog<br>
+                                    <small>Ideal for simple confirmations.</small>
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="col-12 col-4-xs">
+                            <div class="card p-2">
+                                <code class="text-bold text-primary">.dialog-md</code>
+                                <p class="mt-1">
+                                    Medium dialog<br>
+                                    <small>General purpose content.</small>
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="col-12 col-4-xs">
+                            <div class="card p-2">
+                                <code class="text-bold text-primary">.dialog-lg</code>
+                                <p class="mt-1">
+                                    Large dialog<br>
+                                    <small>Complex forms or detailed content.</small>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
 
@@ -117,49 +181,53 @@
                     <p class="p-1">
                         These variables control dialog spacing, borders, radius, width and backdrop color.
                     </p>
-
-                    <table class="table">
-                        <thead>
-                        <tr class="text-left">
-                            <th>Variable</th>
-                            <th>Description</th>
-                        </tr>
-                        </thead>
-                        <tbody>
-                        <tr>
-                            <td><code class="text-bold text-primary">--dialog-body-padding</code></td>
-                            <td>Padding applied to the <code class="text-bold text-primary">.dialog-body</code>.</td>
-                        </tr>
-                        <tr>
-                            <td><code class="text-bold text-primary">--dialog-header-padding</code></td>
-                            <td>Padding applied to the <code class="text-bold text-primary">.dialog-header</code>.</td>
-                        </tr>
-                        <tr>
-                            <td><code class="text-bold text-primary">--dialog-footer-padding</code></td>
-                            <td>Padding applied to the <code class="text-bold text-primary">.dialog-footer</code>.</td>
-                        </tr>
-                        <tr>
-                            <td><code class="text-bold text-primary">--dialog-backdrop-color</code></td>
-                            <td>Color used for the modal backdrop behind the dialog.</td>
-                        </tr>
-                        <tr>
-                            <td><code class="text-bold text-primary">--dialog-border</code></td>
-                            <td>Border style, width and color applied to the dialog container.</td>
-                        </tr>
-                        <tr>
-                            <td><code class="text-bold text-primary">--dialog-border-radius</code></td>
-                            <td>Corner radius applied to the dialog container.</td>
-                        </tr>
-                        <tr>
-                            <td><code class="text-bold text-primary">--dialog-padding</code></td>
-                            <td>General padding for the dialog container.</td>
-                        </tr>
-                        <tr>
-                            <td><code class="text-bold text-primary">--dialog-width</code></td>
-                            <td>Fixed or maximum width of the dialog window.</td>
-                        </tr>
-                        </tbody>
-                    </table>
+                    <div class="table-responsive">
+                        <table class="table">
+                            <thead>
+                            <tr class="text-left">
+                                <th>Variable</th>
+                                <th>Description</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td><code class="text-bold text-primary">--dialog-body-padding</code></td>
+                                <td>Padding applied to the <code class="text-bold text-primary">.dialog-body</code>.
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><code class="text-bold text-primary">--dialog-header-padding</code></td>
+                                <td>Padding applied to the <code class="text-bold text-primary">.dialog-header</code>.
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><code class="text-bold text-primary">--dialog-footer-padding</code></td>
+                                <td>Padding applied to the <code class="text-bold text-primary">.dialog-footer</code>.
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><code class="text-bold text-primary">--dialog-backdrop-color</code></td>
+                                <td>Color used for the modal backdrop behind the dialog.</td>
+                            </tr>
+                            <tr>
+                                <td><code class="text-bold text-primary">--dialog-border</code></td>
+                                <td>Border style, width and color applied to the dialog container.</td>
+                            </tr>
+                            <tr>
+                                <td><code class="text-bold text-primary">--dialog-border-radius</code></td>
+                                <td>Corner radius applied to the dialog container.</td>
+                            </tr>
+                            <tr>
+                                <td><code class="text-bold text-primary">--dialog-padding</code></td>
+                                <td>General padding for the dialog container.</td>
+                            </tr>
+                            <tr>
+                                <td><code class="text-bold text-primary">--dialog-width</code></td>
+                                <td>Fixed or maximum width of the dialog window.</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
                 </div>
             </div>
 
@@ -172,33 +240,34 @@
                     <p class="p-1">
                         These custom events let you run code before or after the dialog opens or closes.
                     </p>
-
-                    <table class="table">
-                        <thead>
-                        <tr class="text-left">
-                            <th>Event</th>
-                            <th>Description</th>
-                        </tr>
-                        </thead>
-                        <tbody>
-                        <tr>
-                            <td><code class="text-bold text-primary">dialog:beforeOpen</code></td>
-                            <td>Fires just before the dialog starts opening.</td>
-                        </tr>
-                        <tr>
-                            <td><code class="text-bold text-primary">dialog:afterOpen</code></td>
-                            <td>Fires right after the dialog is fully opened.</td>
-                        </tr>
-                        <tr>
-                            <td><code class="text-bold text-primary">dialog:beforeClose</code></td>
-                            <td>Fires just before the dialog starts closing.</td>
-                        </tr>
-                        <tr>
-                            <td><code class="text-bold text-primary">dialog:afterClose</code></td>
-                            <td>Fires right after the dialog is fully closed.</td>
-                        </tr>
-                        </tbody>
-                    </table>
+                    <div class="table-responsive">
+                        <table class="table">
+                            <thead>
+                            <tr class="text-left">
+                                <th>Event</th>
+                                <th>Description</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td><code class="text-bold text-primary">dialog:beforeOpen</code></td>
+                                <td>Fires just before the dialog starts opening.</td>
+                            </tr>
+                            <tr>
+                                <td><code class="text-bold text-primary">dialog:afterOpen</code></td>
+                                <td>Fires right after the dialog is fully opened.</td>
+                            </tr>
+                            <tr>
+                                <td><code class="text-bold text-primary">dialog:beforeClose</code></td>
+                                <td>Fires just before the dialog starts closing.</td>
+                            </tr>
+                            <tr>
+                                <td><code class="text-bold text-primary">dialog:afterClose</code></td>
+                                <td>Fires right after the dialog is fully closed.</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
                 </div>
             </div>
 

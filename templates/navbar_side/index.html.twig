@@ -41,7 +41,8 @@
                                 onclick="copyCode('code-sidebar', this);">Copy
                         </button>
                         <div data-js="code" id="code-sidebar" class="container-code overflow-auto">
-                            <button class="btn btn-primary" data-js="aside" data-target="#aside-right-demo" aria-controls="aside-right-demo" aria-expanded="false">
+                            <button class="btn btn-primary" data-js="aside" data-target="#aside-right-demo"
+                                    aria-controls="aside-right-demo" aria-expanded="false">
                                 Open sidebar right
                             </button>
 
@@ -84,16 +85,22 @@
                 </div>
                 <div class="card-body">
                     <p class="mb-2">
-                        Sidebar side is controlled with utility classes on the container (usually an <code class="text-bold text-primary">&lt;aside&gt;</code>).
-                        The panel is off-canvas by default and becomes visible when the <code class="text-bold text-primary">.show</code> class is added.
+                        Sidebar side is controlled with utility classes on the container (usually an <code
+                            class="text-bold text-primary">&lt;aside&gt;</code>).
+                        The panel is off-canvas by default and becomes visible when the <code
+                            class="text-bold text-primary">.show</code> class is added.
                     </p>
 
                     <ul class="list-unstyled">
                         <li>
-                            <code class="text-bold text-primary">.sidebar-left</code> – positions the sidebar on the left, translated outside the viewport and sliding in from the left when <code class="text-bold text-primary">.show</code> is added.
+                            <code class="text-bold text-primary">.sidebar-left</code> – positions the sidebar on the
+                            left, translated outside the viewport and sliding in from the left when <code
+                                class="text-bold text-primary">.show</code> is added.
                         </li>
                         <li>
-                            <code class="text-bold text-primary">.sidebar-right</code> – positions the sidebar on the right, translated outside the viewport and sliding in from the right when <code class="text-bold text-primary">.show</code> is applied.
+                            <code class="text-bold text-primary">.sidebar-right</code> – positions the sidebar on the
+                            right, translated outside the viewport and sliding in from the right when <code
+                                class="text-bold text-primary">.show</code> is applied.
                         </li>
                     </ul>
                 </div>
@@ -106,7 +113,12 @@
                 </div>
                 <div class="card-body">
                     <p class="p-1">
-                        Wrap your content in an <code class="text-bold text-primary">&lt;aside&gt;</code> with <code class="text-bold text-primary">.sidebar-left</code> or <code class="text-bold text-primary">.sidebar-right</code> and a unique <code class="text-bold text-primary">id</code>, trigger it with a button using <code class="text-bold text-primary">data-js="aside"</code> and <code class="text-bold text-primary">data-target="#your-id"</code>, and place a <code class="text-bold text-primary">.close</code> button inside the sidebar to hide it.
+                        Wrap your content in an <code class="text-bold text-primary">&lt;aside&gt;</code> with <code
+                            class="text-bold text-primary">.sidebar-left</code> or <code class="text-bold text-primary">.sidebar-right</code>
+                        and a unique <code class="text-bold text-primary">id</code>, trigger it with a button using
+                        <code class="text-bold text-primary">data-js="aside"</code> and <code
+                            class="text-bold text-primary">data-target="#your-id"</code>, and place a <code
+                            class="text-bold text-primary">.close</code> button inside the sidebar to hide it.
                     </p>
                 </div>
             </div>
@@ -118,7 +130,12 @@
                 </div>
                 <div class="card-body">
                     <p class="p-1">
-                        The script listens for clicks on <code class="text-bold text-primary">[data-js="aside"][data-target]</code> and <code class="text-bold text-primary">.close</code>, toggles the <code class="text-bold text-primary">.show</code> class on the targeted sidebar, and updates <code class="text-bold text-primary">aria-expanded</code> on the trigger while CSS handles the fixed position, off-canvas <code class="text-bold text-primary">translateX()</code> and the 0.25s slide animation.
+                        The script listens for clicks on <code class="text-bold text-primary">[data-js="aside"][data-target]</code>
+                        and <code class="text-bold text-primary">.close</code>, toggles the <code
+                            class="text-bold text-primary">.show</code> class on the targeted sidebar, and updates <code
+                            class="text-bold text-primary">aria-expanded</code> on the trigger while CSS handles the
+                        fixed position, off-canvas <code class="text-bold text-primary">translateX()</code> and the
+                        0.25s slide animation.
                     </p>
                 </div>
             </div>
@@ -132,33 +149,35 @@
                     <p class="p-1">
                         These variables control sidebar width, inner padding, borders and corner radius.
                     </p>
-
-                    <table class="table">
-                        <thead>
-                        <tr class="text-left">
-                            <th>Variable</th>
-                            <th>Description</th>
-                        </tr>
-                        </thead>
-                        <tbody>
-                        <tr>
-                            <td><code class="text-bold text-primary">--sidebar-border</code></td>
-                            <td>Border definition (color, style, width) used on the visible edge of the sidebar.</td>
-                        </tr>
-                        <tr>
-                            <td><code class="text-bold text-primary">--sidebar-border-radius</code></td>
-                            <td>Corner radius applied to the side facing the page content.</td>
-                        </tr>
-                        <tr>
-                            <td><code class="text-bold text-primary">--sidebar-padding</code></td>
-                            <td>Internal padding applied to the sidebar content area.</td>
-                        </tr>
-                        <tr>
-                            <td><code class="text-bold text-primary">--sidebar-width</code></td>
-                            <td>Fixed width of the sidebar panel when it is shown.</td>
-                        </tr>
-                        </tbody>
-                    </table>
+                    <div class="table-responsive">
+                        <table class="table">
+                            <thead>
+                            <tr class="text-left">
+                                <th>Variable</th>
+                                <th>Description</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td><code class="text-bold text-primary">--sidebar-border</code></td>
+                                <td>Border definition (color, style, width) used on the visible edge of the sidebar.
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><code class="text-bold text-primary">--sidebar-border-radius</code></td>
+                                <td>Corner radius applied to the side facing the page content.</td>
+                            </tr>
+                            <tr>
+                                <td><code class="text-bold text-primary">--sidebar-padding</code></td>
+                                <td>Internal padding applied to the sidebar content area.</td>
+                            </tr>
+                            <tr>
+                                <td><code class="text-bold text-primary">--sidebar-width</code></td>
+                                <td>Fixed width of the sidebar panel when it is shown.</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
                 </div>
             </div>
 
