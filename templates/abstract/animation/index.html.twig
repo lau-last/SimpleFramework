@@ -1,0 +1,419 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Animation Utilities{% endblock %}
+
+{% block body %}
+    <div class="container-sm">
+        <div class="d-flex fd-column gap-5">
+
+            {# Intro #}
+            <div class="card p-2">
+                <div class="card-header">
+                    <h2>🎞️ Animation Utilities</h2>
+                </div>
+            </div>
+
+            {# What are animation utilities used for? #}
+            <div class="card p-2">
+                <div class="card-header">
+                    <h2>📐 What are animation utilities used for?</h2>
+                </div>
+
+                <div class="card-body">
+                    <p class="p-1">
+                        Animation utilities let you assign predefined animation keyframes, directions,
+                        speeds and repetition rules directly in your HTML using small helper classes.
+                    </p>
+
+                    <p class="p-1">
+                        They allow rapid prototyping and consistent transitions across the entire design system,
+                        without writing custom CSS for each animated element.
+                    </p>
+                </div>
+            </div>
+
+            {# Examples #}
+            <div class="card p-2">
+                <div class="card-header">
+                    <h2>💠 Examples</h2>
+                </div>
+
+                <div class="card-body">
+                    <p class="p-1">
+                        Hover each box to play the animation.
+                    </p>
+
+                    <div class="row mb-1">
+
+                        <div class="col-12 col-4-md">
+                            <div data-anim-hover="anim-shake-x anim-medium"
+                                 class="p-1 border-all text-center h-100 cursor-pointer">
+                                <code class="text-bold text-primary">.anim-shake-x</code><br>
+                                <code class="text-bold text-primary">.anim-medium</code>
+                            </div>
+                        </div>
+
+                        <div class="col-12 col-4-md">
+                            <div data-anim-hover="anim-shake-y anim-medium"
+                                 class="p-1 border-all text-center h-100 cursor-pointer">
+                                <code class="text-bold text-primary">.anim-shake-y</code><br>
+                                <code class="text-bold text-primary">.anim-medium</code>
+                            </div>
+                        </div>
+
+                        <div class="col-12 col-4-md">
+                            <div data-anim-hover="anim-rotate anim-medium"
+                                 class="p-1 border-all text-center h-100 cursor-pointer">
+                                <code class="text-bold text-primary">.anim-rotate</code><br>
+                                <code class="text-bold text-primary">.anim-medium</code>
+                            </div>
+                        </div>
+
+                        <div class="col-12 col-4-md">
+                            <div data-anim-hover="anim-fade-in anim-medium"
+                                 class="p-1 border-all text-center h-100 cursor-pointer">
+                                <code class="text-bold text-primary">.anim-fade-in</code><br>
+                                <code class="text-bold text-primary">.anim-medium</code>
+                            </div>
+                        </div>
+
+                        <div class="col-12 col-4-md">
+                            <div data-anim-hover="anim-fade-out anim-medium"
+                                 class="p-1 border-all text-center h-100 cursor-pointer">
+                                <code class="text-bold text-primary">.anim-fade-out</code><br>
+                                <code class="text-bold text-primary">.anim-medium</code>
+                            </div>
+                        </div>
+
+                        <div class="col-12 col-4-md">
+                            <div data-anim-hover="anim-grow-in anim-medium"
+                                 class="p-1 border-all text-center h-100 cursor-pointer">
+                                <code class="text-bold text-primary">.anim-grow-in</code><br>
+                                <code class="text-bold text-primary">.anim-medium</code>
+                            </div>
+                        </div>
+
+                        <div class="col-12 col-4-md">
+                            <div data-anim-hover="anim-shrink-in anim-medium"
+                                 class="p-1 border-all text-center h-100 cursor-pointer">
+                                <code class="text-bold text-primary">.anim-shrink-in</code><br>
+                                <code class="text-bold text-primary">.anim-medium</code>
+                            </div>
+                        </div>
+
+                        <div class="col-12 col-4-md">
+                            <div data-anim-hover="anim-slide-top-in anim-medium"
+                                 class="p-1 border-all text-center h-100 cursor-pointer">
+                                <code class="text-bold text-primary">.anim-slide-top-in</code><br>
+                                <code class="text-bold text-primary">.anim-medium</code>
+                            </div>
+                        </div>
+
+                        <div class="col-12 col-4-md">
+                            <div data-anim-hover="anim-slide-bottom-in anim-medium"
+                                 class="p-1 border-all text-center h-100 cursor-pointer">
+                                <code class="text-bold text-primary">.anim-slide-bottom-in</code><br>
+                                <code class="text-bold text-primary">.anim-medium</code>
+                            </div>
+                        </div>
+
+                        <div class="col-12 col-4-md">
+                            <div data-anim-hover="anim-slide-left-in anim-medium"
+                                 class="p-1 border-all text-center h-100 cursor-pointer">
+                                <code class="text-bold text-primary">.anim-slide-left-in</code><br>
+                                <code class="text-bold text-primary">.anim-medium</code>
+                            </div>
+                        </div>
+
+                        <div class="col-12 col-4-md">
+                            <div data-anim-hover="anim-slide-right-in anim-medium"
+                                 class="p-1 border-all text-center h-100 cursor-pointer">
+                                <code class="text-bold text-primary">.anim-slide-right-in</code><br>
+                                <code class="text-bold text-primary">.anim-medium</code>
+                            </div>
+                        </div>
+
+                        <div class="col-12 col-4-md">
+                            <div data-anim-hover="anim-slide-top-out anim-medium"
+                                 class="p-1 border-all text-center h-100 cursor-pointer">
+                                <code class="text-bold text-primary">.anim-slide-top-out</code><br>
+                                <code class="text-bold text-primary">.anim-medium</code>
+                            </div>
+                        </div>
+
+                        <div class="col-12 col-4-md">
+                            <div data-anim-hover="anim-slide-bottom-out anim-medium"
+                                 class="p-1 border-all text-center h-100 cursor-pointer">
+                                <code class="text-bold text-primary">.anim-slide-bottom-out</code><br>
+                                <code class="text-bold text-primary">.anim-medium</code>
+                            </div>
+                        </div>
+
+                        <div class="col-12 col-4-md">
+                            <div data-anim-hover="anim-slide-left-out anim-medium"
+                                 class="p-1 border-all text-center h-100 cursor-pointer">
+                                <code class="text-bold text-primary">.anim-slide-left-out</code><br>
+                                <code class="text-bold text-primary">.anim-medium</code>
+                            </div>
+                        </div>
+
+                        <div class="col-12 col-4-md">
+                            <div data-anim-hover="anim-slide-right-out anim-medium"
+                                 class="p-1 border-all text-center h-100 cursor-pointer">
+                                <code class="text-bold text-primary">.anim-slide-right-out</code><br>
+                                <code class="text-bold text-primary">.anim-medium</code>
+                            </div>
+                        </div>
+
+                        <div class="col-12 col-4-md">
+                            <div data-anim-hover="anim-rotate anim-fast"
+                                 class="p-1 border-all text-center h-100 cursor-pointer">
+                                <code class="text-bold text-primary">.anim-rotate</code><br>
+                                <code class="text-bold text-primary">.anim-fast</code>
+                            </div>
+                        </div>
+
+                        <div class="col-12 col-4-md">
+                            <div data-anim-hover="anim-rotate anim-medium"
+                                 class="p-1 border-all text-center h-100 cursor-pointer">
+                                <code class="text-bold text-primary">.anim-rotate</code><br>
+                                <code class="text-bold text-primary">.anim-medium</code>
+                            </div>
+                        </div>
+
+                        <div class="col-12 col-4-md">
+                            <div data-anim-hover="anim-rotate anim-slow"
+                                 class="p-1 border-all text-center h-100 cursor-pointer">
+                                <code class="text-bold text-primary">.anim-rotate</code><br>
+                                <code class="text-bold text-primary">.anim-slow</code>
+                            </div>
+                        </div>
+
+                        <div class="col-12 col-4-md">
+                            <div data-anim-hover="anim-rotate anim-medium anim-reverse"
+                                 class="p-1 border-all text-center h-100 cursor-pointer">
+                                <code class="text-bold text-primary">.anim-rotate</code><br>
+                                <code class="text-bold text-primary">.anim-medium</code><br>
+                                <code class="text-bold text-primary">.anim-reverse</code>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+
+            {# HTML Code #}
+            <div class="card p-2">
+                <div class="card-header">
+                    <h2>💻 HTML Code</h2>
+                </div>
+
+                <div class="card-body">
+                    <div class="position-relative">
+                        <button class="btn btn-primary position-top-right z-1 mt-1 mr-1"
+                                onclick="copyCode('code-animation', this);">
+                            Copy
+                        </button>
+
+                        <div data-js="code" id="code-animation" class="container-code overflow-auto">
+
+                            <!-- Basic animations -->
+                            <div class="anim-shake-x">Shake X (.anim-shake-x)</div>
+                            <div class="anim-shake-y">Shake Y (.anim-shake-y)</div>
+                            <div class="anim-rotate">Rotate (.anim-rotate)</div>
+
+                            <!-- Fade -->
+                            <div class="anim-fade-in">Fade In (.anim-fade-in)</div>
+                            <div class="anim-fade-out">Fade Out (.anim-fade-out)</div>
+
+                            <!-- Grow / shrink -->
+                            <div class="anim-grow-in">Grow In (.anim-grow-in)</div>
+                            <div class="anim-shrink-in">Shrink In (.anim-shrink-in)</div>
+
+                            <!-- Slide In -->
+                            <div class="anim-slide-top-in">Slide Top In (.anim-slide-top-in)</div>
+                            <div class="anim-slide-bottom-in">Slide Bottom In (.anim-slide-bottom-in)</div>
+                            <div class="anim-slide-left-in">Slide Left In (.anim-slide-left-in)</div>
+                            <div class="anim-slide-right-in">Slide Right In (.anim-slide-right-in)</div>
+
+                            <!-- Slide Out -->
+                            <div class="anim-slide-top-out">Slide Top Out (.anim-slide-top-out)</div>
+                            <div class="anim-slide-bottom-out">Slide Bottom Out (.anim-slide-bottom-out)</div>
+                            <div class="anim-slide-left-out">Slide Left Out (.anim-slide-left-out)</div>
+                            <div class="anim-slide-right-out">Slide Right Out (.anim-slide-right-out)</div>
+
+                            <!-- Animation modifiers -->
+                            <div class="anim-reverse">Reverse direction (.anim-reverse)</div>
+                            <div class="anim-infinite">Repeat forever (.anim-infinite)</div>
+                            <div class="anim-fast">Fast speed (.anim-fast)</div>
+                            <div class="anim-medium">Medium speed (.anim-medium)</div>
+                            <div class="anim-slow">Slow speed (.anim-slow)</div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            {# How to Use #}
+            <div class="card p-2">
+                <div class="card-header">
+                    <h2>🛠️ How to Use</h2>
+                </div>
+
+                <div class="card-body">
+                    <p class="p-1">
+                        To apply an animation, you always need <strong>at least two classes</strong>:
+                    </p>
+                    <ul class="p-1 list-unstyled">
+                        <li>
+                            <strong>1 — Choose an animation</strong> (ex: <code class="text-bold text-primary">.anim-shake-x</code>)
+                        </li>
+                        <li>
+                            <strong>2 — Choose a speed</strong> (ex: <code
+                                class="text-bold text-primary">.anim-medium</code>)
+                        </li>
+                    </ul>
+                    <p class="p-1">
+                        The animation class only defines the keyframes, and the speed class defines the duration.
+                        Both are required for the animation to be visible.
+                    </p>
+                    <h3 class="mt-2">🔁 Play animation on hover like the examples</h3>
+
+                    <p class="p-1">
+                        To use animations the same way they are shown in the examples,
+                        simply add <code>data-anim-hover</code> with the animation and speed you want to replay on
+                        hover.
+                    </p>
+
+                    <pre class="p-2 border-radius bg-gray-800 text-white">
+&lt;div data-anim-hover="anim-shake-x anim-medium"&gt;
+    Hover me
+&lt;/div&gt;
+</pre>
+                    <p class="p-1">Add this script to enable hover replay:</p>
+
+                    <pre class="p-2 border-radius bg-gray-800 text-white">
+document.addEventListener('DOMContentLoaded', () => {
+    document.querySelectorAll('[data-anim-hover]').forEach(element => {
+        const animClasses = element.dataset.animHover.split(" ");
+        let isPlaying = false;
+
+        element.addEventListener('mouseenter', () => {
+            if (isPlaying) return;
+            isPlaying = true;
+
+            animClasses.forEach(cls => element.classList.remove(cls));
+            void element.offsetWidth;
+            animClasses.forEach(cls => element.classList.add(cls));
+        });
+        element.addEventListener('animationend', () => {
+            isPlaying = false;
+        });
+    });
+})
+</pre>
+                </div>
+            </div>
+
+            {# Utilities Overview #}
+            <div class="card p-2">
+                <div class="card-header">
+                    <h2>📏 Animation Utilities Overview</h2>
+                </div>
+
+                <div class="card-body">
+                    <p class="p-1">
+                        These utilities map directly to animation names, directions, durations and iteration counts.
+                    </p>
+
+                    <div class="row mt-2">
+
+                        {# Animation names #}
+                        <div class="col-12">
+                            <hr>
+                        </div>
+
+                        {% set anims = [
+                            'anim-shake-x',
+                            'anim-shake-y',
+                            'anim-rotate',
+                            'anim-fade-in',
+                            'anim-fade-out',
+                            'anim-grow-in',
+                            'anim-shrink-in',
+                            'anim-slide-top-in',
+                            'anim-slide-bottom-in',
+                            'anim-slide-left-in',
+                            'anim-slide-right-in',
+                            'anim-slide-top-out',
+                            'anim-slide-bottom-out',
+                            'anim-slide-left-out',
+                            'anim-slide-right-out'
+                        ] %}
+
+                        {% for cls in anims %}
+                            <div class="col-12 col-4-xs">
+                                <div class="card p-2 h-100">
+                                    <code class="text-bold text-primary">.{{ cls }}</code>
+                                    <p class="mt-1">
+                                        Applies the <code class="text-bold text-primary">animation-name</code>
+                                        associated with {{ cls }}.
+                                    </p>
+                                </div>
+                            </div>
+                        {% endfor %}
+
+                        {# Animation modifiers #}
+                        <div class="col-12">
+                            <hr>
+                        </div>
+
+                        {% set modifiers = [
+                            'anim-reverse',
+                            'anim-infinite',
+                            'anim-fast',
+                            'anim-medium',
+                            'anim-slow'
+                        ] %}
+
+                        {% for cls in modifiers %}
+                            <div class="col-12 col-4-xs">
+                                <div class="card p-2 h-100">
+                                    <code class="text-bold text-primary">.{{ cls }}</code>
+                                    <p class="mt-1">
+                                        Modifies animation behavior (direction, duration or iteration count).
+                                    </p>
+                                </div>
+                            </div>
+                        {% endfor %}
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+{% endblock %}
+{% block javascripts %}
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            document.querySelectorAll('[data-anim-hover]').forEach(element => {
+                const animClasses = element.dataset.animHover.split(" ");
+                let isPlaying = false;
+
+                element.addEventListener('mouseenter', () => {
+                    if (isPlaying) return;
+                    isPlaying = true;
+
+                    animClasses.forEach(cls => element.classList.remove(cls));
+                    void element.offsetWidth;
+                    animClasses.forEach(cls => element.classList.add(cls));
+                });
+                element.addEventListener('animationend', () => {
+                    isPlaying = false;
+                });
+            });
+        })
+    </script>
+{% endblock %}
