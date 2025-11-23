@@ -286,14 +286,14 @@
                         hover.
                     </p>
 
-                    <pre class="p-2 border-radius bg-gray-800 text-white">
+                    <pre class="p-2 border-radius bg-gray-800 text-white overflow-auto">
 &lt;div data-anim-hover="anim-shake-x anim-medium"&gt;
     Hover me
 &lt;/div&gt;
 </pre>
                     <p class="p-1">Add this script to enable hover replay:</p>
 
-                    <pre class="p-2 border-radius bg-gray-800 text-white">
+                    <pre class="p-2 border-radius bg-gray-800 text-white overflow-auto">
 document.addEventListener('DOMContentLoaded', () => {
     document.querySelectorAll('[data-anim-hover]').forEach(element => {
         const animClasses = element.dataset.animHover.split(" ");
