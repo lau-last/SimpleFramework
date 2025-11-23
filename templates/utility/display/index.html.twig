@@ -1,0 +1,289 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello DisplayController!{% endblock %}
+
+{% block body %}
+    <div class="container-sm">
+        <div class="d-flex fd-column gap-5">
+
+            {# Intro #}
+            <div class="card p-2">
+                <div class="card-header">
+                    <h2>🧱 Display</h2>
+                </div>
+            </div>
+
+            {# What is display used for? #}
+            <div class="card p-2">
+                <div class="card-header">
+                    <h2>📐 What is display used for?</h2>
+                </div>
+
+                <div class="card-body">
+                    <p class="p-1">
+                        Display utilities control how an element is rendered in the layout:
+                        block, inline, flex, grid, or completely hidden. They provide a quick way to change layout
+                        behavior without writing custom CSS and are fully responsive thanks to breakpoint suffixes.
+                    </p>
+                    <p class="p-1">
+                        You can use base classes such as
+                        <code class="text-bold text-primary">.d-block</code>,
+                        <code class="text-bold text-primary">.d-flex</code>,
+                        <code class="text-bold text-primary">.d-none</code>
+                        for all screen sizes, or responsive variants like
+                        <code class="text-bold text-primary">.d-flex-md</code>,
+                        <code class="text-bold text-primary">.d-none-lg</code>
+                        that only apply from a specific breakpoint.
+                    </p>
+                </div>
+            </div>
+
+            {# Examples #}
+            <div class="card p-2">
+                <div class="card-header">
+                    <h2>💠 Examples</h2>
+                </div>
+
+                <div class="card-body">
+                    <p class="p-1">
+                        The examples below show how display utilities affect layout and how responsive variants
+                        can toggle visibility or layout mode depending on screen size.
+                    </p>
+
+                    {# Block vs inline #}
+                    <div class="p-1 mb-1">
+                        <div class="p-1 bg-primary border-radius mb-2 d-block">
+                            .d-block — takes full width.
+                        </div>
+                        <div class="p-1 bg-primary border-radius d-inline mr-1">
+                            .d-inline — stays in the text flow.
+                        </div>
+                        <div class="p-1 bg-primary border-radius d-inline">
+                            Another .d-inline
+                        </div>
+                    </div>
+
+                    {# Flex vs block #}
+                    <div class="p-1 mb-1">
+                        <p class="p-1">
+                            Using <code class="text-bold text-primary">.d-flex</code> to align items on a single row.
+                        </p>
+                        <div class="d-flex">
+                            <div class="p-1 bg-primary border-radius mr-1">Item 1</div>
+                            <div class="p-1 bg-primary border-radius mr-1">Item 2</div>
+                            <div class="p-1 bg-primary border-radius">Item 3</div>
+                        </div>
+                    </div>
+
+                    {# Responsive: hide on small and show from md #}
+                    <div class="p-1 mb-1">
+                        <p class="p-1">
+                            Example with <code class="text-bold text-primary">.d-none</code> and
+                            <code class="text-bold text-primary">.d-block-md</code>:
+                            hidden on very small screens, visible from the <code>md</code> breakpoint.
+                        </p>
+                        <div class="d-none d-block-md p-1 bg-primary border-radius">
+                            .d-none .d-block-md — only visible from md and up.
+                        </div>
+                    </div>
+
+                    {# Responsive: stacked then flex from md #}
+                    <div class="p-1 mb-1">
+                        <p class="p-1">
+                            Using <code class="text-bold text-primary">.d-block</code> and
+                            <code class="text-bold text-primary">.d-flex-md</code>:
+                            stacked vertically on small screens, aligned horizontally from <code>md</code>.
+                        </p>
+                        <div class="d-block d-flex-md">
+                            <div class="p-1 bg-primary border-radius mb-1 mb-0-md mr-0 mr-1-md">Item A</div>
+                            <div class="p-1 bg-primary border-radius mb-1 mb-0-md mr-0 mr-1-md">Item B</div>
+                            <div class="p-1 bg-primary border-radius">Item C</div>
+                        </div>
+                    </div>
+
+                    {# Grid example #}
+                    <div class="p-1 mb-1">
+                        <p class="p-1">
+                            Using <code class="text-bold text-primary">.d-grid</code> to create a simple grid layout.
+                        </p>
+                        <div class="d-grid" style="grid-template-columns: repeat(3, 1fr); gap: .5rem;">
+                            <div class="p-1 bg-primary border-radius">Cell 1</div>
+                            <div class="p-1 bg-primary border-radius">Cell 2</div>
+                            <div class="p-1 bg-primary border-radius">Cell 3</div>
+                            <div class="p-1 bg-primary border-radius">Cell 4</div>
+                            <div class="p-1 bg-primary border-radius">Cell 5</div>
+                            <div class="p-1 bg-primary border-radius">Cell 6</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            {# HTML Code #}
+            <div class="card p-2">
+                <div class="card-header">
+                    <h2>💻 HTML Code</h2>
+                </div>
+
+                <div class="card-body">
+                    <div class="position-relative">
+                        <button class="btn btn-primary position-top-right z-1 mt-1 mr-1"
+                                onclick="copyCode('code-display', this);">
+                            Copy
+                        </button>
+
+                        <div data-js="code" id="code-display" class="container-code overflow-auto">
+                            <div class="d-block">Block element</div>
+                            <span class="d-inline">Inline element</span>
+                            <div class="d-flex">
+                                <div>Flex item 1</div>
+                                <div>Flex item 2</div>
+                            </div>
+
+                            <div class="d-none d-block-md">
+                                Visible only from the md breakpoint and up.
+                            </div>
+
+                            <div class="d-block d-flex-md">
+                                <div>Item A</div>
+                                <div>Item B</div>
+                                <div>Item C</div>
+                            </div>
+
+                            <div class="d-grid" style="grid-template-columns: repeat(3, 1fr); gap: .5rem;">
+                                <div>Cell 1</div>
+                                <div>Cell 2</div>
+                                <div>Cell 3</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            {# Utilities / Responsive behavior #}
+            <div class="card p-2">
+                <div class="card-header">
+                    <h2>📏 Display Utilities &amp; Breakpoints</h2>
+                </div>
+
+                <div class="card-body">
+                    <p class="p-1">
+                        Display utilities control how an element participates in the layout:
+                        hidden, inline, block, grid, or flex. Base classes apply to all screen sizes,
+                        while responsive variants are generated for each breakpoint from the
+                        <code class="text-bold text-primary">$breakpoints</code> map.
+                    </p>
+
+                    <p class="p-1">
+                        You can combine a non-responsive utility (for the default behavior) with
+                        breakpoint-specific ones to progressively change how an element is displayed
+                        as the viewport grows.
+                    </p>
+
+                    <div class="row mt-2">
+
+                        {# 1 — d-none #}
+                        <div class="col-12 col-4-xs">
+                            <div class="card p-2">
+                                <code class="text-bold text-primary">.d-none</code>
+                                <p class="mt-1">
+                                    Completely hides the element from the layout on all screen sizes.
+                                </p>
+                            </div>
+                        </div>
+
+                        {# 2 — d-inline #}
+                        <div class="col-12 col-4-xs">
+                            <div class="card p-2">
+                                <code class="text-bold text-primary">.d-inline</code>
+                                <p class="mt-1">
+                                    Renders the element as inline content, flowing with text and not forcing line breaks.
+                                </p>
+                            </div>
+                        </div>
+
+                        {# 3 — d-inline-block #}
+                        <div class="col-12 col-4-xs">
+                            <div class="card p-2">
+                                <code class="text-bold text-primary">.d-inline-block</code>
+                                <p class="mt-1">
+                                    Renders the element inline but allows width and height to be set, like a hybrid block/inline.
+                                </p>
+                            </div>
+                        </div>
+
+                        {# 4 — d-block #}
+                        <div class="col-12 col-4-xs">
+                            <div class="card p-2">
+                                <code class="text-bold text-primary">.d-block</code>
+                                <p class="mt-1">
+                                    Renders the element as a block-level element, taking the full available width and breaking the line.
+                                </p>
+                            </div>
+                        </div>
+
+                        {# 5 — d-grid #}
+                        <div class="col-12 col-4-xs">
+                            <div class="card p-2">
+                                <code class="text-bold text-primary">.d-grid</code>
+                                <p class="mt-1">
+                                    Turns the element into a grid container. Define columns and rows with CSS grid properties.
+                                </p>
+                            </div>
+                        </div>
+
+                        {# 6 — d-flex #}
+                        <div class="col-12 col-4-xs">
+                            <div class="card p-2">
+                                <code class="text-bold text-primary">.d-flex</code>
+                                <p class="mt-1">
+                                    Turns the element into a flex container. Combine with flex utilities
+                                    (<code>.fd-*</code>, <code>.jc-*</code>, <code>.ai-*</code>, etc.) to control layout.
+                                </p>
+                            </div>
+                        </div>
+
+                        {# 7 — d-inline-flex #}
+                        <div class="col-12 col-4-xs">
+                            <div class="card p-2">
+                                <code class="text-bold text-primary">.d-inline-flex</code>
+                                <p class="mt-1">
+                                    Similar to <code>.d-flex</code> but keeps the element inline with surrounding content.
+                                </p>
+                            </div>
+                        </div>
+
+                        {# 8 — Responsive pattern #}
+                        <div class="col-12 col-4-xs">
+                            <div class="card p-2">
+                                <code class="text-bold text-primary">.d-{value}-{breakpoint}</code>
+                                <p class="mt-1">
+                                    Applies a display mode only from a specific breakpoint
+                                    (for example:
+                                    <code>.d-none-sm</code>,
+                                    <code>.d-block-md</code>,
+                                    <code>.d-flex-lg</code>,
+                                    <code>.d-grid-xl</code>).
+                                </p>
+                            </div>
+                        </div>
+
+                        {# 9 — Typical visibility pattern #}
+                        <div class="col-12 col-4-xs">
+                            <div class="card p-2">
+                                <code class="text-bold text-primary">.d-none .d-{value}-{breakpoint}</code>
+                                <p class="mt-1">
+                                    Common pattern to hide an element on small screens and show it from a breakpoint
+                                    (for example:
+                                    <code>.d-none .d-block-md</code> or
+                                    <code>.d-none .d-flex-lg</code>).
+                                </p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+{% endblock %}

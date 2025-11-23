@@ -1,0 +1,359 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello FlexController!{% endblock %}
+
+{% block body %}
+    <div class="container-sm">
+        <div class="d-flex fd-column gap-5">
+
+            {# Intro #}
+            <div class="card p-2">
+                <div class="card-header">
+                    <h2>🧵 Flex</h2>
+                </div>
+            </div>
+
+            {# What is flex used for? #}
+            <div class="card p-2">
+                <div class="card-header">
+                    <h2>📐 What is flex used for?</h2>
+                </div>
+
+                <div class="card-body">
+                    <p class="p-1">
+                        Flex utilities are used to control the layout of elements inside a flex container.
+                        They let you change direction, wrapping behavior, alignment along the main axis and cross axis,
+                        and define how items grow or shrink. Combined with responsive variants, they make it easy to
+                        build adaptive layouts without writing custom CSS.
+                    </p>
+                    <p class="p-1">
+                        All these utilities are designed to be used on an element with
+                        <code class="text-bold text-primary">display: flex</code>
+                        (for example using
+                        <code class="text-bold text-primary">.d-flex</code> in this framework).
+                    </p>
+                </div>
+            </div>
+
+            {# Examples #}
+            <div class="card p-2">
+                <div class="card-header">
+                    <h2>💠 Examples</h2>
+                </div>
+
+                <div class="card-body">
+                    <p class="p-1">
+                        The flex utilities are grouped into several families:
+                        <code class="text-bold text-primary">.fd-*</code> for direction,
+                        <code class="text-bold text-primary">.fw-*</code> for wrapping,
+                        <code class="text-bold text-primary">.jc-*</code> for horizontal alignment,
+                        <code class="text-bold text-primary">.ai-*</code> and
+                        <code class="text-bold text-primary">.ac-*</code> for vertical alignment,
+                        and
+                        <code class="text-bold text-primary">.as-*</code>
+                        to control alignment of individual items.
+                    </p>
+
+                    {# Basic row with centered content #}
+                    <div class="p-1 mb-1 border-all">
+                        <div class="d-flex jc-center ai-center">
+                            <div class="p-1 bg-primary border-radius mr-1">Item 1</div>
+                            <div class="p-1 bg-primary border-radius mr-1">Item 2</div>
+                            <div class="p-1 bg-primary border-radius">Item 3</div>
+                        </div>
+                    </div>
+
+                    {# Space-between and end alignment #}
+                    <div class="p-1 mb-1 border-all">
+                        <div class="d-flex jc-between ai-end" style="height: 5rem;">
+                            <div class="p-1 bg-primary border-radius">Start</div>
+                            <div class="p-1 bg-primary border-radius">Middle</div>
+                            <div class="p-1 bg-primary border-radius">End</div>
+                        </div>
+                    </div>
+
+                    {# Column direction on small, row from md #}
+                    <div class="p-1 mb-1 border-all">
+                        <div class="d-flex fd-column fd-row-md jc-around ai-center">
+                            <div class="p-1 bg-primary border-radius mb-1 mb-0-md">Block A</div>
+                            <div class="p-1 bg-primary border-radius mb-1 mb-0-md">Block B</div>
+                            <div class="p-1 bg-primary border-radius">Block C</div>
+                        </div>
+                    </div>
+
+                    {# Wrap vs nowrap #}
+                    <div class="p-1 mb-1 border-all">
+                        <div class="d-flex fw-wrap">
+                            <div class="p-1 bg-primary border-radius mr-1 mb-1">Item 1</div>
+                            <div class="p-1 bg-primary border-radius mr-1 mb-1">Item 2</div>
+                            <div class="p-1 bg-primary border-radius mr-1 mb-1">Item 3</div>
+                            <div class="p-1 bg-primary border-radius mr-1 mb-1">Item 4</div>
+                            <div class="p-1 bg-primary border-radius mr-1 mb-1">Item 5</div>
+                        </div>
+                    </div>
+
+                    {# Align-items: stretch #}
+                    <div class="p-1 mb-1 border-all">
+                        <div class="d-flex ai-stretch" style="height: 6rem;">
+                            <div class="p-1 bg-primary border-radius mr-1">Stretch A</div>
+                            <div class="p-1 bg-primary border-radius mr-1">Stretch B</div>
+                            <div class="p-1 bg-primary border-radius">Stretch C</div>
+                        </div>
+                    </div>
+
+                    {# Align-self overrides #}
+                    <div class="p-1 mb-1 border-all">
+                        <div class="d-flex ai-center" style="height: 6rem;">
+                            <div class="p-1 bg-primary border-radius mr-1 as-start">Start</div>
+                            <div class="p-1 bg-primary border-radius mr-1 as-center">Center</div>
+                            <div class="p-1 bg-primary border-radius mr-1 as-end">End</div>
+                            <div class="p-1 bg-primary border-radius mr-1 as-stretch">Stretch</div>
+                            <div class="p-1 bg-primary border-radius as-baseline">Baseline</div>
+                        </div>
+                    </div>
+
+                    {# Align-content (requires wrap) #}
+                    <div class="p-1 mb-1 border-all" style="height: 10rem;">
+                        <div class="d-flex fw-wrap ac-between">
+                            <div class="p-1 bg-primary border-radius mr-1 mb-1">Box 1</div>
+                            <div class="p-1 bg-primary border-radius mr-1 mb-1">Box 2</div>
+                            <div class="p-1 bg-primary border-radius mr-1 mb-1">Box 3</div>
+                            <div class="p-1 bg-primary border-radius mr-1 mb-1">Box 4</div>
+                            <div class="p-1 bg-primary border-radius mr-1 mb-1">Box 5</div>
+                            <div class="p-1 bg-primary border-radius mr-1 mb-1">Box 6</div>
+                            <div class="p-1 bg-primary border-radius mr-1 mb-1">Box 7</div>
+                            <div class="p-1 bg-primary border-radius mr-1 mb-1">Box 8</div>
+                            <div class="p-1 bg-primary border-radius mr-1 mb-1">Box 9</div>
+                            <div class="p-1 bg-primary border-radius mr-1 mb-1">Box 10</div>
+                            <div class="p-1 bg-primary border-radius mr-1 mb-1">Box 11</div>
+                            <div class="p-1 bg-primary border-radius mr-1 mb-1">Box 12</div>
+                        </div>
+                    </div>
+
+                    {# Flex grow/shrink example #}
+                    <div class="p-1 mb-1 border-all">
+                        <div class="d-flex">
+                            <div class="p-1 bg-primary border-radius mr-1" style="width: 5rem;">Fixed</div>
+                            <div class="p-1 bg-primary border-radius flex-1-1-auto mr-1">Flex auto</div>
+                            <div class="p-1 bg-primary border-radius flex-1-1-auto">Flex auto</div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            {# HTML Code #}
+            <div class="card p-2">
+                <div class="card-header">
+                    <h2>💻 HTML Code</h2>
+                </div>
+
+                <div class="card-body">
+                    <div class="position-relative">
+                        <button class="btn btn-primary position-top-right z-1 mt-1 mr-1"
+                                onclick="copyCode('code-flex', this);">
+                            Copy
+                        </button>
+
+                        <div data-js="code" id="code-flex" class="container-code overflow-auto">
+                            <div class="d-flex jc-center ai-center">
+                                <div>Item 1</div>
+                                <div>Item 2</div>
+                                <div>Item 3</div>
+                            </div>
+
+                            <div class="d-flex jc-between ai-end">
+                                <div>Start</div>
+                                <div>Middle</div>
+                                <div>End</div>
+                            </div>
+
+                            <div class="d-flex fd-column fd-row-md jc-around ai-center">
+                                <div>Block A</div>
+                                <div>Block B</div>
+                                <div>Block C</div>
+                            </div>
+
+                            <div class="d-flex fd-row fw-wrap">
+                                <div>Item 1</div>
+                                <div>Item 2</div>
+                                <div>Item 3</div>
+                                <div>Item 4</div>
+                                <div>Item 5</div>
+                            </div>
+
+                            <div class="d-flex ai-stretch">
+                                <div>Stretch A</div>
+                                <div>Stretch B</div>
+                                <div>Stretch C</div>
+                            </div>
+
+                            <div class="d-flex ai-center">
+                                <div class="as-start">Start</div>
+                                <div class="as-center">Center</div>
+                                <div class="as-end">End</div>
+                                <div class="as-stretch">Stretch</div>
+                                <div class="as-baseline">Baseline</div>
+                            </div>
+
+                            <div class="d-flex fw-wrap ac-between">
+                                <div>Box 1</div>
+                                <div>Box 2</div>
+                                <div>Box 3</div>
+                                <div>Box 4</div>
+                                <div>Box 5</div>
+                                <div>Box 6</div>
+                            </div>
+
+                            <div class="d-flex">
+                                <div>Fixed</div>
+                                <div class="flex-1-1-auto">Flex auto</div>
+                                <div class="flex-1-1-auto">Flex auto</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            {# Utilities / Responsive behavior #}
+            <div class="card p-2">
+                <div class="card-header">
+                    <h2>📏 Flex Utilities &amp; Breakpoints</h2>
+                </div>
+
+                <div class="card-body">
+                    <p class="p-1">
+                        Flex utilities follow a consistent naming pattern. You can use:
+                        <code class="text-bold text-primary">.fd-*</code> to control direction,
+                        <code class="text-bold text-primary">.fw-*</code> to toggle wrapping,
+                        <code class="text-bold text-primary">.jc-*</code> to align items along the main axis,
+                        <code class="text-bold text-primary">.ai-*</code> to align items on the cross axis,
+                        <code class="text-bold text-primary">.ac-*</code> to align multi-line content,
+                        and
+                        <code class="text-bold text-primary">.as-*</code> to override alignment for a single item.
+                    </p>
+
+                    <p class="p-1">
+                        Responsive variants are created by appending a breakpoint suffix, such as
+                        <code class="text-bold text-primary">-xs</code>,
+                        <code class="text-bold text-primary">-sm</code>,
+                        <code class="text-bold text-primary">-md</code>,
+                        or
+                        <code class="text-bold text-primary">-lg</code>.
+                        For example,
+                        <code class="text-bold text-primary">.fd-column fd-row-md</code>
+                        stacks items in a column on small screens and switches to a row layout starting from the
+                        <code>md</code> breakpoint.
+                    </p>
+
+                    <div class="row mt-2">
+
+                        {# 1 — Direction #}
+                        <div class="col-12 col-4-xs">
+                            <div class="card p-2">
+                                <code class="text-bold text-primary">.fd-{direction}</code>
+                                <p class="mt-1">
+                                    Controls the flex direction of a container
+                                    (for example:
+                                    <code class="text-bold text-primary">.fd-row</code>,
+                                    <code class="text-bold text-primary">.fd-column</code>).
+                                </p>
+                            </div>
+                        </div>
+
+                        {# 2 — Wrap #}
+                        <div class="col-12 col-4-xs">
+                            <div class="card p-2">
+                                <code class="text-bold text-primary">.fw-{mode}</code>
+                                <p class="mt-1">
+                                    Controls wrapping behavior inside the container
+                                    (for example:
+                                    <code class="text-bold text-primary">.fw-wrap</code>,
+                                    <code class="text-bold text-primary">.fw-nowrap</code>).
+                                </p>
+                            </div>
+                        </div>
+
+                        {# 3 — Justify content #}
+                        <div class="col-12 col-4-xs">
+                            <div class="card p-2">
+                                <code class="text-bold text-primary">.jc-{value}</code>
+                                <p class="mt-1">
+                                    Aligns items along the main axis
+                                    (for example:
+                                    <code class="text-bold text-primary">.jc-center</code>,
+                                    <code class="text-bold text-primary">.jc-between</code>).
+                                </p>
+                            </div>
+                        </div>
+
+                        {# 4 — Align items #}
+                        <div class="col-12 col-4-xs">
+                            <div class="card p-2">
+                                <code class="text-bold text-primary">.ai-{value}</code>
+                                <p class="mt-1">
+                                    Aligns items on the cross axis
+                                    (for example:
+                                    <code class="text-bold text-primary">.ai-center</code>,
+                                    <code class="text-bold text-primary">.ai-stretch</code>).
+                                </p>
+                            </div>
+                        </div>
+
+                        {# 5 — Align content #}
+                        <div class="col-12 col-4-xs">
+                            <div class="card p-2">
+                                <code class="text-bold text-primary">.ac-{value}</code>
+                                <p class="mt-1">
+                                    Aligns multi-line flex content when wrapping is enabled
+                                    (for example:
+                                    <code class="text-bold text-primary">.ac-between</code>,
+                                    <code class="text-bold text-primary">.ac-around</code>).
+                                </p>
+                            </div>
+                        </div>
+
+                        {# 6 — Align self #}
+                        <div class="col-12 col-4-xs">
+                            <div class="card p-2">
+                                <code class="text-bold text-primary">.as-{value}</code>
+                                <p class="mt-1">
+                                    Overrides alignment for a single flex item
+                                    (for example:
+                                    <code class="text-bold text-primary">.as-start</code>,
+                                    <code class="text-bold text-primary">.as-end</code>).
+                                </p>
+                            </div>
+                        </div>
+
+                        {# 7 — Flex grow/shrink #}
+                        <div class="col-12 col-4-xs">
+                            <div class="card p-2">
+                                <code class="text-bold text-primary">.flex-1-1-auto</code>
+                                <p class="mt-1">
+                                    Allows the item to grow and shrink automatically,
+                                    sharing remaining space with other flex items.
+                                </p>
+                            </div>
+                        </div>
+
+                        {# 8 — Responsive suffix #}
+                        <div class="col-12 col-4-xs">
+                            <div class="card p-2">
+                                <code class="text-bold text-primary">.{utility}-{breakpoint}</code>
+                                <p class="mt-1">
+                                    Applies the selected utility only from the specified breakpoint
+                                    (for example:
+                                    <code class="text-bold text-primary">.fd-row-md</code>,
+                                    <code class="text-bold text-primary">.jc-center-lg</code>).
+                                </p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+{% endblock %}

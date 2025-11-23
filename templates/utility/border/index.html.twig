@@ -1,0 +1,408 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello BorderController!{% endblock %}
+
+{% block body %}
+    <div class="container-sm">
+        <div class="d-flex fd-column gap-5">
+
+            {# Intro #}
+            <div class="card p-2">
+                <div class="card-header">
+                    <h2>🧱 Borders</h2>
+                </div>
+            </div>
+
+            {# What are borders used for? #}
+            <div class="card p-2">
+                <div class="card-header">
+                    <h2>📐 What are borders used for?</h2>
+                </div>
+
+                <div class="card-body">
+                    <p class="p-1">
+                        Border utilities let you quickly control which sides of an element are bordered,
+                        as well as border style, width, and radius. They are designed to work together with
+                        the global border tokens (
+                        <code class="text-bold text-primary">--border-width</code>,
+                        <code class="text-bold text-primary">--border-style</code>,
+                        <code class="text-bold text-primary">--border-color</code>) so you can keep a consistent
+                        look across your design system.
+                    </p>
+                    <p class="p-1">
+                        You can add borders to individual sides, both horizontal or vertical sides, or all around
+                        an element. Then you can refine the style (solid, dashed, dotted, etc.), the width, and the
+                        corner radius using dedicated utility classes.
+                    </p>
+                </div>
+            </div>
+
+            {# Examples #}
+            <div class="card p-2">
+                <div class="card-header">
+                    <h2>💠 Examples</h2>
+                </div>
+
+                <div class="card-body">
+                    <p class="p-1">
+                        The following examples show how to combine side, style, width, and radius utilities
+                        to create different border appearances.
+                    </p>
+
+                    {# Border sides #}
+                    <div class="row">
+                        <div class="col-12 col-4-md">
+                            <div class="p-1 mb-1 border-top">
+                                .border-top
+                            </div>
+                        </div>
+                        <div class="col-12 col-4-md">
+                            <div class="p-1 mb-1 border-x">
+                                .border-x
+                            </div>
+                        </div>
+                        <div class="col-12 col-4-md">
+                            <div class="p-1 mb-1 border-all">
+                                .border-all
+                            </div>
+                        </div>
+                    </div>
+
+                    {# Border styles #}
+                    <div class="row mt-1">
+                        <div class="col-12 col-4-md">
+                            <div class="p-1 mb-1 border-all border-solid">
+                                .border-all .border-solid
+                            </div>
+                        </div>
+                        <div class="col-12 col-4-md">
+                            <div class="p-1 mb-1 border-all border-dashed">
+                                .border-all .border-dashed
+                            </div>
+                        </div>
+                        <div class="col-12 col-4-md">
+                            <div class="p-1 mb-1 border-all border-dotted">
+                                .border-all .border-dotted
+                            </div>
+                        </div>
+                    </div>
+
+                    {# Border widths #}
+                    <div class="row mt-1">
+                        <div class="col-12 col-4-md">
+                            <div class="p-1 mb-1 border-all border-1">
+                                .border-all .border-1
+                            </div>
+                        </div>
+                        <div class="col-12 col-4-md">
+                            <div class="p-1 mb-1 border-all border-3">
+                                .border-all .border-3
+                            </div>
+                        </div>
+                        <div class="col-12 col-4-md">
+                            <div class="p-1 mb-1 border-all border-5">
+                                .border-all .border-5
+                            </div>
+                        </div>
+                    </div>
+
+                    {# Border radius #}
+                    <div class="row mt-1">
+                        <div class="col-12 col-4-md">
+                            <div class="p-1 mb-1 border-all rounded-0">
+                                .border-all .rounded-0
+                            </div>
+                        </div>
+                        <div class="col-12 col-4-md">
+                            <div class="p-1 mb-1 border-all rounded">
+                                .border-all .rounded
+                            </div>
+                        </div>
+                        <div class="col-12 col-4-md">
+                            <div class="p-1 mb-1 border-all rounded-pill">
+                                .border-all .rounded-pill
+                            </div>
+                        </div>
+                    </div>
+
+                    {# Circle example #}
+                    <div class="row mt-1">
+                        <div class="col-12 col-4-md">
+                            <div class="p-2 mb-1 border-all rounded-circle d-flex jc-center ai-center">
+                                .rounded-circle
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            {# HTML Code #}
+            <div class="card p-2">
+                <div class="card-header">
+                    <h2>💻 HTML Code</h2>
+                </div>
+
+                <div class="card-body">
+                    <div class="position-relative">
+                        <button class="btn btn-primary position-top-right z-1 mt-1 mr-1"
+                                onclick="copyCode('code-borders', this);">
+                            Copy
+                        </button>
+
+                        <div data-js="code" id="code-borders" class="container-code overflow-auto">
+                            <div class="border-top">Top border only</div>
+                            <div class="border-x">Left and right borders</div>
+                            <div class="border-all">Border on all sides</div>
+
+                            <div class="border-all border-solid">Solid border</div>
+                            <div class="border-all border-dashed">Dashed border</div>
+                            <div class="border-all border-dotted">Dotted border</div>
+
+                            <div class="border-all border-1">Thin border</div>
+                            <div class="border-all border-3">Medium border</div>
+                            <div class="border-all border-5">Thick border</div>
+
+                            <div class="border-all rounded-0">Square corners</div>
+                            <div class="border-all rounded">Default rounded corners</div>
+                            <div class="border-all rounded-pill">Pill-shaped corners</div>
+                            <div class="border-all rounded-circle">Circle / full radius</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            {# Utilities / Behavior #}
+            <div class="card p-2">
+                <div class="card-header">
+                    <h2>📏 Border Utilities</h2>
+                </div>
+
+                <div class="card-body">
+                    <p class="p-1">
+                        Border utilities follow a simple and predictable naming pattern. You can combine side,
+                        style, width, and radius utilities to get the desired appearance, while still relying on
+                        a consistent set of design tokens.
+                    </p>
+
+                    <div class="row mt-2">
+                        <div class="col-12 col-4-xs">
+                            <div class="card p-2">
+                                <code class="text-bold text-primary">.border-{side}</code>
+                                <p class="mt-1">
+                                    Adds a border to a specific side or group of sides:
+                                    <code>.border-top</code>,
+                                    <code>.border-bottom</code>,
+                                    <code>.border-left</code>,
+                                    <code>.border-right</code>,
+                                    <code>.border-x</code>,
+                                    <code>.border-y</code>,
+                                    <code>.border-all</code>.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="col-12 col-4-xs">
+                            <div class="card p-2">
+                                <code class="text-bold text-primary">.border-{style}</code>
+                                <p class="mt-1">
+                                    Overrides the border style:
+                                    <code>.border-solid</code>,
+                                    <code>.border-dashed</code>,
+                                    <code>.border-dotted</code>,
+                                    <code>.border-double</code>,
+                                    <code>.border-none</code>.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="col-12 col-4-xs">
+                            <div class="card p-2">
+                                <code class="text-bold text-primary">.border-{width}</code>
+                                <p class="mt-1">
+                                    Sets the border width using a scale:
+                                    <code>.border-0</code>,
+                                    <code>.border-1</code>,
+                                    <code>.border-2</code>,
+                                    <code>.border-3</code>,
+                                    <code>.border-4</code>,
+                                    <code>.border-5</code>.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="col-12 col-4-xs">
+                            <div class="card p-2">
+                                <code class="text-bold text-primary">.rounded*</code>
+                                <p class="mt-1">
+                                    Controls the corner radius:
+                                    <code>.rounded-0</code> (no radius),
+                                    <code>.rounded</code> / <code>.border-radius</code> (default radius),
+                                    <code>.rounded-pill</code> (pill shape),
+                                    <code>.rounded-circle</code> (full circle).
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            {# Color #}
+            <div class="card p-2">
+                <div class="card-header">
+                    <h2>🎨 Border Color</h2>
+                </div>
+                <div class="card-body">
+
+                    <p class="p-1">
+                        Use <code class="text-bold text-primary">.border-{color}</code> to apply a themed border color,
+                        and combine it with a side utility such as
+                        <code class="text-bold text-primary">.border-all</code>,
+                        <code class="text-bold text-primary">.border-x</code>,
+                        or
+                        <code class="text-bold text-primary">.border-top</code>
+                        to control where the border is rendered.
+                    </p>
+
+                    <div class="row">
+                        <div class="col-12 col-4-xs">
+                            <div class="card p-2 border-all border-primary">
+                                <code class="text-bold">.border-all .border-primary</code>
+                            </div>
+                        </div>
+                        <div class="col-12 col-4-xs">
+                            <div class="card p-2 border-all border-secondary">
+                                <code class="text-bold">.border-all .border-secondary</code>
+                            </div>
+                        </div>
+                        <div class="col-12 col-4-xs">
+                            <div class="card p-2 border-all border-tertiary">
+                                <code class="text-bold">.border-all .border-tertiary</code>
+                            </div>
+                        </div>
+
+                        <div class="col-12 col-4-xs">
+                            <div class="card p-2 border-all border-success">
+                                <code class="text-bold">.border-all .border-success</code>
+                            </div>
+                        </div>
+                        <div class="col-12 col-4-xs">
+                            <div class="card p-2 border-all border-danger">
+                                <code class="text-bold">.border-all .border-danger</code>
+                            </div>
+                        </div>
+                        <div class="col-12 col-4-xs">
+                            <div class="card p-2 border-all border-warning">
+                                <code class="text-bold">.border-all .border-warning</code>
+                            </div>
+                        </div>
+
+                        <div class="col-12 col-4-xs">
+                            <div class="card p-2 border-all border-info">
+                                <code class="text-bold">.border-all .border-info</code>
+                            </div>
+                        </div>
+                        <div class="col-12 col-4-xs">
+                            <div class="card p-2 border-all border-light">
+                                <code class="text-bold">.border-all .border-light</code>
+                            </div>
+                        </div>
+                        <div class="col-12 col-4-xs">
+                            <div class="card p-2 border-all border-dark">
+                                <code class="text-bold">.border-all .border-dark</code>
+                            </div>
+                        </div>
+
+                        <div class="col-12 col-4-xs">
+                            <div class="card p-2 border-all border-white">
+                                <code class="text-bold">.border-all .border-white</code>
+                            </div>
+                        </div>
+                        <div class="col-12 col-4-xs">
+                            <div class="card p-2 border-all border-black">
+                                <code class="text-bold">.border-all .border-black</code>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            {# Variables #}
+            <div class="card p-2">
+                <div class="card-header">
+                    <h2>⚙️ Border Variables</h2>
+                </div>
+
+                <div class="card-body">
+                    <p class="p-1">
+                        These variables define the default border look and corner radii used across the framework.
+                        Utility classes build on top of them to keep borders consistent while remaining flexible.
+                    </p>
+
+                    <div class="table-responsive">
+                        <table class="table">
+                            <thead>
+                            <tr class="text-left">
+                                <th>Variable</th>
+                                <th>Description</th>
+                            </tr>
+                            </thead>
+
+                            <tbody>
+                            <tr>
+                                <td><code class="text-bold text-primary">--border-width</code></td>
+                                <td>
+                                    Base border width used by side utilities like
+                                    <code>.border-top</code>,
+                                    <code>.border-x</code>,
+                                    <code>.border-all</code>.
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td><code class="text-bold text-primary">--border-style</code></td>
+                                <td>
+                                    Base border style (e.g. solid) applied by default to border utilities.
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td><code class="text-bold text-primary">--border-color</code></td>
+                                <td>
+                                    Default border color used across all border utilities.
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td><code class="text-bold text-primary">--border-radius</code></td>
+                                <td>
+                                    Default corner radius used by
+                                    <code>.rounded</code> and
+                                    <code>.border-radius</code>.
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td><code class="text-bold text-primary">--border-radius-pill</code></td>
+                                <td>
+                                    Corner radius used by
+                                    <code>.rounded-pill</code> to create pill-shaped elements.
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td><code class="text-bold text-primary">--border-radius-circle</code></td>
+                                <td>
+                                    Corner radius used by
+                                    <code>.rounded-circle</code> to create circular elements.
+                                </td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+{% endblock %}

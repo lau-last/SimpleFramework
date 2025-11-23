@@ -13,9 +13,15 @@
 
     <!-- aside content -->
     <nav>
-        <section class="collapse mb-half">
-            <button class="collapse-btn btn-primary" data-js="collapse" data-target="#menu-side-1">Components</button>
-            <div class="collapse-body show" id="menu-side-1">
+        <div class="collapse mb-half">
+            <button class="collapse-btn btn-primary"
+                    data-js="collapse"
+                    data-target="#menu-side-component"
+                    aria-expanded="true"
+                    aria-controls="menu-side-component">
+                Component
+            </button>
+            <div class="collapse-body show" id="menu-side-component">
                 <ul class="list list-hover">
                     <li><a class="list-item" href="{{ url('app_accordion') }}">Accordion</a></li>
                     <li><a class="list-item" href="{{ url('app_accordion_native') }}">Accordion native</a></li>
@@ -36,6 +42,47 @@
                     <li><a class="list-item" href="{{ url('app_table') }}">Table</a></li>
                 </ul>
             </div>
-        </section>
+        </div>
+        <div class="collapse mb-half">
+            <button class="collapse-btn btn-primary"
+                    data-js="collapse"
+                    data-target="#menu-side-layout"
+                    aria-expanded="true"
+                    aria-controls="menu-side-layout">
+                Layout
+            </button>
+            <div class="collapse-body show" id="menu-side-layout">
+                <ul class="list list-hover">
+                    <li><a class="list-item" href="{{ url('app_col') }}">Col</a></li>
+                    <li><a class="list-item" href="{{ url('app_container') }}">Container</a></li>
+                    <li><a class="list-item" href="{{ url('app_flex') }}">Flex</a></li>
+                    <li><a class="list-item" href="{{ url('app_grid') }}">Grid</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="collapse mb-half">
+            <button class="collapse-btn btn-primary"
+                    data-js="collapse"
+                    data-target="#menu-side-utility"
+                    aria-expanded="true"
+                    aria-controls="menu-side-utility">
+                Utility
+            </button>
+            <div class="collapse-body show" id="menu-side-utility">
+                <ul class="list list-hover">
+                    <li><a class="list-item" href="{{ url('app_border') }}">Border</a></li>
+                    <li><a class="list-item" href="{{ url('app_color') }}">Color</a></li>
+                    <li><a class="list-item" href="{{ url('app_display') }}">Display</a></li>
+                    <li><a class="list-item" href="{{ url('app_helper') }}">Helper</a></li>
+                    <li><a class="list-item" href="{{ url('app_image') }}">Image</a></li>
+                    <li><a class="list-item" href="{{ url('app_position') }}">Position</a></li>
+                    <li><a class="list-item" href="{{ url('app_sizing') }}">Sizing</a></li>
+                    <li><a class="list-item" href="{{ url('app_spacing') }}">Spacing</a></li>
+                    <li><a class="list-item" href="{{ url('app_text') }}">Text</a></li>
+                    <li><a class="list-item" href="{{ url('app_typography') }}">Typography</a></li>
+                    <li><a class="list-item" href="{{ url('app_visibility') }}">Visibility</a></li>
+                </ul>
+            </div>
+        </div>
     </nav>
 </aside>

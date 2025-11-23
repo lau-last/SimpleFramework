@@ -1,0 +1,542 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Spacing Utilities{% endblock %}
+
+{% block body %}
+    <div class="container-sm">
+        <div class="d-flex fd-column gap-5">
+
+            {# Intro #}
+            <div class="card h-100 p-2">
+                <div class="card-header">
+                    <h2>📏 Spacing</h2>
+                </div>
+            </div>
+
+            {# What are spacing utilities used for? #}
+            <div class="card h-100 p-2">
+                <div class="card-header">
+                    <h2>📐 What are spacing utilities used for?</h2>
+                </div>
+
+                <div class="card-body">
+                    <p class="p-1">
+                        Spacing utilities control margin, padding, and gaps using a shared spacing scale.
+                        They let you quickly adjust outer spacing (<code>margin</code>), inner spacing
+                        (<code>padding</code>), and the gap between flex/grid items using a consistent set
+                        of values and responsive breakpoints.
+                    </p>
+
+                    <p class="p-1">
+                        All utilities are generated from the <code class="text-bold text-primary">$spacings</code> map
+                        and the global <code class="text-bold text-primary">$breakpoints</code> configuration.
+                        Margins support the <code>auto</code> value, paddings do not, and gap helpers only accept
+                        numeric spacing values.
+                    </p>
+                </div>
+            </div>
+
+            {# Utilities Reference #}
+            <div class="card h-100 p-2">
+                <div class="card-header">
+                    <h2>📏 Spacing Utilities Reference</h2>
+                </div>
+
+                <div class="card-body">
+                    <p class="p-1">
+                        All spacing utilities use the following scale:
+                        <br>
+                        Value:
+                        <code class="text-bold text-primary">0</code>,
+                        <code class="text-bold text-primary">half</code>,
+                        <code class="text-bold text-primary">1</code>,
+                        <code class="text-bold text-primary">2</code>,
+                        <code class="text-bold text-primary">3</code>,
+                        <code class="text-bold text-primary">4</code>,
+                        <code class="text-bold text-primary">5</code>,
+                        <code class="text-bold text-primary">auto</code>
+                        <br>
+                        Breakpoint:
+                        <code class="text-bold text-primary">xs</code>,
+                        <code class="text-bold text-primary">sm</code>,
+                        <code class="text-bold text-primary">md</code>,
+                        <code class="text-bold text-primary">lg</code>,
+                        <code class="text-bold text-primary">xl</code>,
+                        <code class="text-bold text-primary">xxl</code>,
+                    </p>
+
+                    <div class="row mt-2">
+
+                        {# GAP ################################################ #}
+
+                        <div class="col-12 col-4-xs">
+                            <div class="card h-100 p-2">
+                                <code class="text-bold text-primary">.gap-{value}</code>
+                                <p class="mt-1">
+                                    Sets the gap between child elements (for flex or grid containers)
+                                    using the spacing scale.
+                                    <br>
+                                    <span class="text-danger">
+                                        The value <code>auto</code> is not supported for this utility.
+                                    </span>
+                                </p>
+                            </div>
+                        </div>
+
+                        {# MARGIN — ALL SIDES ################################### #}
+
+                        <div class="col-12 col-4-xs">
+                            <div class="card h-100 p-2">
+                                <code class="text-bold text-primary">.m-{value}</code>
+                                <p class="mt-1">
+                                    Applies margin on all sides using the spacing scale,
+                                    including <code>auto</code> (useful for centering blocks).
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="col-12 col-4-xs">
+                            <div class="card h-100 p-2">
+                                <code class="text-bold text-primary">.m-{value}-{breakpoint}</code>
+                                <p class="mt-1">
+                                    Applies margin on all sides from a specific breakpoint,
+                                    using any defined value (including <code>auto</code>).
+                                </p>
+                            </div>
+                        </div>
+
+                        {# MARGIN — TOP ######################################## #}
+
+                        <div class="col-12 col-4-xs">
+                            <div class="card h-100 p-2">
+                                <code class="text-bold text-primary">.mt-{value}</code>
+                                <p class="mt-1">
+                                    Applies margin to the top side using the spacing scale,
+                                    including <code>auto</code>.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="col-12 col-4-xs">
+                            <div class="card h-100 p-2">
+                                <code class="text-bold text-primary">.mt-{value}-{breakpoint}</code>
+                                <p class="mt-1">
+                                    Applies top margin from a specific breakpoint,
+                                    using any defined value (including <code>auto</code>).
+                                </p>
+                            </div>
+                        </div>
+
+                        {# MARGIN — BOTTOM ##################################### #}
+
+                        <div class="col-12 col-4-xs">
+                            <div class="card h-100 p-2">
+                                <code class="text-bold text-primary">.mb-{value}</code>
+                                <p class="mt-1">
+                                    Applies margin to the bottom side using the spacing scale,
+                                    including <code>auto</code>.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="col-12 col-4-xs">
+                            <div class="card h-100 p-2">
+                                <code class="text-bold text-primary">.mb-{value}-{breakpoint}</code>
+                                <p class="mt-1">
+                                    Applies bottom margin from a specific breakpoint,
+                                    using any defined value (including <code>auto</code>).
+                                </p>
+                            </div>
+                        </div>
+
+                        {# MARGIN — LEFT (physical) ############################ #}
+
+                        <div class="col-12 col-4-xs">
+                            <div class="card h-100 p-2">
+                                <code class="text-bold text-primary">.ml-{value}</code>
+                                <p class="mt-1">
+                                    Applies margin to the left side using the spacing scale,
+                                    including <code>auto</code>.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="col-12 col-4-xs">
+                            <div class="card h-100 p-2">
+                                <code class="text-bold text-primary">.ml-{value}-{breakpoint}</code>
+                                <p class="mt-1">
+                                    Applies left margin from a specific breakpoint,
+                                    using any defined value (including <code>auto</code>).
+                                </p>
+                            </div>
+                        </div>
+
+                        {# MARGIN — START (logical) ############################ #}
+
+                        <div class="col-12 col-4-xs">
+                            <div class="card h-100 p-2">
+                                <code class="text-bold text-primary">.ms-{value}</code>
+                                <p class="mt-1">
+                                    Applies margin on the logical start side (left in LTR, right in RTL),
+                                    including <code>auto</code>.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="col-12 col-4-xs">
+                            <div class="card h-100 p-2">
+                                <code class="text-bold text-primary">.ms-{value}-{breakpoint}</code>
+                                <p class="mt-1">
+                                    Applies logical start margin from a specific breakpoint,
+                                    using any defined value (including <code>auto</code>).
+                                </p>
+                            </div>
+                        </div>
+
+                        {# MARGIN — RIGHT (physical) ########################### #}
+
+                        <div class="col-12 col-4-xs">
+                            <div class="card h-100 p-2">
+                                <code class="text-bold text-primary">.mr-{value}</code>
+                                <p class="mt-1">
+                                    Applies margin to the right side using the spacing scale,
+                                    including <code>auto</code>.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="col-12 col-4-xs">
+                            <div class="card h-100 p-2">
+                                <code class="text-bold text-primary">.mr-{value}-{breakpoint}</code>
+                                <p class="mt-1">
+                                    Applies right margin from a specific breakpoint,
+                                    using any defined value (including <code>auto</code>).
+                                </p>
+                            </div>
+                        </div>
+
+                        {# MARGIN — END (logical) ############################## #}
+
+                        <div class="col-12 col-4-xs">
+                            <div class="card h-100 p-2">
+                                <code class="text-bold text-primary">.me-{value}</code>
+                                <p class="mt-1">
+                                    Applies margin on the logical end side (right in LTR, left in RTL),
+                                    including <code>auto</code>.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="col-12 col-4-xs">
+                            <div class="card h-100 p-2">
+                                <code class="text-bold text-primary">.me-{value}-{breakpoint}</code>
+                                <p class="mt-1">
+                                    Applies logical end margin from a specific breakpoint,
+                                    using any defined value (including <code>auto</code>).
+                                </p>
+                            </div>
+                        </div>
+
+                        {# MARGIN — X AXIS ###################################### #}
+
+                        <div class="col-12 col-4-xs">
+                            <div class="card h-100 p-2">
+                                <code class="text-bold text-primary">.mx-{value}</code>
+                                <p class="mt-1">
+                                    Applies horizontal margins (left and right) using the spacing scale,
+                                    including <code>auto</code>.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="col-12 col-4-xs">
+                            <div class="card h-100 p-2">
+                                <code class="text-bold text-primary">.mx-{value}-{breakpoint}</code>
+                                <p class="mt-1">
+                                    Applies horizontal margins from a specific breakpoint,
+                                    using any defined value (including <code>auto</code>).
+                                </p>
+                            </div>
+                        </div>
+
+                        {# MARGIN — Y AXIS ###################################### #}
+
+                        <div class="col-12 col-4-xs">
+                            <div class="card h-100 p-2">
+                                <code class="text-bold text-primary">.my-{value}</code>
+                                <p class="mt-1">
+                                    Applies vertical margins (top and bottom) using the spacing scale,
+                                    including <code>auto</code>.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="col-12 col-4-xs">
+                            <div class="card h-100 p-2">
+                                <code class="text-bold text-primary">.my-{value}-{breakpoint}</code>
+                                <p class="mt-1">
+                                    Applies vertical margins from a specific breakpoint,
+                                    using any defined value (including <code>auto</code>).
+                                </p>
+                            </div>
+                        </div>
+
+                        {# PADDING — ALL SIDES ################################## #}
+
+                        <div class="col-12 col-4-xs">
+                            <div class="card h-100 p-2">
+                                <code class="text-bold text-primary">.p-{value}</code>
+                                <p class="mt-1">
+                                    Applies padding on all sides using the spacing scale.
+                                    <br>
+                                    <span class="text-danger">
+                                        The value <code>auto</code> is not supported for this utility.
+                                    </span>
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="col-12 col-4-xs">
+                            <div class="card h-100 p-2">
+                                <code class="text-bold text-primary">.p-{value}-{breakpoint}</code>
+                                <p class="mt-1">
+                                    Applies padding on all sides from a specific breakpoint.
+                                    <br>
+                                    <span class="text-danger">
+                                        The value <code>auto</code> is not supported for this utility.
+                                    </span>
+                                </p>
+                            </div>
+                        </div>
+
+                        {# PADDING — TOP ######################################## #}
+
+                        <div class="col-12 col-4-xs">
+                            <div class="card h-100 p-2">
+                                <code class="text-bold text-primary">.pt-{value}</code>
+                                <p class="mt-1">
+                                    Applies padding to the top side using the spacing scale.
+                                    <br>
+                                    <span class="text-danger">
+                                        The value <code>auto</code> is not supported for this utility.
+                                    </span>
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="col-12 col-4-xs">
+                            <div class="card h-100 p-2">
+                                <code class="text-bold text-primary">.pt-{value}-{breakpoint}</code>
+                                <p class="mt-1">
+                                    Applies top padding from a specific breakpoint.
+                                    <br>
+                                    <span class="text-danger">
+                                        The value <code>auto</code> is not supported for this utility.
+                                    </span>
+                                </p>
+                            </div>
+                        </div>
+
+                        {# PADDING — BOTTOM ##################################### #}
+
+                        <div class="col-12 col-4-xs">
+                            <div class="card h-100 p-2">
+                                <code class="text-bold text-primary">.pb-{value}</code>
+                                <p class="mt-1">
+                                    Applies padding to the bottom side using the spacing scale.
+                                    <br>
+                                    <span class="text-danger">
+                                        The value <code>auto</code> is not supported for this utility.
+                                    </span>
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="col-12 col-4-xs">
+                            <div class="card h-100 p-2">
+                                <code class="text-bold text-primary">.pb-{value}-{breakpoint}</code>
+                                <p class="mt-1">
+                                    Applies bottom padding from a specific breakpoint.
+                                    <br>
+                                    <span class="text-danger">
+                                        The value <code>auto</code> is not supported for this utility.
+                                    </span>
+                                </p>
+                            </div>
+                        </div>
+
+                        {# PADDING — LEFT (physical) ############################ #}
+
+                        <div class="col-12 col-4-xs">
+                            <div class="card h-100 p-2">
+                                <code class="text-bold text-primary">.pl-{value}</code>
+                                <p class="mt-1">
+                                    Applies padding to the left side using the spacing scale.
+                                    <br>
+                                    <span class="text-danger">
+                                        The value <code>auto</code> is not supported for this utility.
+                                    </span>
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="col-12 col-4-xs">
+                            <div class="card h-100 p-2">
+                                <code class="text-bold text-primary">.pl-{value}-{breakpoint}</code>
+                                <p class="mt-1">
+                                    Applies left padding from a specific breakpoint.
+                                    <br>
+                                    <span class="text-danger">
+                                        The value <code>auto</code> is not supported for this utility.
+                                    </span>
+                                </p>
+                            </div>
+                        </div>
+
+                        {# PADDING — START (logical) ############################ #}
+
+                        <div class="col-12 col-4-xs">
+                            <div class="card h-100 p-2">
+                                <code class="text-bold text-primary">.ps-{value}</code>
+                                <p class="mt-1">
+                                    Applies padding on the logical start side (left in LTR, right in RTL).
+                                    <br>
+                                    <span class="text-danger">
+                                        The value <code>auto</code> is not supported for this utility.
+                                    </span>
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="col-12 col-4-xs">
+                            <div class="card h-100 p-2">
+                                <code class="text-bold text-primary">.ps-{value}-{breakpoint}</code>
+                                <p class="mt-1">
+                                    Applies logical start padding from a specific breakpoint.
+                                    <br>
+                                    <span class="text-danger">
+                                        The value <code>auto</code> is not supported for this utility.
+                                    </span>
+                                </p>
+                            </div>
+                        </div>
+
+                        {# PADDING — RIGHT (physical) ########################### #}
+
+                        <div class="col-12 col-4-xs">
+                            <div class="card h-100 p-2">
+                                <code class="text-bold text-primary">.pr-{value}</code>
+                                <p class="mt-1">
+                                    Applies padding to the right side using the spacing scale.
+                                    <br>
+                                    <span class="text-danger">
+                                        The value <code>auto</code> is not supported for this utility.
+                                    </span>
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="col-12 col-4-xs">
+                            <div class="card h-100 p-2">
+                                <code class="text-bold text-primary">.pr-{value}-{breakpoint}</code>
+                                <p class="mt-1">
+                                    Applies right padding from a specific breakpoint.
+                                    <br>
+                                    <span class="text-danger">
+                                        The value <code>auto</code> is not supported for this utility.
+                                    </span>
+                                </p>
+                            </div>
+                        </div>
+
+                        {# PADDING — END (logical) ############################## #}
+
+                        <div class="col-12 col-4-xs">
+                            <div class="card h-100 p-2">
+                                <code class="text-bold text-primary">.pe-{value}</code>
+                                <p class="mt-1">
+                                    Applies padding on the logical end side (right in LTR, left in RTL).
+                                    <br>
+                                    <span class="text-danger">
+                                        The value <code>auto</code> is not supported for this utility.
+                                    </span>
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="col-12 col-4-xs">
+                            <div class="card h-100 p-2">
+                                <code class="text-bold text-primary">.pe-{value}-{breakpoint}</code>
+                                <p class="mt-1">
+                                    Applies logical end padding from a specific breakpoint.
+                                    <br>
+                                    <span class="text-danger">
+                                        The value <code>auto</code> is not supported for this utility.
+                                    </span>
+                                </p>
+                            </div>
+                        </div>
+
+                        {# PADDING — X AXIS ###################################### #}
+
+                        <div class="col-12 col-4-xs">
+                            <div class="card h-100 p-2">
+                                <code class="text-bold text-primary">.px-{value}</code>
+                                <p class="mt-1">
+                                    Applies horizontal padding (left and right) using the spacing scale.
+                                    <br>
+                                    <span class="text-danger">
+                                        The value <code>auto</code> is not supported for this utility.
+                                    </span>
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="col-12 col-4-xs">
+                            <div class="card h-100 p-2">
+                                <code class="text-bold text-primary">.px-{value}-{breakpoint}</code>
+                                <p class="mt-1">
+                                    Applies horizontal padding from a specific breakpoint.
+                                    <br>
+                                    <span class="text-danger">
+                                        The value <code>auto</code> is not supported for this utility.
+                                    </span>
+                                </p>
+                            </div>
+                        </div>
+
+                        {# PADDING — Y AXIS ###################################### #}
+
+                        <div class="col-12 col-4-xs">
+                            <div class="card h-100 p-2">
+                                <code class="text-bold text-primary">.py-{value}</code>
+                                <p class="mt-1">
+                                    Applies vertical padding (top and bottom) using the spacing scale.
+                                    <br>
+                                    <span class="text-danger">
+                                        The value <code>auto</code> is not supported for this utility.
+                                    </span>
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="col-12 col-4-xs">
+                            <div class="card h-100 p-2">
+                                <code class="text-bold text-primary">.py-{value}-{breakpoint}</code>
+                                <p class="mt-1">
+                                    Applies vertical padding from a specific breakpoint.
+                                    <br>
+                                    <span class="text-danger">
+                                        The value <code>auto</code> is not supported for this utility.
+                                    </span>
+                                </p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+{% endblock %}

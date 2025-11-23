@@ -1,0 +1,629 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Text & Typography Utilities{% endblock %}
+
+{% block body %}
+    <div class="container-sm">
+        <div class="d-flex fd-column gap-5">
+
+            {# Intro #}
+            <div class="card p-2">
+                <div class="card-header">
+                    <h2>🔤 Text</h2>
+                </div>
+            </div>
+
+            {# What are text utilities used for? #}
+            <div class="card p-2">
+                <div class="card-header">
+                    <h2>📐 What are text utilities used for?</h2>
+                </div>
+
+                <div class="card-body">
+                    <p class="p-1">
+                        Text utilities let you control alignment, transformation, font style, line height,
+                        letter spacing, wrapping behavior, and font family directly from your HTML.
+                        They are built on top of the global typography tokens so your text remains consistent
+                        across the entire design system.
+                    </p>
+
+                    <p class="p-1">
+                        Most utilities also have responsive variants, allowing you to change alignment,
+                        wrapping, or typography rules from a specific breakpoint using the pattern
+                        <code class="text-bold text-primary">.{utility}-{breakpoint}</code>
+                        (for example:
+                        <code class="text-bold text-primary">.text-center-md</code> or
+                        <code class="text-bold text-primary">.lh-lg-lg</code>).
+                    </p>
+                </div>
+            </div>
+
+            {# Examples #}
+            <div class="card p-2">
+                <div class="card-header">
+                    <h2>💠 Examples</h2>
+                </div>
+
+                <div class="card-body">
+                    <p class="p-1">
+                        The examples below show how to combine alignment, transformation, line-height,
+                        letter spacing, wrapping, and font family helpers.
+                    </p>
+
+                    {# Alignment #}
+                    <div class="row mb-1">
+                        <div class="col-12 col-4-md">
+                            <div class="p-1 border-all h-100">
+                                <p class="text-start">.text-start (left-aligned text)</p>
+                            </div>
+                        </div>
+                        <div class="col-12 col-4-md">
+                            <div class="p-1 border-all h-100">
+                                <p class="text-center">.text-center (centered text)</p>
+                            </div>
+                        </div>
+                        <div class="col-12 col-4-md">
+                            <div class="p-1 border-all h-100">
+                                <p class="text-end">.text-end (right-aligned text)</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    {# Transform & style #}
+                    <div class="row mb-1">
+                        <div class="col-12 col-4-md">
+                            <div class="p-1 border-all h-100">
+                                <p class="text-uppercase">.text-uppercase — uppercase text</p>
+                            </div>
+                        </div>
+                        <div class="col-12 col-4-md">
+                            <div class="p-1 border-all h-100">
+                                <p class="text-capitalize">.text-capitalize — capitalized sentence</p>
+                            </div>
+                        </div>
+                        <div class="col-12 col-4-md">
+                            <div class="p-1 border-all h-100">
+                                <p class="text-italic">.text-italic — italic text style</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    {# Line height #}
+                    <div class="row mb-1">
+                        <div class="col-12 col-4-md">
+                            <div class="p-1 border-all h-100">
+                                <p class="lh-sm">
+                                    .lh-sm — compact line height. Lorem ipsum dolor sit amet, consectetur adipiscing
+                                    elit.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="col-12 col-4-md">
+                            <div class="p-1 border-all h-100">
+                                <p class="lh-md">
+                                    .lh-md — default reading line height for paragraphs of text.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="col-12 col-4-md">
+                            <div class="p-1 border-all h-100">
+                                <p class="lh-lg">
+                                    .lh-lg — relaxed line height, useful for long-form content.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    {# Letter spacing #}
+                    <div class="row mb-1">
+                        <div class="col-12 col-4-md">
+                            <div class="p-1 border-all h-100">
+                                <p class="ls-sm">.ls-sm — tighter letter spacing</p>
+                            </div>
+                        </div>
+                        <div class="col-12 col-4-md">
+                            <div class="p-1 border-all h-100">
+                                <p class="ls-md">.ls-md — slightly wider letter spacing</p>
+                            </div>
+                        </div>
+                        <div class="col-12 col-4-md">
+                            <div class="p-1 border-all h-100">
+                                <p class="ls-lg">.ls-lg — strong tracking effect</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    {# Wrapping & truncate #}
+                    <div class="row mb-1">
+                        <div class="col-12 col-4-md">
+                            <div class="p-1 border-all h-100">
+                                <p class="text-wrap">
+                                    .text-wrap — long text will wrap normally onto multiple lines when needed.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="col-12 col-4-md">
+                            <div class="p-1 border-all h-100">
+                                <p class="text-truncate">
+                                    .text-truncate — long text is cut and replaced with an ellipsis when it overflows.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="col-12 col-4-md">
+                            <div class="p-1 border-all h-100">
+                                <p class="text-nowrap">
+                                    .text-nowrap — long text will stay on a single line and can overflow its container.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    {# Font family #}
+                    <div class="row">
+                        <div class="col-12 col-4-md">
+                            <div class="p-1 border-all h-100">
+                                <p class="text-serif">
+                                    .text-serif — serif typeface for more traditional or editorial content.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="col-12 col-4-md">
+                            <div class="p-1 border-all h-100">
+                                <p class="text-sans-serif">
+                                    .text-sans-serif — clean, modern sans-serif typeface (default for UI text).
+                                </p>
+                            </div>
+                        </div>
+                        <div class="col-12 col-4-md">
+                            <div class="p-1 border-all h-100">
+                                <p class="text-mono">
+                                    .text-mono — monospace typeface, ideal for inline code or technical snippets.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            {# HTML Code #}
+            <div class="card p-2">
+                <div class="card-header">
+                    <h2>💻 HTML Code</h2>
+                </div>
+
+                <div class="card-body">
+                    <div class="position-relative">
+                        <button class="btn btn-primary position-top-right z-1 mt-1 mr-1"
+                                onclick="copyCode('code-text', this);">
+                            Copy
+                        </button>
+
+                        <div data-js="code" id="code-text" class="container-code overflow-auto">
+
+                            <!-- Alignment -->
+                            <p class="text-start">Left-aligned text (.text-start)</p>
+                            <p class="text-center">Centered text (.text-center)</p>
+                            <p class="text-end">Right-aligned text (.text-end)</p>
+
+                            <!-- Transform & style -->
+                            <p class="text-uppercase">Uppercase text (.text-uppercase)</p>
+                            <p class="text-capitalize">capitalized sentence (.text-capitalize)</p>
+                            <p class="text-italic">Italic style (.text-italic)</p>
+
+                            <!-- Line height -->
+                            <p class="lh-sm">
+                                Compact line height (.lh-sm) for tight blocks of text.
+                            </p>
+                            <p class="lh-md">
+                                Default reading line height (.lh-md) for typical paragraphs.
+                            </p>
+                            <p class="lh-lg">
+                                Relaxed line height (.lh-lg) for large or long text blocks.
+                            </p>
+
+                            <!-- Letter spacing -->
+                            <p class="ls-sm">Tight spacing (.ls-sm)</p>
+                            <p class="ls-md">Medium spacing (.ls-md)</p>
+                            <p class="ls-lg">Wide spacing (.ls-lg)</p>
+
+                            <!-- Wrapping & truncate -->
+                            <p class="text-wrap">
+                                Wrapping text (.text-wrap) will break onto multiple lines when necessary.
+                            </p>
+                            <p class="text-truncate">
+                                Truncated text (.text-truncate) shows an ellipsis when the content is too long.
+                            </p>
+                            <p class="text-nowrap">
+                                No wrapping (.text-nowrap) keeps text on a single line.
+                            </p>
+
+                            <!-- Font family -->
+                            <p class="text-serif">Serif font (.text-serif)</p>
+                            <p class="text-sans-serif">Sans-serif font (.text-sans-serif)</p>
+                            <p class="text-mono">Monospace font (.text-mono)</p>
+
+                            <!-- Responsive example -->
+                            <p class="text-center-md">
+                                This text is default-aligned on mobile and centered from the md breakpoint.
+                            </p>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            {# Utilities / Behavior #}
+            <div class="card p-2">
+                <div class="card-header">
+                    <h2>📏 Text Utilities &amp; Breakpoints</h2>
+                </div>
+
+                <div class="card-body">
+                    <p class="p-1">
+                        Text utilities follow a predictable naming pattern and can be combined freely. <br>
+                        Most of them also offer responsive variants by appending a breakpoint suffix such as
+                        <code class="text-bold text-primary">-xs</code>,
+                        <code class="text-bold text-primary">-sm</code>,
+                        <code class="text-bold text-primary">-md</code>,
+                        <code class="text-bold text-primary">-lg</code>,
+                        <code class="text-bold text-primary">-xl</code>,
+                        or
+                        <code class="text-bold text-primary">-xxl</code>.
+                    </p>
+
+                    <div class="row mt-2">
+
+                        {# ------------------------------------------------------- #}
+                        {# 1 — Alignment #}
+                        {# ------------------------------------------------------- #}
+                        <div class="col-12">
+                            <hr>
+                        </div>
+
+                        {# text-start / text-left #}
+                        <div class="col-12 col-4-xs">
+                            <div class="card p-2 h-100">
+                                <code class="text-bold text-primary">.text-start</code><br>
+                                <code class="text-bold text-primary">.text-start-{breakpoint}</code>
+                                <p class="mt-1">
+                                    Aligns text to the left, with optional responsive variants.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="col-12 col-4-xs">
+                            <div class="card p-2 h-100">
+                                <code class="text-bold text-primary">.text-left</code><br>
+                                <code class="text-bold text-primary">.text-left-{breakpoint}</code>
+                                <p class="mt-1">
+                                    Aligns text to the left, with optional responsive variants.
+                                </p>
+                            </div>
+                        </div>
+
+                        {# text-end / text-right #}
+                        <div class="col-12 col-4-xs">
+                            <div class="card p-2 h-100">
+                                <code class="text-bold text-primary">.text-end</code><br>
+                                <code class="text-bold text-primary">.text-end-{breakpoint}</code>
+                                <p class="mt-1">
+                                    Aligns text to the right, with optional responsive variants.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="col-12 col-4-xs">
+                            <div class="card p-2 h-100">
+                                <code class="text-bold text-primary">.text-right</code><br>
+                                <code class="text-bold text-primary">.text-right-{breakpoint}</code>
+                                <p class="mt-1">
+                                    Aligns text to the right, with optional responsive variants.
+                                </p>
+                            </div>
+                        </div>
+
+                        {# text-center #}
+                        <div class="col-12 col-4-xs">
+                            <div class="card p-2 h-100">
+                                <code class="text-bold text-primary">.text-center</code><br>
+                                <code class="text-bold text-primary">.text-center-{breakpoint}</code>
+                                <p class="mt-1">
+                                    Centers text horizontally, with breakpoint-specific variants.
+                                </p>
+                            </div>
+                        </div>
+
+                        {# text-justify #}
+                        <div class="col-12 col-4-xs">
+                            <div class="card p-2 h-100">
+                                <code class="text-bold text-primary">.text-justify</code><br>
+                                <code class="text-bold text-primary">.text-justify-{breakpoint}</code>
+                                <p class="mt-1">
+                                    Justifies text, stretching it to align on both sides.
+                                </p>
+                            </div>
+                        </div>
+
+                        {# ------------------------------------------------------- #}
+                        {# 2 — Transform #}
+                        {# ------------------------------------------------------- #}
+                        <div class="col-12">
+                            <hr>
+                        </div>
+
+                        {# uppercase #}
+                        <div class="col-12 col-4-xs">
+                            <div class="card p-2 h-100">
+                                <code class="text-bold text-primary">.text-uppercase</code><br>
+                                <code class="text-bold text-primary">.text-uppercase-{breakpoint}</code>
+                                <p class="mt-1">
+                                    Converts text to uppercase, globally or from a specific breakpoint.
+                                </p>
+                            </div>
+                        </div>
+
+                        {# lowercase #}
+                        <div class="col-12 col-4-xs">
+                            <div class="card p-2 h-100">
+                                <code class="text-bold text-primary">.text-lowercase</code><br>
+                                <code class="text-bold text-primary">.text-lowercase-{breakpoint}</code>
+                                <p class="mt-1">
+                                    Converts text to lowercase, with optional responsive behavior.
+                                </p>
+                            </div>
+                        </div>
+
+                        {# capitalize #}
+                        <div class="col-12 col-4-xs">
+                            <div class="card p-2 h-100">
+                                <code class="text-bold text-primary">.text-capitalize</code><br>
+                                <code class="text-bold text-primary">.text-capitalize-{breakpoint}</code>
+                                <p class="mt-1">
+                                    Capitalizes the first letter of each word.
+                                </p>
+                            </div>
+                        </div>
+
+                        {# none #}
+                        <div class="col-12 col-4-xs">
+                            <div class="card p-2 h-100">
+                                <code class="text-bold text-primary">.text-none</code><br>
+                                <code class="text-bold text-primary">.text-none-{breakpoint}</code>
+                                <p class="mt-1">
+                                    Removes any text transformation applied by other utilities.
+                                </p>
+                            </div>
+                        </div>
+
+                        {# ------------------------------------------------------- #}
+                        {# 3 — Font style #}
+                        {# ------------------------------------------------------- #}
+                        <div class="col-12">
+                            <hr>
+                        </div>
+
+                        {# italic #}
+                        <div class="col-12 col-4-xs">
+                            <div class="card p-2 h-100">
+                                <code class="text-bold text-primary">.text-italic</code><br>
+                                <code class="text-bold text-primary">.text-italic-{breakpoint}</code>
+                                <p class="mt-1">
+                                    Applies italic style to text.
+                                </p>
+                            </div>
+                        </div>
+
+                        {# normal #}
+                        <div class="col-12 col-4-xs">
+                            <div class="card p-2 h-100">
+                                <code class="text-bold text-primary">.text-normal</code><br>
+                                <code class="text-bold text-primary">.text-normal-{breakpoint}</code>
+                                <p class="mt-1">
+                                    Resets font style to normal.
+                                </p>
+                            </div>
+                        </div>
+
+                        {# oblique #}
+                        <div class="col-12 col-4-xs">
+                            <div class="card p-2 h-100">
+                                <code class="text-bold text-primary">.text-oblique</code><br>
+                                <code class="text-bold text-primary">.text-oblique-{breakpoint}</code>
+                                <p class="mt-1">
+                                    Applies an oblique font style.
+                                </p>
+                            </div>
+                        </div>
+
+                        {# ------------------------------------------------------- #}
+                        {# 4 — Line height #}
+                        {# ------------------------------------------------------- #}
+                        <div class="col-12">
+                            <hr>
+                        </div>
+
+                        {% for size in ['base','sm','md','lg','xl'] %}
+                            <div class="col-12 col-4-xs">
+                                <div class="card p-2 h-100">
+                                    <code class="text-bold text-primary">.lh-{{ size }}</code><br>
+                                    <code class="text-bold text-primary">.lh-{{ size }}-{breakpoint}</code>
+                                    <p class="mt-1">
+                                        Applies the <code>{{ size }}</code> line-height token, globally or responsively.
+                                    </p>
+                                </div>
+                            </div>
+                        {% endfor %}
+
+                        {# ------------------------------------------------------- #}
+                        {# 5 — Letter spacing #}
+                        {# ------------------------------------------------------- #}
+                        <div class="col-12">
+                            <hr>
+                        </div>
+
+                        {% for space in ['sm','md','lg'] %}
+                            <div class="col-12 col-4-xs">
+                                <div class="card p-2 h-100">
+                                    <code class="text-bold text-primary">.ls-{{ space }}</code><br>
+                                    <code class="text-bold text-primary">.ls-{{ space }}-{breakpoint}</code>
+                                    <p class="mt-1">
+                                        Sets letter spacing preset <code>{{ space }}</code>, with responsive variants
+                                        available.
+                                    </p>
+                                </div>
+                            </div>
+                        {% endfor %}
+
+                        {# ------------------------------------------------------- #}
+                        {# 6 — Wrapping / overflow / ellipsis #}
+                        {# ------------------------------------------------------- #}
+                        <div class="col-12">
+                            <hr>
+                        </div>
+
+                        {% set wrapClasses = [
+                            'text-wrap',
+                            'text-nowrap',
+                            'text-truncate',
+                            'text-ellipsis'
+                        ] %}
+
+                        {% for cls in wrapClasses %}
+                            <div class="col-12 col-4-xs">
+                                <div class="card p-2 h-100">
+                                    <code class="text-bold text-primary">.{{ cls }}</code><br>
+                                    <code class="text-bold text-primary">.{{ cls }}-{breakpoint}</code>
+                                    <p class="mt-1">
+                                        Controls wrapping and text overflow behavior.
+                                    </p>
+                                </div>
+                            </div>
+                        {% endfor %}
+
+                        {# ------------------------------------------------------- #}
+                        {# 7 — Font family #}
+                        {# ------------------------------------------------------- #}
+                        <div class="col-12">
+                            <hr>
+                        </div>
+
+                        {% for font in ['serif','sans-serif','mono'] %}
+                            <div class="col-12 col-4-xs">
+                                <div class="card p-2 h-100">
+                                    <code class="text-bold text-primary">.text-{{ font }}</code><br>
+                                    <code class="text-bold text-primary">.text-{{ font }}-{breakpoint}</code>
+                                    <p class="mt-1">
+                                        Applies the {{ font }} font family globally or from a chosen breakpoint.
+                                    </p>
+                                </div>
+                            </div>
+                        {% endfor %}
+
+                    </div>
+                </div>
+            </div>
+
+            {# Variables #}
+            <div class="card p-2">
+                <div class="card-header">
+                    <h2>⚙️ Typography Variables</h2>
+                </div>
+
+                <div class="card-body">
+                    <p class="p-1">
+                        These variables define the default line heights and letter-spacing presets used by the
+                        text utilities. They ensure consistent vertical rhythm and readable typography throughout
+                        the framework.
+                    </p>
+
+                    <div class="table-responsive">
+                        <table class="table">
+                            <thead>
+                            <tr class="text-left">
+                                <th>Variable</th>
+                                <th>Description</th>
+                            </tr>
+                            </thead>
+
+                            <tbody>
+                            <tr>
+                                <td><span class="text-bold text-primary">--line-height</span></td>
+                                <td>
+                                    Base line height used for compact text or headings.
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td><span class="text-bold text-primary">--line-height-sm</span></td>
+                                <td>
+                                    Small line height preset used by <code>.lh-sm</code>.
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td><span class="text-bold text-primary">--line-height-md</span></td>
+                                <td>
+                                    Medium line height preset used by <code>.lh-md</code>, ideal for body text.
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td><span class="text-bold text-primary">--line-height-lg</span></td>
+                                <td>
+                                    Large line height preset used by <code>.lh-lg</code> for airy layouts.
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td><span class="text-bold text-primary">--line-height-xl</span></td>
+                                <td>
+                                    Extra-large line height preset used by <code>.lh-xl</code> when maximum readability
+                                    is needed.
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td><span class="text-bold text-primary">--letter-spacing-sm</span></td>
+                                <td>
+                                    Tighter tracking used by <code>.ls-sm</code>, often for big titles.
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td><span class="text-bold text-primary">--letter-spacing-md</span></td>
+                                <td>
+                                    Slightly increased tracking used by <code>.ls-md</code>.
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td><span class="text-bold text-primary">--letter-spacing-lg</span></td>
+                                <td>
+                                    Strong tracking effect used by <code>.ls-lg</code>, useful for labels or UI
+                                    elements.
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td><span class="text-bold text-primary">--font-family-text</span></td>
+                                <td>
+                                    Default font family for body text across the framework.
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td><span class="text-bold text-primary">--font-family-title</span></td>
+                                <td>
+                                    Font family used for headings and titles, complementing the body text font.
+                                </td>
+                            </tr>
+
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+{% endblock %}

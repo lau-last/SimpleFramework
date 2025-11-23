@@ -1,0 +1,257 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello ColController!{% endblock %}
+
+{% block body %}
+    <div class="container-sm">
+        <div class="d-flex fd-column gap-5">
+
+            {# Intro #}
+            <div class="card p-2">
+                <div class="card-header">
+                    <h2>🧩 Columns</h2>
+                </div>
+            </div>
+
+            {# What are columns used for? #}
+            <div class="card p-2">
+                <div class="card-header">
+                    <h2>📐 What are columns used for?</h2>
+                </div>
+
+                <div class="card-body">
+                    <p class="p-1">
+                        Columns are used to build responsive layouts inside a
+                        <code class="text-bold text-primary">.row</code> container.
+                        The grid is based on 12 virtual columns and each
+                        <code class="text-bold text-primary">.col-*</code> class defines how much horizontal space
+                        a column takes. On small screens, columns stack vertically by default, and spread side by side
+                        as the viewport gets larger.
+                    </p>
+                </div>
+            </div>
+
+            {# Examples #}
+            <div class="card p-2">
+                <div class="card-header">
+                    <h2>💠 Examples</h2>
+                </div>
+
+                <div class="card-body">
+                    <p class="p-1">
+                        The grid uses a 12-column system. Each fixed column class
+                        (<code class="text-bold text-primary">.col-1</code> to
+                        <code class="text-bold text-primary">.col-12</code>)
+                        represents a fraction of the row width. Responsive variants such as
+                        <code class="text-bold text-primary">.col-6-md</code> or
+                        <code class="text-bold text-primary">.col-4-xs</code>
+                        become active at their corresponding breakpoints.
+                    </p>
+
+                    {# Basic 2-column layout #}
+                    <div class="row">
+                        <div class="col-12 col-6-md">
+                            <div class="p-1 bg-primary border-radius">
+                                .col-12 .col-6-md
+                            </div>
+                        </div>
+                        <div class="col-12 col-6-md">
+                            <div class="p-1 bg-primary border-radius">
+                                .col-12 .col-6-md
+                            </div>
+                        </div>
+                    </div>
+
+                    {# 3 columns: 4/4/4 #}
+                    <div class="row">
+                        <div class="col-12 col-4-md">
+                            <div class="p-1 bg-primary border-radius">
+                                .col-12 .col-4-md
+                            </div>
+                        </div>
+                        <div class="col-12 col-4-md">
+                            <div class="p-1 bg-primary border-radius">
+                                .col-12 .col-4-md
+                            </div>
+                        </div>
+                        <div class="col-12 col-4-md">
+                            <div class="p-1 bg-primary border-radius">
+                                .col-12 .col-4-md
+                            </div>
+                        </div>
+                    </div>
+
+                    {# Mixed layout: 3/6/3 #}
+                    <div class="row">
+                        <div class="col-12 col-3-md">
+                            <div class="p-1 bg-primary border-radius">
+                                .col-12 .col-3-md
+                            </div>
+                        </div>
+                        <div class="col-12 col-6-md">
+                            <div class="p-1 bg-primary border-radius">
+                                .col-12 .col-6-md
+                            </div>
+                        </div>
+                        <div class="col-12 col-3-md">
+                            <div class="p-1 bg-primary border-radius">
+                                .col-12 .col-3-md
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            {# HTML Code #}
+            <div class="card p-2">
+                <div class="card-header">
+                    <h2>💻 HTML Code</h2>
+                </div>
+
+                <div class="card-body">
+                    <div class="position-relative">
+                        <button class="btn btn-primary position-top-right z-1 mt-1 mr-1"
+                                onclick="copyCode('code-cols', this);">
+                            Copy
+                        </button>
+
+                        <div data-js="code" id="code-cols" class="container-code overflow-auto">
+                            <div class="row">
+                                <div class="col-12 col-6-md">Column 1</div>
+                                <div class="col-12 col-6-md">Column 2</div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-12 col-4-md">Column A</div>
+                                <div class="col-12 col-4-md">Column B</div>
+                                <div class="col-12 col-4-md">Column C</div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-12 col-3-md">Sidebar</div>
+                                <div class="col-12 col-6-md">Content</div>
+                                <div class="col-12 col-3-md">Sidebar</div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col">Fluid column</div>
+                                <div class="col">Fluid column</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            {# Sizes / Responsive behavior #}
+            <div class="card p-2">
+                <div class="card-header">
+                    <h2>📏 Column Sizes &amp; Breakpoints</h2>
+                </div>
+
+                <div class="card-body">
+                    <p class="p-1">
+                        The grid is based on 12 columns. You can use:
+                        <code class="text-bold text-primary">.col</code> for fluid columns,
+                        <code class="text-bold text-primary">.col-{number}</code> for fixed spans of the 12-column grid,
+                        and
+                        <code class="text-bold text-primary">.col-{number}-{breakpoint}</code>
+                        to change the column width from a specific breakpoint.
+                        By default, any element inside
+                        <code class="text-bold text-primary">.row</code>
+                        with a class starting with
+                        <code class="text-bold text-primary">col-</code>
+                        is full-width on very small screens, then behaves as a grid column when its size classes become
+                        active.
+                    </p>
+
+                    <div class="row mt-2">
+                        <div class="col-12 col-4-xs">
+                            <div class="card p-2">
+                                <code class="text-bold text-primary">.col</code>
+                                <p class="mt-1">
+                                    Fluid column that automatically shares the available space with other
+                                    <code class="text-bold text-primary">.col</code> siblings in the same row.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="col-12 col-4-xs">
+                            <div class="card p-2">
+                                <code class="text-bold text-primary">.col-{number}</code>
+                                <p class="mt-1">
+                                    Fixed column width based on the 12-column grid
+                                    (for example:
+                                    <code class="text-bold text-primary">.col-6</code> = 6/12 = 50%,
+                                    <code class="text-bold text-primary">.col-4</code> = 4/12 ≈ 33.3%).
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="col-12 col-4-xs">
+                            <div class="card p-2">
+                                <code class="text-bold text-primary">.col-{number}-{breakpoint}</code>
+                                <p class="mt-1">
+                                    Responsive column that applies its width only from the given breakpoint
+                                    (for example:
+                                    <code class="text-bold text-primary">.col-6-md</code> =
+                                    full-width on small screens, 6/12 from the <code>md</code> breakpoint).
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            {# Variables #}
+            <div class="card p-2">
+                <div class="card-header">
+                    <h2>⚙️ Column Variables</h2>
+                </div>
+
+                <div class="card-body">
+                    <p class="p-1">
+                        These variables control spacing and padding inside the grid system. They keep columns aligned
+                        and consistent across all breakpoints.
+                    </p>
+
+                    <div class="table-responsive">
+                        <table class="table">
+                            <thead>
+                            <tr class="text-left">
+                                <th>Variable</th>
+                                <th>Description</th>
+                            </tr>
+                            </thead>
+
+                            <tbody>
+                            <tr>
+                                <td><code class="text-bold text-primary">--col-padding</code></td>
+                                <td>
+                                    Internal horizontal padding applied to each column inside
+                                    <code class="text-bold text-primary">.row</code>.
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td><code class="text-bold text-primary">--g-col-padding</code></td>
+                                <td>
+                                    Global padding used when generating grid-based column spacing.
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td><code class="text-bold text-primary">--gap-grid</code></td>
+                                <td>
+                                    Base gap value used for grid utilities when spacing columns or sections.
+                                </td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+{% endblock %}

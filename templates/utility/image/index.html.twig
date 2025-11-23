@@ -1,0 +1,238 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello ImageController!{% endblock %}
+
+{% block body %}
+    <div class="container-sm">
+        <div class="d-flex fd-column gap-5">
+
+            {# Intro #}
+            <div class="card p-2">
+                <div class="card-header">
+                    <h2>🖼️ Images</h2>
+                </div>
+            </div>
+
+            {# What are images utilities used for? #}
+            <div class="card p-2">
+                <div class="card-header">
+                    <h2>📐 What are image utilities used for?</h2>
+                </div>
+
+                <div class="card-body">
+                    <p class="p-1">
+                        Image utilities help control how images behave inside responsive layouts.
+                        They ensure proper scaling, preserve aspect ratio, provide fluid resizing,
+                        and offer a built-in thumbnail style.
+                        These helpers allow you to use images cleanly across cards, articles,
+                        galleries, grids, or responsive layouts without custom CSS.
+                    </p>
+                </div>
+            </div>
+
+            {# Examples #}
+            <div class="card p-2">
+                <div class="card-header">
+                    <h2>💠 Examples</h2>
+                </div>
+
+                <div class="card-body">
+
+                    <p class="p-1">Here are some examples showcasing each utility:</p>
+
+                    {# 1 — Base image #}
+
+                    <figure class="p-1 mb-1 border-all">
+                        <img src="https://picsum.photos/300/150" class="img" alt="Base image">
+                        <figcaption>.img</figcaption>
+                    </figure>
+
+
+                    {# 2 — Responsive image #}
+                    <figure class="p-1 mb-1 border-all">
+                        <img src="https://picsum.photos/600/300" class="img-responsive" alt="Responsive image">
+                        <figcaption>.img-responsive</figcaption>
+                    </figure>
+
+                    {# 3 — Fluid image #}
+                    <figure class="p-1 mb-1 border-all">
+                        <img src="https://picsum.photos/500/400" class="img-fluid" alt="Fluid image">
+                        <figcaption>.img-fluid</figcaption>
+                    </figure>
+
+                    {# 4 — Thumbnail image #}
+                    <figure class="p-1 mb-1 border-all">
+                        <img src="https://picsum.photos/150" class="img-thumbnail" alt="Thumbnail image">
+                        <figcaption>.img-thumbnail</figcaption>
+                    </figure>
+
+                </div>
+            </div>
+
+            {# HTML Code #}
+            <div class="card p-2">
+                <div class="card-header">
+                    <h2>💻 HTML Code</h2>
+                </div>
+
+                <div class="card-body">
+                    <div class="position-relative">
+                        <button class="btn btn-primary position-top-right z-1 mt-1 mr-1"
+                                onclick="copyCode('code-img', this);">
+                            Copy
+                        </button>
+
+                        <div data-js="code" id="code-img" class="container-code overflow-auto">
+                            <figure>
+                                <img src="image.jpg" class="img" alt="Base image">
+                                <figcaption>.img-thumbnail</figcaption>
+                            </figure>
+
+                            <figure>
+                                <img src="image.jpg" class="img-responsive" alt="Responsive image">
+                                <figcaption>.img-thumbnail</figcaption>
+                            </figure>
+
+                            <figure>
+                                <img src="image.jpg" class="img-fluid" alt="Fluid image">
+                                <figcaption>.img-thumbnail</figcaption>
+                            </figure>
+
+                            <figure>
+                                <img src="image.jpg" class="img-thumbnail" alt="Thumbnail image">
+                                <figcaption>.img-thumbnail</figcaption>
+                            </figure>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            {# Utilities Reference #}
+            <div class="card p-2">
+                <div class="card-header">
+                    <h2>📏 Image Utilities Reference</h2>
+                </div>
+
+                <div class="card-body">
+                    <p class="p-1">
+                        Below is the complete reference for all available image utilities.
+                    </p>
+
+                    <div class="row mt-2">
+
+                        {# 1 — .img #}
+                        <div class="col-12 col-4-xs">
+                            <div class="card p-2">
+                                <code class="text-bold text-primary">.img</code>
+                                <p class="mt-1">
+                                    Base image class applying a global
+                                    <code>border-radius</code> using
+                                    <code>--img-border-radius</code>.
+                                </p>
+                            </div>
+                        </div>
+
+                        {# 2 — .img-responsive #}
+                        <div class="col-12 col-4-xs">
+                            <div class="card p-2">
+                                <code class="text-bold text-primary">.img-responsive</code>
+                                <p class="mt-1">
+                                    Makes the image fully responsive:
+                                    <code>max-width: 100%</code>,
+                                    <code>height: auto</code>,
+                                    and <code>object-fit: cover</code>.
+                                </p>
+                            </div>
+                        </div>
+
+                        {# 3 — .img-fluid #}
+                        <div class="col-12 col-4-xs">
+                            <div class="card p-2">
+                                <code class="text-bold text-primary">.img-fluid</code>
+                                <p class="mt-1">
+                                    Scales the image to fit its container width while maintaining
+                                    proportions, similar to Bootstrap’s <code>.img-fluid</code>.
+                                </p>
+                            </div>
+                        </div>
+
+                        {# 4 — .img-thumbnail #}
+                        <div class="col-12 col-4-xs">
+                            <div class="card p-2">
+                                <code class="text-bold text-primary">.img-thumbnail</code>
+                                <p class="mt-1">
+                                    Wraps the image in a padded box with border and background:
+                                    useful for previews, galleries, and UI components.
+                                </p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            {# Variables #}
+            <div class="card p-2">
+                <div class="card-header">
+                    <h2>⚙️ Image Variables</h2>
+                </div>
+
+                <div class="card-body">
+                    <p class="p-1">
+                        These variables control border radius, padding, and the visual appearance of thumbnails.
+                        Updating them globally will automatically affect every image utility.
+                    </p>
+
+                    <div class="table-responsive">
+                        <table class="table">
+                            <thead>
+                            <tr class="text-left">
+                                <th>Variable</th>
+                                <th>Description</th>
+                            </tr>
+                            </thead>
+
+                            <tbody>
+
+                            <tr>
+                                <td><code class="text-bold text-primary">--img-border-radius</code></td>
+                                <td>
+                                    Sets the border radius for all image helpers including
+                                    <code>.img</code>,
+                                    <code>.img-responsive</code>,
+                                    <code>.img-fluid</code>, and
+                                    <code>.img-thumbnail</code>.
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td><code class="text-bold text-primary">--img-thumbnail-padding</code></td>
+                                <td>
+                                    Controls the internal padding around a thumbnail image.
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td><code class="text-bold text-primary">--img-thumbnail-bg-color</code></td>
+                                <td>
+                                    Defines the background color used behind thumbnail images.
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td><code class="text-bold text-primary">--img-thumbnail-border</code></td>
+                                <td>
+                                    Border definition applied to <code>.img-thumbnail</code>.
+                                </td>
+                            </tr>
+
+                            </tbody>
+
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+{% endblock %}

@@ -1,0 +1,259 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello HelperController!{% endblock %}
+
+{% block body %}
+    <div class="container-sm">
+        <div class="d-flex fd-column gap-5">
+
+            {# Intro #}
+            <div class="card p-2">
+                <div class="card-header">
+                    <h2>🛠️ Helpers</h2>
+                </div>
+            </div>
+
+            {# What are helpers used for? #}
+            <div class="card p-2">
+                <div class="card-header">
+                    <h2>📐 What are helpers used for?</h2>
+                </div>
+
+                <div class="card-body">
+                    <p class="p-1">
+                        Helpers provide small, utility-focused classes designed to quickly adjust common visual or
+                        structural
+                        behaviors without writing custom CSS. They cover text decoration, list layouts, and fit-content
+                        sizing.
+                        These classes are lightweight and meant to be combined freely with other components.
+                    </p>
+                </div>
+            </div>
+
+            {# Examples #}
+            <div class="card p-2">
+                <div class="card-header">
+                    <h2>💠 Examples</h2>
+                </div>
+
+                <div class="card-body">
+
+                    <p class="p-1">
+                        Here are basic examples showing how helper utilities behave:
+                    </p>
+
+                    {# 1 — No underline #}
+                    <div class="p-1 mb-1 border-all">
+                        <a href="#" class="no-underline">.no-underline</a>
+                    </div>
+
+                    {# 2 — List inline #}
+                    <div class="p-1 mb-1 border-all">
+                        <ul class="list-inline">
+                            <li>.list-inline</li>
+                            <li>.list-inline</li>
+                            <li>.list-inline</li>
+                        </ul>
+                    </div>
+
+                    {# 3 — List column #}
+                    <div class="p-1 mb-1 border-all">
+                        <ul class="list-column">
+                            <li>.list-column</li>
+                            <li>.list-column</li>
+                            <li>.list-column</li>
+                        </ul>
+                    </div>
+
+                    {# 4 — Fit content #}
+                    <div class="p-1 mb-1 border-all">
+                        <div class="bg-primary p-1 fit-width border-radius">.fit-width</div>
+                    </div>
+
+                </div>
+            </div>
+
+            {# HTML Code #}
+            <div class="card p-2">
+                <div class="card-header">
+                    <h2>💻 HTML Code</h2>
+                </div>
+
+                <div class="card-body">
+                    <div class="position-relative">
+                        <button class="btn btn-primary position-top-right z-1 mt-1 mr-1"
+                                onclick="copyCode('code-helpers', this);">
+                            Copy
+                        </button>
+
+                        <div data-js="code" id="code-helpers" class="container-code overflow-auto">
+                            <a href="#" class="no-underline">No underline link</a>
+
+                            <ul class="list-inline">
+                                <li>Inline 1</li>
+                                <li>Inline 2</li>
+                                <li>Inline 3</li>
+                            </ul>
+
+                            <ul class="list-column">
+                                <li>Column A</li>
+                                <li>Column B</li>
+                                <li>Column C</li>
+                            </ul>
+
+                            <div class="fit-width">Fit width</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            {# Utilities Reference #}
+            <div class="card p-2">
+                <div class="card-header">
+                    <h2>📏 Helper Utilities Reference</h2>
+                </div>
+
+                <div class="card-body">
+                    <p class="p-1">
+                        Each helper class focuses on a very specific behavior.
+                        Below is the complete reference, one card per utility family.
+                    </p>
+
+                    <div class="row mt-2">
+
+                        {# 1 — no-underline #}
+                        <div class="col-12 col-4-xs">
+                            <div class="card p-2">
+                                <code class="text-bold text-primary">.no-underline</code>
+                                <p class="mt-1">
+                                    Removes text underline from the element and any nested links.
+                                </p>
+                            </div>
+                        </div>
+
+                        {# 2 — list-unstyled #}
+                        <div class="col-12 col-4-xs">
+                            <div class="card p-2">
+                                <code class="text-bold text-primary">.list-unstyled</code>
+                                <p class="mt-1">
+                                    Removes list bullet styling while keeping the natural block layout.
+                                </p>
+                            </div>
+                        </div>
+
+                        {# 3 — list-inline #}
+                        <div class="col-12 col-4-xs">
+                            <div class="card p-2">
+                                <code class="text-bold text-primary">.list-inline</code>
+                                <p class="mt-1">
+                                    Displays items horizontally using flex, applying spacing via
+                                    <code>--list-inline-gap</code>.
+                                </p>
+                            </div>
+                        </div>
+
+                        {# 4 — list-column #}
+                        <div class="col-12 col-4-xs">
+                            <div class="card p-2">
+                                <code class="text-bold text-primary">.list-column</code>
+                                <p class="mt-1">
+                                    Stacks items vertically with spacing from
+                                    <code>--list-column-gap</code>.
+                                </p>
+                            </div>
+                        </div>
+
+                        {# 5 — fit-height #}
+                        <div class="col-12 col-4-xs">
+                            <div class="card p-2">
+                                <code class="text-bold text-primary">.fit-height</code>
+                                <p class="mt-1">
+                                    Makes the element’s height shrink to fit its content.
+                                </p>
+                            </div>
+                        </div>
+
+                        {# 6 — fit-width #}
+                        <div class="col-12 col-4-xs">
+                            <div class="card p-2">
+                                <code class="text-bold text-primary">.fit-width</code>
+                                <p class="mt-1">
+                                    Makes the element’s width shrink to fit its content.
+                                </p>
+                            </div>
+                        </div>
+
+                        {# 7 — fit-size #}
+                        <div class="col-12 col-4-xs">
+                            <div class="card p-2">
+                                <code class="text-bold text-primary">.fit-size</code>
+                                <p class="mt-1">
+                                    Applies <code>fit-content</code> to both width and height.
+                                </p>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+
+            {# Variables #}
+            <div class="card p-2">
+                <div class="card-header">
+                    <h2>⚙️ Helper Variables</h2>
+                </div>
+
+                <div class="card-body">
+                    <p class="p-1">
+                        Helper utilities use a small set of global variables to control spacing and layout behavior.
+                        These variables allow you to adjust list gaps and fine-tune how inline or column lists render
+                        across your components. Updating these tokens will instantly affect all helpers that rely on them.
+                    </p>
+
+                    <div class="table-responsive">
+                        <table class="table">
+                            <thead>
+                            <tr class="text-left">
+                                <th>Variable</th>
+                                <th>Description</th>
+                            </tr>
+                            </thead>
+
+                            <tbody>
+
+                            <tr>
+                                <td><code class="text-bold text-primary">--list-inline-gap</code></td>
+                                <td>
+                                    Controls horizontal spacing between items inside
+                                    <code class="text-bold text-primary">.list-inline</code>.
+                                    Increasing this value will spread inline list elements further apart.
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td><code class="text-bold text-primary">--list-column-gap</code></td>
+                                <td>
+                                    Controls vertical spacing between items inside
+                                    <code class="text-bold text-primary">.list-column</code>.
+                                    Useful to adjust density for stacked lists.
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td><code class="text-bold text-primary">--g-col-padding</code></td>
+                                <td>
+                                    Although used primarily in grid layouts, this padding also influences helpers
+                                    when mixed with grid-related utilities, ensuring consistent spacing.
+                                </td>
+                            </tr>
+
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+{% endblock %}

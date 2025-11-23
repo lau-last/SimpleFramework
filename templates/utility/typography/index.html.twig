@@ -1,0 +1,324 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Typography Utilities{% endblock %}
+
+{% block body %}
+    <div class="container-sm">
+        <div class="d-flex fd-column gap-5">
+
+            {# Intro #}
+            <div class="card p-2">
+                <div class="card-header">
+                    <h2>🔠 Typography Utilities</h2>
+                </div>
+            </div>
+
+            {# What are typography utilities used for? #}
+            <div class="card p-2">
+                <div class="card-header">
+                    <h2>📐 What are typography utilities used for?</h2>
+                </div>
+
+                <div class="card-body">
+                    <p class="p-1">
+                        Typography utilities let you control font weight and font size directly from your HTML.
+                        They are built on top of the global font-size tokens so headings and body text stay consistent
+                        across the entire design system.
+                    </p>
+
+                    <p class="p-1">
+                        Most utilities also have responsive variants, allowing you to change font size or weight
+                        from a specific breakpoint using the pattern
+                        <code class="text-bold text-primary">.{utility}-{breakpoint}</code>
+                        (for example:
+                        <code class="text-bold text-primary">.fs-xl-md</code> or
+                        <code class="text-bold text-primary">.fw-700-lg</code>).
+                    </p>
+                </div>
+            </div>
+
+            {# Examples #}
+            <div class="card p-2">
+                <div class="card-header">
+                    <h2>💠 Examples</h2>
+                </div>
+
+                <div class="card-body">
+                    <p class="p-1">
+                        The examples below show how to combine font sizes and font weights using the
+                        <code class="text-bold text-primary">.fs-*</code> and <code
+                            class="text-bold text-primary">.fw-*</code> utilities.
+                    </p>
+
+                    {# Heading scale (fs-1 .. fs-6) #}
+                    <div class="row mb-1">
+                        <div class="col-12 col-6-md">
+                            <div class="p-1 border-all h-100">
+                                <p class="fs-1">.fs-1</p>
+                                <p class="fs-2">.fs-2</p>
+                                <p class="fs-3">.fs-3</p>
+                                <p class="fs-4">.fs-4</p>
+                                <p class="fs-5">.fs-5</p>
+                                <p class="fs-6">.fs-6</p>
+                            </div>
+                        </div>
+
+                        {# Text scale (fs-xs .. fs-xxl) #}
+                        <div class="col-12 col-6-md">
+                            <div class="p-1 border-all h-100">
+                                <p class="fs-xs">
+                                    .fs-xs — Extra-small text.
+                                </p>
+                                <p class="fs-sm">
+                                    .fs-sm — Small text.
+                                </p>
+                                <p class="fs-md">
+                                    .fs-md — Medium text.
+                                </p>
+                                <p class="fs-lg">
+                                    .fs-lg — Large text.
+                                </p>
+                                <p class="fs-xl">
+                                    .fs-xl — Extra-large text.
+                                </p>
+                                <p class="fs-xxl">
+                                    .fs-xxl — Extra-extra-large text.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    {# Font weights #}
+                    <div class="row mb-1">
+                        <div class="col-12">
+                            <div class="p-1 border-all h-100">
+                                <p class="fs-md fw-100">.fw-100 — Thin</p>
+                                <p class="fs-md fw-200">.fw-200 — Extra Light</p>
+                                <p class="fs-md fw-300">.fw-300 — Light</p>
+                                <p class="fs-md fw-400">.fw-400 — Regular</p>
+                                <p class="fs-md fw-500">.fw-500 — Medium</p>
+                                <p class="fs-md fw-600">.fw-600 — Semi Bold</p>
+                                <p class="fs-md fw-700">.fw-700 — Bold</p>
+                                <p class="fs-md fw-800">.fw-800 — Extra Bold</p>
+                                <p class="fs-md fw-900">.fw-900 — Black</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row mb-1">
+                        <div class="col-12">
+                            <p class="fs-md fs-xl-md fw-400 fw-700-lg">
+                                This text is medium weight and size by default,
+                                becomes extra large at the <code class="text-bold text-primary">md</code> breakpoint
+                                and bold from the <code class="text-bold text-primary">lg</code> breakpoint.
+                                (.fs-md .fs-xl-md .fw-400 .fw-700-lg)
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            {# HTML Code #}
+            <div class="card p-2">
+                <div class="card-header">
+                    <h2>💻 HTML Code</h2>
+                </div>
+
+                <div class="card-body">
+                    <div class="position-relative">
+                        <button class="btn btn-primary position-top-right z-1 mt-1 mr-1"
+                                onclick="copyCode('code-typography', this);">
+                            Copy
+                        </button>
+
+                        <div data-js="code" id="code-typography" class="container-code overflow-auto">
+
+                            <!-- Heading sizes -->
+                            <p class="fs-1">fs-1</p>
+                            <p class="fs-2">fs-2</p>
+                            <p class="fs-3">fs-3</p>
+                            <p class="fs-4">fs-4</p>
+                            <p class="fs-5">fs-5</p>
+                            <p class="fs-6">fs-6</p>
+
+                            <!-- Text sizes -->
+                            <p class="fs-xs">Extra small text (.fs-xs)</p>
+                            <p class="fs-sm">Small text (.fs-sm)</p>
+                            <p class="fs-md">Medium / body text (.fs-md)</p>
+                            <p class="fs-lg">Large text (.fs-lg)</p>
+                            <p class="fs-xl">Extra large text (.fs-xl)</p>
+                            <p class="fs-xxl">Extra-extra large text (.fs-xxl)</p>
+
+                            <!-- Font weights -->
+                            <p class="fs-md fw-100">Thin weight (.fw-100)</p>
+                            <p class="fs-md fw-200">Extra light (.fw-200)</p>
+                            <p class="fs-md fw-300">Light (.fw-300)</p>
+                            <p class="fs-md fw-400">Regular (.fw-400)</p>
+                            <p class="fs-md fw-500">Medium (.fw-500)</p>
+                            <p class="fs-md fw-600">Semi-bold (.fw-600)</p>
+                            <p class="fs-md fw-700">Bold (.fw-700)</p>
+                            <p class="fs-md fw-800">Extra-bold (.fw-800)</p>
+                            <p class="fs-md fw-900">Black (.fw-900)</p>
+
+                            <!-- Responsive example -->
+                            <p class="fs-md fs-xl-md fw-400 fw-700-lg">
+                                This text is medium weight and size by default,
+                                becomes extra large at the <code class="text-bold text-primary">md</code> breakpoint
+                                and bold from the <code class="text-bold text-primary">lg</code> breakpoint.
+                                (.fs-md .fs-xl-md .fw-400 .fw-700-lg)
+                            </p>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            {# Utilities / Behavior #}
+            <div class="card p-2">
+                <div class="card-header">
+                    <h2>📏 Typography Utilities &amp; Breakpoints</h2>
+                </div>
+
+                <div class="card-body">
+                    <p class="p-1">
+                        Typography utilities follow a predictable naming pattern and can be combined freely. <br>
+                        Most of them also offer responsive variants by appending a breakpoint suffix such as
+                        <code class="text-bold text-primary">-xs</code>,
+                        <code class="text-bold text-primary">-sm</code>,
+                        <code class="text-bold text-primary">-md</code>,
+                        <code class="text-bold text-primary">-lg</code>,
+                        <code class="text-bold text-primary">-xl</code>,
+                        or
+                        <code class="text-bold text-primary">-xxl</code>.
+                    </p>
+
+                    <div class="row mt-2">
+
+                        {# ------------------------------------------------------- #}
+                        {# 1 — Font weights #}
+                        {# ------------------------------------------------------- #}
+                        <div class="col-12">
+                            <hr>
+                        </div>
+
+                        {% set weights = [100, 200, 300, 400, 500, 600, 700, 800, 900] %}
+
+                        {% for weight in weights %}
+                            <div class="col-12 col-4-xs">
+                                <div class="card p-2 h-100">
+                                    <code class="text-bold text-primary">.fw-{{ weight }}</code><br>
+                                    <code class="text-bold text-primary">.fw-{{ weight }}-{breakpoint}</code>
+                                    <p class="mt-1">
+                                        Sets the font weight to <code class="text-bold text-primary">{{ weight }}</code>,
+                                        globally or from a specific breakpoint.
+                                    </p>
+                                </div>
+                            </div>
+                        {% endfor %}
+
+                        {# ------------------------------------------------------- #}
+                        {# 2 — Heading font sizes (fs-1 .. fs-6) #}
+                        {# ------------------------------------------------------- #}
+                        <div class="col-12">
+                            <hr>
+                        </div>
+
+                        {% for level in [1, 2, 3, 4, 5, 6] %}
+                            <div class="col-12 col-4-xs">
+                                <div class="card p-2 h-100">
+                                    <code class="text-bold text-primary">.fs-{{ level }}</code><br>
+                                    <code class="text-bold text-primary">.fs-{{ level }}-{breakpoint}</code>
+                                    <p class="mt-1">
+                                        Applies the <code class="text-bold text-primary">--font-size-h{{ level }}</code>
+                                        token, globally or responsively.
+                                    </p>
+                                </div>
+                            </div>
+                        {% endfor %}
+
+                        {# ------------------------------------------------------- #}
+                        {# 3 — Text font sizes (fs-xs .. fs-xxl) #}
+                        {# ------------------------------------------------------- #}
+                        <div class="col-12">
+                            <hr>
+                        </div>
+
+                        {% set textSizes = ['xs','sm','md','lg','xl','xxl'] %}
+
+                        {% for size in textSizes %}
+                            <div class="col-12 col-4-xs">
+                                <div class="card p-2 h-100">
+                                    <code class="text-bold text-primary">.fs-{{ size }}</code><br>
+                                    <code class="text-bold text-primary">.fs-{{ size }}-{breakpoint}</code>
+                                    <p class="mt-1">
+                                        Applies the <code class="text-bold text-primary">--font-size-{{ size }}</code>
+                                        token, with responsive variants available.
+                                    </p>
+                                </div>
+                            </div>
+                        {% endfor %}
+
+                    </div>
+                </div>
+            </div>
+
+            {# Variables #}
+            <div class="card p-2">
+                <div class="card-header">
+                    <h2>⚙️ Typography Size Variables</h2>
+                </div>
+
+                <div class="card-body">
+                    <p class="p-1">
+                        These variables define the font-size scale used by the <code class="text-bold text-primary">.fs-*</code>
+                        utilities.
+                        They ensure a consistent hierarchy between headings and body text across the framework.
+                    </p>
+
+                    <div class="table-responsive">
+                        <table class="table">
+                            <thead>
+                            <tr class="text-left">
+                                <th>Variable</th>
+                                <th>Description</th>
+                            </tr>
+                            </thead>
+
+                            <tbody>
+                            {# Heading size tokens #}
+                            {% for level in [1, 2, 3, 4, 5, 6] %}
+                                <tr>
+                                    <td>
+                                        <span class="text-bold text-primary">--font-size-h{{ level }}</span>
+                                    </td>
+                                    <td>
+                                        Font size used by <code class="text-bold text-primary">.fs-{{ level }}</code>
+                                        (heading level {{ level }}).
+                                    </td>
+                                </tr>
+                            {% endfor %}
+
+                            {# Text size tokens #}
+                            {% set textSizes = ['xs','sm','md','lg','xl','xxl'] %}
+                            {% for size in textSizes %}
+                                <tr>
+                                    <td>
+                                        <span class="text-bold text-primary">--font-size-{{ size }}</span>
+                                    </td>
+                                    <td>
+                                        Font size used by <code class="text-bold text-primary">.fs-{{ size }}</code> for
+                                        body text and UI elements.
+                                    </td>
+                                </tr>
+                            {% endfor %}
+
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+{% endblock %}

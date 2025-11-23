@@ -1,0 +1,222 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello ContainerController!{% endblock %}
+
+{% block body %}
+    <div class="container-sm">
+        <div class="d-flex fd-column gap-5">
+
+            {# Intro #}
+            <div class="card p-2">
+                <div class="card-header">
+                    <h2>🗂️ Container</h2>
+                </div>
+            </div>
+
+            {# What are Containers Used For? #}
+            <div class="card p-2">
+                <div class="card-header">
+                    <h2>📦 What are containers used for?</h2>
+                </div>
+
+                <div class="card-body">
+                    <p class="p-1">
+                        Containers are used to structure page layout by defining a maximum or fluid width depending on
+                        the screen size. They help center the content, control its reading width, and ensure comfortable
+                        spacing across mobile, tablet, and desktop devices.
+                    </p>
+                </div>
+            </div>
+
+            {# Example #}
+            <div class="card p-2">
+                <div class="card-header">
+                    <h2>💠 Examples</h2>
+                </div>
+                <div class="card-body">
+                    <p class="p-1">
+                        The current configuration sets the typographic baseline to <code class="text-bold text-primary">1rem
+                            = 10px</code>, using
+                        <code class="text-bold text-primary">html { font-size: 62.5%; }</code>.
+                    </p>
+                    <div class="p-1 mb-1 bg-primary border-radius container">Container (120rem)</div>
+                    <div class="p-1 mb-1 bg-primary border-radius container-sm">Container-sm (100rem)</div>
+                    <div class="p-1 mb-1 bg-primary border-radius container-md">Container-md (120rem)</div>
+                    <div class="p-1 mb-1 bg-primary border-radius container-lg">Container-lg (140rem)</div>
+
+                    <div class="p-1 mb-1 bg-primary border-radius container-fluid">Container-fluid (80%)</div>
+                    <div class="p-1 mb-1 bg-primary border-radius container-fluid-sm">Container-fluid-sm (70%)</div>
+                    <div class="p-1 mb-1 bg-primary border-radius container-fluid-md">Container-fluid-md (80%)</div>
+                    <div class="p-1 mb-1 bg-primary border-radius container-fluid-lg">Container-fluid-lg (90%)</div>
+                </div>
+            </div>
+
+            {# HTML Code #}
+            <div class="card p-2">
+                <div class="card-header">
+                    <h2>💻 HTML Code</h2>
+                </div>
+                <div class="card-body">
+                    <div class="position-relative">
+                        <button class="btn btn-primary position-top-right z-1 mt-1 mr-1"
+                                onclick="copyCode('code-container', this);">Copy
+                        </button>
+                        <div data-js="code" id="code-container" class="container-code overflow-auto">
+                            <div class="container">Container (120rem)</div>
+                            <div class="container-sm">Container-sm (100rem)</div>
+                            <div class="container-md">Container-md (120rem)</div>
+                            <div class="container-lg">Container-lg (140rem)</div>
+
+                            <div class="container-fluid">Container-fluid (80%)</div>
+                            <div class="container-fluid-sm">Container-fluid-sm (70%)</div>
+                            <div class="container-fluid-md">Container-fluid-md (80%)</div>
+                            <div class="container-fluid-lg">Container-fluid-lg (90%)</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            {# Sizes #}
+            <div class="card p-2">
+                <div class="card-header">
+                    <h2>📏 Container Sizes</h2>
+                </div>
+
+                <div class="card-body">
+                    <p class="p-1">
+                        Just choose the container size you need, and it will automatically apply its own width or
+                        max-width based on your layout, while remaining fully responsive across breakpoints.
+                    </p>
+
+                    <div class="row mt-2">
+                        <div class="col-12 col-4-xs">
+                            <div class="card p-2">
+                                <code class="text-bold text-primary">.container</code>
+                            </div>
+                        </div>
+
+                        <div class="col-12 col-4-xs">
+                            <div class="card p-2">
+                                <code class="text-bold text-primary">.container-sm</code>
+                            </div>
+                        </div>
+
+                        <div class="col-12 col-4-xs">
+                            <div class="card p-2">
+                                <code class="text-bold text-primary">.container-md</code>
+                            </div>
+                        </div>
+
+                        <div class="col-12 col-4-xs">
+                            <div class="card p-2">
+                                <code class="text-bold text-primary">.container-lg</code>
+                            </div>
+                        </div>
+
+                        <div class="col-12 col-4-xs">
+                            <div class="card p-2">
+                                <code class="text-bold text-primary">.container-fluid</code>
+                            </div>
+                        </div>
+
+                        <div class="col-12 col-4-xs">
+                            <div class="card p-2">
+                                <code class="text-bold text-primary">.container-fluid-sm</code>
+                            </div>
+                        </div>
+
+                        <div class="col-12 col-4-xs">
+                            <div class="card p-2">
+                                <code class="text-bold text-primary">.container-fluid-md</code>
+                            </div>
+                        </div>
+
+                        <div class="col-12 col-4-xs">
+                            <div class="card p-2">
+                                <code class="text-bold text-primary">.container-fluid-lg</code>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            {# Variables #}
+            <div class="card p-2">
+                <div class="card-header">
+                    <h2>⚙️ Container Variables</h2>
+                </div>
+
+                <div class="card-body">
+                    <p class="p-1">
+                        These variables control the width, padding, and responsive behavior of all container components.
+                        Each breakpoint-specific value allows containers to adapt fluidly across different screen sizes.
+                    </p>
+
+                    <div class="table-responsive">
+                        <table class="table">
+                            <thead>
+                            <tr class="text-left">
+                                <th>Variable</th>
+                                <th>Description</th>
+                            </tr>
+                            </thead>
+
+                            <tbody>
+                            <tr>
+                                <td><code class="text-bold text-primary">--container-padding</code></td>
+                                <td>Internal padding applied to all fixed and fluid containers.</td>
+                            </tr>
+
+                            <tr>
+                                <td><code class="text-bold text-primary">--container-width</code></td>
+                                <td>Default max-width for fixed containers on large screens (desktop layout).</td>
+                            </tr>
+
+                            <tr>
+                                <td><code class="text-bold text-primary">--container-width-sm</code></td>
+                                <td>Max-width for fixed containers at the <code>sm</code> breakpoint.</td>
+                            </tr>
+
+                            <tr>
+                                <td><code class="text-bold text-primary">--container-width-md</code></td>
+                                <td>Max-width for fixed containers at the <code>md</code> breakpoint.</td>
+                            </tr>
+
+                            <tr>
+                                <td><code class="text-bold text-primary">--container-width-lg</code></td>
+                                <td>Max-width for fixed containers at the <code>lg</code> breakpoint.</td>
+                            </tr>
+
+                            <tr>
+                                <td><code class="text-bold text-primary">--container-fluid-padding</code></td>
+                                <td>Internal padding applied to fluid containers (100% width based containers).</td>
+                            </tr>
+
+                            <tr>
+                                <td><code class="text-bold text-primary">--container-fluid-width</code></td>
+                                <td>Base percentage width of fluid containers.</td>
+                            </tr>
+
+                            <tr>
+                                <td><code class="text-bold text-primary">--container-fluid-width-sm</code></td>
+                                <td>Percentage width of fluid containers at the <code>sm</code> breakpoint.</td>
+                            </tr>
+
+                            <tr>
+                                <td><code class="text-bold text-primary">--container-fluid-width-md</code></td>
+                                <td>Percentage width of fluid containers at the <code>md</code> breakpoint.</td>
+                            </tr>
+
+                            <tr>
+                                <td><code class="text-bold text-primary">--container-fluid-width-lg</code></td>
+                                <td>Percentage width of fluid containers at the <code>lg</code> breakpoint.</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+{% endblock %}

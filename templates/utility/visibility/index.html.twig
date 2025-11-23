@@ -1,0 +1,360 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Visibility & Display Utilities{% endblock %}
+
+{% block body %}
+    <div class="container-sm">
+        <div class="d-flex fd-column gap-5">
+
+            {# Intro #}
+            <div class="card p-2">
+                <div class="card-header">
+                    <h2>👁️ Visibility, Overflow, Cursor &amp; Opacity</h2>
+                </div>
+            </div>
+
+            {# What are these utilities used for? #}
+            <div class="card p-2">
+                <div class="card-header">
+                    <h2>📐 What are visibility utilities used for?</h2>
+                </div>
+
+                <div class="card-body">
+                    <p class="p-1">
+                        Visibility utilities let you control whether elements are visible, how content overflows its
+                        container, which mouse cursor is displayed, and how transparent an element is.
+                    </p>
+
+                    <p class="p-1">
+                        They are designed as low-level helpers that can be combined with any component or layout
+                        to quickly adjust behavior without writing custom CSS.
+                    </p>
+                </div>
+            </div>
+
+            {# Examples #}
+            <div class="card p-2">
+                <div class="card-header">
+                    <h2>💠 Examples</h2>
+                </div>
+
+                <div class="card-body">
+                    <p class="p-1">
+                        The examples below show how to use visibility, overflow, cursor, and opacity helpers.
+                    </p>
+
+                    {# Visibility #}
+                    <div class="row mb-1">
+                        <div class="col-12 col-6-md">
+                            <div class="p-1 border-all h-100">
+                                <p class="visible">
+                                    <code>.visible</code> — the element is visible and takes up space.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="col-12 col-6-md">
+                            <div class="p-1 border-all h-100">
+                                <p class="hidden">
+                                    <code>.hidden</code> — the element is hidden but still occupies layout space.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    {# Overflow #}
+                    <div class="row mb-1">
+                        <div class="col-12 col-4-md">
+                            <div class="p-1 border-all h-100 overflow-hidden" style="max-height: 3rem;">
+                                <p>
+                                    <code>.overflow-hidden</code> — extra content is clipped and not visible.
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="col-12 col-4-md">
+                            <div class="p-1 border-all h-100 overflow-auto" style="max-height: 3rem;">
+                                <p>
+                                    <code>.overflow-auto</code> — scrollbars appear when needed.
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="col-12 col-4-md">
+                            <div class="p-1 border-all h-100 overflow-visible" style="max-height: 3rem;">
+                                <p>
+                                    <code>.overflow-visible</code> — content can overflow the container.
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    {# Cursor #}
+                    <div class="row mb-1">
+                        <div class="col-12 col-4-md">
+                            <div class="p-1 border-all h-100 cursor-pointer">
+                                <p>
+                                    <code>.cursor-pointer</code> — pointer cursor for clickable areas.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="col-12 col-4-md">
+                            <div class="p-1 border-all h-100 cursor-not-allowed">
+                                <p>
+                                    <code>.cursor-not-allowed</code> — indicates disabled or forbidden action.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="col-12 col-4-md">
+                            <div class="p-1 border-all h-100 cursor-wait">
+                                <p>
+                                    <code>.cursor-wait</code> — shows that an operation is in progress.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    {# Opacity #}
+                    <div class="row mb-1">
+                        <div class="col-12 col-3-md">
+                            <div class="p-1 border-all h-100 opacity-2">
+                                <p>
+                                    <code>.opacity-2</code> — 20% opacity.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="col-12 col-3-md">
+                            <div class="p-1 border-all h-100 opacity-5">
+                                <p>
+                                    <code>.opacity-5</code> — 50% opacity.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="col-12 col-3-md">
+                            <div class="p-1 border-all h-100 opacity-8">
+                                <p>
+                                    <code>.opacity-8</code> — 80% opacity.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="col-12 col-3-md">
+                            <div class="p-1 border-all h-100 opacity-10">
+                                <p>
+                                    <code>.opacity-10</code> — fully opaque (100%).
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            {# HTML Code #}
+            <div class="card p-2">
+                <div class="card-header">
+                    <h2>💻 HTML Code</h2>
+                </div>
+
+                <div class="card-body">
+                    <div class="position-relative">
+                        <button class="btn btn-primary position-top-right z-1 mt-1 mr-1"
+                                onclick="copyCode('code-visibility', this);">
+                            Copy
+                        </button>
+
+                        <div data-js="code" id="code-visibility" class="container-code overflow-auto">
+
+                            <!-- Visibility -->
+                            <p class="visible">Visible content (.visible)</p>
+                            <p class="hidden">Hidden content (.hidden)</p>
+
+                            <!-- Overflow -->
+                            <div class="overflow-hidden">
+                                Content with hidden overflow (.overflow-hidden)
+                            </div>
+                            <div class="overflow-auto">
+                                Content with automatic scrollbars (.overflow-auto)
+                            </div>
+                            <div class="overflow-visible">
+                                Content with visible overflow (.overflow-visible)
+                            </div>
+                            <div class="overflow-y-auto">
+                                Content scrollable only on Y axis (.overflow-y-auto)
+                            </div>
+                            <div class="overflow-x-auto">
+                                Content scrollable only on X axis (.overflow-x-auto)
+                            </div>
+                            <div class="overflow-y-hidden">
+                                Hidden overflow on Y axis (.overflow-y-hidden)
+                            </div>
+                            <div class="overflow-x-hidden">
+                                Hidden overflow on X axis (.overflow-x-hidden)
+                            </div>
+
+                            <!-- Cursor -->
+                            <p class="cursor-auto">Automatic cursor (.cursor-auto)</p>
+                            <p class="cursor-pointer">Pointer cursor (.cursor-pointer)</p>
+                            <p class="cursor-not-allowed">Not allowed cursor (.cursor-not-allowed)</p>
+                            <p class="cursor-help">Help cursor (.cursor-help)</p>
+                            <p class="cursor-progress">Progress cursor (.cursor-progress)</p>
+                            <p class="cursor-wait">Wait cursor (.cursor-wait)</p>
+                            <p class="cursor-grab">Grab cursor (.cursor-grab)</p>
+                            <p class="cursor-grabbing">Grabbing cursor (.cursor-grabbing)</p>
+                            <p class="cursor-text">Text cursor (.cursor-text)</p>
+                            <p class="cursor-copy">Copy cursor (.cursor-copy)</p>
+                            <p class="cursor-alias">Alias cursor (.cursor-alias)</p>
+
+                            <!-- Opacity -->
+                            <p class="opacity-0">Fully transparent (.opacity-0)</p>
+                            <p class="opacity-1">10% opacity (.opacity-1)</p>
+                            <p class="opacity-2">20% opacity (.opacity-2)</p>
+                            <p class="opacity-3">30% opacity (.opacity-3)</p>
+                            <p class="opacity-4">40% opacity (.opacity-4)</p>
+                            <p class="opacity-5">50% opacity (.opacity-5)</p>
+                            <p class="opacity-6">60% opacity (.opacity-6)</p>
+                            <p class="opacity-7">70% opacity (.opacity-7)</p>
+                            <p class="opacity-8">80% opacity (.opacity-8)</p>
+                            <p class="opacity-9">90% opacity (.opacity-9)</p>
+                            <p class="opacity-10">Fully opaque (.opacity-10)</p>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            {# Utilities / Behavior #}
+            <div class="card p-2">
+                <div class="card-header">
+                    <h2>📏 Visibility Utilities Overview</h2>
+                </div>
+
+                <div class="card-body">
+                    <p class="p-1">
+                        These utilities provide a small but powerful set of helpers to control visibility, overflow,
+                        cursors, and opacity at a glance.
+                    </p>
+
+                    <div class="row mt-2">
+
+                        {# ------------------------------------------------------- #}
+                        {# 1 — Visibility #}
+                        {# ------------------------------------------------------- #}
+                        <div class="col-12">
+                            <hr>
+                        </div>
+
+                        <div class="col-12 col-4-xs">
+                            <div class="card p-2 h-100">
+                                <code class="text-bold text-primary">.visible</code>
+                                <p class="mt-1">
+                                    Sets <code>visibility: visible;</code> to ensure the element is visible while keeping
+                                    its layout space.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="col-12 col-4-xs">
+                            <div class="card p-2 h-100">
+                                <code class="text-bold text-primary">.hidden</code>
+                                <p class="mt-1">
+                                    Sets <code>visibility: hidden;</code>, hiding the element but preserving its
+                                    layout space.
+                                </p>
+                            </div>
+                        </div>
+
+                        {# ------------------------------------------------------- #}
+                        {# 2 — Overflow #}
+                        {# ------------------------------------------------------- #}
+                        <div class="col-12">
+                            <hr>
+                        </div>
+
+                        {% set overflows = [
+                            'overflow-hidden',
+                            'overflow-visible',
+                            'overflow-auto',
+                            'overflow-y-auto',
+                            'overflow-x-auto',
+                            'overflow-y-hidden',
+                            'overflow-x-hidden'
+                        ] %}
+
+                        {% for cls in overflows %}
+                            <div class="col-12 col-4-xs">
+                                <div class="card p-2 h-100">
+                                    <code class="text-bold text-primary">.{{ cls }}</code>
+                                    <p class="mt-1">
+                                        Controls the <code>overflow</code> behavior on the corresponding axis or both axes.
+                                    </p>
+                                </div>
+                            </div>
+                        {% endfor %}
+
+                        {# ------------------------------------------------------- #}
+                        {# 3 — Cursor #}
+                        {# ------------------------------------------------------- #}
+                        <div class="col-12">
+                            <hr>
+                        </div>
+
+                        {% set cursors = [
+                            'cursor-none',
+                            'cursor-auto',
+                            'cursor-pointer',
+                            'cursor-not-allowed',
+                            'cursor-help',
+                            'cursor-progress',
+                            'cursor-wait',
+                            'cursor-grab',
+                            'cursor-grabbing',
+                            'cursor-text',
+                            'cursor-copy',
+                            'cursor-alias'
+                        ] %}
+
+                        {% for cls in cursors %}
+                            <div class="col-12 col-4-xs">
+                                <div class="card p-2 h-100">
+                                    <code class="text-bold text-primary">.{{ cls }}</code>
+                                    <p class="mt-1">
+                                        Sets the mouse cursor style using the <code>cursor</code> property.
+                                    </p>
+                                </div>
+                            </div>
+                        {% endfor %}
+
+                        {# ------------------------------------------------------- #}
+                        {# 4 — Opacity #}
+                        {# ------------------------------------------------------- #}
+                        <div class="col-12">
+                            <hr>
+                        </div>
+
+                        {% for i in 0..10 %}
+                            <div class="col-12 col-4-xs">
+                                <div class="card p-2 h-100">
+                                    <code class="text-bold text-primary">.opacity-{{ i }}</code>
+                                    <p class="mt-1">
+                                        Sets <code>opacity</code> to
+                                        <code>{{ i == 10 ? '1' : '0.' ~ i }}</code>.
+                                    </p>
+                                </div>
+                            </div>
+                        {% endfor %}
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+{% endblock %}
