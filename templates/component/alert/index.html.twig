@@ -42,8 +42,16 @@
                         <div data-js="code" id="code-alert" class="container-code overflow-auto">
                             <div class="alert-container">
                                 <div class="alert alert-success" data-js="alert" role="status" aria-live="polite">
-                                    <p>Alert success</p>
-                                    <button class="close btn btn-success">X</button>
+                                    <div class="alert-header d-flex jc-between">
+                                        <h2>Alert success</h2>
+                                        <button class="close btn btn-success">X</button>
+                                    </div>
+                                    <div class="alert-body">
+                                        <p>Lorem ipsum dolor sit amet.</p>
+                                    </div>
+                                    <div class="alert-footer">
+                                        <small>Some footer if you need it</small>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -273,28 +281,89 @@
 {% block javascripts %}
     <script>
         const alertMessages = {
-            danger: '⚠️ An error has occurred!',
-            success: '✓ Operation successful',
-            warning: '⚡ Warning, action required',
-            info: 'ℹ️ Important information'
+            danger: {
+                title: "Alert danger",
+                body: "⚠️ An error has occurred!",
+                footer: "Please check the issue."
+            },
+            success: {
+                title: "Alert success",
+                body: "✓ Operation successful",
+                footer: "Everything went well."
+            },
+            warning: {
+                title: "Alert warning",
+                body: "⚡ Warning, action required",
+                footer: "Be careful."
+            },
+            info: {
+                title: "Alert info",
+                body: "ℹ️ Important information",
+                footer: "For your information."
+            }
         };
 
         function showAlert(type) {
-            if (!type) return;
+            if (!alertMessages[type]) {
+                console.error("Unknown alert type:", type);
+                return;
+            }
+
             const container = document.getElementById('alert-demo');
-            if (!container) return;
+            if (!container) {
+                console.error("Missing #alert-demo container");
+                return;
+            }
+
+            // Main wrapper
             const alert = document.createElement('div');
-            const button = document.createElement('button');
             alert.className = `alert alert-${type}`;
+
+            // HEADER
+            const header = document.createElement('div');
+            header.className = 'alert-header d-flex jc-between';
+
+            const h2 = document.createElement('h3');
+            h2.textContent = alertMessages[type].title;
+
+            const button = document.createElement('button');
             button.className = `close btn btn-${type}`;
-            alert.textContent = alertMessages[type];
-            button.textContent = 'x';
-            alert.appendChild(button);
+            button.textContent = 'X';
+
+            header.appendChild(h2);
+            header.appendChild(button);
+
+            // BODY
+            const body = document.createElement('div');
+            body.className = 'alert-body';
+
+            const p = document.createElement('p');
+            p.textContent = alertMessages[type].body;
+
+            body.appendChild(p);
+
+            // FOOTER
+            const footer = document.createElement('div');
+            footer.className = 'alert-footer';
+
+            const small = document.createElement('small');
+            small.textContent = alertMessages[type].footer;
+
+            footer.appendChild(small);
+
+            // Assemble
+            alert.appendChild(header);
+            alert.appendChild(body);
+            alert.appendChild(footer);
             container.appendChild(alert);
-            alert.addEventListener('animationend', () => {
+
+            // Close action
+            button.addEventListener('click', () => {
                 alert.remove();
             });
-            button.addEventListener('click', () => {
+
+            // Optional auto-remove if you keep animations
+            alert.addEventListener('animationend', () => {
                 alert.remove();
             });
         }

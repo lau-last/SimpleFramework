@@ -1,5 +1,6 @@
 <!-- aside -->
 <aside class="sidebar-left width-sidebar-md" id="aside">
+    {% set route = app.request.get('_route') %}
 
     <!-- button close -->
     <div class="d-flex jc-end m-1 d-none-md">
@@ -22,24 +23,58 @@
                 Component
             </button>
             <div class="collapse-body show" id="menu-side-component">
-                <ul class="list list-hover">
-                    <li><a class="list-item" href="{{ url('app_accordion') }}">Accordion</a></li>
-                    <li><a class="list-item" href="{{ url('app_accordion_native') }}">Accordion native</a></li>
-                    <li><a class="list-item" href="{{ url('app_alert') }}">Alert</a></li>
-                    <li><a class="list-item" href="{{ url('app_badge') }}">Badge</a></li>
-                    <li><a class="list-item" href="{{ url('app_button') }}">Button</a></li>
-                    <li><a class="list-item" href="{{ url('app_card') }}">Card</a></li>
-                    <li><a class="list-item" href="{{ url('app_collapse') }}">Collapse</a></li>
-                    <li><a class="list-item" href="{{ url('app_collapse_native') }}">Collapse native</a></li>
-                    <li><a class="list-item" href="{{ url('app_dialog') }}">Dialog</a></li>
-                    <li><a class="list-item" href="{{ url('app_dropdown') }}">Dropdown</a></li>
-                    <li><a class="list-item" href="{{ url('app_dropdown_native') }}">Dropdown native</a></li>
-                    <li><a class="list-item" href="{{ url('app_form') }}">Form</a></li>
-                    <li><a class="list-item" href="{{ url('app_list') }}">List</a></li>
-                    <li><a class="list-item" href="{{ url('app_navbar') }}">Navbar</a></li>
-                    <li><a class="list-item" href="{{ url('app_navbar_side') }}">Navbar side</a></li>
-                    <li><a class="list-item" href="{{ url('app_tab') }}">Tab</a></li>
-                    <li><a class="list-item" href="{{ url('app_table') }}">Table</a></li>
+                <ul class="list list-hover list-primary text-base">
+                    <li class="list-item {{ route == 'app_accordion' ? 'active' : '' }}">
+                        <a class="list-link" href="{{ url('app_accordion') }}">Accordion</a>
+                    </li>
+                    <li class="list-item {{ route == 'app_accordion_native' ? 'active' : '' }}">
+                        <a class="list-link" href="{{ url('app_accordion_native') }}">Accordion native</a>
+                    </li>
+                    <li class="list-item {{ route == 'app_alert' ? 'active' : '' }}">
+                        <a class="list-link" href="{{ url('app_alert') }}">Alert</a>
+                    </li>
+                    <li class="list-item {{ route == 'app_badge' ? 'active' : '' }}">
+                        <a class="list-link" href="{{ url('app_badge') }}">Badge</a>
+                    </li>
+                    <li class="list-item {{ route == 'app_button' ? 'active' : '' }}">
+                        <a class="list-link" href="{{ url('app_button') }}">Button</a>
+                    </li>
+                    <li class="list-item {{ route == 'app_card' ? 'active' : '' }}">
+                        <a class="list-link" href="{{ url('app_card') }}">Card</a>
+                    </li>
+                    <li class="list-item {{ route == 'app_collapse' ? 'active' : '' }}">
+                        <a class="list-link" href="{{ url('app_collapse') }}">Collapse</a>
+                    </li>
+                    <li class="list-item {{ route == 'app_collapse_native' ? 'active' : '' }}">
+                        <a class="list-link" href="{{ url('app_collapse_native') }}">Collapse native</a>
+                    </li>
+                    <li class="list-item {{ route == 'app_dialog' ? 'active' : '' }}">
+                        <a class="list-link" href="{{ url('app_dialog') }}">Dialog</a>
+                    </li>
+                    <li class="list-item {{ route == 'app_dropdown' ? 'active' : '' }}">
+                        <a class="list-link" href="{{ url('app_dropdown') }}">Dropdown</a>
+                    </li>
+                    <li class="list-item {{ route == 'app_dropdown_native' ? 'active' : '' }}">
+                        <a class="list-link" href="{{ url('app_dropdown_native') }}">Dropdown native</a>
+                    </li>
+                    <li class="list-item {{ route == 'app_form' ? 'active' : '' }}">
+                        <a class="list-link" href="{{ url('app_form') }}">Form</a>
+                    </li>
+                    <li class="list-item {{ route == 'app_list' ? 'active' : '' }}">
+                        <a class="list-link" href="{{ url('app_list') }}">List</a>
+                    </li>
+                    <li class="list-item {{ route == 'app_navbar' ? 'active' : '' }}">
+                        <a class="list-link" href="{{ url('app_navbar') }}">Navbar</a>
+                    </li>
+                    <li class="list-item {{ route == 'app_navbar_side' ? 'active' : '' }}">
+                        <a class="list-link" href="{{ url('app_navbar_side') }}">Navbar side</a>
+                    </li>
+                    <li class="list-item {{ route == 'app_tab' ? 'active' : '' }}">
+                        <a class="list-link" href="{{ url('app_tab') }}">Tab</a>
+                    </li>
+                    <li class="list-item {{ route == 'app_table' ? 'active' : '' }}">
+                        <a class="list-link" href="{{ url('app_table') }}">Table</a>
+                    </li>
                 </ul>
             </div>
         </div>
@@ -52,11 +87,19 @@
                 Layout
             </button>
             <div class="collapse-body show" id="menu-side-layout">
-                <ul class="list list-hover">
-                    <li><a class="list-item" href="{{ url('app_col') }}">Col</a></li>
-                    <li><a class="list-item" href="{{ url('app_container') }}">Container</a></li>
-                    <li><a class="list-item" href="{{ url('app_flex') }}">Flex</a></li>
-                    <li><a class="list-item" href="{{ url('app_grid') }}">Grid</a></li>
+                <ul class="list list-hover list-primary text-base">
+                    <li class="list-item {{ route == 'app_col' ? 'active' : '' }}">
+                        <a class="list-link" href="{{ url('app_col') }}">Col</a>
+                    </li>
+                    <li class="list-item {{ route == 'app_container' ? 'active' : '' }}">
+                        <a class="list-link" href="{{ url('app_container') }}">Container</a>
+                    </li>
+                    <li class="list-item {{ route == 'app_flex' ? 'active' : '' }}">
+                        <a class="list-link" href="{{ url('app_flex') }}">Flex</a>
+                    </li>
+                    <li class="list-item {{ route == 'app_grid' ? 'active' : '' }}">
+                        <a class="list-link" href="{{ url('app_grid') }}">Grid</a>
+                    </li>
                 </ul>
             </div>
         </div>
@@ -69,18 +112,40 @@
                 Utility
             </button>
             <div class="collapse-body show" id="menu-side-utility">
-                <ul class="list list-hover">
-                    <li><a class="list-item" href="{{ url('app_border') }}">Border</a></li>
-                    <li><a class="list-item" href="{{ url('app_color') }}">Color</a></li>
-                    <li><a class="list-item" href="{{ url('app_display') }}">Display</a></li>
-                    <li><a class="list-item" href="{{ url('app_helper') }}">Helper</a></li>
-                    <li><a class="list-item" href="{{ url('app_image') }}">Image</a></li>
-                    <li><a class="list-item" href="{{ url('app_position') }}">Position</a></li>
-                    <li><a class="list-item" href="{{ url('app_sizing') }}">Sizing</a></li>
-                    <li><a class="list-item" href="{{ url('app_spacing') }}">Spacing</a></li>
-                    <li><a class="list-item" href="{{ url('app_text') }}">Text</a></li>
-                    <li><a class="list-item" href="{{ url('app_typography') }}">Typography</a></li>
-                    <li><a class="list-item" href="{{ url('app_visibility') }}">Visibility</a></li>
+                <ul class="list list-hover list-primary text-base">
+                    <li class="list-item {{ route == 'app_border' ? 'active' : '' }}">
+                        <a class="list-link" href="{{ url('app_border') }}">Border</a>
+                    </li>
+                    <li class="list-item {{ route == 'app_color' ? 'active' : '' }}">
+                        <a class="list-link" href="{{ url('app_color') }}">Color</a>
+                    </li>
+                    <li class="list-item {{ route == 'app_display' ? 'active' : '' }}">
+                        <a class="list-link" href="{{ url('app_display') }}">Display</a>
+                    </li>
+                    <li class="list-item {{ route == 'app_helper' ? 'active' : '' }}">
+                        <a class="list-link" href="{{ url('app_helper') }}">Helper</a>
+                    </li>
+                    <li class="list-item {{ route == 'app_image' ? 'active' : '' }}">
+                        <a class="list-link" href="{{ url('app_image') }}">Image</a>
+                    </li>
+                    <li class="list-item {{ route == 'app_position' ? 'active' : '' }}">
+                        <a class="list-link" href="{{ url('app_position') }}">Position</a>
+                    </li>
+                    <li class="list-item {{ route == 'app_sizing' ? 'active' : '' }}">
+                        <a class="list-link" href="{{ url('app_sizing') }}">Sizing</a>
+                    </li>
+                    <li class="list-item {{ route == 'app_spacing' ? 'active' : '' }}">
+                        <a class="list-link" href="{{ url('app_spacing') }}">Spacing</a>
+                    </li>
+                    <li class="list-item {{ route == 'app_text' ? 'active' : '' }}">
+                        <a class="list-link" href="{{ url('app_text') }}">Text</a>
+                    </li>
+                    <li class="list-item {{ route == 'app_typography' ? 'active' : '' }}">
+                        <a class="list-link" href="{{ url('app_typography') }}">Typography</a>
+                    </li>
+                    <li class="list-item {{ route == 'app_visibility' ? 'active' : '' }}">
+                        <a class="list-link" href="{{ url('app_visibility') }}">Visibility</a>
+                    </li>
                 </ul>
             </div>
         </div>
@@ -93,8 +158,10 @@
                 Abstract
             </button>
             <div class="collapse-body show" id="menu-side-abstract">
-                <ul class="list list-hover">
-                    <li><a class="list-item" href="{{ url('app_animation') }}">Animation</a></li>
+                <ul class="list list-hover list-primary text-base">
+                    <li class="list-item {{ route == 'app_animation' ? 'active' : '' }}">
+                        <a class="list-link" href="{{ url('app_animation') }}">Animation</a>
+                    </li>
                 </ul>
             </div>
         </div>

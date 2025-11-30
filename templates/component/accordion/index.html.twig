@@ -1,21 +1,21 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Hello AccordionController!{% endblock %}
+{% block title %}Accordion{% endblock %}
 
 {% block body %}
     <div class="container-sm">
         <div class="d-flex fd-column gap-5">
 
             {# Intro #}
-            <div class="card p-2">
+            <article class="card p-2">
                 <div class="card-header d-flex ai-baseline">
                     <h2>🗂️ Accordion</h2>
                     <span class="ml-1">(With JavaScript)</span>
                 </div>
-            </div>
+            </article>
 
             {# Example #}
-            <div class="card p-2">
+            <article class="card p-2">
                 <div class="card-header d-flex ai-baseline">
                     <h2>💠 Example</h2>
                     <span class="ml-1">(Single)</span>
@@ -24,86 +24,47 @@
                     <div class="row">
                         <div class="col-12">
                             <div class="accordion">
-                                <div class="accordion-item">
-                                    <button class="accordion-btn btn-primary"
-                                            data-js="collapse"
-                                            data-target="#single-1"
-                                            aria-expanded="false"
-                                            aria-controls="single-1">
-                                        Single
-                                    </button>
-                                    <div class="accordion-body" id="single-1">
-                                        <p class="p-1">
-                                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab dolorem
-                                            doloremque hic ipsam ipsum modi voluptatibus? Amet aperiam fuga minus optio
-                                            velit. Labore mollitia, voluptatibus! Fuga iste natus sit tempora temporibus
-                                            vero! Adipisci delectus distinctio esse fuga maiores necessitatibus neque
-                                            possimus voluptate! Architecto deserunt itaque sequi sint. Alias
-                                            consequuntur culpa ea eligendi fugiat magni porro, quis soluta veniam vero?
-                                            Aut corporis dolores eum eveniet nostrum perferendis quae quaerat qui quis
-                                            rem! Aperiam culpa cupiditate libero minima neque nesciunt optio possimus,
-                                            quae qui tempore. Consequuntur dignissimos doloremque error facilis fugit
-                                            inventore, labore molestiae necessitatibus nemo, nesciunt officia omnis
-                                            pariatur ratione recusandae!
-                                        </p>
+                                {% for i in 1..5 %}
+                                    {% set color = {
+                                        1: 'btn-primary-pastel',
+                                        2: 'btn-primary-light',
+                                        3: 'btn-primary',
+                                        4: 'btn-primary-dark',
+                                        5: 'btn-primary-night',
+                                    } %}
+                                    <div class="accordion-item">
+                                        <button class="accordion-btn {{ color[i] }}"
+                                                data-js="collapse"
+                                                data-target="#single-{{ i }}"
+                                                aria-expanded="false"
+                                                aria-controls="single-{{ i }}">
+                                            Single
+                                        </button>
+                                        <div class="accordion-body" id="single-{{ i }}">
+                                            <p class="p-1">
+                                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab dolorem
+                                                doloremque hic ipsam ipsum modi voluptatibus? Amet aperiam fuga minus optio
+                                                velit. Labore mollitia, voluptatibus! Fuga iste natus sit tempora temporibus
+                                                vero! Adipisci delectus distinctio esse fuga maiores necessitatibus neque
+                                                possimus voluptate! Architecto deserunt itaque sequi sint. Alias
+                                                consequuntur culpa ea eligendi fugiat magni porro, quis soluta veniam vero?
+                                                Aut corporis dolores eum eveniet nostrum perferendis quae quaerat qui quis
+                                                rem! Aperiam culpa cupiditate libero minima neque nesciunt optio possimus,
+                                                quae qui tempore. Consequuntur dignissimos doloremque error facilis fugit
+                                                inventore, labore molestiae necessitatibus nemo, nesciunt officia omnis
+                                                pariatur ratione recusandae!
+                                            </p>
+                                        </div>
                                     </div>
-                                </div>
-                                <div class="accordion-item">
-                                    <button class="accordion-btn btn-primary"
-                                            data-js="collapse"
-                                            data-target="#single-2"
-                                            aria-expanded="false"
-                                            aria-controls="single-2">
-                                        Single
-                                    </button>
-                                    <div class="accordion-body" id="single-2">
-                                        <p class="p-1">
-                                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab dolorem
-                                            doloremque hic ipsam ipsum modi voluptatibus? Amet aperiam fuga minus optio
-                                            velit. Labore mollitia, voluptatibus! Fuga iste natus sit tempora temporibus
-                                            vero! Adipisci delectus distinctio esse fuga maiores necessitatibus neque
-                                            possimus voluptate! Architecto deserunt itaque sequi sint. Alias
-                                            consequuntur culpa ea eligendi fugiat magni porro, quis soluta veniam vero?
-                                            Aut corporis dolores eum eveniet nostrum perferendis quae quaerat qui quis
-                                            rem! Aperiam culpa cupiditate libero minima neque nesciunt optio possimus,
-                                            quae qui tempore. Consequuntur dignissimos doloremque error facilis fugit
-                                            inventore, labore molestiae necessitatibus nemo, nesciunt officia omnis
-                                            pariatur ratione recusandae!
-                                        </p>
-                                    </div>
-                                </div>
-                                <div class="accordion-item">
-                                    <button class="accordion-btn btn-primary"
-                                            data-js="collapse"
-                                            data-target="#single-3"
-                                            aria-expanded="false"
-                                            aria-controls="single-3">
-                                        Single
-                                    </button>
-                                    <div class="accordion-body" id="single-3">
-                                        <p class="p-1">
-                                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab dolorem
-                                            doloremque hic ipsam ipsum modi voluptatibus? Amet aperiam fuga minus optio
-                                            velit. Labore mollitia, voluptatibus! Fuga iste natus sit tempora temporibus
-                                            vero! Adipisci delectus distinctio esse fuga maiores necessitatibus neque
-                                            possimus voluptate! Architecto deserunt itaque sequi sint. Alias
-                                            consequuntur culpa ea eligendi fugiat magni porro, quis soluta veniam vero?
-                                            Aut corporis dolores eum eveniet nostrum perferendis quae quaerat qui quis
-                                            rem! Aperiam culpa cupiditate libero minima neque nesciunt optio possimus,
-                                            quae qui tempore. Consequuntur dignissimos doloremque error facilis fugit
-                                            inventore, labore molestiae necessitatibus nemo, nesciunt officia omnis
-                                            pariatur ratione recusandae!
-                                        </p>
-                                    </div>
-                                </div>
+                                {% endfor %}
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
+            </article>
 
             {# HTML Code #}
-            <div class="card p-2">
+            <article class="card p-2">
                 <div class="card-header d-flex ai-baseline">
                     <h2>💻 HTML Code</h2>
                     <span class="ml-1">(Single)</span>
@@ -161,10 +122,10 @@
                         </div>
                     </div>
                 </div>
-            </div>
+            </article>
 
             {# Example #}
-            <div class="card p-2">
+            <article class="card p-2">
                 <div class="card-header d-flex ai-baseline">
                     <h2>💠 Example</h2>
                     <span class="ml-1">(Multiple)</span>
@@ -173,86 +134,47 @@
                     <div class="row">
                         <div class="col-12">
                             <div class="accordion" data-type="multiple">
-                                <div class="accordion-item">
-                                    <button class="accordion-btn btn-primary"
-                                            data-js="collapse"
-                                            data-target="#multiple-1"
-                                            aria-expanded="false"
-                                            aria-controls="multiple-1">
-                                        Multiple
-                                    </button>
-                                    <div class="accordion-body" id="multiple-1">
-                                        <p class="p-1">
-                                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab dolorem
-                                            doloremque hic ipsam ipsum modi voluptatibus? Amet aperiam fuga minus optio
-                                            velit. Labore mollitia, voluptatibus! Fuga iste natus sit tempora temporibus
-                                            vero! Adipisci delectus distinctio esse fuga maiores necessitatibus neque
-                                            possimus voluptate! Architecto deserunt itaque sequi sint. Alias
-                                            consequuntur culpa ea eligendi fugiat magni porro, quis soluta veniam vero?
-                                            Aut corporis dolores eum eveniet nostrum perferendis quae quaerat qui quis
-                                            rem! Aperiam culpa cupiditate libero minima neque nesciunt optio possimus,
-                                            quae qui tempore. Consequuntur dignissimos doloremque error facilis fugit
-                                            inventore, labore molestiae necessitatibus nemo, nesciunt officia omnis
-                                            pariatur ratione recusandae!
-                                        </p>
+                                {% for i in 1..5 %}
+                                    {% set color = {
+                                        1: 'btn-secondary-pastel',
+                                        2: 'btn-secondary-light',
+                                        3: 'btn-secondary',
+                                        4: 'btn-secondary-dark',
+                                        5: 'btn-secondary-night',
+                                    } %}
+                                    <div class="accordion-item">
+                                        <button class="accordion-btn {{ color[i] }}"
+                                                data-js="collapse"
+                                                data-target="#multiple-{{ i }}"
+                                                aria-expanded="false"
+                                                aria-controls="multiple-{{ i }}">
+                                            Multiple
+                                        </button>
+                                        <div class="accordion-body" id="multiple-{{ i }}">
+                                            <p class="p-1">
+                                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab dolorem
+                                                doloremque hic ipsam ipsum modi voluptatibus? Amet aperiam fuga minus optio
+                                                velit. Labore mollitia, voluptatibus! Fuga iste natus sit tempora temporibus
+                                                vero! Adipisci delectus distinctio esse fuga maiores necessitatibus neque
+                                                possimus voluptate! Architecto deserunt itaque sequi sint. Alias
+                                                consequuntur culpa ea eligendi fugiat magni porro, quis soluta veniam vero?
+                                                Aut corporis dolores eum eveniet nostrum perferendis quae quaerat qui quis
+                                                rem! Aperiam culpa cupiditate libero minima neque nesciunt optio possimus,
+                                                quae qui tempore. Consequuntur dignissimos doloremque error facilis fugit
+                                                inventore, labore molestiae necessitatibus nemo, nesciunt officia omnis
+                                                pariatur ratione recusandae!
+                                            </p>
+                                        </div>
                                     </div>
-                                </div>
-                                <div class="accordion-item">
-                                    <button class="accordion-btn btn-primary"
-                                            data-js="collapse"
-                                            data-target="#multiple-2"
-                                            aria-expanded="false"
-                                            aria-controls="multiple-2">
-                                        Multiple
-                                    </button>
-                                    <div class="accordion-body" id="multiple-2">
-                                        <p class="p-1">
-                                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab dolorem
-                                            doloremque hic ipsam ipsum modi voluptatibus? Amet aperiam fuga minus optio
-                                            velit. Labore mollitia, voluptatibus! Fuga iste natus sit tempora temporibus
-                                            vero! Adipisci delectus distinctio esse fuga maiores necessitatibus neque
-                                            possimus voluptate! Architecto deserunt itaque sequi sint. Alias
-                                            consequuntur culpa ea eligendi fugiat magni porro, quis soluta veniam vero?
-                                            Aut corporis dolores eum eveniet nostrum perferendis quae quaerat qui quis
-                                            rem! Aperiam culpa cupiditate libero minima neque nesciunt optio possimus,
-                                            quae qui tempore. Consequuntur dignissimos doloremque error facilis fugit
-                                            inventore, labore molestiae necessitatibus nemo, nesciunt officia omnis
-                                            pariatur ratione recusandae!
-                                        </p>
-                                    </div>
-                                </div>
-                                <div class="accordion-item">
-                                    <button class="accordion-btn btn-primary"
-                                            data-js="collapse"
-                                            data-target="#multiple-3"
-                                            aria-expanded="false"
-                                            aria-controls="multiple-3">
-                                        Multiple
-                                    </button>
-                                    <div class="accordion-body" id="multiple-3">
-                                        <p class="p-1">
-                                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab dolorem
-                                            doloremque hic ipsam ipsum modi voluptatibus? Amet aperiam fuga minus optio
-                                            velit. Labore mollitia, voluptatibus! Fuga iste natus sit tempora temporibus
-                                            vero! Adipisci delectus distinctio esse fuga maiores necessitatibus neque
-                                            possimus voluptate! Architecto deserunt itaque sequi sint. Alias
-                                            consequuntur culpa ea eligendi fugiat magni porro, quis soluta veniam vero?
-                                            Aut corporis dolores eum eveniet nostrum perferendis quae quaerat qui quis
-                                            rem! Aperiam culpa cupiditate libero minima neque nesciunt optio possimus,
-                                            quae qui tempore. Consequuntur dignissimos doloremque error facilis fugit
-                                            inventore, labore molestiae necessitatibus nemo, nesciunt officia omnis
-                                            pariatur ratione recusandae!
-                                        </p>
-                                    </div>
-                                </div>
+                                {% endfor %}
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
+            </article>
 
             {# HTML Code #}
-            <div class="card p-2">
+            <article class="card p-2">
                 <div class="card-header d-flex ai-baseline">
                     <h2>💻 HTML Code</h2>
                     <span class="ml-1">(Multiple)</span>
@@ -310,10 +232,10 @@
                         </div>
                     </div>
                 </div>
-            </div>
+            </article>
 
             {# Sizes #}
-            <div class="card p-2">
+            <article class="card p-2">
                 <div class="card-header">
                     <h2>📏 Sizes</h2>
                 </div>
@@ -334,31 +256,31 @@
                     </p>
                     <div class="row mt-2">
                         <div class="col-12 col-4-xs">
-                            <div class="card p-2">
+                            <figure class="card p-2">
                                 <code class="text-bold text-primary">.accordion-btn</code>
-                            </div>
+                            </figure>
                         </div>
                         <div class="col-12 col-4-xs">
-                            <div class="card p-2">
+                            <figure class="card p-2">
                                 <code class="text-bold text-primary">.accordion-btn-sm</code>
-                            </div>
+                            </figure>
                         </div>
                         <div class="col-12 col-4-xs">
-                            <div class="card p-2">
+                            <figure class="card p-2">
                                 <code class="text-bold text-primary">.accordion-btn-md</code>
-                            </div>
+                            </figure>
                         </div>
                         <div class="col-12 col-4-xs">
-                            <div class="card p-2">
+                            <figure class="card p-2">
                                 <code class="text-bold text-primary">.accordion-btn-lg</code>
-                            </div>
+                            </figure>
                         </div>
                     </div>
                 </div>
-            </div>
+            </article>
 
             {# How to use #}
-            <div class="card p-2">
+            <article class="card p-2">
                 <div class="card-header">
                     <h2>🧩 How to use</h2>
                 </div>
@@ -370,10 +292,10 @@
                         <code class="text-bold text-primary">aria-expanded</code> automatically.
                     </p>
                 </div>
-            </div>
+            </article>
 
             {# How it works #}
-            <div class="card p-2">
+            <article class="card p-2">
                 <div class="card-header">
                     <h2>🧩 How it works</h2>
                 </div>
@@ -387,10 +309,10 @@
                         Extra clicks are ignored during the animation.
                     </p>
                 </div>
-            </div>
+            </article>
 
             {# Note about colors #}
-            <div class="card p-2">
+            <article class="card p-2">
                 <div class="card-header">
                     <h2>📌 Note colors</h2>
                 </div>
@@ -401,10 +323,10 @@
                         custom class.
                     </p>
                 </div>
-            </div>
+            </article>
 
             {# Note about state #}
-            <div class="card p-2">
+            <article class="card p-2">
                 <div class="card-header">
                     <h2>📌 Note open state</h2>
                 </div>
@@ -416,10 +338,10 @@
                         the button shows <strong>﹣</strong>.
                     </p>
                 </div>
-            </div>
+            </article>
 
             {# Notes about spacing #}
-            <div class="card p-2">
+            <article class="card p-2">
                 <div class="card-header">
                     <h2>📌 Note spacing rules</h2>
                 </div>
@@ -436,10 +358,10 @@
                         <code class="text-bold text-primary">.accordion-native</code>.
                     </p>
                 </div>
-            </div>
+            </article>
 
             {# Varibles #}
-            <div class="card p-2">
+            <article class="card p-2">
                 <div class="card-header">
                     <h2>⚙️ Variables CSS</h2>
                 </div>
@@ -493,7 +415,7 @@
                        </table>
                    </div>
                 </div>
-            </div>
+            </article>
 
         </div>
     </div>
