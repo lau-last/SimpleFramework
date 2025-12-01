@@ -24,66 +24,25 @@
                     <div class="row">
                         <div class="col-12">
                             <div class="accordion-native">
-                                <details class="accordion-item">
-                                    <summary class="accordion-btn btn-primary">
-                                        Multiple
-                                    </summary>
-                                    <div class="accordion-body">
-                                        <p class="p-1">
-                                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab dolorem
-                                            doloremque hic ipsam ipsum modi voluptatibus? Amet aperiam fuga minus optio
-                                            velit. Labore mollitia, voluptatibus! Fuga iste natus sit tempora temporibus
-                                            vero! Adipisci delectus distinctio esse fuga maiores necessitatibus neque
-                                            possimus voluptate! Architecto deserunt itaque sequi sint. Alias
-                                            consequuntur culpa ea eligendi fugiat magni porro, quis soluta veniam vero?
-                                            Aut corporis dolores eum eveniet nostrum perferendis quae quaerat qui quis
-                                            rem! Aperiam culpa cupiditate libero minima neque nesciunt optio possimus,
-                                            quae qui tempore. Consequuntur dignissimos doloremque error facilis fugit
-                                            inventore, labore molestiae necessitatibus nemo, nesciunt officia omnis
-                                            pariatur ratione recusandae!
-                                        </p>
-                                    </div>
-                                </details>
-                                <details class="accordion-item">
-                                    <summary class="accordion-btn btn-primary">
-                                        Multiple
-                                    </summary>
-                                    <div class="accordion-body">
-                                        <p class="p-1">
-                                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab dolorem
-                                            doloremque hic ipsam ipsum modi voluptatibus? Amet aperiam fuga minus optio
-                                            velit. Labore mollitia, voluptatibus! Fuga iste natus sit tempora temporibus
-                                            vero! Adipisci delectus distinctio esse fuga maiores necessitatibus neque
-                                            possimus voluptate! Architecto deserunt itaque sequi sint. Alias
-                                            consequuntur culpa ea eligendi fugiat magni porro, quis soluta veniam vero?
-                                            Aut corporis dolores eum eveniet nostrum perferendis quae quaerat qui quis
-                                            rem! Aperiam culpa cupiditate libero minima neque nesciunt optio possimus,
-                                            quae qui tempore. Consequuntur dignissimos doloremque error facilis fugit
-                                            inventore, labore molestiae necessitatibus nemo, nesciunt officia omnis
-                                            pariatur ratione recusandae!
-                                        </p>
-                                    </div>
-                                </details>
-                                <details class="accordion-item">
-                                    <summary class="accordion-btn btn-primary">
-                                        Multiple
-                                    </summary>
-                                    <div class="accordion-body">
-                                        <p class="p-1">
-                                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab dolorem
-                                            doloremque hic ipsam ipsum modi voluptatibus? Amet aperiam fuga minus optio
-                                            velit. Labore mollitia, voluptatibus! Fuga iste natus sit tempora temporibus
-                                            vero! Adipisci delectus distinctio esse fuga maiores necessitatibus neque
-                                            possimus voluptate! Architecto deserunt itaque sequi sint. Alias
-                                            consequuntur culpa ea eligendi fugiat magni porro, quis soluta veniam vero?
-                                            Aut corporis dolores eum eveniet nostrum perferendis quae quaerat qui quis
-                                            rem! Aperiam culpa cupiditate libero minima neque nesciunt optio possimus,
-                                            quae qui tempore. Consequuntur dignissimos doloremque error facilis fugit
-                                            inventore, labore molestiae necessitatibus nemo, nesciunt officia omnis
-                                            pariatur ratione recusandae!
-                                        </p>
-                                    </div>
-                                </details>
+                                {% for i in 1..5 %}
+                                    {% set color = {
+                                        1: 'btn-primary-pastel',
+                                        2: 'btn-primary-light',
+                                        3: 'btn-primary',
+                                        4: 'btn-primary-dark',
+                                        5: 'btn-primary-night',
+                                    } %}
+                                    <details class="accordion-item">
+                                        <summary class="accordion-btn {{ color[i] }}">
+                                            Multiple
+                                        </summary>
+                                        <div class="accordion-body">
+                                            <p class="p-1">
+                                                Some content
+                                            </p>
+                                        </div>
+                                    </details>
+                                {% endfor %}
                             </div>
                         </div>
                     </div>
@@ -228,7 +187,7 @@
                 </div>
             </article>
 
-            {# Variables #}
+            {# Varibles #}
             <article class="card p-2">
                 <div class="card-header">
                     <h2>⚙️ Variables CSS</h2>
@@ -243,42 +202,52 @@
                             </tr>
                             </thead>
                             <tbody>
+
                             <tr>
                                 <td><code class="text-bold text-primary">--accordion-bg-color</code></td>
                                 <td>Background color of the accordion.</td>
                             </tr>
+
                             <tr>
                                 <td><code class="text-bold text-primary">--accordion-border-color</code></td>
                                 <td>Color of the borders.</td>
                             </tr>
+
                             <tr>
                                 <td><code class="text-bold text-primary">--accordion-border-radius</code></td>
                                 <td>Corner radius.</td>
                             </tr>
+
                             <tr>
                                 <td><code class="text-bold text-primary">--accordion-border-style</code></td>
                                 <td>Border style (solid, dashed, etc.).</td>
                             </tr>
+
                             <tr>
                                 <td><code class="text-bold text-primary">--accordion-border-width</code></td>
                                 <td>Border thickness.</td>
                             </tr>
+
                             <tr>
                                 <td><code class="text-bold text-primary">--accordion-button-padding</code></td>
                                 <td>Default button padding.</td>
                             </tr>
-                            <tr>
-                                <td><code class="text-bold text-primary">--accordion-button-padding-sm</code></td>
-                                <td>Padding for small buttons.</td>
-                            </tr>
-                            <tr>
-                                <td><code class="text-bold text-primary">--accordion-button-padding-md</code></td>
-                                <td>Padding for medium buttons.</td>
-                            </tr>
+
                             <tr>
                                 <td><code class="text-bold text-primary">--accordion-button-padding-lg</code></td>
                                 <td>Padding for large buttons.</td>
                             </tr>
+
+                            <tr>
+                                <td><code class="text-bold text-primary">--accordion-button-padding-md</code></td>
+                                <td>Padding for medium buttons.</td>
+                            </tr>
+
+                            <tr>
+                                <td><code class="text-bold text-primary">--accordion-button-padding-sm</code></td>
+                                <td>Padding for small buttons.</td>
+                            </tr>
+
                             </tbody>
                         </table>
                     </div>

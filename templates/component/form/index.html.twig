@@ -399,8 +399,6 @@
                     <h2>⚙️ Variables CSS</h2>
                 </div>
                 <div class="card-body">
-                    <p class="p-1">These variables control input size, spacing, borders, colors, and extra elements like
-                        range, select and switch.</p>
                     <div class="table-responsive">
                         <table class="table">
                             <thead>
@@ -412,138 +410,228 @@
                             <tbody>
 
                             <tr>
-                                <td><code class="text-bold text-primary">--gap-form-inline</code></td>
-                                <td>Gap between inline form elements.</td>
+                                <td><code class="text-bold text-primary">--form-control-gap</code></td>
+                                <td>Gap between form controls.</td>
+                            </tr>
+
+                            <tr>
+                                <td><code class="text-bold text-primary">--form-control-height</code></td>
+                                <td>Default height of form controls.</td>
+                            </tr>
+
+                            <tr>
+                                <td><code class="text-bold text-primary">--form-control-height-lg</code></td>
+                                <td>Height for large-sized form controls.</td>
+                            </tr>
+
+                            <tr>
+                                <td><code class="text-bold text-primary">--form-control-height-md</code></td>
+                                <td>Height for medium-sized form controls.</td>
+                            </tr>
+
+                            <tr>
+                                <td><code class="text-bold text-primary">--form-control-height-sm</code></td>
+                                <td>Height for small-sized form controls.</td>
                             </tr>
 
                             <tr>
                                 <td><code class="text-bold text-primary">--input-bg-color</code></td>
-                                <td>Input background color.</td>
+                                <td>Background color of the input.</td>
                             </tr>
 
                             <tr>
-                                <td><code class="text-bold text-primary">--input-border</code></td>
-                                <td>Full input border (color, width, style).</td>
+                                <td><code class="text-bold text-primary">--input-border-color</code></td>
+                                <td>Border color of the input.</td>
+                            </tr>
+
+                            <tr>
+                                <td><code class="text-bold text-primary">--input-border-color-invalid</code></td>
+                                <td>Border color for invalid input state.</td>
+                            </tr>
+
+                            <tr>
+                                <td><code class="text-bold text-primary">--input-border-color-valid</code></td>
+                                <td>Border color for valid input state.</td>
                             </tr>
 
                             <tr>
                                 <td><code class="text-bold text-primary">--input-border-radius</code></td>
-                                <td>Corner radius of the input.</td>
+                                <td>Corner radius of inputs.</td>
+                            </tr>
+
+                            <tr>
+                                <td><code class="text-bold text-primary">--input-border-style</code></td>
+                                <td>Border style applied to inputs.</td>
+                            </tr>
+
+                            <tr>
+                                <td><code class="text-bold text-primary">--input-border-width</code></td>
+                                <td>Thickness of the input border.</td>
                             </tr>
 
                             <tr>
                                 <td><code class="text-bold text-primary">--input-box-shadow-focus</code></td>
-                                <td>Shadow applied when the input is focused.</td>
+                                <td>Focus shadow applied when the input is active.</td>
+                            </tr>
+
+                            <tr>
+                                <td><code class="text-bold text-primary">--input-box-shadow-invalid</code></td>
+                                <td>Shadow applied when the input state is invalid.</td>
+                            </tr>
+
+                            <tr>
+                                <td><code class="text-bold text-primary">--input-box-shadow-valid</code></td>
+                                <td>Shadow applied when the input state is valid.</td>
+                            </tr>
+
+                            <tr>
+                                <td><code class="text-bold text-primary">--input-checbox-size</code></td>
+                                <td>Default size of checkboxes.</td>
+                            </tr>
+
+                            <tr>
+                                <td><code class="text-bold text-primary">--input-checbox-size-lg</code></td>
+                                <td>Size for large checkboxes.</td>
+                            </tr>
+
+                            <tr>
+                                <td><code class="text-bold text-primary">--input-checbox-size-md</code></td>
+                                <td>Size for medium checkboxes.</td>
+                            </tr>
+
+                            <tr>
+                                <td><code class="text-bold text-primary">--input-checbox-size-sm</code></td>
+                                <td>Size for small checkboxes.</td>
                             </tr>
 
                             <tr>
                                 <td><code class="text-bold text-primary">--input-height</code></td>
-                                <td>Default input height.</td>
-                            </tr>
-
-                            <tr>
-                                <td><code class="text-bold text-primary">--input-height-sm</code></td>
-                                <td>Height for small inputs.</td>
-                            </tr>
-
-                            <tr>
-                                <td><code class="text-bold text-primary">--input-height-md</code></td>
-                                <td>Height for medium inputs.</td>
+                                <td>Default height of inputs.</td>
                             </tr>
 
                             <tr>
                                 <td><code class="text-bold text-primary">--input-height-lg</code></td>
-                                <td>Height for large inputs.</td>
+                                <td>Height for large-sized inputs.</td>
                             </tr>
 
                             <tr>
-                                <td><code class="text-bold text-primary">--input-margin</code></td>
-                                <td>Space below the input inside <code>.form-control</code>.</td>
+                                <td><code class="text-bold text-primary">--input-height-md</code></td>
+                                <td>Height for medium-sized inputs.</td>
+                            </tr>
+
+                            <tr>
+                                <td><code class="text-bold text-primary">--input-height-sm</code></td>
+                                <td>Height for small-sized inputs.</td>
+                            </tr>
+
+                            <tr>
+                                <td><code class="text-bold text-primary">--input-icon-invalid-svg</code></td>
+                                <td>SVG icon displayed for invalid input state.</td>
+                            </tr>
+
+                            <tr>
+                                <td><code class="text-bold text-primary">--input-icon-select-arrow-svg</code></td>
+                                <td>Arrow icon for select elements.</td>
+                            </tr>
+
+                            <tr>
+                                <td><code class="text-bold text-primary">--input-icon-valid-svg</code></td>
+                                <td>SVG icon displayed for valid input state.</td>
                             </tr>
 
                             <tr>
                                 <td><code class="text-bold text-primary">--input-padding</code></td>
-                                <td>Internal padding of the input.</td>
+                                <td>Horizontal padding inside inputs.</td>
                             </tr>
 
                             <tr>
-                                <td><code class="text-bold text-primary">--input-placeholder-color</code></td>
-                                <td>Placeholder text color.</td>
+                                <td><code class="text-bold text-primary">--input-radio-size</code></td>
+                                <td>Default size of radio buttons.</td>
                             </tr>
 
                             <tr>
-                                <td><code class="text-bold text-primary">--input-size</code></td>
-                                <td>Default font size inside inputs.</td>
+                                <td><code class="text-bold text-primary">--input-radio-size-lg</code></td>
+                                <td>Size for large radio buttons.</td>
                             </tr>
 
                             <tr>
-                                <td><code class="text-bold text-primary">--input-size-sm</code></td>
-                                <td>Font size for small inputs.</td>
+                                <td><code class="text-bold text-primary">--input-radio-size-md</code></td>
+                                <td>Size for medium radio buttons.</td>
                             </tr>
 
                             <tr>
-                                <td><code class="text-bold text-primary">--input-size-md</code></td>
-                                <td>Font size for medium inputs.</td>
+                                <td><code class="text-bold text-primary">--input-radio-size-sm</code></td>
+                                <td>Size for small radio buttons.</td>
                             </tr>
 
                             <tr>
-                                <td><code class="text-bold text-primary">--input-size-lg</code></td>
-                                <td>Font size for large inputs.</td>
+                                <td><code class="text-bold text-primary">--input-range-bar-height</code></td>
+                                <td>Height of the input range bar.</td>
                             </tr>
 
                             <tr>
-                                <td><code class="text-bold text-primary">--input-text-color</code></td>
-                                <td>Input text color.</td>
+                                <td><code class="text-bold text-primary">--input-range-bar-height-lg</code></td>
+                                <td>Height of the input range bar (large).</td>
                             </tr>
 
                             <tr>
-                                <td><code class="text-bold text-primary">--range-size</code></td>
-                                <td>Height of the range slider.</td>
+                                <td><code class="text-bold text-primary">--input-range-bar-height-md</code></td>
+                                <td>Height of the input range bar (medium).</td>
                             </tr>
 
                             <tr>
-                                <td><code class="text-bold text-primary">--range-size-sm</code></td>
-                                <td>Height for small sliders.</td>
+                                <td><code class="text-bold text-primary">--input-range-bar-height-sm</code></td>
+                                <td>Height of the input range bar (small).</td>
                             </tr>
 
                             <tr>
-                                <td><code class="text-bold text-primary">--range-size-md</code></td>
-                                <td>Height for medium sliders.</td>
+                                <td><code class="text-bold text-primary">--input-range-button-size</code></td>
+                                <td>Size of the input range handle button.</td>
                             </tr>
 
                             <tr>
-                                <td><code class="text-bold text-primary">--range-size-lg</code></td>
-                                <td>Height for large sliders.</td>
+                                <td><code class="text-bold text-primary">--input-range-button-size-lg</code></td>
+                                <td>Size of the handle button (large).</td>
                             </tr>
 
                             <tr>
-                                <td><code class="text-bold text-primary">--select-padding</code></td>
-                                <td>Padding inside select elements.</td>
+                                <td><code class="text-bold text-primary">--input-range-button-size-md</code></td>
+                                <td>Size of the handle button (medium).</td>
                             </tr>
 
                             <tr>
-                                <td><code class="text-bold text-primary">--switch-size</code></td>
-                                <td>Base size of the switch component.</td>
+                                <td><code class="text-bold text-primary">--input-range-button-size-sm</code></td>
+                                <td>Size of the handle button (small).</td>
                             </tr>
 
                             <tr>
-                                <td><code class="text-bold text-primary">--switch-size-sm</code></td>
-                                <td>Size for small switches.</td>
+                                <td><code class="text-bold text-primary">--input-switch-bg-color</code></td>
+                                <td>Background color of toggle switches.</td>
                             </tr>
 
                             <tr>
-                                <td><code class="text-bold text-primary">--switch-size-md</code></td>
-                                <td>Size for medium switches.</td>
+                                <td><code class="text-bold text-primary">--input-switch-height</code></td>
+                                <td>Default height of toggle switches.</td>
                             </tr>
 
                             <tr>
-                                <td><code class="text-bold text-primary">--switch-size-lg</code></td>
-                                <td>Size for large switches.</td>
+                                <td><code class="text-bold text-primary">--input-switch-height-lg</code></td>
+                                <td>Height of toggle switches (large).</td>
+                            </tr>
+
+                            <tr>
+                                <td><code class="text-bold text-primary">--input-switch-height-md</code></td>
+                                <td>Height of toggle switches (medium).</td>
+                            </tr>
+
+                            <tr>
+                                <td><code class="text-bold text-primary">--input-switch-height-sm</code></td>
+                                <td>Height of toggle switches (small).</td>
                             </tr>
 
                             <tr>
                                 <td><code class="text-bold text-primary">--textarea-padding</code></td>
-                                <td>Padding inside textareas.</td>
+                                <td>Padding inside textarea elements.</td>
                             </tr>
 
                             </tbody>

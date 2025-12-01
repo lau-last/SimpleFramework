@@ -136,11 +136,11 @@
                             <div class="accordion" data-type="multiple">
                                 {% for i in 1..5 %}
                                     {% set color = {
-                                        1: 'btn-secondary-pastel',
-                                        2: 'btn-secondary-light',
-                                        3: 'btn-secondary',
-                                        4: 'btn-secondary-dark',
-                                        5: 'btn-secondary-night',
+                                        1: 'btn-primary-pastel',
+                                        2: 'btn-primary-light',
+                                        3: 'btn-primary',
+                                        4: 'btn-primary-dark',
+                                        5: 'btn-primary-night',
                                     } %}
                                     <div class="accordion-item">
                                         <button class="accordion-btn {{ color[i] }}"
@@ -366,54 +366,64 @@
                     <h2>⚙️ Variables CSS</h2>
                 </div>
                 <div class="card-body">
-                   <div class="table-responsive">
-                       <table class="table">
-                           <thead>
-                           <tr class="text-left">
-                               <th>Class</th>
-                               <th>Description</th>
-                           </tr>
-                           </thead>
-                           <tbody>
-                           <tr>
-                               <td><code class="text-bold text-primary">--accordion-bg-color</code></td>
-                               <td>Background color of the accordion.</td>
-                           </tr>
-                           <tr>
-                               <td><code class="text-bold text-primary">--accordion-border-color</code></td>
-                               <td>Color of the borders.</td>
-                           </tr>
-                           <tr>
-                               <td><code class="text-bold text-primary">--accordion-border-radius</code></td>
-                               <td>Corner radius.</td>
-                           </tr>
-                           <tr>
-                               <td><code class="text-bold text-primary">--accordion-border-style</code></td>
-                               <td>Border style (solid, dashed, etc.).</td>
-                           </tr>
-                           <tr>
-                               <td><code class="text-bold text-primary">--accordion-border-width</code></td>
-                               <td>Border thickness.</td>
-                           </tr>
-                           <tr>
-                               <td><code class="text-bold text-primary">--accordion-button-padding</code></td>
-                               <td>Default button padding.</td>
-                           </tr>
-                           <tr>
-                               <td><code class="text-bold text-primary">--accordion-button-padding-sm</code></td>
-                               <td>Padding for small buttons.</td>
-                           </tr>
-                           <tr>
-                               <td><code class="text-bold text-primary">--accordion-button-padding-md</code></td>
-                               <td>Padding for medium buttons.</td>
-                           </tr>
-                           <tr>
-                               <td><code class="text-bold text-primary">--accordion-button-padding-lg</code></td>
-                               <td>Padding for large buttons.</td>
-                           </tr>
-                           </tbody>
-                       </table>
-                   </div>
+                    <div class="table-responsive">
+                        <table class="table">
+                            <thead>
+                            <tr class="text-left">
+                                <th>Class</th>
+                                <th>Description</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+
+                            <tr>
+                                <td><code class="text-bold text-primary">--accordion-bg-color</code></td>
+                                <td>Background color of the accordion.</td>
+                            </tr>
+
+                            <tr>
+                                <td><code class="text-bold text-primary">--accordion-border-color</code></td>
+                                <td>Color of the borders.</td>
+                            </tr>
+
+                            <tr>
+                                <td><code class="text-bold text-primary">--accordion-border-radius</code></td>
+                                <td>Corner radius.</td>
+                            </tr>
+
+                            <tr>
+                                <td><code class="text-bold text-primary">--accordion-border-style</code></td>
+                                <td>Border style (solid, dashed, etc.).</td>
+                            </tr>
+
+                            <tr>
+                                <td><code class="text-bold text-primary">--accordion-border-width</code></td>
+                                <td>Border thickness.</td>
+                            </tr>
+
+                            <tr>
+                                <td><code class="text-bold text-primary">--accordion-button-padding</code></td>
+                                <td>Default button padding.</td>
+                            </tr>
+
+                            <tr>
+                                <td><code class="text-bold text-primary">--accordion-button-padding-lg</code></td>
+                                <td>Padding for large buttons.</td>
+                            </tr>
+
+                            <tr>
+                                <td><code class="text-bold text-primary">--accordion-button-padding-md</code></td>
+                                <td>Padding for medium buttons.</td>
+                            </tr>
+
+                            <tr>
+                                <td><code class="text-bold text-primary">--accordion-button-padding-sm</code></td>
+                                <td>Padding for small buttons.</td>
+                            </tr>
+
+                            </tbody>
+                        </table>
+                    </div>
                 </div>
             </article>
 

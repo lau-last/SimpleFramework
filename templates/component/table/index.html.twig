@@ -1,64 +1,6 @@
 {% extends 'base.html.twig' %}
 
 {% block title %}Hello TableController!{% endblock %}
-{% block stylesheets %}
-    <style>
-        .table-primary {
-            background: var(--table-primary-color);
-            color: var(--table-text-on-primary);
-        }
-
-        .table-secondary {
-            background: var(--table-secondary-color);
-            color: var(--table-text-on-secondary);
-        }
-
-        .table-tertiary {
-            background: var(--table-tertiary-color);
-            color: var(--table-text-on-tertiary);
-        }
-
-        .table-success {
-            background: var(--table-success-color);
-            color: var(--table-text-on-success);
-        }
-
-        .table-danger {
-            background: var(--table-danger-color);
-            color: var(--table-text-on-danger);
-        }
-
-        .table-warning {
-            background: var(--table-warning-color);
-            color: var(--table-text-on-warning);
-        }
-
-        .table-info {
-            background: var(--table-info-color);
-            color: var(--table-text-on-info);
-        }
-
-        .table-light {
-            background: var(--table-light-color);
-            color: var(--table-text-on-light);
-        }
-
-        .table-dark {
-            background: var(--table-dark-color);
-            color: var(--table-text-on-dark);
-        }
-
-        .table-white {
-            background: var(--table-white-color);
-            color: var(--table-text-on-white);
-        }
-
-        .table-black {
-            background: var(--table-black-color);
-            color: var(--table-text-on-black);
-        }
-    </style>
-{% endblock %}
 
 {% block body %}
     <div class="container-sm">
@@ -390,183 +332,90 @@
                 </div>
             </div>
 
-            {# Variables CSS #}
+            {# Variables #}
             <div class="card p-2">
                 <div class="card-header">
-                    <h2>⚙️ CSS Variables</h2>
+                    <h2>⚙️ Variables CSS</h2>
                 </div>
-
                 <div class="card-body">
-                    <p class="p-1">
-                        These variables control borders, padding, hover effects, striping, and table colors.
-                    </p>
                     <div class="table-responsive">
-                        <table class="table table-sm text-left">
+                        <table class="table">
                             <thead>
-                            <tr>
+                            <tr class="text-left">
                                 <th>Variable</th>
                                 <th>Description</th>
                             </tr>
                             </thead>
-
                             <tbody>
 
-                            {# Borders #}
+                            <tr>
+                                <td><code class="text-bold text-primary">--table-active-bg-color</code></td>
+                                <td>Background color applied when a table row is active or selected.</td>
+                            </tr>
+
+                            <tr>
+                                <td><code class="text-bold text-primary">--table-bg-color</code></td>
+                                <td>Background color of the table.</td>
+                            </tr>
+
                             <tr>
                                 <td><code class="text-bold text-primary">--table-border-color</code></td>
-                                <td>Main border color for table cells.</td>
-                            </tr>
-                            <tr>
-                                <td><code class="text-bold text-primary">--table-border-style</code></td>
-                                <td>Common border style (solid, dashed, etc.).</td>
-                            </tr>
-                            <tr>
-                                <td><code class="text-bold text-primary">--table-border-width</code></td>
-                                <td>Default border thickness for cells.</td>
+                                <td>Border color of the table.</td>
                             </tr>
 
-                            {# Divider #}
                             <tr>
                                 <td><code class="text-bold text-primary">--table-border-divider-color</code></td>
-                                <td>Color of group dividers.</td>
+                                <td>Color of the internal row/column dividers.</td>
                             </tr>
-                            <tr>
-                                <td><code class="text-bold text-primary">--table-border-divider-width</code></td>
-                                <td>Thickness of group dividers.</td>
-                            </tr>
+
                             <tr>
                                 <td><code class="text-bold text-primary">--table-border-divider-style</code></td>
-                                <td>Style of group dividers.</td>
+                                <td>Border style of the table’s internal dividers.</td>
                             </tr>
 
-                            {# Hover / Striped #}
+                            <tr>
+                                <td><code class="text-bold text-primary">--table-border-divider-width</code></td>
+                                <td>Thickness of inner dividers between table rows and columns.</td>
+                            </tr>
+
+                            <tr>
+                                <td><code class="text-bold text-primary">--table-border-style</code></td>
+                                <td>Border style of the table.</td>
+                            </tr>
+
+                            <tr>
+                                <td><code class="text-bold text-primary">--table-border-width</code></td>
+                                <td>Thickness of the table border.</td>
+                            </tr>
+
                             <tr>
                                 <td><code class="text-bold text-primary">--table-hover-bg-color</code></td>
-                                <td>Background used when hovering a row.</td>
-                            </tr>
-                            <tr>
-                                <td><code class="text-bold text-primary">--table-striped-bg-color</code></td>
-                                <td>Background color for striped rows/columns.</td>
+                                <td>Background color applied when hovering table rows.</td>
                             </tr>
 
-                            {# Color variants #}
-                            <tr>
-                                <td><code class="text-bold text-primary">--table-primary-color</code></td>
-                                <td>Primary background mix for themed tables.</td>
-                            </tr>
-                            <tr>
-                                <td><code class="text-bold text-primary">--table-secondary-color</code></td>
-                                <td>Secondary background mix.</td>
-                            </tr>
-                            <tr>
-                                <td><code class="text-bold text-primary">--table-tertiary-color</code></td>
-                                <td>Tertiary background mix.</td>
-                            </tr>
-
-                            <tr>
-                                <td><code class="text-bold text-primary">--table-black-color</code></td>
-                                <td>Black variant background.</td>
-                            </tr>
-                            <tr>
-                                <td><code class="text-bold text-primary">--table-danger-color</code></td>
-                                <td>Danger / error background.</td>
-                            </tr>
-                            <tr>
-                                <td><code class="text-bold text-primary">--table-dark-color</code></td>
-                                <td>Dark variant background.</td>
-                            </tr>
-                            <tr>
-                                <td><code class="text-bold text-primary">--table-info-color</code></td>
-                                <td>Info background.</td>
-                            </tr>
-                            <tr>
-                                <td><code class="text-bold text-primary">--table-light-color</code></td>
-                                <td>Light background variant.</td>
-                            </tr>
-                            <tr>
-                                <td><code class="text-bold text-primary">--table-neutral-color</code></td>
-                                <td>Neutral gray background.</td>
-                            </tr>
-                            <tr>
-                                <td><code class="text-bold text-primary">--table-success-color</code></td>
-                                <td>Success / confirmation background.</td>
-                            </tr>
-                            <tr>
-                                <td><code class="text-bold text-primary">--table-warning-color</code></td>
-                                <td>Warning background.</td>
-                            </tr>
-                            <tr>
-                                <td><code class="text-bold text-primary">--table-white-color</code></td>
-                                <td>White variant background.</td>
-                            </tr>
-
-                            {# Text colors #}
-                            <tr>
-                                <td><code class="text-bold text-primary">--table-text-on-primary</code></td>
-                                <td>Text color on primary background.</td>
-                            </tr>
-                            <tr>
-                                <td><code class="text-bold text-primary">--table-text-on-secondary</code></td>
-                                <td>Text color on secondary background.</td>
-                            </tr>
-                            <tr>
-                                <td><code class="text-bold text-primary">--table-text-on-tertiary</code></td>
-                                <td>Text color on tertiary background.</td>
-                            </tr>
-
-                            <tr>
-                                <td><code class="text-bold text-primary">--table-text-on-black</code></td>
-                                <td>Text color on black variant.</td>
-                            </tr>
-                            <tr>
-                                <td><code class="text-bold text-primary">--table-text-on-danger</code></td>
-                                <td>Text color on danger variant.</td>
-                            </tr>
-                            <tr>
-                                <td><code class="text-bold text-primary">--table-text-on-dark</code></td>
-                                <td>Text color on dark variant.</td>
-                            </tr>
-                            <tr>
-                                <td><code class="text-bold text-primary">--table-text-on-info</code></td>
-                                <td>Text color on info variant.</td>
-                            </tr>
-                            <tr>
-                                <td><code class="text-bold text-primary">--table-text-on-light</code></td>
-                                <td>Text color on light variant.</td>
-                            </tr>
-                            <tr>
-                                <td><code class="text-bold text-primary">--table-text-on-neutral</code></td>
-                                <td>Text color on neutral variant.</td>
-                            </tr>
-                            <tr>
-                                <td><code class="text-bold text-primary">--table-text-on-success</code></td>
-                                <td>Text color on success variant.</td>
-                            </tr>
-                            <tr>
-                                <td><code class="text-bold text-primary">--table-text-on-warning</code></td>
-                                <td>Text color on warning variant.</td>
-                            </tr>
-                            <tr>
-                                <td><code class="text-bold text-primary">--table-text-on-white</code></td>
-                                <td>Text color on white variant.</td>
-                            </tr>
-
-                            {# Padding #}
                             <tr>
                                 <td><code class="text-bold text-primary">--table-padding</code></td>
-                                <td>Default cell padding.</td>
+                                <td>Default padding inside table cells.</td>
                             </tr>
-                            <tr>
-                                <td><code class="text-bold text-primary">--table-padding-sm</code></td>
-                                <td>Padding for <code>.table-sm</code>.</td>
-                            </tr>
-                            <tr>
-                                <td><code class="text-bold text-primary">--table-padding-md</code></td>
-                                <td>Padding for <code>.table-md</code>.</td>
-                            </tr>
+
                             <tr>
                                 <td><code class="text-bold text-primary">--table-padding-lg</code></td>
-                                <td>Padding for <code>.table-lg</code>.</td>
+                                <td>Padding for large-sized table cells.</td>
+                            </tr>
+
+                            <tr>
+                                <td><code class="text-bold text-primary">--table-padding-md</code></td>
+                                <td>Padding for medium-sized table cells.</td>
+                            </tr>
+
+                            <tr>
+                                <td><code class="text-bold text-primary">--table-padding-sm</code></td>
+                                <td>Padding for small-sized table cells.</td>
+                            </tr>
+
+                            <tr>
+                                <td><code class="text-bold text-primary">--table-text-color</code></td>
+                                <td>Text color used inside the table.</td>
                             </tr>
 
                             </tbody>

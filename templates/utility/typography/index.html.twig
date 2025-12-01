@@ -266,16 +266,9 @@
             {# Variables #}
             <div class="card p-2">
                 <div class="card-header">
-                    <h2>⚙️ Typography Size Variables</h2>
+                    <h2>⚙️ Variables CSS</h2>
                 </div>
-
                 <div class="card-body">
-                    <p class="p-1">
-                        These variables define the font-size scale used by the <code class="text-bold text-primary">.fs-*</code>
-                        utilities.
-                        They ensure a consistent hierarchy between headings and body text across the framework.
-                    </p>
-
                     <div class="table-responsive">
                         <table class="table">
                             <thead>
@@ -284,34 +277,74 @@
                                 <th>Description</th>
                             </tr>
                             </thead>
-
                             <tbody>
-                            {# Heading size tokens #}
-                            {% for level in [1, 2, 3, 4, 5, 6] %}
-                                <tr>
-                                    <td>
-                                        <span class="text-bold text-primary">--font-size-h{{ level }}</span>
-                                    </td>
-                                    <td>
-                                        Font size used by <code class="text-bold text-primary">.fs-{{ level }}</code>
-                                        (heading level {{ level }}).
-                                    </td>
-                                </tr>
-                            {% endfor %}
 
-                            {# Text size tokens #}
-                            {% set textSizes = ['xs','sm','md','lg','xl','xxl'] %}
-                            {% for size in textSizes %}
-                                <tr>
-                                    <td>
-                                        <span class="text-bold text-primary">--font-size-{{ size }}</span>
-                                    </td>
-                                    <td>
-                                        Font size used by <code class="text-bold text-primary">.fs-{{ size }}</code> for
-                                        body text and UI elements.
-                                    </td>
-                                </tr>
-                            {% endfor %}
+                            <!-- Font sizes -->
+                            <tr>
+                                <td><code class="text-bold text-primary">--font-size</code></td>
+                                <td>Default font size.</td>
+                            </tr>
+
+                            <tr>
+                                <td><code class="text-bold text-primary">--font-size-lg</code></td>
+                                <td>Large font size.</td>
+                            </tr>
+
+                            <tr>
+                                <td><code class="text-bold text-primary">--font-size-md</code></td>
+                                <td>Medium font size.</td>
+                            </tr>
+
+                            <tr>
+                                <td><code class="text-bold text-primary">--font-size-sm</code></td>
+                                <td>Small font size.</td>
+                            </tr>
+
+                            <tr>
+                                <td><code class="text-bold text-primary">--font-size-xl</code></td>
+                                <td>Extra-large font size.</td>
+                            </tr>
+
+                            <tr>
+                                <td><code class="text-bold text-primary">--font-size-xs</code></td>
+                                <td>Extra-small font size.</td>
+                            </tr>
+
+                            <tr>
+                                <td><code class="text-bold text-primary">--font-size-xxl</code></td>
+                                <td>Extra extra-large font size.</td>
+                            </tr>
+
+                            <!-- Headings -->
+                            <tr>
+                                <td><code class="text-bold text-primary">--font-size-h1</code></td>
+                                <td>Font size for heading H1.</td>
+                            </tr>
+
+                            <tr>
+                                <td><code class="text-bold text-primary">--font-size-h2</code></td>
+                                <td>Font size for heading H2.</td>
+                            </tr>
+
+                            <tr>
+                                <td><code class="text-bold text-primary">--font-size-h3</code></td>
+                                <td>Font size for heading H3.</td>
+                            </tr>
+
+                            <tr>
+                                <td><code class="text-bold text-primary">--font-size-h4</code></td>
+                                <td>Font size for heading H4.</td>
+                            </tr>
+
+                            <tr>
+                                <td><code class="text-bold text-primary">--font-size-h5</code></td>
+                                <td>Font size for heading H5.</td>
+                            </tr>
+
+                            <tr>
+                                <td><code class="text-bold text-primary">--font-size-h6</code></td>
+                                <td>Font size for heading H6.</td>
+                            </tr>
 
                             </tbody>
                         </table>

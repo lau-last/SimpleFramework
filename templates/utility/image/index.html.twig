@@ -174,15 +174,9 @@
             {# Variables #}
             <div class="card p-2">
                 <div class="card-header">
-                    <h2>⚙️ Image Variables</h2>
+                    <h2>⚙️ Variables CSS</h2>
                 </div>
-
                 <div class="card-body">
-                    <p class="p-1">
-                        These variables control border radius, padding, and the visual appearance of thumbnails.
-                        Updating them globally will automatically affect every image utility.
-                    </p>
-
                     <div class="table-responsive">
                         <table class="table">
                             <thead>
@@ -191,43 +185,39 @@
                                 <th>Description</th>
                             </tr>
                             </thead>
-
                             <tbody>
 
                             <tr>
                                 <td><code class="text-bold text-primary">--img-border-radius</code></td>
-                                <td>
-                                    Sets the border radius for all image helpers including
-                                    <code>.img</code>,
-                                    <code>.img-responsive</code>,
-                                    <code>.img-fluid</code>, and
-                                    <code>.img-thumbnail</code>.
-                                </td>
-                            </tr>
-
-                            <tr>
-                                <td><code class="text-bold text-primary">--img-thumbnail-padding</code></td>
-                                <td>
-                                    Controls the internal padding around a thumbnail image.
-                                </td>
+                                <td>Border radius applied to images.</td>
                             </tr>
 
                             <tr>
                                 <td><code class="text-bold text-primary">--img-thumbnail-bg-color</code></td>
-                                <td>
-                                    Defines the background color used behind thumbnail images.
-                                </td>
+                                <td>Background color of thumbnail images.</td>
                             </tr>
 
                             <tr>
-                                <td><code class="text-bold text-primary">--img-thumbnail-border</code></td>
-                                <td>
-                                    Border definition applied to <code>.img-thumbnail</code>.
-                                </td>
+                                <td><code class="text-bold text-primary">--img-thumbnail-border-color</code></td>
+                                <td>Border color of thumbnail images.</td>
+                            </tr>
+
+                            <tr>
+                                <td><code class="text-bold text-primary">--img-thumbnail-border-style</code></td>
+                                <td>Border style of thumbnail images.</td>
+                            </tr>
+
+                            <tr>
+                                <td><code class="text-bold text-primary">--img-thumbnail-border-width</code></td>
+                                <td>Thickness of the thumbnail border.</td>
+                            </tr>
+
+                            <tr>
+                                <td><code class="text-bold text-primary">--img-thumbnail-padding</code></td>
+                                <td>Padding inside the thumbnail container.</td>
                             </tr>
 
                             </tbody>
-
                         </table>
                     </div>
                 </div>

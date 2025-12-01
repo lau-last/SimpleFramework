@@ -106,75 +106,6 @@
                 </div>
             </div>
 
-            {# Color #}
-            <div class="card p-2">
-                <div class="card-header">
-                    <h2>🎨 Color</h2>
-                </div>
-                <div class="card-body">
-                    <p class="p-1">
-                        Use <code class="text-bold text-primary">.alert-{color}</code> to set both the background and
-                        the matching text color, based on your theme variables.
-                    </p>
-                    <div class="row mt-2">
-                        <div class="col-12 col-4-xs">
-                            <div class="card p-2 alert-primary">
-                                <code class="text-bold">.alert-primary</code>
-                            </div>
-                        </div>
-                        <div class="col-12 col-4-xs">
-                            <div class="card p-2 alert-secondary">
-                                <code class="text-bold">.alert-secondary</code>
-                            </div>
-                        </div>
-                        <div class="col-12 col-4-xs">
-                            <div class="card p-2 alert-tertiary">
-                                <code class="text-bold">.alert-tertiary</code>
-                            </div>
-                        </div>
-                        <div class="col-12 col-4-xs">
-                            <div class="card p-2 alert-success">
-                                <code class="text-bold">.alert-success</code>
-                            </div>
-                        </div>
-                        <div class="col-12 col-4-xs">
-                            <div class="card p-2 alert-danger">
-                                <code class="text-bold">.alert-danger</code>
-                            </div>
-                        </div>
-                        <div class="col-12 col-4-xs">
-                            <div class="card p-2 alert-warning">
-                                <code class="text-bold">.alert-warning</code>
-                            </div>
-                        </div>
-                        <div class="col-12 col-4-xs">
-                            <div class="card p-2 alert-info">
-                                <code class="text-bold">.alert-info</code>
-                            </div>
-                        </div>
-                        <div class="col-12 col-4-xs">
-                            <div class="card p-2 alert-light">
-                                <code class="text-bold">.alert-light</code>
-                            </div>
-                        </div>
-                        <div class="col-12 col-4-xs">
-                            <div class="card p-2 alert-dark">
-                                <code class="text-bold">.alert-dark</code>
-                            </div>
-                        </div>
-                        <div class="col-12 col-4-xs">
-                            <div class="card p-2 alert-white">
-                                <code class="text-bold">.alert-white</code>
-                            </div>
-                        </div>
-                        <div class="col-12 col-4-xs">
-                            <div class="card p-2 alert-black">
-                                <code class="text-bold">.alert-black</code>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
 
             {# Note about close button #}
             <div class="card p-2">
@@ -207,7 +138,7 @@
                 </div>
             </div>
 
-            {# Varibles #}
+            {# Variables #}
             <div class="card p-2">
                 <div class="card-header">
                     <h2>⚙️ Variables CSS</h2>
@@ -222,52 +153,77 @@
                             </tr>
                             </thead>
                             <tbody>
+
                             <tr>
-                                <td><code class="text-bold text-primary">--alert-padding</code></td>
-                                <td>Inner padding of the alert.</td>
+                                <td><code class="text-bold text-primary">--alert-animation</code></td>
+                                <td>Animation used to show and/or hide the alert.</td>
                             </tr>
+
                             <tr>
-                                <td><code class="text-bold text-primary">--alert-margin</code></td>
-                                <td>Outer margin between alerts.</td>
+                                <td><code class="text-bold text-primary">--alert-bg-color</code></td>
+                                <td>Background color of the alert.</td>
                             </tr>
+
                             <tr>
-                                <td><code class="text-bold text-primary">--alert-border-radius</code></td>
-                                <td>Corner radius of the alert.</td>
+                                <td><code class="text-bold text-primary">--alert-body-padding</code></td>
+                                <td>Padding inside the alert body.</td>
                             </tr>
+
                             <tr>
                                 <td><code class="text-bold text-primary">--alert-border-color</code></td>
                                 <td>Color of the alert border.</td>
                             </tr>
+
+                            <tr>
+                                <td><code class="text-bold text-primary">--alert-border-radius</code></td>
+                                <td>Corner radius of the alert.</td>
+                            </tr>
+
                             <tr>
                                 <td><code class="text-bold text-primary">--alert-border-style</code></td>
-                                <td>Border style (solid, dashed, etc.).</td>
+                                <td>Border style of the alert (solid, dashed, etc.).</td>
                             </tr>
+
                             <tr>
                                 <td><code class="text-bold text-primary">--alert-border-width</code></td>
                                 <td>Thickness of the alert border.</td>
                             </tr>
-                            <tr>
-                                <td><code class="text-bold text-primary">--bg-color</code></td>
-                                <td>Background color of the alert.</td>
-                            </tr>
-                            <tr>
-                                <td><code class="text-bold text-primary">--alert-width</code></td>
-                                <td>Width of the alert (e.g. 100% or a fixed value).</td>
-                            </tr>
+
                             <tr>
                                 <td><code class="text-bold text-primary">--alert-box-shadow</code></td>
                                 <td>Shadow applied to the alert.</td>
                             </tr>
-                            <tr>
-                                <td><code class="text-bold text-primary">--alert-animation</code></td>
-                                <td>Animation used when showing or hiding the alert.</td>
-                            </tr>
+
                             <tr>
                                 <td><code class="text-bold text-primary">--alert-container-padding-inline</code></td>
-                                <td>Horizontal padding inside <code
-                                        class="text-bold text-primary">.alert-container</code>.
-                                </td>
+                                <td>Horizontal padding inside the <code>.alert-container</code>.</td>
                             </tr>
+
+                            <tr>
+                                <td><code class="text-bold text-primary">--alert-footer-padding</code></td>
+                                <td>Padding inside the alert footer.</td>
+                            </tr>
+
+                            <tr>
+                                <td><code class="text-bold text-primary">--alert-gap</code></td>
+                                <td>Gap between alerts inside the container.</td>
+                            </tr>
+
+                            <tr>
+                                <td><code class="text-bold text-primary">--alert-header-padding</code></td>
+                                <td>Padding inside the alert header.</td>
+                            </tr>
+
+                            <tr>
+                                <td><code class="text-bold text-primary">--alert-margin</code></td>
+                                <td>Outer margin around each alert.</td>
+                            </tr>
+
+                            <tr>
+                                <td><code class="text-bold text-primary">--alert-width</code></td>
+                                <td>Width of the alert (e.g. 100% or fixed value).</td>
+                            </tr>
+
                             </tbody>
                         </table>
                     </div>

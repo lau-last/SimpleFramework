@@ -195,16 +195,9 @@
             {# Variables #}
             <div class="card p-2">
                 <div class="card-header">
-                    <h2>⚙️ Helper Variables</h2>
+                    <h2>⚙️ Variables CSS</h2>
                 </div>
-
                 <div class="card-body">
-                    <p class="p-1">
-                        Helper utilities use a small set of global variables to control spacing and layout behavior.
-                        These variables allow you to adjust list gaps and fine-tune how inline or column lists render
-                        across your components. Updating these tokens will instantly affect all helpers that rely on them.
-                    </p>
-
                     <div class="table-responsive">
                         <table class="table">
                             <thead>
@@ -213,33 +206,16 @@
                                 <th>Description</th>
                             </tr>
                             </thead>
-
                             <tbody>
 
                             <tr>
-                                <td><code class="text-bold text-primary">--list-inline-gap</code></td>
-                                <td>
-                                    Controls horizontal spacing between items inside
-                                    <code class="text-bold text-primary">.list-inline</code>.
-                                    Increasing this value will spread inline list elements further apart.
-                                </td>
-                            </tr>
-
-                            <tr>
                                 <td><code class="text-bold text-primary">--list-column-gap</code></td>
-                                <td>
-                                    Controls vertical spacing between items inside
-                                    <code class="text-bold text-primary">.list-column</code>.
-                                    Useful to adjust density for stacked lists.
-                                </td>
+                                <td>Gap between list columns.</td>
                             </tr>
 
                             <tr>
-                                <td><code class="text-bold text-primary">--g-col-padding</code></td>
-                                <td>
-                                    Although used primarily in grid layouts, this padding also influences helpers
-                                    when mixed with grid-related utilities, ensuring consistent spacing.
-                                </td>
+                                <td><code class="text-bold text-primary">--list-inline-gap</code></td>
+                                <td>Gap between inline list items.</td>
                             </tr>
 
                             </tbody>

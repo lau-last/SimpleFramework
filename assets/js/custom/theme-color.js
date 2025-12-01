@@ -4,10 +4,38 @@ class ThemeColor {
     }
 
     static init() {
-        const dark = window.matchMedia("(prefers-color-scheme: dark)").matches;
-        const systemTheme = dark ? 'dark' : 'light';
-        const savedTheme = localStorage.getItem('theme') || systemTheme;
-        document.documentElement.setAttribute('data-theme', savedTheme);
+        ThemeColor.setTheme();
+        document.addEventListener("DOMContentLoaded", () => {
+            ThemeColor.setThemeIcon();
+            ThemeColor.setActiveTheme();
+        });
+    }
+
+    static onClickTheme() {
+        ThemeColor.setThemeIcon();
+        ThemeColor.setActiveTheme();
+    }
+
+    static setTheme() {
+        const theme = localStorage.getItem('theme');
+        switch (theme) {
+            case 'dark':
+                ThemeColor.themeDark();
+                break;
+            case 'light':
+                ThemeColor.themeLight();
+                break;
+            case 'system':
+                ThemeColor.themeSystem();
+                break;
+            default:
+                ThemeColor.themeSystem();
+                break;
+        }
+    }
+
+    static getSystemTheme() {
+        return window.matchMedia("(prefers-color-scheme: dark)").matches ? 'dark' : 'light';
     }
 
     static themeLight() {
@@ -21,10 +49,33 @@ class ThemeColor {
     }
 
     static themeSystem() {
-        const dark = window.matchMedia("(prefers-color-scheme: dark)").matches;
-        const systemTheme = dark ? 'dark' : 'light';
-        document.documentElement.setAttribute('data-theme', systemTheme);
-        localStorage.setItem('theme', systemTheme);
+        document.documentElement.setAttribute('data-theme', ThemeColor.getSystemTheme());
+        localStorage.setItem('theme', 'system');
+    }
+
+    static witchTheme() {
+        const savedTheme = localStorage.getItem('theme');
+        if (savedTheme === 'dark' || savedTheme === 'light' || savedTheme === 'system') return savedTheme;
+        return 'system';
+    }
+
+    static setThemeIcon() {
+        const icons = {light: "☀️", dark: "🌙", system: "💻"};
+        const current = ThemeColor.witchTheme();
+        const iconEl = document.getElementById("theme-icon");
+        iconEl.textContent = icons[current];
+
+    }
+
+    static setActiveTheme() {
+        const current = ThemeColor.witchTheme();
+        const listItems = document.querySelectorAll("[data-theme]");
+        listItems.forEach(item => {
+            item.classList.remove("active");
+            if (item.dataset.theme === current) {
+                item.classList.add("active");
+            }
+        });
     }
 
 }

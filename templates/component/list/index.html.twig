@@ -180,10 +180,6 @@
                     <h2>⚙️ Variables CSS</h2>
                 </div>
                 <div class="card-body">
-                    <p class="p-1">
-                        These variables control background, borders, spacing, item sizes, hover effects, colors and text
-                        contrast for all list components.
-                    </p>
                     <div class="table-responsive">
                         <table class="table">
                             <thead>
@@ -194,182 +190,114 @@
                             </thead>
                             <tbody>
 
-                            <!-- Group 1 -->
                             <tr>
                                 <td><code class="text-bold text-primary">--list-bg-color</code></td>
-                                <td>List container background.</td>
+                                <td>Background color of the list container.</td>
                             </tr>
-                            <tr>
-                                <td><code class="text-bold text-primary">--list-border-width</code></td>
-                                <td>List border width.</td>
-                            </tr>
-                            <tr>
-                                <td><code class="text-bold text-primary">--list-border-style</code></td>
-                                <td>List border style.</td>
-                            </tr>
+
                             <tr>
                                 <td><code class="text-bold text-primary">--list-border-color</code></td>
-                                <td>List border color.</td>
+                                <td>Border color of the list container.</td>
                             </tr>
+
                             <tr>
                                 <td><code class="text-bold text-primary">--list-border-radius</code></td>
-                                <td>List corner radius.</td>
+                                <td>Corner radius of the list container.</td>
                             </tr>
+
+                            <tr>
+                                <td><code class="text-bold text-primary">--list-border-style</code></td>
+                                <td>Style of the list border.</td>
+                            </tr>
+
+                            <tr>
+                                <td><code class="text-bold text-primary">--list-border-width</code></td>
+                                <td>Thickness of the list border.</td>
+                            </tr>
+
+                            <tr>
+                                <td><code class="text-bold text-primary">--list-border-width-inside-hover</code></td>
+                                <td>Border thickness applied inside list items on hover.</td>
+                            </tr>
+
                             <tr>
                                 <td><code class="text-bold text-primary">--list-column-gap</code></td>
-                                <td>Gap for column lists.</td>
+                                <td>Gap between list columns.</td>
                             </tr>
+
                             <tr>
                                 <td><code class="text-bold text-primary">--list-inline-gap</code></td>
-                                <td>Gap for inline lists.</td>
+                                <td>Gap between list items arranged inline.</td>
                             </tr>
+
                             <tr>
-                                <td><code class="text-bold text-primary">--list-item-height</code></td>
-                                <td>Default list item height.</td>
+                                <td><code class="text-bold text-primary">--list-item-active-bg-color</code></td>
+                                <td>Background color of list items when active.</td>
                             </tr>
-                            <tr>
-                                <td><code class="text-bold text-primary">--list-item-height-sm</code></td>
-                                <td>Small item height.</td>
-                            </tr>
-                            <tr>
-                                <td><code class="text-bold text-primary">--list-item-height-md</code></td>
-                                <td>Medium item height.</td>
-                            </tr>
-                            <tr>
-                                <td><code class="text-bold text-primary">--list-item-height-lg</code></td>
-                                <td>Large item height.</td>
-                            </tr>
-                            <tr>
-                                <td><code class="text-bold text-primary">--list-item-hover-bg-color</code></td>
-                                <td>Background on hover.</td>
-                            </tr>
-                            <tr>
-                                <td><code class="text-bold text-primary">--list-item-padding</code></td>
-                                <td>Default item padding.</td>
-                            </tr>
-                            <tr>
-                                <td><code class="text-bold text-primary">--list-item-padding-sm</code></td>
-                                <td>Small item padding.</td>
-                            </tr>
-                            <tr>
-                                <td><code class="text-bold text-primary">--list-item-padding-md</code></td>
-                                <td>Medium item padding.</td>
-                            </tr>
-                            <tr>
-                                <td><code class="text-bold text-primary">--list-item-padding-lg</code></td>
-                                <td>Large item padding.</td>
-                            </tr>
-                            <tr>
-                                <td><code class="text-bold text-primary">--list-item-border-width</code></td>
-                                <td>Item border width.</td>
-                            </tr>
-                            <tr>
-                                <td><code class="text-bold text-primary">--list-item-border-style</code></td>
-                                <td>Item border style.</td>
-                            </tr>
+
                             <tr>
                                 <td><code class="text-bold text-primary">--list-item-border-color</code></td>
-                                <td>Item border color.</td>
+                                <td>Border color applied to list items.</td>
                             </tr>
 
-                            <!-- Group 2 -->
                             <tr>
-                                <td><code class="text-bold text-primary">--list-primary-color</code></td>
-                                <td>Primary background color.</td>
-                            </tr>
-                            <tr>
-                                <td><code class="text-bold text-primary">--list-secondary-color</code></td>
-                                <td>Secondary background color.</td>
-                            </tr>
-                            <tr>
-                                <td><code class="text-bold text-primary">--list-tertiary-color</code></td>
-                                <td>Tertiary background color.</td>
-                            </tr>
-                            <tr>
-                                <td><code class="text-bold text-primary">--list-black-color</code></td>
-                                <td>Black themed background.</td>
-                            </tr>
-                            <tr>
-                                <td><code class="text-bold text-primary">--list-danger-color</code></td>
-                                <td>Danger background color.</td>
-                            </tr>
-                            <tr>
-                                <td><code class="text-bold text-primary">--list-dark-color</code></td>
-                                <td>Dark background.</td>
-                            </tr>
-                            <tr>
-                                <td><code class="text-bold text-primary">--list-info-color</code></td>
-                                <td>Info background.</td>
-                            </tr>
-                            <tr>
-                                <td><code class="text-bold text-primary">--list-light-color</code></td>
-                                <td>Light background.</td>
-                            </tr>
-                            <tr>
-                                <td><code class="text-bold text-primary">--list-neutral-color</code></td>
-                                <td>Neutral background.</td>
-                            </tr>
-                            <tr>
-                                <td><code class="text-bold text-primary">--list-success-color</code></td>
-                                <td>Success background.</td>
-                            </tr>
-                            <tr>
-                                <td><code class="text-bold text-primary">--list-warning-color</code></td>
-                                <td>Warning background.</td>
-                            </tr>
-                            <tr>
-                                <td><code class="text-bold text-primary">--list-white-color</code></td>
-                                <td>White background.</td>
+                                <td><code class="text-bold text-primary">--list-item-border-style</code></td>
+                                <td>Border style applied to list items.</td>
                             </tr>
 
-                            <!-- Group 3 -->
                             <tr>
-                                <td><code class="text-bold text-primary">--list-text-on-primary</code></td>
-                                <td>Text color on primary.</td>
+                                <td><code class="text-bold text-primary">--list-item-border-width</code></td>
+                                <td>Border width applied to list items.</td>
                             </tr>
+
                             <tr>
-                                <td><code class="text-bold text-primary">--list-text-on-secondary</code></td>
-                                <td>Text on secondary.</td>
+                                <td><code class="text-bold text-primary">--list-item-height</code></td>
+                                <td>Default height of list items.</td>
                             </tr>
+
                             <tr>
-                                <td><code class="text-bold text-primary">--list-text-on-tertiary</code></td>
-                                <td>Text on tertiary.</td>
+                                <td><code class="text-bold text-primary">--list-item-height-lg</code></td>
+                                <td>Height of large-sized list items.</td>
                             </tr>
+
                             <tr>
-                                <td><code class="text-bold text-primary">--list-text-on-black</code></td>
-                                <td>Text on black background.</td>
+                                <td><code class="text-bold text-primary">--list-item-height-md</code></td>
+                                <td>Height of medium-sized list items.</td>
                             </tr>
+
                             <tr>
-                                <td><code class="text-bold text-primary">--list-text-on-danger</code></td>
-                                <td>Text on danger background.</td>
+                                <td><code class="text-bold text-primary">--list-item-height-sm</code></td>
+                                <td>Height of small-sized list items.</td>
                             </tr>
+
                             <tr>
-                                <td><code class="text-bold text-primary">--list-text-on-dark</code></td>
-                                <td>Text on dark background.</td>
+                                <td><code class="text-bold text-primary">--list-item-hover-bg-color</code></td>
+                                <td>Background color of list items on hover.</td>
                             </tr>
+
                             <tr>
-                                <td><code class="text-bold text-primary">--list-text-on-info</code></td>
-                                <td>Text on info background.</td>
+                                <td><code class="text-bold text-primary">--list-item-padding</code></td>
+                                <td>Default padding applied to list items.</td>
                             </tr>
+
                             <tr>
-                                <td><code class="text-bold text-primary">--list-text-on-light</code></td>
-                                <td>Text on light background.</td>
+                                <td><code class="text-bold text-primary">--list-item-padding-lg</code></td>
+                                <td>Padding for large-sized list items.</td>
                             </tr>
+
                             <tr>
-                                <td><code class="text-bold text-primary">--list-text-on-neutral</code></td>
-                                <td>Text on neutral background.</td>
+                                <td><code class="text-bold text-primary">--list-item-padding-md</code></td>
+                                <td>Padding for medium-sized list items.</td>
                             </tr>
+
                             <tr>
-                                <td><code class="text-bold text-primary">--list-text-on-success</code></td>
-                                <td>Text on success background.</td>
+                                <td><code class="text-bold text-primary">--list-item-padding-sm</code></td>
+                                <td>Padding for small-sized list items.</td>
                             </tr>
+
                             <tr>
-                                <td><code class="text-bold text-primary">--list-text-on-warning</code></td>
-                                <td>Text on warning background.</td>
-                            </tr>
-                            <tr>
-                                <td><code class="text-bold text-primary">--list-text-on-white</code></td>
-                                <td>Text on white background.</td>
+                                <td><code class="text-bold text-primary">--list-text-color</code></td>
+                                <td>Text color used inside the list.</td>
                             </tr>
 
                             </tbody>

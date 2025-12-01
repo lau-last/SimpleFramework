@@ -8,13 +8,19 @@
                     data-target="#dropdown-bottom-left"
                     aria-controls="dropdown-bottom-left"
                     aria-expanded="false">
-                Themes
+                <span class="me-1" id="theme-icon"></span>Theme
             </button>
             <div class="dropdown-body bottom right" id="dropdown-bottom-left">
                 <ul class="list list-hover list-borderless">
-                    <li class="list-item list-warning text-base" onclick="ThemeColor.themeLight()">☀️<span class="ms-1">Light</span></li>
-                    <li class="list-item list-dark-light text-base" onclick="ThemeColor.themeDark()">🌙<span class="ms-1">Dark</span></li>
-                    <li class="list-item list-primary text-base" onclick="ThemeColor.themeSystem()">💻<span class="ms-1">System</span></li>
+                    <li class="list-item list-warning text-base" data-theme="light"
+                        onclick="ThemeColor.themeLight();ThemeColor.onClickTheme();">☀️<span class="ms-1">Light</span>
+                    </li>
+                    <li class="list-item list-dark-light text-base" data-theme="dark"
+                        onclick="ThemeColor.themeDark();ThemeColor.onClickTheme();">🌙<span class="ms-1">Dark</span>
+                    </li>
+                    <li class="list-item list-primary text-base" data-theme="system"
+                        onclick="ThemeColor.themeSystem();ThemeColor.onClickTheme();">💻<span class="ms-1">System</span>
+                    </li>
                 </ul>
             </div>
         </div>
@@ -22,7 +28,7 @@
            target="_blank">
             Download
         </a>
-        <button class="btn btn-primary-dark d-none-md" data-js="aside" data-target="#aside">Menu</button>
+        <button class="btn btn-white d-none-md" data-js="aside" data-target="#aside">Menu</button>
     </div>
 </header>
 
