@@ -7,14 +7,14 @@
         <div class="d-flex fd-column gap-5">
 
             {# Intro #}
-            <div class="card p-2">
+            <article class="card p-2">
                 <div class="card-header">
                     <h2>📍 Positions</h2>
                 </div>
-            </div>
+            </article>
 
             {# What are positions used for? #}
-            <div class="card p-2">
+            <article class="card p-2">
                 <div class="card-header">
                     <h2>📐 What are position utilities used for?</h2>
                 </div>
@@ -32,10 +32,10 @@
                         modals, floating UI elements, or any component requiring precise placement.
                     </p>
                 </div>
-            </div>
+            </article>
 
             {# Utilities Reference #}
-            <div class="card p-2">
+            <article class="card p-2">
                 <div class="card-header">
                     <h2>📏 Position Utilities Reference</h2>
                 </div>
@@ -51,210 +51,210 @@
 
                         {% for z in zValues %}
                             <div class="col-12 col-4-xs">
-                                <div class="card p-2">
+                                <article class="card p-2">
                                     <code class="text-bold text-primary">.z-{{ z }}</code>
                                     <p class="mt-1">
                                         Sets the element’s stacking order to {{ z }}.<br>
                                         <span class="fs-small opacity-7">z-index: {{ z }};</span>
                                     </p>
-                                </div>
+                                </article>
                             </div>
                         {% endfor %}
 
                         {# Base positions #}
                         <div class="col-12 col-4-xs">
-                            <div class="card p-2">
+                            <article class="card p-2">
                                 <code class="text-bold text-primary">.position-static</code>
                                 <p class="mt-1">Default static positioning.<br>
                                     <span class="fs-small opacity-7">position: static;</span>
                                 </p>
-                            </div>
+                            </article>
                         </div>
 
                         {# Base positions #}
                         <div class="col-12 col-4-xs">
-                            <div class="card p-2">
+                            <article class="card p-2">
                                 <code class="text-bold text-primary">.position-static</code>
                                 <p class="mt-1">Default static positioning.<br>
                                     <span class="fs-small opacity-7">position: static;</span>
                                 </p>
-                            </div>
+                            </article>
                         </div>
 
                         <div class="col-12 col-4-xs">
-                            <div class="card p-2">
+                            <article class="card p-2">
                                 <code class="text-bold text-primary">.position-relative</code>
                                 <p class="mt-1">Offsets children using absolute positioning.<br>
                                     <span class="fs-small opacity-7">position: relative;</span>
                                 </p>
-                            </div>
+                            </article>
                         </div>
 
                         <div class="col-12 col-4-xs">
-                            <div class="card p-2">
+                            <article class="card p-2">
                                 <code class="text-bold text-primary">.position-absolute</code>
                                 <p class="mt-1">Positions element relative to nearest ancestor.<br>
                                     <span class="fs-small opacity-7">position: absolute;</span>
                                 </p>
-                            </div>
+                            </article>
                         </div>
 
                         <div class="col-12 col-4-xs">
-                            <div class="card p-2">
+                            <article class="card p-2">
                                 <code class="text-bold text-primary">.position-fixed</code>
                                 <p class="mt-1">Fixes element to the viewport.<br>
                                     <span class="fs-small opacity-7">position: fixed;</span>
                                 </p>
-                            </div>
+                            </article>
                         </div>
 
                         <div class="col-12 col-4-xs">
-                            <div class="card p-2">
+                            <article class="card p-2">
                                 <code class="text-bold text-primary">.position-sticky</code>
                                 <p class="mt-1">Sticks element during scroll.<br>
                                     <span class="fs-small opacity-7">position: sticky;</span>
                                 </p>
-                            </div>
+                            </article>
                         </div>
 
                         {# Corner positions #}
                         <div class="col-12 col-4-xs">
-                            <div class="card p-2">
+                            <article class="card p-2">
                                 <code class="text-bold text-primary">.position-top-left</code>
                                 <p class="mt-1">Top-left corner.<br>
                                     <span class="fs-small opacity-7">position: absolute; top: 0; left: 0;</span>
                                 </p>
-                            </div>
+                            </article>
                         </div>
 
                         <div class="col-12 col-4-xs">
-                            <div class="card p-2">
+                            <article class="card p-2">
                                 <code class="text-bold text-primary">.position-top-right</code>
                                 <p class="mt-1">Top-right corner.<br>
                                     <span class="fs-small opacity-7">position: absolute; top: 0; right: 0;</span>
                                 </p>
-                            </div>
+                            </article>
                         </div>
 
                         <div class="col-12 col-4-xs">
-                            <div class="card p-2">
+                            <article class="card p-2">
                                 <code class="text-bold text-primary">.position-bottom-left</code>
                                 <p class="mt-1">Bottom-left corner.<br>
                                     <span class="fs-small opacity-7">position: absolute; bottom: 0; left: 0;</span>
                                 </p>
-                            </div>
+                            </article>
                         </div>
 
                         <div class="col-12 col-4-xs">
-                            <div class="card p-2">
+                            <article class="card p-2">
                                 <code class="text-bold text-primary">.position-bottom-right</code>
                                 <p class="mt-1">Bottom-right corner.<br>
                                     <span class="fs-small opacity-7">position: absolute; bottom: 0; right: 0;</span>
                                 </p>
-                            </div>
+                            </article>
                         </div>
 
                         {# Center helpers #}
                         <div class="col-12 col-4-xs">
-                            <div class="card p-2">
+                            <article class="card p-2">
                                 <code class="text-bold text-primary">.position-center</code>
                                 <p class="mt-1">Centered on both axes.<br>
                                     <span class="fs-small opacity-7">
                             position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);
                         </span>
                                 </p>
-                            </div>
+                            </article>
                         </div>
 
                         <div class="col-12 col-4-xs">
-                            <div class="card p-2">
+                            <article class="card p-2">
                                 <code class="text-bold text-primary">.position-x-center</code>
                                 <p class="mt-1">Centered horizontally.<br>
                                     <span class="fs-small opacity-7">
                             position: absolute; left: 50%; transform: translateX(-50%);
                         </span>
                                 </p>
-                            </div>
+                            </article>
                         </div>
 
                         <div class="col-12 col-4-xs">
-                            <div class="card p-2">
+                            <article class="card p-2">
                                 <code class="text-bold text-primary">.position-y-center</code>
                                 <p class="mt-1">Centered vertically.<br>
                                     <span class="fs-small opacity-7">
                             position: absolute; top: 50%; transform: translateY(-50%);
                         </span>
                                 </p>
-                            </div>
+                            </article>
                         </div>
 
                         {# Sticky helpers #}
                         <div class="col-12 col-4-xs">
-                            <div class="card p-2">
+                            <article class="card p-2">
                                 <code class="text-bold text-primary">.sticky-top</code>
                                 <p class="mt-1">Sticks to the top.<br>
                                     <span class="fs-small opacity-7">position: sticky; top: 0;</span>
                                 </p>
-                            </div>
+                            </article>
                         </div>
 
                         <div class="col-12 col-4-xs">
-                            <div class="card p-2">
+                            <article class="card p-2">
                                 <code class="text-bold text-primary">.sticky-bottom</code>
                                 <p class="mt-1">Sticks to the bottom.<br>
                                     <span class="fs-small opacity-7">position: sticky; bottom: 0;</span>
                                 </p>
-                            </div>
+                            </article>
                         </div>
 
                         {# Fixed helpers #}
                         <div class="col-12 col-4-xs">
-                            <div class="card p-2">
+                            <article class="card p-2">
                                 <code class="text-bold text-primary">.fixed-top</code>
                                 <p class="mt-1">Fixed at the top.<br>
                                     <span class="fs-small opacity-7">
                             position: fixed; top: 0; left: 0; right: 0;
                         </span>
                                 </p>
-                            </div>
+                            </article>
                         </div>
 
                         <div class="col-12 col-4-xs">
-                            <div class="card p-2">
+                            <article class="card p-2">
                                 <code class="text-bold text-primary">.fixed-bottom</code>
                                 <p class="mt-1">Fixed at the bottom.<br>
                                     <span class="fs-small opacity-7">
                             position: fixed; bottom: 0; left: 0; right: 0;
                         </span>
                                 </p>
-                            </div>
+                            </article>
                         </div>
 
                         <div class="col-12 col-4-xs">
-                            <div class="card p-2">
+                            <article class="card p-2">
                                 <code class="text-bold text-primary">.fixed-left</code>
                                 <p class="mt-1">Fixed on the left side.<br>
                                     <span class="fs-small opacity-7">
                             position: fixed; top: 0; bottom: 0; left: 0;
                         </span>
                                 </p>
-                            </div>
+                            </article>
                         </div>
 
                         <div class="col-12 col-4-xs">
-                            <div class="card p-2">
+                            <article class="card p-2">
                                 <code class="text-bold text-primary">.fixed-right</code>
                                 <p class="mt-1">Fixed on the right side.<br>
                                     <span class="fs-small opacity-7">
                             position: fixed; top: 0; bottom: 0; right: 0;
                         </span>
                                 </p>
-                            </div>
+                            </article>
                         </div>
 
                     </div>
                 </div>
-            </div>
+            </article>
 
         </div>
     </div>

@@ -7,14 +7,14 @@
         <div class="d-flex fd-column gap-5">
 
             {# Intro #}
-            <div class="card p-2">
+            <article class="card p-2">
                 <div class="card-header">
                     <h2>🔠 Typography Utilities</h2>
                 </div>
-            </div>
+            </article>
 
             {# What are typography utilities used for? #}
-            <div class="card p-2">
+            <article class="card p-2">
                 <div class="card-header">
                     <h2>📐 What are typography utilities used for?</h2>
                 </div>
@@ -35,10 +35,10 @@
                         <code class="text-bold text-primary">.fw-700-lg</code>).
                     </p>
                 </div>
-            </div>
+            </article>
 
             {# Examples #}
-            <div class="card p-2">
+            <article class="card p-2">
                 <div class="card-header">
                     <h2>💠 Examples</h2>
                 </div>
@@ -117,10 +117,10 @@
                     </div>
 
                 </div>
-            </div>
+            </article>
 
             {# HTML Code #}
-            <div class="card p-2">
+            <article class="card p-2">
                 <div class="card-header">
                     <h2>💻 HTML Code</h2>
                 </div>
@@ -172,10 +172,10 @@
                         </div>
                     </div>
                 </div>
-            </div>
+            </article>
 
             {# Utilities / Behavior #}
-            <div class="card p-2">
+            <article class="card p-2">
                 <div class="card-header">
                     <h2>📏 Typography Utilities &amp; Breakpoints</h2>
                 </div>
@@ -206,14 +206,14 @@
 
                         {% for weight in weights %}
                             <div class="col-12 col-4-xs">
-                                <div class="card p-2 h-100">
+                                <article class="card p-2 h-100">
                                     <code class="text-bold text-primary">.fw-{{ weight }}</code><br>
                                     <code class="text-bold text-primary">.fw-{{ weight }}-{breakpoint}</code>
                                     <p class="mt-1">
                                         Sets the font weight to <code class="text-bold text-primary">{{ weight }}</code>,
                                         globally or from a specific breakpoint.
                                     </p>
-                                </div>
+                                </article>
                             </div>
                         {% endfor %}
 
@@ -226,14 +226,14 @@
 
                         {% for level in [1, 2, 3, 4, 5, 6] %}
                             <div class="col-12 col-4-xs">
-                                <div class="card p-2 h-100">
+                                <article class="card p-2 h-100">
                                     <code class="text-bold text-primary">.fs-{{ level }}</code><br>
                                     <code class="text-bold text-primary">.fs-{{ level }}-{breakpoint}</code>
                                     <p class="mt-1">
                                         Applies the <code class="text-bold text-primary">--font-size-h{{ level }}</code>
                                         token, globally or responsively.
                                     </p>
-                                </div>
+                                </article>
                             </div>
                         {% endfor %}
 
@@ -248,23 +248,23 @@
 
                         {% for size in textSizes %}
                             <div class="col-12 col-4-xs">
-                                <div class="card p-2 h-100">
+                                <article class="card p-2 h-100">
                                     <code class="text-bold text-primary">.fs-{{ size }}</code><br>
                                     <code class="text-bold text-primary">.fs-{{ size }}-{breakpoint}</code>
                                     <p class="mt-1">
                                         Applies the <code class="text-bold text-primary">--font-size-{{ size }}</code>
                                         token, with responsive variants available.
                                     </p>
-                                </div>
+                                </article>
                             </div>
                         {% endfor %}
 
                     </div>
                 </div>
-            </div>
+            </article>
 
             {# Variables #}
-            <div class="card p-2">
+            <article class="card p-2">
                 <div class="card-header">
                     <h2>⚙️ Variables CSS</h2>
                 </div>
@@ -350,7 +350,7 @@
                         </table>
                     </div>
                 </div>
-            </div>
+            </article>
 
         </div>
     </div>

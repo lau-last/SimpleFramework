@@ -7,14 +7,14 @@
         <div class="d-flex fd-column gap-5">
 
             {# Intro #}
-            <div class="card p-2">
+            <article class="card p-2">
                 <div class="card-header">
                     <h2>👁️ Visibility, Overflow, Cursor &amp; Opacity</h2>
                 </div>
-            </div>
+            </article>
 
             {# What are these utilities used for? #}
-            <div class="card p-2">
+            <article class="card p-2">
                 <div class="card-header">
                     <h2>📐 What are visibility utilities used for?</h2>
                 </div>
@@ -30,10 +30,10 @@
                         to quickly adjust behavior without writing custom CSS.
                     </p>
                 </div>
-            </div>
+            </article>
 
             {# Examples #}
-            <div class="card p-2">
+            <article class="card p-2">
                 <div class="card-header">
                     <h2>💠 Examples</h2>
                 </div>
@@ -155,10 +155,10 @@
                     </div>
 
                 </div>
-            </div>
+            </article>
 
             {# HTML Code #}
-            <div class="card p-2">
+            <article class="card p-2">
                 <div class="card-header">
                     <h2>💻 HTML Code</h2>
                 </div>
@@ -228,10 +228,10 @@
                         </div>
                     </div>
                 </div>
-            </div>
+            </article>
 
             {# Utilities / Behavior #}
-            <div class="card p-2">
+            <article class="card p-2">
                 <div class="card-header">
                     <h2>📏 Visibility Utilities Overview</h2>
                 </div>
@@ -252,23 +252,23 @@
                         </div>
 
                         <div class="col-12 col-4-xs">
-                            <div class="card p-2 h-100">
+                            <article class="card p-2 h-100">
                                 <code class="text-bold text-primary">.visible</code>
                                 <p class="mt-1">
                                     Sets <code>visibility: visible;</code> to ensure the element is visible while keeping
                                     its layout space.
                                 </p>
-                            </div>
+                            </article>
                         </div>
 
                         <div class="col-12 col-4-xs">
-                            <div class="card p-2 h-100">
+                            <article class="card p-2 h-100">
                                 <code class="text-bold text-primary">.hidden</code>
                                 <p class="mt-1">
                                     Sets <code>visibility: hidden;</code>, hiding the element but preserving its
                                     layout space.
                                 </p>
-                            </div>
+                            </article>
                         </div>
 
                         {# ------------------------------------------------------- #}
@@ -290,12 +290,12 @@
 
                         {% for cls in overflows %}
                             <div class="col-12 col-4-xs">
-                                <div class="card p-2 h-100">
+                                <article class="card p-2 h-100">
                                     <code class="text-bold text-primary">.{{ cls }}</code>
                                     <p class="mt-1">
                                         Controls the <code>overflow</code> behavior on the corresponding axis or both axes.
                                     </p>
-                                </div>
+                                </article>
                             </div>
                         {% endfor %}
 
@@ -323,12 +323,12 @@
 
                         {% for cls in cursors %}
                             <div class="col-12 col-4-xs">
-                                <div class="card p-2 h-100">
+                                <article class="card p-2 h-100">
                                     <code class="text-bold text-primary">.{{ cls }}</code>
                                     <p class="mt-1">
                                         Sets the mouse cursor style using the <code>cursor</code> property.
                                     </p>
-                                </div>
+                                </article>
                             </div>
                         {% endfor %}
 
@@ -341,19 +341,19 @@
 
                         {% for i in 0..10 %}
                             <div class="col-12 col-4-xs">
-                                <div class="card p-2 h-100">
+                                <article class="card p-2 h-100">
                                     <code class="text-bold text-primary">.opacity-{{ i }}</code>
                                     <p class="mt-1">
                                         Sets <code>opacity</code> to
                                         <code>{{ i == 10 ? '1' : '0.' ~ i }}</code>.
                                     </p>
-                                </div>
+                                </article>
                             </div>
                         {% endfor %}
 
                     </div>
                 </div>
-            </div>
+            </article>
 
         </div>
     </div>
