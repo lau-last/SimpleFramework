@@ -1,0 +1,38 @@
+<article class="card p-2">
+    <div class="card-header">
+        <h3>📨 AJAX POST response</h3>
+    </div>
+    <div class="card-body">
+        <p class="p-1">
+            The form was sent with
+            <code class="text-bold text-primary">data-ajax-post</code>
+            and processed by the route
+            <code class="text-bold text-primary">ajax_demo_post</code>.
+        </p>
+
+        <p class="p-1 mt-1">
+            <strong>Message received:</strong><br>
+            <span class="d-inline-block mt-1">
+                {{ message|e }}
+            </span>
+        </p>
+
+        <div class="form-control">
+            <label for="text">Text</label>
+            <input data-ajax-post="{{ path('ajax_demo_fragment') }}"
+                   data-ajax-trigger="input"
+                   data-ajax-target="#ajax-fragment-result"
+                   data-ajax-select="#ajax-fragment-result"
+                   data-ajax-swap="innerHTML"
+                   type="text"
+                   id="text"
+                   name="text">
+        </div>
+
+
+        <p class="p-1 mt-1">
+            You can now render a confirmation, a partial update, or any HTML snippet
+            based on the submitted form data.
+        </p>
+    </div>
+</article>

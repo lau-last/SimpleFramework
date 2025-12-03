@@ -24,33 +24,33 @@
                     <div class="row">
                         <div class="col-12">
                             <div class="accordion">
-                                {% for i in 1..5 %}
-                                    {% set color = {
-                                        1: 'btn-primary-pastel',
-                                        2: 'btn-primary-light',
-                                        3: 'btn-primary',
-                                        4: 'btn-primary-dark',
-                                        5: 'btn-primary-night',
-                                    } %}
+                                {% for i in 1..3 %}
                                     <div class="accordion-item">
-                                        <button class="accordion-btn {{ color[i] }}"
+                                        <button class="accordion-btn btn-primary"
                                                 data-js="collapse"
                                                 data-target="#single-{{ i }}"
-                                                aria-expanded="false"
+                                                aria-expanded="{{ i == 1 ? 'true' : 'false' }}"
                                                 aria-controls="single-{{ i }}">
                                             Single
                                         </button>
-                                        <div class="accordion-body" id="single-{{ i }}">
+                                        <div class="accordion-body {{ i == 1 ? 'show' : '' }}" id="single-{{ i }}">
                                             <p class="p-1">
                                                 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab dolorem
-                                                doloremque hic ipsam ipsum modi voluptatibus? Amet aperiam fuga minus optio
-                                                velit. Labore mollitia, voluptatibus! Fuga iste natus sit tempora temporibus
-                                                vero! Adipisci delectus distinctio esse fuga maiores necessitatibus neque
+                                                doloremque hic ipsam ipsum modi voluptatibus? Amet aperiam fuga minus
+                                                optio
+                                                velit. Labore mollitia, voluptatibus! Fuga iste natus sit tempora
+                                                temporibus
+                                                vero! Adipisci delectus distinctio esse fuga maiores necessitatibus
+                                                neque
                                                 possimus voluptate! Architecto deserunt itaque sequi sint. Alias
-                                                consequuntur culpa ea eligendi fugiat magni porro, quis soluta veniam vero?
-                                                Aut corporis dolores eum eveniet nostrum perferendis quae quaerat qui quis
-                                                rem! Aperiam culpa cupiditate libero minima neque nesciunt optio possimus,
-                                                quae qui tempore. Consequuntur dignissimos doloremque error facilis fugit
+                                                consequuntur culpa ea eligendi fugiat magni porro, quis soluta veniam
+                                                vero?
+                                                Aut corporis dolores eum eveniet nostrum perferendis quae quaerat qui
+                                                quis
+                                                rem! Aperiam culpa cupiditate libero minima neque nesciunt optio
+                                                possimus,
+                                                quae qui tempore. Consequuntur dignissimos doloremque error facilis
+                                                fugit
                                                 inventore, labore molestiae necessitatibus nemo, nesciunt officia omnis
                                                 pariatur ratione recusandae!
                                             </p>
@@ -80,11 +80,11 @@
                                     <button class="accordion-btn btn-primary"
                                             data-js="collapse"
                                             data-target="#single-demo-1"
-                                            aria-expanded="false"
+                                            aria-expanded="true"
                                             aria-controls="single-demo-1">
                                         Single
                                     </button>
-                                    <div class="accordion-body" id="single-demo-1">
+                                    <div class="accordion-body show" id="single-demo-1">
                                         <p class="p-1">
                                             Some content
                                         </p>
@@ -134,33 +134,33 @@
                     <div class="row">
                         <div class="col-12">
                             <div class="accordion" data-type="multiple">
-                                {% for i in 1..5 %}
-                                    {% set color = {
-                                        1: 'btn-primary-pastel',
-                                        2: 'btn-primary-light',
-                                        3: 'btn-primary',
-                                        4: 'btn-primary-dark',
-                                        5: 'btn-primary-night',
-                                    } %}
+                                {% for i in 1..3 %}
                                     <div class="accordion-item">
-                                        <button class="accordion-btn {{ color[i] }}"
+                                        <button class="accordion-btn btn-primary"
                                                 data-js="collapse"
                                                 data-target="#multiple-{{ i }}"
-                                                aria-expanded="false"
+                                                aria-expanded="{{ i == 1 ? 'true' : 'false' }}"
                                                 aria-controls="multiple-{{ i }}">
                                             Multiple
                                         </button>
-                                        <div class="accordion-body" id="multiple-{{ i }}">
+                                        <div class="accordion-body {{ i == 1 ? 'show' : '' }}" id="multiple-{{ i }}">
                                             <p class="p-1">
                                                 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab dolorem
-                                                doloremque hic ipsam ipsum modi voluptatibus? Amet aperiam fuga minus optio
-                                                velit. Labore mollitia, voluptatibus! Fuga iste natus sit tempora temporibus
-                                                vero! Adipisci delectus distinctio esse fuga maiores necessitatibus neque
+                                                doloremque hic ipsam ipsum modi voluptatibus? Amet aperiam fuga minus
+                                                optio
+                                                velit. Labore mollitia, voluptatibus! Fuga iste natus sit tempora
+                                                temporibus
+                                                vero! Adipisci delectus distinctio esse fuga maiores necessitatibus
+                                                neque
                                                 possimus voluptate! Architecto deserunt itaque sequi sint. Alias
-                                                consequuntur culpa ea eligendi fugiat magni porro, quis soluta veniam vero?
-                                                Aut corporis dolores eum eveniet nostrum perferendis quae quaerat qui quis
-                                                rem! Aperiam culpa cupiditate libero minima neque nesciunt optio possimus,
-                                                quae qui tempore. Consequuntur dignissimos doloremque error facilis fugit
+                                                consequuntur culpa ea eligendi fugiat magni porro, quis soluta veniam
+                                                vero?
+                                                Aut corporis dolores eum eveniet nostrum perferendis quae quaerat qui
+                                                quis
+                                                rem! Aperiam culpa cupiditate libero minima neque nesciunt optio
+                                                possimus,
+                                                quae qui tempore. Consequuntur dignissimos doloremque error facilis
+                                                fugit
                                                 inventore, labore molestiae necessitatibus nemo, nesciunt officia omnis
                                                 pariatur ratione recusandae!
                                             </p>
@@ -190,11 +190,11 @@
                                     <button class="accordion-btn btn-primary"
                                             data-js="collapse"
                                             data-target="#multiple-demo-1"
-                                            aria-expanded="false"
+                                            aria-expanded="true"
                                             aria-controls="multiple-demo-1">
                                         Multiple
                                     </button>
-                                    <div class="accordion-body" id="multiple-demo-1">
+                                    <div class="accordion-body show" id="multiple-demo-1">
                                         <p class="p-1">
                                             Some content
                                         </p>
@@ -240,20 +240,8 @@
                     <h2>📏 Sizes</h2>
                 </div>
                 <div class="card-body">
-                    <p class="p-1">
-                        You don’t need to combine
-                        <code class="text-bold text-primary">.accordion-btn</code>
-                        with a size class. Each size class (
-                        <code class="text-bold text-primary">.accordion-btn-sm</code>,
-                        <code class="text-bold text-primary">.accordion-btn-md</code>,
-                        <code class="text-bold text-primary">.accordion-btn-lg</code> )
-                        already includes the base accordion button style and its own padding values.
-                        Just put the wanted size class on the button inside
-                        <code class="text-bold text-primary">.accordion</code>
-                        or
-                        <code class="text-bold text-primary">.accordion-native</code>
-                        and the height and inner spacing will adapt automatically.
-                    </p>
+                    These classes apply only to the accordion buttons.
+                    Each one already includes both the style and the size, so just pick the one you need.
                     <div class="row mt-2">
                         <div class="col-12 col-4-xs">
                             <div class="card p-2">
@@ -279,6 +267,40 @@
                 </div>
             </article>
 
+            {# Colors #}
+            <article class="card p-2">
+                <div class="card-header">
+                    <h2>📌 Colors</h2>
+                </div>
+                <div class="card-body">
+                    Button colors and accordion borders are handled separately.
+                    Apply these classes directly on the element you want to style.
+
+                    <div class="row mt-2">
+                        <div class="col-12 col-4-xs">
+                            <div class="card p-2">
+                                <code class="text-bold text-primary">btn-{color}</code>
+                                <br><small>Apply on the button <br>(with hover)</small>
+                            </div>
+                        </div>
+
+                        <div class="col-12 col-4-xs">
+                            <div class="card p-2">
+                                <code class="text-bold text-primary">bg-{color}</code>
+                                <br><small>Apply on the button <br>(no hover)</small>
+                            </div>
+                        </div>
+
+                        <div class="col-12 col-4-xs">
+                            <div class="card p-2">
+                                <code class="text-bold text-primary">accordion-{color}</code>
+                                <br><small>Apply on the <code>.accordion</code> container <br>(borders only)</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </article>
+
             {# How to use #}
             <article class="card p-2">
                 <div class="card-header">
@@ -288,47 +310,37 @@
                     <p class="p-1">
                         Add <code class="text-bold text-primary">data-js="collapse"</code> to the button and set
                         <code class="text-bold text-primary">data-target</code> to the ID of the matching
-                        <code class="text-bold text-primary">.accordion-body</code>. The script toggles the panel and updates
+                        <code class="text-bold text-primary">.accordion-body</code>. The script toggles the panel and
+                        updates
                         <code class="text-bold text-primary">aria-expanded</code> automatically.
                     </p>
                 </div>
             </article>
 
-            {# How it works #}
+            {# Accessibility #}
             <article class="card p-2">
                 <div class="card-header">
-                    <h2>🧩 How it works</h2>
+                    <h2>📌 Accessibility</h2>
                 </div>
                 <div class="card-body">
                     <p class="p-1">
-                        The script listens to clicks on elements with <code class="text-bold text-primary">data-js="collapse"</code>.
-                        It reads <code class="text-bold text-primary">data-target</code>, finds the matching <code
-                            class="text-bold text-primary">.accordion-body</code>,
-                        and adds or removes <code class="text-bold text-primary">.show</code>. The open/close animation
-                        is 300ms.
-                        Extra clicks are ignored during the animation.
+                        For accessibility, set <code class="text-bold text-primary">aria-expanded</code> in your HTML
+                        only once to match the
+                        initial state. After that, the script updates its value automatically.
+                    </p>
+
+                    <p class="p-1">
+                        Add <code class="text-bold text-primary">aria-controls</code> to link the button to the panel
+                        ID.
+                        This helps screen readers understand which content is being toggled.
                     </p>
                 </div>
             </article>
 
-            {# Note about colors #}
+            {# State #}
             <article class="card p-2">
                 <div class="card-header">
-                    <h2>📌 Note colors</h2>
-                </div>
-                <div class="card-body">
-                    <p class="p-1">
-                        You can use <code class="text-bold text-primary">btn-{color}</code> if you want a hover effect.
-                        If you do not need hover, use <code class="text-bold text-primary">bg-{color}</code> or your own
-                        custom class.
-                    </p>
-                </div>
-            </article>
-
-            {# Note about state #}
-            <article class="card p-2">
-                <div class="card-header">
-                    <h2>📌 Note open state</h2>
+                    <h2>📌 State</h2>
                 </div>
                 <div class="card-body">
                     <p class="p-1">
@@ -340,10 +352,10 @@
                 </div>
             </article>
 
-            {# Notes about spacing #}
+            {# Spacing rules #}
             <article class="card p-2">
                 <div class="card-header">
-                    <h2>📌 Note spacing rules</h2>
+                    <h2>📌 Spacing rules</h2>
                 </div>
                 <div class="card-body">
                     <p class="p-1">
@@ -353,9 +365,7 @@
                             class="text-bold text-primary">0</code>.
                         Add spacing on elements inside the panel (like <code class="text-bold text-primary">p</code> or
                         <code class="text-bold text-primary">ul</code>),
-                        not on <code class="text-bold text-primary">.accordion-body</code>. Same rule for <code
-                            class="text-bold text-primary">.accordion</code> and
-                        <code class="text-bold text-primary">.accordion-native</code>.
+                        not on <code class="text-bold text-primary">.accordion-body</code>
                     </p>
                 </div>
             </article>

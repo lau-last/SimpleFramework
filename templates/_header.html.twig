@@ -1,7 +1,7 @@
 <!-- navbar -->
 <header class="bg-primary p-2 d-flex jc-between ai-center">
     <a href="{{ path('app_main') }}" class="fw-400 no-underline text-white">SimpleCSS</a>
-    <div class="d-flex gap-1 gap-2-xs">
+    <div class="d-flex gap-1 gap-2-xs ai-center">
         <div class="dropdown">
             <button class="btn btn-primary-dark"
                     data-js="dropdown"
@@ -11,7 +11,7 @@
                 <span class="me-1" id="theme-icon"></span>Theme
             </button>
             <div class="dropdown-body bottom right" id="dropdown-theme">
-                <ul class="list list-hover list-borderless">
+                <ul class="list list-hover">
                     <li class="list-item list-warning text-base" data-theme="light"
                         onclick="ThemeColor.themeLight();ThemeColor.onClickTheme();">☀️<span class="ms-1">Light</span>
                     </li>

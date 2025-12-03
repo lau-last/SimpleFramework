@@ -23,7 +23,7 @@
                 Component
             </button>
             <div class="collapse-body show" id="menu-side-component">
-                <ul class="list list-hover list-primary text-base">
+                <ul class="list list-hover list-primary text-color">
                     <li class="list-item {{ route == 'app_accordion' ? 'active' : '' }}">
                         <a class="list-link" href="{{ url('app_accordion') }}">Accordion</a>
                     </li>
@@ -87,7 +87,7 @@
                 Layout
             </button>
             <div class="collapse-body show" id="menu-side-layout">
-                <ul class="list list-hover list-primary text-base">
+                <ul class="list list-hover list-primary text-color">
                     <li class="list-item {{ route == 'app_col' ? 'active' : '' }}">
                         <a class="list-link" href="{{ url('app_col') }}">Col</a>
                     </li>
@@ -112,7 +112,7 @@
                 Utility
             </button>
             <div class="collapse-body show" id="menu-side-utility">
-                <ul class="list list-hover list-primary text-base">
+                <ul class="list list-hover list-primary text-color">
                     <li class="list-item {{ route == 'app_border' ? 'active' : '' }}">
                         <a class="list-link" href="{{ url('app_border') }}">Border</a>
                     </li>
@@ -158,9 +158,25 @@
                 Abstract
             </button>
             <div class="collapse-body show" id="menu-side-abstract">
-                <ul class="list list-hover list-primary text-base">
+                <ul class="list list-hover list-primary text-color">
                     <li class="list-item {{ route == 'app_animation' ? 'active' : '' }}">
                         <a class="list-link" href="{{ url('app_animation') }}">Animation</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="collapse mb-half">
+            <button class="collapse-btn btn-primary"
+                    data-js="collapse"
+                    data-target="#menu-side-other"
+                    aria-expanded="true"
+                    aria-controls="menu-side-other">
+                Other
+            </button>
+            <div class="collapse-body show" id="menu-side-other">
+                <ul class="list list-hover list-primary text-color">
+                    <li class="list-item {{ route == 'app_ajax' ? 'active' : '' }}">
+                        <a class="list-link" href="{{ url('app_ajax') }}">Ajax</a>
                     </li>
                 </ul>
             </div>

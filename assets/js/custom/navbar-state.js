@@ -27,7 +27,9 @@ class NavbarState {
     }
 
     static initCollapse() {
-        document.querySelectorAll('[data-js="collapse"]').forEach(collapseBtn => {
+        const aside = document.getElementById("aside");
+        if (!aside) return;
+        aside.querySelectorAll('[data-js="collapse"]').forEach(collapseBtn => {
             const targetSelector = collapseBtn.dataset.target;
             const target = document.querySelector(targetSelector);
             if (!target) return;

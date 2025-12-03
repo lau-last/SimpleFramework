@@ -1,0 +1,38 @@
+<article class="card p-2">
+    <div class="card-header">
+        <h3>🔄 AJAX GET response</h3>
+    </div>
+    <div class="card-body">
+        <p class="p-1">
+            This content was loaded with
+            <code class="text-bold text-primary">data-ajax-get</code>
+            from the route
+            <code class="text-bold text-primary">ajax_demo_get</code>.
+        </p>
+        <p class="p-1 mt-1">
+            You can put any HTML here: text, lists, cards, forms, etc.
+        </p>
+
+
+        <div class="form-control">
+            <label for="text">Text</label>
+            <input data-ajax-post="{{ path('ajax_demo_fragment') }}"
+                   data-ajax-trigger="input"
+                   data-ajax-target="#ajax-on-input"
+                   data-ajax-swap="innerHTML"
+                   type="text"
+                   id="text"
+                   name="text">
+        </div>
+
+
+        <p class="p-1 mt-1" id="ajax-on-input">
+            You can now render a confirmation, a partial update, or any HTML snippet
+            based on the submitted form data.
+        </p>
+
+
+    </div>
+
+
+</article>

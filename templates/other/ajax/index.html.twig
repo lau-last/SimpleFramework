@@ -1,0 +1,465 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Ajax{% endblock %}
+
+{% block body %}
+    <div class="container-sm">
+        <div class="d-flex fd-column gap-5">
+
+            {# Intro #}
+            <article class="card p-2">
+                <div class="card-header d-flex ai-baseline">
+                    <h2>⚡ Ajax</h2>
+                    <span class="ml-1">(HTMX-like behavior with data-ajax-* attributes)</span>
+                </div>
+                <div class="card-body">
+                    <p class="p-1">
+                        The <code class="text-bold text-primary">Ajax</code> utility is a lightweight vanilla JS helper
+                        that provides HTMX-like behavior using simple
+                        <code class="text-bold text-primary">data-ajax-*</code> attributes.
+                        It uses event delegation and works for dynamically added elements.
+                    </p>
+                    <p class="p-1 mt-1">
+                        It supports GET and POST requests, target selection, partial swaps, fragment extraction and
+                        hook events (<code class="text-bold text-primary">before</code>,
+                        <code class="text-bold text-primary">success</code>,
+                        <code class="text-bold text-primary">error</code>,
+                        <code class="text-bold text-primary">after</code>).
+                    </p>
+                </div>
+            </article>
+
+            {# Example - Simple GET #}
+            <article class="card p-2">
+                <div class="card-header d-flex ai-baseline">
+                    <h2>💠 Example</h2>
+                    <span class="ml-1">(Simple GET button)</span>
+                </div>
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-12">
+                            <button
+                                class="btn btn-primary"
+                                data-ajax-get="{{ path('ajax_demo_get') }}"
+                                data-ajax-trigger="click"
+                                data-ajax-target="#ajax-simple-result"
+                                data-ajax-swap="innerHTML"
+                            >
+                                Load content
+                            </button>
+
+                            <div id="ajax-simple-result" class="mt-2">
+                                <p class="p-1">
+                                    This content will be replaced by the AJAX response.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </article>
+
+{#            #}{# HTML Code - Simple GET #}
+{#            <article class="card p-2">#}
+{#                <div class="card-header d-flex ai-baseline">#}
+{#                    <h2>💻 HTML Code</h2>#}
+{#                    <span class="ml-1">(Simple GET button)</span>#}
+{#                </div>#}
+{#                <div class="card-body">#}
+{#                    <div class="position-relative">#}
+{#                        <button class="btn btn-primary position-top-right z-1 mt-1 mr-1"#}
+{#                                onclick="copyCode('code-ajax-simple-get', this);">Copy#}
+{#                        </button>#}
+{#                        <div data-js="code" id="code-ajax-simple-get" class="container-code overflow-auto">#}
+
+{#                            <button#}
+{#                                class="btn btn-primary"#}
+{#                                data-ajax-get="{{ path('ajax_demo_get') }}"#}
+{#                                data-ajax-trigger="click"#}
+{#                                data-ajax-target="#ajax-simple-result"#}
+{#                                data-ajax-swap="innerHTML"#}
+{#                            >#}
+{#                                Load content#}
+{#                            </button>#}
+
+{#                            <div id="ajax-simple-result" class="mt-2">#}
+{#                                <p class="p-1">#}
+{#                                    This content will be replaced by the AJAX response.#}
+{#                                </p>#}
+{#                            </div>#}
+
+{#                        </div>#}
+{#                    </div>#}
+{#                </div>#}
+{#            </article>#}
+
+{#            #}{# Example - POST with form #}
+{#            <article class="card p-2">#}
+{#                <div class="card-header d-flex ai-baseline">#}
+{#                    <h2>💠 Example</h2>#}
+{#                    <span class="ml-1">(Form POST)</span>#}
+{#                </div>#}
+{#                <div class="card-body">#}
+{#                    <div class="row">#}
+{#                        <div class="col-12">#}
+{#                            <form#}
+{#                                data-ajax-post="{{ path('ajax_demo_post') }}"#}
+{#                                data-ajax-trigger="submit"#}
+{#                                data-ajax-target="#ajax-form-result"#}
+{#                                data-ajax-swap="innerHTML"#}
+{#                            >#}
+{#                                <div class="form-group mb-1">#}
+{#                                    <label for="demo-input">Your text</label>#}
+{#                                    <input id="demo-input" name="message" type="text" class="form-control"#}
+{#                                           value="Hello Ajax!">#}
+{#                                </div>#}
+{#                                <button type="submit" class="btn btn-primary">#}
+{#                                    Send form with Ajax#}
+{#                                </button>#}
+{#                            </form>#}
+
+{#                            <div id="ajax-form-result" class="mt-2">#}
+{#                                <p class="p-1">#}
+{#                                    The server response will appear here.#}
+{#                                </p>#}
+{#                            </div>#}
+{#                        </div>#}
+{#                    </div>#}
+{#                </div>#}
+{#            </article>#}
+
+{#            #}{# HTML Code - POST with form #}
+{#            <article class="card p-2">#}
+{#                <div class="card-header d-flex ai-baseline">#}
+{#                    <h2>💻 HTML Code</h2>#}
+{#                    <span class="ml-1">(Form POST)</span>#}
+{#                </div>#}
+{#                <div class="card-body">#}
+{#                    <div class="position-relative">#}
+{#                        <button class="btn btn-primary position-top-right z-1 mt-1 mr-1"#}
+{#                                onclick="copyCode('code-ajax-form-post', this);">Copy#}
+{#                        </button>#}
+{#                        <div data-js="code" id="code-ajax-form-post" class="container-code overflow-auto">#}
+
+{#                            <form#}
+{#                                data-ajax-post="{{ path('ajax_demo_post') }}"#}
+{#                                data-ajax-trigger="submit"#}
+{#                                data-ajax-target="#ajax-form-result"#}
+{#                                data-ajax-swap="innerHTML"#}
+{#                            >#}
+{#                                <div class="form-group mb-1">#}
+{#                                    <label for="demo-input">Your text</label>#}
+{#                                    <input id="demo-input" name="message" type="text" class="form-control"#}
+{#                                           value="Hello Ajax!">#}
+{#                                </div>#}
+{#                                <button type="submit" class="btn btn-primary">#}
+{#                                    Send form with Ajax#}
+{#                                </button>#}
+{#                            </form>#}
+
+{#                            <div id="ajax-form-result" class="mt-2">#}
+{#                                <p class="p-1">#}
+{#                                    The server response will appear here.#}
+{#                                </p>#}
+{#                            </div>#}
+
+{#                        </div>#}
+{#                    </div>#}
+{#                </div>#}
+{#            </article>#}
+
+{#            #}{# Example - Fragment selection and value #}
+{#            <article class="card p-2">#}
+{#                <div class="card-body">#}
+{#                    <button#}
+{#                        class="btn btn-secondary"#}
+{#                        data-ajax-post="{{ path('ajax_demo_list') }}"#}
+{#                        data-ajax-trigger="click"#}
+{#                        data-ajax-target="#ajax-list-output"#}
+{#                        data-ajax-select="#ajax-list-result"#}
+{#                        data-ajax-swap="innerHTML"#}
+{#                        data-ajax-value="{'page': 1, 'limit': 5}"#}
+{#                    >#}
+{#                        Load first 5 items#}
+{#                    </button>#}
+
+{#                    <div id="ajax-list-output" class="mt-2">#}
+{#                        <p class="p-1">#}
+{#                            The content of <code class="text-bold text-primary">#ajax-list-result</code>#}
+{#                            from the server response will be injected here.#}
+{#                        </p>#}
+{#                    </div>#}
+{#                </div>#}
+{#            </article>#}
+
+{#            #}{# HTML Code - Fragment selection and value #}
+{#            <article class="card p-2">#}
+{#                <div class="card-header d-flex ai-baseline">#}
+{#                    <h2>💻 HTML Code</h2>#}
+{#                    <span class="ml-1">(Fragment + data-ajax-value)</span>#}
+{#                </div>#}
+{#                <div class="card-body">#}
+{#                    <div class="position-relative">#}
+{#                        <button class="btn btn-primary position-top-right z-1 mt-1 mr-1"#}
+{#                                onclick="copyCode('code-ajax-fragment', this);">Copy#}
+{#                        </button>#}
+{#                        <div data-js="code" id="code-ajax-fragment" class="container-code overflow-auto">#}
+
+{#                            <button#}
+{#                                class="btn btn-secondary"#}
+{#                                data-ajax-get="{{ path('ajax_demo_list') }}"#}
+{#                                data-ajax-trigger="click"#}
+{#                                data-ajax-target="#ajax-fragment-result"#}
+{#                                data-ajax-select="#items-list"#}
+{#                                data-ajax-swap="innerHTML"#}
+{#                                data-ajax-value="{'page': 1, 'limit': 5}"#}
+{#                            >#}
+{#                                Load first 5 items#}
+{#                            </button>#}
+
+{#                            <div id="ajax-fragment-result" class="mt-2">#}
+{#                                <p class="p-1">#}
+{#                                    The content of <code class="text-bold text-primary">#items-list</code> from the#}
+{#                                    server response#}
+{#                                    will be injected here.#}
+{#                                </p>#}
+{#                            </div>#}
+
+{#                        </div>#}
+{#                    </div>#}
+{#                </div>#}
+{#            </article>#}
+
+            {# How to use #}
+            <article class="card p-2">
+                <div class="card-header">
+                    <h2>🧩 How to use</h2>
+                </div>
+                <div class="card-body">
+                    <p class="p-1">
+                        Add one of the following attributes on your element:
+                    </p>
+                    <ul class="p-1">
+                        <li>
+                            <code class="text-bold text-primary">data-ajax-get="URL"</code>:
+                            sends a GET request.
+                        </li>
+                        <li>
+                            <code class="text-bold text-primary">data-ajax-post="URL"</code>:
+                            sends a POST request.
+                        </li>
+                        <li>
+                            <code class="text-bold text-primary">data-ajax-trigger="eventName"</code>:
+                            event that triggers the request
+                            (for example <code>click</code>, <code>submit</code>, <code>input</code>).
+                        </li>
+                        <li>
+                            <code class="text-bold text-primary">data-ajax-target="#selector"</code>:
+                            CSS selector of the element to update with the response. If not found,
+                            the source element is used as fallback.
+                        </li>
+                        <li>
+                            <code class="text-bold text-primary">data-ajax-swap="innerHTML|outerHTML|replace"</code>:
+                            how the HTML is injected. Default is <code>innerHTML</code>.
+                        </li>
+                        <li>
+                            <code class="text-bold text-primary">data-ajax-select="CSS selector"</code>:
+                            optional fragment selector. If set, only the matching element’s
+                            <code>innerHTML</code> from the response is used.
+                        </li>
+                        <li>
+                            <code class="text-bold text-primary">data-ajax-value="{'key': 'value'}"</code>:
+                            JSON object appended to the form data before sending.
+                        </li>
+                    </ul>
+                    <p class="p-1 mt-1">
+                        For POST requests, the nearest <code class="text-bold text-primary">&lt;form&gt;</code> is used
+                        to build the <code>FormData</code>. For GET requests, the form data is converted to query
+                        parameters and appended to the URL.
+                    </p>
+                </div>
+            </article>
+
+            {# How it works #}
+            <article class="card p-2">
+                <div class="card-header">
+                    <h2>🧩 How it works</h2>
+                </div>
+                <div class="card-body">
+                    <p class="p-1">
+                        The <code class="text-bold text-primary">Ajax</code> class sets up global event delegation using
+                        an <code class="text-bold text-primary">EventManager</code> wrapper.
+                        For each <code class="text-bold text-primary">data-ajax-trigger</code> value found in the DOM,
+                        it registers a listener on <code>document</code>.
+                    </p>
+                    <p class="p-1 mt-1">
+                        On each event:
+                    </p>
+                    <ul class="p-1">
+                        <li>It finds the closest element with <code
+                                class="text-bold text-primary">data-ajax-trigger</code>
+                            matching the event type.
+                        </li>
+                        <li>It resolves the URL and HTTP method from
+                            <code class="text-bold text-primary">data-ajax-get</code> /
+                            <code class="text-bold text-primary">data-ajax-post</code>.
+                        </li>
+                        <li>It builds the <code>FormData</code> from the closest form or from the element itself.</li>
+                        <li>It applies optional <code class="text-bold text-primary">data-ajax-value</code> by parsing
+                            the JSON and appending each key/value to the form data.
+                        </li>
+                        <li>For GET requests, it appends parameters to the URL; for POST, it sends them as the body.
+                        </li>
+                        <li>It sends a <code>fetch</code> request with
+                            <code class="text-bold text-primary">X-Requested-With: XMLHttpRequest</code>
+                            and expects an HTML response.
+                        </li>
+                        <li>On success, it optionally extracts a fragment with
+                            <code class="text-bold text-primary">data-ajax-select</code> and swaps the target content
+                            according to <code class="text-bold text-primary">data-ajax-swap</code>.
+                        </li>
+                        <li>On error, it logs messages and injects a fallback error message.</li>
+                    </ul>
+                </div>
+            </article>
+
+            {# Events hooks #}
+            <article class="card p-2">
+                <div class="card-header">
+                    <h2>🧩 Hook events</h2>
+                </div>
+                <div class="card-body">
+                    <p class="p-1">
+                        You can run inline expressions or functions at different stages of the lifecycle using:
+                    </p>
+                    <ul class="p-1">
+                        <li><code class="text-bold text-primary">data-ajax-event-before</code></li>
+                        <li><code class="text-bold text-primary">data-ajax-event-success</code></li>
+                        <li><code class="text-bold text-primary">data-ajax-event-error</code></li>
+                        <li><code class="text-bold text-primary">data-ajax-event-after</code></li>
+                    </ul>
+                    <p class="p-1">
+                        The value is a list of function names or JS expressions separated by
+                        <code class="text-bold text-primary">;</code>. For each expression:
+                    </p>
+                    <ul class="p-1">
+                        <li>If <code>window[expr]</code> is a function, it is called as
+                            <code>fn(context, element)</code>.
+                        </li>
+                        <li>Otherwise a new function is evaluated:
+                            <code>new Function('context', 'element', expr)(context, host)</code>.
+                        </li>
+                    </ul>
+
+                    <p class="p-1 mt-1">
+                        Example:
+                    </p>
+                    <div class="card p-2">
+                        <code class="text-bold text-primary">
+                            data-ajax-event-success="onAjaxSuccess;console.log('Done')"
+                        </code>
+                    </div>
+                    <p class="p-1 mt-1">
+                        Here, <code>onAjaxSuccess(context, element)</code> must exist on
+                        <code class="text-bold text-primary">window</code>. Then a simple
+                        <code>console.log</code> is executed.
+                    </p>
+                </div>
+            </article>
+
+            {# Attributes reference #}
+            <article class="card p-2">
+                <div class="card-header">
+                    <h2>⚙️ Attributes reference</h2>
+                </div>
+                <div class="card-body">
+                    <div class="table-responsive">
+                        <table class="table">
+                            <thead>
+                            <tr class="text-left">
+                                <th>Attribute</th>
+                                <th>Description</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+
+                            <tr>
+                                <td><code class="text-bold text-primary">data-ajax-get</code></td>
+                                <td>URL for GET requests. Form data is appended as query parameters.</td>
+                            </tr>
+
+                            <tr>
+                                <td><code class="text-bold text-primary">data-ajax-post</code></td>
+                                <td>URL for POST requests. Form data is sent in the request body.</td>
+                            </tr>
+
+                            <tr>
+                                <td><code class="text-bold text-primary">data-ajax-trigger</code></td>
+                                <td>
+                                    Event name that triggers the request (e.g.
+                                    <code>click</code>, <code>submit</code>, <code>input</code>).
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td><code class="text-bold text-primary">data-ajax-target</code></td>
+                                <td>
+                                    CSS selector of the element to update with the response.
+                                    If missing or not found, the source element is used.
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td><code class="text-bold text-primary">data-ajax-swap</code></td>
+                                <td>
+                                    Swap strategy: <code>innerHTML</code> (default), <code>outerHTML</code>,
+                                    <code>replace</code>. Unknown values fall back to
+                                    <code>innerHTML</code>.
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td><code class="text-bold text-primary">data-ajax-select</code></td>
+                                <td>
+                                    CSS selector of the element to extract from the HTML response.
+                                    If found, its <code>innerHTML</code> is used. If not, the whole
+                                    response is used.
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td><code class="text-bold text-primary">data-ajax-value</code></td>
+                                <td>
+                                    JSON-like string that is parsed and appended to the form data.
+                                    Single quotes are allowed and converted internally.
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td><code class="text-bold text-primary">data-ajax-event-before</code></td>
+                                <td>Hook executed before the request is sent.</td>
+                            </tr>
+
+                            <tr>
+                                <td><code class="text-bold text-primary">data-ajax-event-success</code></td>
+                                <td>Hook executed after a successful response.</td>
+                            </tr>
+
+                            <tr>
+                                <td><code class="text-bold text-primary">data-ajax-event-error</code></td>
+                                <td>Hook executed when the request fails.</td>
+                            </tr>
+
+                            <tr>
+                                <td><code class="text-bold text-primary">data-ajax-event-after</code></td>
+                                <td>Hook executed at the very end (success or error).</td>
+                            </tr>
+
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </article>
+
+        </div>
+    </div>
+{% endblock %}
