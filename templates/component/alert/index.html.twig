@@ -59,6 +59,34 @@
                 </div>
             </article>
 
+            {# How to use #}
+            <article class="card p-2">
+                <div class="card-header">
+                    <h2>🧩 How to use</h2>
+                </div>
+                <div class="card-body">
+                    <p class="p-1">
+                        Add <code class="text-bold text-primary">data-js="alert"</code> to the alert.
+                        To let users close it manually, include a button with the
+                        <code class="text-bold text-primary">.close</code> class inside the alert.
+                        The script removes the alert automatically on button click or when its animation ends.
+                    </p>
+                </div>
+            </article>
+
+            {# Colors #}
+            <article class="card p-2">
+                <div class="card-header">
+                    <h2>🎨 Colors</h2>
+                </div>
+                <div class="card-body">
+                    <p class="p-1">
+                        Apply a color by adding <code class="text-bold text-primary">.alert-{color}</code> to the alert.
+                        Each variant changes the background, border, and text according to the selected color.
+                    </p>
+                </div>
+            </article>
+
             {# Positioning #}
             <article class="card p-2">
                 <div class="card-header">
@@ -66,74 +94,53 @@
                 </div>
                 <div class="card-body">
                     <p class="p-1">
-                        Wrap your alerts in <code class="text-bold text-primary">.alert-container</code>.
-                        Add one position class to choose where alerts appear.
-                        If you do not set a position class, alerts use
-                        <code class="text-bold text-primary">.top-center</code> by default.
+                        Wrap alerts in an <code class="text-bold text-primary">.alert-container</code>.
+                        If no position class is added to the container, alerts use <code class="text-bold text-primary">.top</code>
+                        and <code class="text-bold text-primary">.center</code> by default.
                     </p>
+
                     <div class="row mt-2">
                         <div class="col-12 col-4-xs">
-                            <div class="card p-2">
-                                <code class="text-bold text-primary">.top-left</code>
-                            </div>
+                            <div class="card p-2"><code class="text-bold text-primary">.top</code></div>
                         </div>
                         <div class="col-12 col-4-xs">
-                            <div class="card p-2">
-                                <code class="text-bold text-primary">.top-center</code>
-                            </div>
+                            <div class="card p-2"><code class="text-bold text-primary">.bottom</code></div>
                         </div>
                         <div class="col-12 col-4-xs">
-                            <div class="card p-2">
-                                <code class="text-bold text-primary">.top-right</code>
-                            </div>
+                            <div class="card p-2"><code class="text-bold text-primary">.left</code></div>
                         </div>
                         <div class="col-12 col-4-xs">
-                            <div class="card p-2">
-                                <code class="text-bold text-primary">.bottom-left</code>
-                            </div>
+                            <div class="card p-2"><code class="text-bold text-primary">.center</code></div>
                         </div>
                         <div class="col-12 col-4-xs">
-                            <div class="card p-2">
-                                <code class="text-bold text-primary">.bottom-center</code>
-                            </div>
-                        </div>
-                        <div class="col-12 col-4-xs">
-                            <div class="card p-2">
-                                <code class="text-bold text-primary">.bottom-right</code>
-                            </div>
+                            <div class="card p-2"><code class="text-bold text-primary">.right</code></div>
                         </div>
                     </div>
                 </div>
             </article>
 
-
-            {# Note about close button #}
+            {# Accessibility #}
             <article class="card p-2">
                 <div class="card-header">
-                    <h2>📌 Note close button</h2>
+                    <h2>📌 Accessibility</h2>
                 </div>
                 <div class="card-body">
                     <p class="p-1">
-                        Add a button with class <code class="text-bold text-primary">.close</code> inside the alert.
-                        When the user clicks this button, the alert is removed by JavaScript.
-                        The alert element must have <code class="text-bold text-primary">data-js="alert"</code>
-                        so the script can find and remove it.
+                        For accessibility, give the alert a suitable role like
+                        <code class="text-bold text-primary">role="status"</code> and use
+                        <code class="text-bold text-primary">aria-live="polite"</code> so screen readers announce it when it appears.
                     </p>
                 </div>
             </article>
 
-            {# Note about animation #}
+            {# Close button #}
             <article class="card p-2">
                 <div class="card-header">
-                    <h2>📌 Note animation</h2>
+                    <h2>📌 Close button</h2>
                 </div>
                 <div class="card-body">
                     <p class="p-1">
-                        The script listens to the <code class="text-bold text-primary">animationend</code> event on
-                        elements with <code class="text-bold text-primary">data-js="alert"</code>.
-                        When the animation ends, the alert is removed.
-                        Use <code class="text-bold text-primary">--alert-animation</code> to set the CSS animation
-                        (for example a fade-out). If you do not set an animation, alerts will not auto-remove.
+                        To let users manually dismiss an alert before the animation ends, add a button with the <code class="text-bold text-primary">.close</code> class inside the alert.
                     </p>
                 </div>
             </article>
@@ -161,7 +168,7 @@
 
                             <tr>
                                 <td><code class="text-bold text-primary">--alert-bg-color</code></td>
-                                <td>Background color of the alert.</td>
+                                <td>Background color of the alert (default).</td>
                             </tr>
 
                             <tr>
@@ -171,7 +178,7 @@
 
                             <tr>
                                 <td><code class="text-bold text-primary">--alert-border-color</code></td>
-                                <td>Color of the alert border.</td>
+                                <td>Color of the alert border (default).</td>
                             </tr>
 
                             <tr>

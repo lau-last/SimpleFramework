@@ -24,16 +24,9 @@
                     <div class="row">
                         <div class="col-12">
                             <div class="accordion-native">
-                                {% for i in 1..5 %}
-                                    {% set color = {
-                                        1: 'btn-primary-pastel',
-                                        2: 'btn-primary-light',
-                                        3: 'btn-primary',
-                                        4: 'btn-primary-dark',
-                                        5: 'btn-primary-night',
-                                    } %}
-                                    <details class="accordion-item">
-                                        <summary class="accordion-btn {{ color[i] }}">
+                                {% for i in 1..3 %}
+                                    <details class="accordion-item" {{ i == 1 ? 'open' : '' }}>
+                                        <summary class="accordion-btn btn-primary">
                                             Multiple
                                         </summary>
                                         <div class="accordion-body">
@@ -62,7 +55,7 @@
                         </button>
                         <div data-js="code" id="code-accordion-native-multiple" class="container-code overflow-auto">
                             <div class="accordion-native">
-                                <details class="accordion-item">
+                                <details class="accordion-item" open>
                                     <summary class="accordion-btn btn-primary">
                                         Multiple
                                     </summary>
@@ -104,18 +97,8 @@
                     <h2>📏 Sizes</h2>
                 </div>
                 <div class="card-body">
-                    <p class="p-1">
-                        You don’t need to combine
-                        <code class="text-bold text-primary">.accordion-btn</code>
-                        with a size class. Each size class (
-                        <code class="text-bold text-primary">.accordion-btn-sm</code>,
-                        <code class="text-bold text-primary">.accordion-btn-md</code>,
-                        <code class="text-bold text-primary">.accordion-btn-lg</code> )
-                        already includes the base accordion button style and its own padding values.
-                        Just put the wanted size class on the button inside
-                        <code class="text-bold text-primary">.accordion-native</code>
-                        and the height and inner spacing will adapt automatically.
-                    </p>
+                    These classes apply only to the accordion buttons.
+                    Each one already includes both the style and the size, so just pick the one you need.
                     <div class="row mt-2">
                         <div class="col-12 col-4-xs">
                             <div class="card p-2">
@@ -141,48 +124,49 @@
                 </div>
             </article>
 
-            {# Note about colors #}
+            {# Colors #}
             <article class="card p-2">
                 <div class="card-header">
-                    <h2>📌 Note colors</h2>
+                    <h2>🎨 Colors</h2>
                 </div>
                 <div class="card-body">
-                    <p class="p-1">
-                        You can use <code class="text-bold text-primary">btn-{color}</code> if you want a hover effect.
-                        If you do not need hover, use <code class="text-bold text-primary">bg-{color}</code> or your own
-                        custom class.
-                    </p>
+                    Button colors and accordion borders are handled separately.
+                    Apply these classes directly on the element you want to style.
+
+                    <div class="row mt-2">
+                        <div class="col-12 col-4-xs">
+                            <div class="card p-2">
+                                <code class="text-bold text-primary">btn-{color}</code>
+                                <br><small>Apply on the button <br>(with hover)</small>
+                            </div>
+                        </div>
+
+                        <div class="col-12 col-4-xs">
+                            <div class="card p-2">
+                                <code class="text-bold text-primary">bg-{color}</code>
+                                <br><small>Apply on the button <br>(no hover)</small>
+                            </div>
+                        </div>
+
+                        <div class="col-12 col-4-xs">
+                            <div class="card p-2">
+                                <code class="text-bold text-primary">accordion-{color}</code>
+                                <br><small>Apply on the <code>.accordion-native</code> container <br>(borders only)</small>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </article>
 
-            {# Note about open state #}
+            {# State #}
             <article class="card p-2">
                 <div class="card-header">
-                    <h2>📌 Note open state</h2>
+                    <h2>📌 State</h2>
                 </div>
                 <div class="card-body">
                     <p class="p-1">
                         To keep a panel open on page load, add the
-                        <code class="text-bold text-primary">open</code> attribute on
-                        the <code class="text-bold text-primary">&lt;details&gt;</code> element
-                        with class <code class="text-bold text-primary">.accordion-item</code>.
-                    </p>
-                </div>
-            </article>
-
-            {# Note about how it works #}
-            <article class="card p-2">
-                <div class="card-header">
-                    <h2>📌 Note how it works</h2>
-                </div>
-                <div class="card-body">
-                    <p class="p-1">
-                        Accordion native uses the HTML elements <code
-                            class="text-bold text-primary">&lt;details&gt;</code> and
-                        <code class="text-bold text-primary">&lt;summary&gt;</code>. The browser controls the open/close
-                        state with the
-                        <code class="text-bold text-primary">open</code> attribute. The CSS updates borders and the
-                        plus/minus icon based on this state.
+                        <code class="text-bold text-primary">open</code> attribute on the <code class="text-bold text-primary">details</code> element.
                     </p>
                 </div>
             </article>

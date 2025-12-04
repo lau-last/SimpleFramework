@@ -20,6 +20,7 @@
                 </div>
                 <div class="card-body d-flex fd-column gap-1">
                     <div class="btn-group">
+                        <button class="btn">Default</button>
                         <button class="btn btn-primary">Button</button>
                         <button class="btn link-primary">Button link</button>
                         <button class="btn outline-primary">Button outline</button>
@@ -42,13 +43,14 @@
                                 onclick="copyCode('code-button', this);">Copy
                         </button>
                         <div data-js="code" id="code-button" class="container-code overflow-auto">
+                            <button class="btn">Default</button>
                             <button class="btn btn-primary">Button</button>
                             <button class="btn link-primary">Button link</button>
                             <button class="btn outline-primary">Button outline</button>
                             <button class="btn btn-primary rounded-pill">Button rounded-pill</button>
-                            <button class="btn btn-primary btn-sm">Button small</button>
-                            <button class="btn btn-primary btn-md">Button medium</button>
-                            <button class="btn btn-primary btn-lg">Button large</button>
+                            <button class="btn-sm btn-primary">Button small</button>
+                            <button class="btn-md btn-primary">Button medium</button>
+                            <button class="btn-lg btn-primary">Button large</button>
                         </div>
                     </div>
                 </div>
@@ -61,11 +63,7 @@
                 </div>
                 <div class="card-body">
                     <p class="p-1">
-                        Each class (<code class="text-bold text-primary">.btn</code>, <code
-                            class="text-bold text-primary">.btn-sm</code>, <code
-                            class="text-bold text-primary">.btn-md</code>, <code
-                            class="text-bold text-primary">.btn-lg</code>) includes the base button style with its own
-                        padding.
+                        These classes apply only to buttons. Each one includes the base style and its own spacing.
                     </p>
 
                     <div class="row mt-2">
@@ -74,19 +72,54 @@
                                 <code class="text-bold text-primary">.btn</code>
                             </div>
                         </div>
+
                         <div class="col-12 col-4-xs">
                             <div class="card p-2">
                                 <code class="text-bold text-primary">.btn-sm</code>
                             </div>
                         </div>
+
                         <div class="col-12 col-4-xs">
                             <div class="card p-2">
                                 <code class="text-bold text-primary">.btn-md</code>
                             </div>
                         </div>
+
                         <div class="col-12 col-4-xs">
                             <div class="card p-2">
                                 <code class="text-bold text-primary">.btn-lg</code>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </article>
+
+            {# Colors #}
+            <article class="card p-2">
+                <div class="card-header">
+                    <h2>🎨 Colors</h2>
+                </div>
+                <div class="card-body">
+                    <p class="p-1">
+                        Choose the button color by applying the corresponding class to your element.
+                    </p>
+
+                    <div class="row mt-2">
+                        <div class="col-12 col-4-xs">
+                            <div class="card p-2">
+                                <code class="text-bold text-primary">.btn-{color}</code>
+                            </div>
+                        </div>
+
+                        <div class="col-12 col-4-xs">
+                            <div class="card p-2">
+                                <code class="text-bold text-primary">.outline-{color}</code>
+                            </div>
+                        </div>
+
+                        <div class="col-12 col-4-xs">
+                            <div class="card p-2">
+                                <code class="text-bold text-primary">.link-{color}</code>
                             </div>
                         </div>
                     </div>
@@ -99,52 +132,29 @@
                     <h2>🧵 Type</h2>
                 </div>
                 <div class="card-body">
-
                     <p class="p-1">
-                        Use <code class="text-bold text-primary">.btn-{color}</code> for solid buttons, <code
-                            class="text-bold text-primary">.outline-{color}</code> for bordered styles, and <code
-                            class="text-bold text-primary">.rounded-pill</code> for softer shapes.
-                        <code class="text-bold text-primary">.link-{color}</code> gives a minimal, text-styled button
-                        using the theme color.
+                        Choose the button type by applying the matching class to your element.
                     </p>
 
                     <div class="row mt-2">
                         <div class="col-12 col-4-xs">
                             <div class="card p-2">
-                                <code class="text-bold text-primary">.btn-{color}</code>
-                            </div>
-                        </div>
-                        <div class="col-12 col-4-xs">
-                            <div class="card p-2">
-                                <code class="text-bold text-primary">.outline-{color}</code>
-                            </div>
-                        </div>
-                        <div class="col-12 col-4-xs">
-                            <div class="card p-2">
                                 <code class="text-bold text-primary">.rounded-pill</code>
-                            </div>
-                        </div>
-                        <div class="col-12 col-4-xs">
-                            <div class="card p-2">
-                                <code class="text-bold text-primary">.link-{color}</code>
                             </div>
                         </div>
                     </div>
                 </div>
             </article>
 
-
-            {# Note about badge-group #}
+            {# Button group #}
             <article class="card p-2">
                 <div class="card-header">
-                    <h2>📌 Note btn-group</h2>
+                    <h2>📌 Button group</h2>
                 </div>
                 <div class="card-body">
                     <p class="p-1">
-                        Use <code class="text-bold text-primary">.btn-group</code> to display several button on the same
-                        line
-                        with consistent spacing.
-                        The container automatically:
+                        Use <code class="text-bold text-primary">.btn-group</code> to align multiple buttons on the same line
+                        with consistent spacing. The container handles layout automatically.
                     </p>
                 </div>
             </article>
@@ -167,7 +177,7 @@
 
                             <tr>
                                 <td><code class="text-bold text-primary">--button-active-bg-color</code></td>
-                                <td>Background color applied when the button is active or pressed.</td>
+                                <td>Background color applied when the button is active or pressed (default).</td>
                             </tr>
 
                             <tr>
@@ -197,7 +207,7 @@
 
                             <tr>
                                 <td><code class="text-bold text-primary">--button-hover-bg-color</code></td>
-                                <td>Background color applied when hovering the button.</td>
+                                <td>Background color applied when hovering the button (default).</td>
                             </tr>
 
                             <tr>

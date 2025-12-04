@@ -78,29 +78,28 @@
                     <h2>📏 Sizes</h2>
                 </div>
                 <div class="card-body">
-                    <p class="p-1">
-                        Each size class (<code class="text-bold text-primary">.collapse-btn</code>,
-                        <code class="text-bold text-primary">.collapse-btn-sm</code>,
-                        <code class="text-bold text-primary">.collapse-btn-md</code>,
-                        <code class="text-bold text-primary">.collapse-btn-lg</code>) applies the base collapse button
-                        style with its own padding.
-                    </p>
+                    These classes apply only to the collapse button.
+                    Each one already includes its own size and spacing.
+
                     <div class="row mt-2">
                         <div class="col-12 col-4-xs">
                             <div class="card p-2">
                                 <code class="text-bold text-primary">.collapse-btn</code>
                             </div>
                         </div>
+
                         <div class="col-12 col-4-xs">
                             <div class="card p-2">
                                 <code class="text-bold text-primary">.collapse-btn-sm</code>
                             </div>
                         </div>
+
                         <div class="col-12 col-4-xs">
                             <div class="card p-2">
                                 <code class="text-bold text-primary">.collapse-btn-md</code>
                             </div>
                         </div>
+
                         <div class="col-12 col-4-xs">
                             <div class="card p-2">
                                 <code class="text-bold text-primary">.collapse-btn-lg</code>
@@ -110,37 +109,66 @@
                 </div>
             </article>
 
-            {# Note open state #}
+            {# Colors #}
             <article class="card p-2">
                 <div class="card-header">
-                    <h2>📌 Note open state</h2>
+                    <h2>🎨 Colors</h2>
+                </div>
+                <div class="card-body">
+                    Collapse button and panel colors are handled separately.
+                    Apply these classes directly to the element you want to style.
+
+                    <div class="row mt-2">
+                        <div class="col-12 col-4-xs">
+                            <div class="card p-2">
+                                <code class="text-bold text-primary">btn-{color}</code>
+                                <br><small>Apply on the button<br>(with hover)</small>
+                            </div>
+                        </div>
+
+                        <div class="col-12 col-4-xs">
+                            <div class="card p-2">
+                                <code class="text-bold text-primary">bg-{color}</code>
+                                <br><small>Apply on the button<br>(no hover)</small>
+                            </div>
+                        </div>
+
+                        <div class="col-12 col-4-xs">
+                            <div class="card p-2">
+                                <code class="text-bold text-primary">collapse-{color}</code>
+                                <br><small>Apply on the <code>.collapse-native</code><br>(borders only)</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </article>
+
+            {# State #}
+            <article class="card p-2">
+                <div class="card-header">
+                    <h2>📌 State</h2>
                 </div>
                 <div class="card-body">
                     <p class="p-1">
-                        To open a native collapse by default, add the <code class="text-bold text-primary">open</code>
-                        attribute on the <code class="text-bold text-primary">&lt;details
-                            class="collapse-native"&gt;</code> element.
-                        The browser then manages the open and closed state when the user clicks the
-                        <code class="text-bold text-primary">&lt;summary&gt;</code>, without any JavaScript.
+                        To keep a panel open on page load, add the
+                        <code class="text-bold text-primary">open</code> attribute on the <code class="text-bold text-primary">details</code> element.
                     </p>
                 </div>
             </article>
 
-            {# Notes about spacing #}
+            {# Spacing rules #}
             <article class="card p-2">
                 <div class="card-header">
-                    <h2>📌 Note spacing rules</h2>
+                    <h2>📌 Spacing rules</h2>
                 </div>
                 <div class="card-body">
                     <p class="p-1">
-                        Avoid setting <code class="text-bold text-primary">padding</code> or
-                        <code class="text-bold text-primary">margin</code> directly on
-                        <code class="text-bold text-primary">.collapse-body</code>, as this container is meant to stay
-                        layout-neutral.
-                        Add spacing to elements inside the body (for example a <code
-                            class="text-bold text-primary">p</code>,
-                        <code class="text-bold text-primary">ul</code> or an inner wrapper), not on
-                        <code class="text-bold text-primary">.collapse-body</code> itself.
+                        Do not add <code class="text-bold text-primary">padding</code> or <code
+                            class="text-bold text-primary">margin</code> on
+                        <code class="text-bold text-primary">.collapse-body</code>.
+                        Add spacing on elements inside the panel (like
+                        <code class="text-bold text-primary">p</code> or <code class="text-bold text-primary">ul</code>),
+                        not on <code class="text-bold text-primary">.collapse-body</code>.
                     </p>
                 </div>
             </article>

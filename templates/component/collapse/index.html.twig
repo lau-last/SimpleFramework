@@ -57,10 +57,10 @@
                         </button>
                         <div data-js="code" id="code-collapse" class="container-code overflow-auto">
                             <div class="collapse">
-                                <button class="collapse-btn btn-primary" data-js="collapse" data-target="#collapse-1"
-                                        aria-controls="collapse-1" aria-expanded="false">Collapse
+                                <button class="collapse-btn btn-primary" data-js="collapse" data-target="#collapse-demo"
+                                        aria-controls="collapse-demo" aria-expanded="false">Collapse
                                 </button>
-                                <div class="collapse-body" id="collapse-1">
+                                <div class="collapse-body" id="collapse-demo">
                                     <p class="p-1">
                                         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda minima
                                         repellat
@@ -75,35 +75,49 @@
                 </div>
             </article>
 
+            {# How to use #}
+            <article class="card p-2">
+                <div class="card-header">
+                    <h2>🧩 How to use</h2>
+                </div>
+                <div class="card-body">
+                    <p class="p-1">
+                        Add <code class="text-bold text-primary">data-js="collapse"</code> to the button and use
+                        <code class="text-bold text-primary">data-target</code> to link it to the matching
+                        <code class="text-bold text-primary">.collapse-body</code>.
+                        The script toggles the panel and updates <code class="text-bold text-primary">aria-expanded</code> automatically.
+                    </p>
+                </div>
+            </article>
+
             {# Sizes #}
             <article class="card p-2">
                 <div class="card-header">
                     <h2>📏 Sizes</h2>
                 </div>
                 <div class="card-body">
-                    <p class="p-1">
-                        Each size class (<code class="text-bold text-primary">.collapse-btn</code>,
-                        <code class="text-bold text-primary">.collapse-btn-sm</code>,
-                        <code class="text-bold text-primary">.collapse-btn-md</code>,
-                        <code class="text-bold text-primary">.collapse-btn-lg</code>) includes the base collapse button
-                        style with its own padding values.
-                    </p>
+                    These classes apply only to the collapse button.
+                    Each one already includes its own size and spacing.
+
                     <div class="row mt-2">
                         <div class="col-12 col-4-xs">
                             <div class="card p-2">
                                 <code class="text-bold text-primary">.collapse-btn</code>
                             </div>
                         </div>
+
                         <div class="col-12 col-4-xs">
                             <div class="card p-2">
                                 <code class="text-bold text-primary">.collapse-btn-sm</code>
                             </div>
                         </div>
+
                         <div class="col-12 col-4-xs">
                             <div class="card p-2">
                                 <code class="text-bold text-primary">.collapse-btn-md</code>
                             </div>
                         </div>
+
                         <div class="col-12 col-4-xs">
                             <div class="card p-2">
                                 <code class="text-bold text-primary">.collapse-btn-lg</code>
@@ -113,51 +127,85 @@
                 </div>
             </article>
 
-            {# How to use #}
+            {# Colors #}
             <article class="card p-2">
                 <div class="card-header">
-                    <h2>🧩 How to use</h2>
+                    <h2>🎨 Colors</h2>
+                </div>
+                <div class="card-body">
+                    Collapse button and panel colors are handled separately.
+                    Apply these classes directly to the element you want to style.
+
+                    <div class="row mt-2">
+                        <div class="col-12 col-4-xs">
+                            <div class="card p-2">
+                                <code class="text-bold text-primary">btn-{color}</code>
+                                <br><small>Apply on the button<br>(with hover)</small>
+                            </div>
+                        </div>
+
+                        <div class="col-12 col-4-xs">
+                            <div class="card p-2">
+                                <code class="text-bold text-primary">bg-{color}</code>
+                                <br><small>Apply on the button<br>(no hover)</small>
+                            </div>
+                        </div>
+
+                        <div class="col-12 col-4-xs">
+                            <div class="card p-2">
+                                <code class="text-bold text-primary">collapse-{color}</code>
+                                <br><small>Apply on the <code>.collapse</code><br>(borders only)</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </article>
+
+            {# Accessibility #}
+            <article class="card p-2">
+                <div class="card-header">
+                    <h2>📌 Accessibility</h2>
                 </div>
                 <div class="card-body">
                     <p class="p-1">
-                        Add <code class="text-bold text-primary">data-js="collapse"</code> to the button and set
-                        <code class="text-bold text-primary">data-target</code> to the ID of the matching
-                        <code class="text-bold text-primary">.collapse-body</code>. The script toggles the panel and
-                        updates
-                        <code class="text-bold text-primary">aria-expanded</code> automatically.
+                        Set <code class="text-bold text-primary">aria-expanded</code> only once in your HTML to match the initial state.
+                        After this, the script updates it automatically.
+                    </p>
+
+                    <p class="p-1">
+                        Add <code class="text-bold text-primary">aria-controls</code> to link the button to the panel ID.
+                        This helps assistive technologies understand which content is being toggled.
                     </p>
                 </div>
             </article>
 
-            {# Note open state #}
+            {# State #}
             <article class="card p-2">
                 <div class="card-header">
-                    <h2>📌 Default open state</h2>
+                    <h2>📌 State</h2>
                 </div>
                 <div class="card-body">
                     <p class="p-1">
-                        To open a collapse by default, add the
-                        <code class="text-bold text-primary">.show</code> class to the
-                        <code class="text-bold text-primary">.collapse-body</code> in your HTML.
+                        To keep the panel open on page load, add the
+                        <code class="text-bold text-primary">.show</code> class on the
+                        <code class="text-bold text-primary">.collapse-body</code>.
                     </p>
                 </div>
             </article>
 
-            {# Notes about spacing #}
+            {# Spacing rules #}
             <article class="card p-2">
                 <div class="card-header">
-                    <h2>📌 Note spacing rules</h2>
+                    <h2>📌 Spacing rules</h2>
                 </div>
                 <div class="card-body">
                     <p class="p-1">
-                        Do not set <code class="text-bold text-primary">padding</code> or
-                        <code class="text-bold text-primary">margin</code> on
-                        <code class="text-bold text-primary">.collapse-body</code>, as this container is reset and
-                        spacing there will not behave as expected.
-                        Add spacing to elements inside the body (for example a <code
-                            class="text-bold text-primary">p</code>,
-                        <code class="text-bold text-primary">ul</code> or an inner wrapper), not on
-                        <code class="text-bold text-primary">.collapse-body</code> itself.
+                        Do not add <code class="text-bold text-primary">padding</code> or <code
+                            class="text-bold text-primary">margin</code> on
+                        <code class="text-bold text-primary">.collapse-body</code>.
+                        Add spacing on elements inside the panel (like
+                        <code class="text-bold text-primary">p</code> or <code class="text-bold text-primary">ul</code>),
+                        not on <code class="text-bold text-primary">.collapse-body</code>.
                     </p>
                 </div>
             </article>

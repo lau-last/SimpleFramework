@@ -58,12 +58,8 @@
                     <h2>📏 Sizes</h2>
                 </div>
                 <div class="card-body">
-                    <p class="p-1">
-                        Each class (<code class="text-bold text-primary">.badge</code>, <code
-                            class="text-bold text-primary">.badge-sm</code>, <code class="text-bold text-primary">.badge-md</code>,
-                        <code class="text-bold text-primary">.badge-lg</code>) includes the base badge style with its
-                        own padding.
-                    </p>
+                    These classes apply only to the badge.
+                    Each one already includes both the style and the size, so just pick the one you need.
                     <div class="row mt-2">
                         <div class="col-12 col-4-xs">
                             <div class="card p-2">
@@ -89,6 +85,32 @@
                 </div>
             </article>
 
+            {# Colors #}
+            <article class="card p-2">
+                <div class="card-header">
+                    <h2>🎨 Colors</h2>
+                </div>
+                <div class="card-body">
+                    <p class="p-1">
+                        Choose the badge style by applying the appropriate class to your element.
+                    </p>
+
+                    <div class="row mt-2">
+                        <div class="col-12 col-4-xs">
+                            <div class="card p-2">
+                                <code class="text-bold text-primary">.badge-{color}</code>
+                            </div>
+                        </div>
+
+                        <div class="col-12 col-4-xs">
+                            <div class="card p-2">
+                                <code class="text-bold text-primary">.outline-{color}</code>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </article>
+
             {# Type #}
             <article class="card p-2">
                 <div class="card-header">
@@ -96,21 +118,9 @@
                 </div>
                 <div class="card-body">
                     <p class="p-1">
-                        Use <code class="text-bold text-primary">.badge-{color}</code> for solid badge, <code
-                            class="text-bold text-primary">.badge-{color}</code> for bordered styles, and <code
-                            class="text-bold text-primary">.rounded-pill</code> for softer shapes.
+                        Choose the badge type by adding the corresponding class to your element.
                     </p>
                     <div class="row mt-2">
-                        <div class="col-12 col-4-xs">
-                            <div class="card p-2">
-                                <code class="text-bold text-primary">.badge-{color}</code>
-                            </div>
-                        </div>
-                        <div class="col-12 col-4-xs">
-                            <div class="card p-2">
-                                <code class="text-bold text-primary">.outline-{color}</code>
-                            </div>
-                        </div>
                         <div class="col-12 col-4-xs">
                             <div class="card p-2">
                                 <code class="text-bold text-primary">.rounded-pill</code>
@@ -120,11 +130,10 @@
                 </div>
             </article>
 
-
-            {# Note about badge-group #}
+            {# Badge group #}
             <article class="card p-2">
                 <div class="card-header">
-                    <h2>📌 Note badge-group</h2>
+                    <h2>📌 Badge group</h2>
                 </div>
                 <div class="card-body">
                     <p class="p-1">
