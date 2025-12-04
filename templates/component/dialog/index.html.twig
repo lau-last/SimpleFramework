@@ -77,7 +77,7 @@
                                 </div>
                             </dialog>
                             <!-- Dialog 3 -->
-                            <dialog class="dialog bg-danger border-danger" id="third-modal-demo" aria-modal="true">
+                            <dialog class="dialog dialog-primary" id="third-modal-demo" aria-modal="true">
                                 <div class="dialog-header">
                                     <h3>Second Dialog</h3>
                                 </div>
@@ -101,32 +101,21 @@
                 <div class="card-body">
                     <p class="p-1">
                         Add <code class="text-bold text-primary">data-js="dialog"</code> to a button and set
-                        <code class="text-bold text-primary">data-target</code> to the dialog ID. When clicked, the
-                        script opens
-                        the dialog and closes it when the user clicks an element with <code
-                            class="text-bold text-primary">.close</code>
-                        or presses ESC. Add <code class="text-bold text-primary">aria-modal="true"</code> manually for
-                        accessibility.
+                        <code class="text-bold text-primary">data-target</code> to the dialog ID. The script opens the dialog and
+                        closes it when the user clicks an element with <code class="text-bold text-primary">.close</code> or presses ESC.
                     </p>
                 </div>
             </article>
 
-            {# Dialog Sizes #}
+            {# Sizes #}
             <article class="card p-2">
                 <div class="card-header">
-                    <h2>📏 Dialog sizes</h2>
+                    <h2>📏 Sizes</h2>
                 </div>
 
                 <div class="card-body">
-                    <p class="p-1">
-                        Each class (<code class="text-bold text-primary">.dialog</code>,
-                        <code class="text-bold text-primary">.dialog-sm</code>,
-                        <code class="text-bold text-primary">.dialog-md</code>,
-                        <code class="text-bold text-primary">.dialog-lg</code>)
-                        controls the <span class="text-bold">maximum width</span> of the dialog.<br>
-                        The width is responsive: it never exceeds
-                        <code class="text-bold text-primary">95vw</code> on small screens.
-                    </p>
+                    These classes apply only to dialogs.
+                    Each one defines a different maximum width while remaining responsive on smaller screens.
 
                     <div class="row mt-2">
                         <div class="col-12 col-4-xs">
@@ -150,6 +139,28 @@
                         <div class="col-12 col-4-xs">
                             <div class="card p-2">
                                 <code class="text-bold text-primary">.dialog-lg</code>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </article>
+
+            {# Colors #}
+            <article class="card p-2">
+                <div class="card-header">
+                    <h2>🎨 Colors</h2>
+                </div>
+
+                <div class="card-body">
+                    <p class="p-1">
+                        Apply a color to your dialog using <code class="text-bold text-primary">.dialog-{color}</code>. Each variant sets the background, border, and text contrast for the entire dialog.
+                        For more specific variations such as custom headers, borders, or additional effects, refer to the examples above.
+                    </p>
+
+                    <div class="row mt-2">
+                        <div class="col-12 col-4-xs">
+                            <div class="card p-2">
+                                <code class="text-bold text-primary">.dialog-{color}</code>
                             </div>
                         </div>
                     </div>
@@ -310,7 +321,7 @@
             </button>
         </div>
     </dialog>
-    <dialog class="dialog bg-danger border-danger" id="modal-second" aria-modal="true">
+    <dialog class="dialog dialog-primary" id="modal-second" aria-modal="true">
         <div class="dialog-header">
             <h3>Second Dialog</h3>
         </div>

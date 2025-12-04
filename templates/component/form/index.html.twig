@@ -307,19 +307,27 @@
                 </div>
             </article>
 
-            {# Input sizes #}
+            {# How to use #}
+            <article class="card p-2">
+                <div class="card-header">
+                    <h2>🛠️ How use validate</h2>
+                </div>
+                <div class="card-body">
+                    <p class="p-1">
+                        Add <code class="text-bold text-primary">data-js="validate"</code> to the form, apply <code class="text-bold text-primary">required</code> or any HTML constraints to the fields, and wrap each label–input pair in <code class="text-bold text-primary">.form-control</code>.
+                        Use <code class="text-bold text-primary">novalidate</code> if you want to disable native browser popups and rely entirely on the component's validation UI.
+                    </p>
+                </div>
+            </article>
+
+            {# Sizes #}
             <article class="card p-2">
                 <div class="card-header">
                     <h2>📏 Input sizes</h2>
                 </div>
                 <div class="card-body">
-                    <p class="p-1">
-                        Input size is controlled by the wrapper. Use <code
-                            class="text-bold text-primary">.form-control</code> for the default size, or <code
-                            class="text-bold text-primary">.form-control-sm</code>, <code
-                            class="text-bold text-primary">.form-control-md</code>, and <code
-                            class="text-bold text-primary">.form-control-lg</code> for smaller or larger fields.
-                    </p>
+                    These classes apply only to input wrappers.
+                    Each one provides its own size and spacing.
 
                     <div class="row mt-2">
                         <div class="col-12 col-4-xs">
@@ -327,16 +335,19 @@
                                 <code class="text-bold text-primary">.form-control</code>
                             </div>
                         </div>
+
                         <div class="col-12 col-4-xs">
                             <div class="card p-2">
                                 <code class="text-bold text-primary">.form-control-sm</code>
                             </div>
                         </div>
+
                         <div class="col-12 col-4-xs">
                             <div class="card p-2">
                                 <code class="text-bold text-primary">.form-control-md</code>
                             </div>
                         </div>
+
                         <div class="col-12 col-4-xs">
                             <div class="card p-2">
                                 <code class="text-bold text-primary">.form-control-lg</code>
@@ -349,46 +360,12 @@
             {# Form inline #}
             <article class="card p-2">
                 <div class="card-header">
-                    <h2>📏 Inline Forms</h2>
+                    <h2>📍 Inline Forms</h2>
                 </div>
                 <div class="card-body">
                     <p class="p-1">
-                        By default, labels and inputs are displayed vertically: the label appears above the field.
-                        If you want a horizontal layout instead, <br>wrap your label and input inside
-                        <code class="text-bold text-primary">.form-inline</code>.
-                        This class aligns both elements side by side while keeping the spacing consistent.
-                    </p>
-                </div>
-            </article>
-
-            {# How it works #}
-            <article class="card p-2">
-                <div class="card-header">
-                    <h2>⚙️ How it works</h2>
-                </div>
-                <div class="card-body">
-                    <p class="p-1">
-                        The script listens to <code class="text-bold text-primary">submit</code> events on forms with
-                        <code class="text-bold text-primary">data-js="validate"</code>, uses the browser’s native <code
-                            class="text-bold text-primary">checkValidity()</code>, and prevents submit if the form is
-                        invalid while adding <code class="text-bold text-primary">.validated</code> so CSS can style
-                        valid and invalid fields.
-                    </p>
-                </div>
-            </article>
-
-            {# How to use #}
-            <article class="card p-2">
-                <div class="card-header">
-                    <h2>🛠️ How to use</h2>
-                </div>
-                <div class="card-body">
-                    <p class="p-1">
-                        Add <code class="text-bold text-primary">data-js="validate"</code> to your form, set <code
-                            class="text-bold text-primary">required</code> or other HTML constraints on fields, and wrap
-                        each label–field pair in <code class="text-bold text-primary">.form-control</code>. Use the
-                        <code class="text-bold text-primary">novalidate</code> attribute on the form if you want to
-                        disable native browser error popups and let the component handle validation UI.
+                        By default, labels sit above inputs.
+                        Use <code class="text-bold text-primary">.form-inline</code> to place the label and field side by side while keeping consistent spacing.
                     </p>
                 </div>
             </article>
