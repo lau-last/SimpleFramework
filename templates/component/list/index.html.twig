@@ -20,20 +20,52 @@
                 </div>
                 <div class="card-body">
                     <div class="row">
-                        <div class="col-12 col-6-xs">
-                            <ul class="list list-warning list-hover">
-                                <li class="list-item">List 2</li>
-                                <li class="list-item">List 2</li>
-                                <li class="list-item">List 2</li>
-                                <li class="list-item">List 2</li>
+                        <div class="col-12 col-4-xs">
+                            <ul class="list list-primary list-borderless">
+                                <li class="list-item">list-borderless</li>
+                                <li class="list-item">list-borderless</li>
+                                <li class="list-item">list-borderless</li>
+                                <li class="list-item">list-borderless</li>
                             </ul>
                         </div>
-                        <div class="col-12 col-6-xs">
+                        <div class="col-12 col-4-xs">
+                            <ul class="list list-primary">
+                                <li class="list-item">List</li>
+                                <li class="list-item">List</li>
+                                <li class="list-item">List</li>
+                                <li class="list-item">List</li>
+                            </ul>
+                        </div>
+                        <div class="col-12 col-4-xs">
+                            <ul class="list list-primary list-bordered">
+                                <li class="list-item">List-bordered</li>
+                                <li class="list-item">List-bordered</li>
+                                <li class="list-item">List-bordered</li>
+                                <li class="list-item">List-bordered</li>
+                            </ul>
+                        </div>
+                        <div class="col-12 col-4-xs">
+                            <ul class="list list-primary list-hover">
+                                <li class="list-item">List hover with link</li>
+                                <li class="list-item">List hover with link</li>
+                                <li class="list-item">List hover with link</li>
+                                <li class="list-item">List hover with link</li>
+                            </ul>
+                        </div>
+                        <div class="col-12 col-4-xs">
                             <ul class="list list-hover">
-                                <li class="list-item list-primary">List 3</li>
-                                <li class="list-item list-secondary">List 3</li>
-                                <li class="list-item list-tertiary">List 3</li>
-                                <li class="list-item list-success">List 3</li>
+                                <li class="list-item"><a href="#" class="list-link">List hover</a></li>
+                                <li class="list-item list-primary"><a href="#" class="list-link">List hover</a></li>
+                                <li class="list-item list-secondary"><a href="#" class="list-link">List hover</a></li>
+                                <li class="list-item list-tertiary"><a href="#" class="list-link">List hover</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-12 col-4-xs">
+                            <ul class="list">
+                                <li class="list-item active">List active</li>
+                                <li class="list-item list-primary list-hover">List hover</li>
+                                <li class="list-item list-secondary">List</li>
+                                <li class="list-item list-tertiary list-hover">List hover</li>
                             </ul>
                         </div>
                     </div>
@@ -51,21 +83,64 @@
                                 onclick="copyCode('code-list', this);">Copy
                         </button>
                         <div data-js="code" id="code-list" class="container-code overflow-auto">
-                            <ul class="list list-warning list-hover">
-                                <li class="list-item">List 2</li>
-                                <li class="list-item">List 2</li>
-                                <li class="list-item">List 2</li>
-                                <li class="list-item">List 2</li>
+                            <ul class="list list-primary list-borderless">
+                                <li class="list-item">list-borderless</li>
+                                <li class="list-item">list-borderless</li>
+                                <li class="list-item">list-borderless</li>
+                                <li class="list-item">list-borderless</li>
+                            </ul>
+
+                            <ul class="list list-primary">
+                                <li class="list-item">List</li>
+                                <li class="list-item">List</li>
+                                <li class="list-item">List</li>
+                                <li class="list-item">List</li>
+                            </ul>
+
+                            <ul class="list list-primary list-hover">
+                                <li class="list-item">List hover with link</li>
+                                <li class="list-item">List hover with link</li>
+                                <li class="list-item">List hover with link</li>
+                                <li class="list-item">List hover with link</li>
                             </ul>
 
                             <ul class="list list-hover">
-                                <li class="list-item list-primary">List 3</li>
-                                <li class="list-item list-secondary">List 3</li>
-                                <li class="list-item list-tertiary">List 3</li>
-                                <li class="list-item list-success">List 3</li>
+                                <li class="list-item"><a href="#" class="list-link">List hover</a></li>
+                                <li class="list-item list-primary"><a href="#" class="list-link">List hover</a></li>
+                                <li class="list-item list-secondary"><a href="#" class="list-link">List hover</a></li>
+                                <li class="list-item list-tertiary"><a href="#" class="list-link">List hover</a></li>
+                            </ul>
+
+                            <ul class="list list-hover">
+                                <li class="list-item">List hover 2</li>
+                                <li class="list-item list-primary">List hover 2</li>
+                                <li class="list-item list-secondary">List hover 2</li>
+                                <li class="list-item list-tertiary">List hover 2</li>
+                            </ul>
+
+                            <ul class="list">
+                                <li class="list-item active">List active</li>
+                                <li class="list-item list-primary list-hover">List hover</li>
+                                <li class="list-item list-secondary">List</li>
+                                <li class="list-item list-tertiary list-hover">List hover</li>
                             </ul>
                         </div>
                     </div>
+                </div>
+            </article>
+
+            {# Link rules #}
+            <article class="card p-2">
+                <div class="card-header">
+                    <h2>🔗 Link rules</h2>
+                </div>
+                <div class="card-body">
+                    <p class="p-1">
+                        When your list contains links or interactive elements, make sure to wrap them inside
+                        <code class="text-bold text-primary">.list-link</code>.
+                        This class ensures that padding and spacing are applied correctly on the link itself,
+                        not on <code class="text-bold text-primary">.list-item</code>.
+                    </p>
                 </div>
             </article>
 
@@ -75,30 +150,30 @@
                     <h2>📏 Sizes</h2>
                 </div>
                 <div class="card-body">
-                    <p class="p-1">You don’t need to combine
-                        <code class="text-bold text-primary">.list</code>
-                        with a size class. Each size class (
-                        <code class="text-bold text-primary">.list</code>,
-                        <code class="text-bold text-primary">.list-sm</code>,
-                        <code class="text-bold text-primary">.list-md</code>,
-                        <code class="text-bold text-primary">.list-lg</code> )
-                        already includes the base list style and its own CSS variables.</p>
+                    <p class="p-1">
+                        These classes apply only to lists. Each size includes the base list style and its own spacing
+                        variables.
+                    </p>
+
                     <div class="row mt-2">
                         <div class="col-12 col-4-xs">
                             <div class="card p-2">
                                 <code class="text-bold text-primary">.list</code>
                             </div>
                         </div>
+
                         <div class="col-12 col-4-xs">
                             <div class="card p-2">
                                 <code class="text-bold text-primary">.list-sm</code>
                             </div>
                         </div>
+
                         <div class="col-12 col-4-xs">
                             <div class="card p-2">
                                 <code class="text-bold text-primary">.list-md</code>
                             </div>
                         </div>
+
                         <div class="col-12 col-4-xs">
                             <div class="card p-2">
                                 <code class="text-bold text-primary">.list-lg</code>
@@ -108,66 +183,21 @@
                 </div>
             </article>
 
-            {# Color #}
+            {# Colors #}
             <article class="card p-2">
                 <div class="card-header">
-                    <h2>🎨 Color</h2>
+                    <h2>🎨 Colors</h2>
                 </div>
+
                 <div class="card-body">
-                    <div class="row">
+                    <p class="p-1">
+                        Choose the list color by applying the corresponding class to your element.
+                    </p>
+
+                    <div class="row mt-2">
                         <div class="col-12 col-4-xs">
-                            <div class="card p-2 list-primary">
-                                <code class="text-bold">.list-primary</code>
-                            </div>
-                        </div>
-                        <div class="col-12 col-4-xs">
-                            <div class="card p-2 list-secondary">
-                                <code class="text-bold">.list-secondary</code>
-                            </div>
-                        </div>
-                        <div class="col-12 col-4-xs">
-                            <div class="card p-2 list-tertiary">
-                                <code class="text-bold">.list-tertiary</code>
-                            </div>
-                        </div>
-                        <div class="col-12 col-4-xs">
-                            <div class="card p-2 list-success">
-                                <code class="text-bold">.list-success</code>
-                            </div>
-                        </div>
-                        <div class="col-12 col-4-xs">
-                            <div class="card p-2 list-danger">
-                                <code class="text-bold">.list-danger</code>
-                            </div>
-                        </div>
-                        <div class="col-12 col-4-xs">
-                            <div class="card p-2 list-warning">
-                                <code class="text-bold">.list-warning</code>
-                            </div>
-                        </div>
-                        <div class="col-12 col-4-xs">
-                            <div class="card p-2 list-info">
-                                <code class="text-bold">.list-info</code>
-                            </div>
-                        </div>
-                        <div class="col-12 col-4-xs">
-                            <div class="card p-2 list-light">
-                                <code class="text-bold">.list-light</code>
-                            </div>
-                        </div>
-                        <div class="col-12 col-4-xs">
-                            <div class="card p-2 list-dark">
-                                <code class="text-bold">.list-dark</code>
-                            </div>
-                        </div>
-                        <div class="col-12 col-4-xs">
-                            <div class="card p-2 list-white">
-                                <code class="text-bold">.list-white</code>
-                            </div>
-                        </div>
-                        <div class="col-12 col-4-xs">
-                            <div class="card p-2 list-black">
-                                <code class="text-bold">.list-black</code>
+                            <div class="card p-2">
+                                <code class="text-bold text-primary">.list-{color}</code>
                             </div>
                         </div>
                     </div>
@@ -248,26 +278,6 @@
                             <tr>
                                 <td><code class="text-bold text-primary">--list-item-border-width</code></td>
                                 <td>Border width applied to list items.</td>
-                            </tr>
-
-                            <tr>
-                                <td><code class="text-bold text-primary">--list-item-height</code></td>
-                                <td>Default height of list items.</td>
-                            </tr>
-
-                            <tr>
-                                <td><code class="text-bold text-primary">--list-item-height-lg</code></td>
-                                <td>Height of large-sized list items.</td>
-                            </tr>
-
-                            <tr>
-                                <td><code class="text-bold text-primary">--list-item-height-md</code></td>
-                                <td>Height of medium-sized list items.</td>
-                            </tr>
-
-                            <tr>
-                                <td><code class="text-bold text-primary">--list-item-height-sm</code></td>
-                                <td>Height of small-sized list items.</td>
                             </tr>
 
                             <tr>
