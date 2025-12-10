@@ -20,7 +20,7 @@
                 </div>
                 <div class="card-body">
                     <!--Navbar 1-->
-                    <nav class="my-2 navbar-xs navbar-primary ">
+                    <nav class="my-2 navbar-xs navbar-primary">
                         <div>Lorem.</div>
                         <button class="navbar-btn btn btn-white"
                                 data-js="collapse"
@@ -38,47 +38,21 @@
                                 <a href="#">menu</a>
                                 <a href="#">menu</a>
                                 <a href="#">menu</a>
-                                <a href="#">menu</a>
-                            </div>
-                        </div>
-                    </nav>
-
-                    <!--Navbar 2-->
-                    <nav class="my-2 navbar navbar-primary">
-                        <div>Lorem.</div>
-                        <button class="navbar-btn btn btn-white"
-                                data-js="collapse"
-                                data-target="#navbar-2"
-                                aria-controls="navbar-2"
-                                aria-expanded="false">
-                            Show menu
-                        </button>
-                        <div class="navbar-body bp-center" id="navbar-2">
-                            <ul class="navbar-collapse list list-borderless">
-                                <li class="list-item list-hover"><a href="#" class="list-link">menu</a></li>
-                                <li class="list-item list-hover"><a href="#" class="list-link">menu</a></li>
-                                <li class="list-item dropdown">
-                                    <button class="btn btn-primary" data-js="dropdown" data-target="#dropdown-bottom-left" aria-controls="dropdown-bottom-left" aria-expanded="false">
-                                        Dropdown
+                                <div class="dropdown">
+                                    <button class="btn outline-white" data-js="dropdown" data-target="#dropdown-menu1" aria-controls="dropdown-menu1-demo" aria-expanded="false">
+                                        Dropdown &#9662
                                     </button>
-                                    <div class="dropdown-body bottom left" id="dropdown-bottom-left">
+                                    <div class="dropdown-body top left bottom-xs center-xs" id="dropdown-menu1">
                                         <ul class="list list-hover">
                                             <li class="list-item"><a class="list-link" href="#">Dropdown bottom left menu</a></li>
                                             <li class="list-item"><a class="list-link" href="#">Dropdown bottom left menu</a></li>
                                             <li class="list-item"><a class="list-link" href="#">Dropdown bottom left menu</a></li>
                                         </ul>
                                     </div>
-                                </li>
-                                <li class="list-item list-hover"><a href="#" class="list-link">menu</a></li>
-                                <li class="list-item list-hover"><a href="#" class="list-link">menu</a></li>
-                                <li class="list-item list-hover"><a href="#" class="list-link">menu</a></li>
-                                <li class="list-item list-hover"><a href="#" class="list-link">menu</a></li>
-                                <li class="list-item list-hover"><a href="#" class="list-link">menu</a></li>
-                            </ul>
+                                </div>
+                            </div>
                         </div>
-
                     </nav>
-
                 </div>
             </article>
 
@@ -90,20 +64,20 @@
                 <div class="card-body">
                     <div class="position-relative">
                         <button class="btn btn-primary position-top-right z-1 mt-1 mr-1"
-                                onclick="copyCode('code-navbar', this);">Copy
+                                onclick="copyCode('code-navbar1', this);">Copy
                         </button>
-                        <div data-js="code" id="code-navbar" class="container-code overflow-auto">
+                        <div data-js="code" id="code-navbar1" class="container-code overflow-auto">
                             <!--Navbar 1-->
-                            <nav class="navbar-xs navbar-primary">
+                            <nav class="my-2 navbar-xs navbar-primary">
                                 <div>Lorem.</div>
                                 <button class="navbar-btn btn btn-white"
                                         data-js="collapse"
-                                        data-target="#navbar-demo-1"
-                                        aria-controls="navbar-demo-1"
+                                        data-target="#navbar-1"
+                                        aria-controls="navbar-1"
                                         aria-expanded="false">
                                     Show menu
                                 </button>
-                                <div class="navbar-body center bp-left" id="navbar-demo-1">
+                                <div class="navbar-body center bp-left" id="navbar-1">
                                     <div class="navbar-collapse">
                                         <a href="#">menu</a>
                                         <a href="#">menu</a>
@@ -112,23 +86,95 @@
                                         <a href="#">menu</a>
                                         <a href="#">menu</a>
                                         <a href="#">menu</a>
-                                        <a href="#">menu</a>
+                                        <div class="dropdown">
+                                            <button class="btn outline-white" data-js="dropdown" data-target="#dropdown-menu1" aria-controls="dropdown-menu1-demo" aria-expanded="false">
+                                                Dropdown &#9662
+                                            </button>
+                                            <div class="dropdown-body top left bottom-xs center-xs" id="dropdown-menu1">
+                                                <ul class="list list-hover">
+                                                    <li class="list-item"><a class="list-link" href="#">Dropdown bottom left menu</a></li>
+                                                    <li class="list-item"><a class="list-link" href="#">Dropdown bottom left menu</a></li>
+                                                    <li class="list-item"><a class="list-link" href="#">Dropdown bottom left menu</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </nav>
+                        </div>
+                    </div>
+                </div>
+            </article>
 
+            {# Examples #}
+            <article class="card p-2">
+                <div class="card-header">
+                    <h2>💠 Example</h2>
+                </div>
+                <div class="card-body">
+                    <!--Navbar 2-->
+                    <nav class="my-2 navbar navbar-primary">
+                        <div>Lorem.</div>
+                        <button class="navbar-btn btn btn-white"
+                                data-js="collapse"
+                                data-target="#navbar-2"
+                                aria-controls="navbar-2"
+                                aria-expanded="false">
+                            Show menu
+                        </button>
+                        <div class="navbar-body bp-center" id="navbar-2">
+                            <ul class="navbar-collapse list list-borderless list-hover">
+                                <li class="list-item"><a href="#" class="list-link">menu</a></li>
+                                <li class="list-item"><a href="#" class="list-link">menu</a></li>
+                                <li class="list-item"><a href="#" class="list-link">menu</a></li>
+                                <li class="list-item"><a href="#" class="list-link">menu</a></li>
+                                <li class="list-item"><a href="#" class="list-link">menu</a></li>
+                                <li class="list-item"><a href="#" class="list-link">menu</a></li>
+                                <li class="list-item"><a href="#" class="list-link">menu</a></li>
+                                <li class="list-item">
+                                    <div class="dropdown">
+                                        <button class="btn outline-white" data-js="dropdown" data-target="#dropdown-menu2" aria-controls="dropdown-menu2-demo" aria-expanded="false">
+                                            Dropdown &#9662
+                                        </button>
+                                        <div class="dropdown-body top center side-left-md" id="dropdown-menu2">
+                                            <ul class="list list-hover">
+                                                <li class="list-item"><a class="list-link" href="#">Dropdown bottom left menu</a></li>
+                                                <li class="list-item"><a class="list-link" href="#">Dropdown bottom left menu</a></li>
+                                                <li class="list-item"><a class="list-link" href="#">Dropdown bottom left menu</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+
+                    </nav>
+                </div>
+            </article>
+
+            {# HTML Code #}
+            <article class="card p-2">
+                <div class="card-header">
+                    <h2>💻 HTML Code</h2>
+                </div>
+                <div class="card-body">
+                    <div class="position-relative">
+                        <button class="btn btn-primary position-top-right z-1 mt-1 mr-1"
+                                onclick="copyCode('code-navbar2', this);">Copy
+                        </button>
+                        <div data-js="code" id="code-navbar2" class="container-code overflow-auto">
                             <!--Navbar 2-->
-                            <nav class="navbar navbar-primary">
+                            <nav class="my-2 navbar navbar-primary">
                                 <div>Lorem.</div>
                                 <button class="navbar-btn btn btn-white"
                                         data-js="collapse"
-                                        data-target="#navbar-demo-2"
-                                        aria-controls="navbar-demo-2"
+                                        data-target="#navbar-2"
+                                        aria-controls="navbar-2"
                                         aria-expanded="false">
                                     Show menu
                                 </button>
-                                <div class="navbar-body bp-center" id="navbar-demo-2">
-                                    <ul class="navbar-collapse list list-hover list-borderless">
+                                <div class="navbar-body bp-center" id="navbar-2">
+                                    <ul class="navbar-collapse list list-borderless list-hover">
                                         <li class="list-item"><a href="#" class="list-link">menu</a></li>
                                         <li class="list-item"><a href="#" class="list-link">menu</a></li>
                                         <li class="list-item"><a href="#" class="list-link">menu</a></li>
@@ -136,7 +182,20 @@
                                         <li class="list-item"><a href="#" class="list-link">menu</a></li>
                                         <li class="list-item"><a href="#" class="list-link">menu</a></li>
                                         <li class="list-item"><a href="#" class="list-link">menu</a></li>
-                                        <li class="list-item"><a href="#" class="list-link">menu</a></li>
+                                        <li class="list-item">
+                                            <div class="dropdown">
+                                                <button class="btn outline-white" data-js="dropdown" data-target="#dropdown-menu2" aria-controls="dropdown-menu2-demo" aria-expanded="false">
+                                                    Dropdown &#9662
+                                                </button>
+                                                <div class="dropdown-body top center side-left-md" id="dropdown-menu2">
+                                                    <ul class="list list-hover">
+                                                        <li class="list-item"><a class="list-link" href="#">Dropdown bottom left menu</a></li>
+                                                        <li class="list-item"><a class="list-link" href="#">Dropdown bottom left menu</a></li>
+                                                        <li class="list-item"><a class="list-link" href="#">Dropdown bottom left menu</a></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </li>
                                     </ul>
                                 </div>
                             </nav>
@@ -145,62 +204,80 @@
                 </div>
             </article>
 
-            {# Sizes #}
+            {# How to use #}
             <article class="card p-2">
                 <div class="card-header">
-                    <h2>📏 Sizes</h2>
+                    <h2>🧩 How to use</h2>
                 </div>
                 <div class="card-body">
                     <p class="p-1">
-                        The current configuration sets the typographic baseline to <code class="text-bold text-primary">1rem = 10px</code>, using
-                        <code class="text-bold text-primary">html { font-size: 62.5%; }</code>.
+                        Add <code class="text-bold text-primary">data-js="collapse"</code> to the toggle button and set
+                        <code class="text-bold text-primary">data-target</code> to the navbar body ID.
+                        The script opens or closes the navbar body, toggles the
+                        <code class="text-bold text-primary">.show</code> class, and updates
+                        <code class="text-bold text-primary">aria-expanded</code> automatically.
+                    </p>
+                </div>
+            </article>
+
+            {# Sizes (Breakpoints) #}
+            <article class="card p-2">
+                <div class="card-header">
+                    <h2>📏 Breakpoints</h2>
+                </div>
+                <div class="card-body">
+                    <p class="p-1">
+                    These classes control the breakpoint at which the navbar switches
+                    between desktop layout and collapsed layout.
+                    Each one sets its own responsive behavior. <br>
+                    The default <code class="text-bold text-primary">.navbar</code> uses the <code class="text-bold text-primary">md</code> breakpoint.
                     </p>
                     <p class="p-1">
-                        Navbar size classes choose the breakpoint where the menu collapses into a button; each one
-                        includes the base navbar style and its own max-width value.
+                        The current configuration sets the typographic baseline to <code class="text-bold text-primary">1rem = 10px</code>, using
+                        <code class="text-bold text-primary">html { font-size: 62.5%; }</code>.
                     </p>
 
                     <div class="row mt-2">
                         <div class="col-12 col-4-xs">
                             <article class="card p-2">
                                 <code class="text-bold text-primary">.navbar</code>
-                                <p class="text-sm mt-1">Collapses at 76.8rem</p>
+                                <p class="text-sm mt-1">Collapses at 76.8rem (768px)</p>
                             </article>
                         </div>
                         <div class="col-12 col-4-xs">
                             <article class="card p-2">
                                 <code class="text-bold text-primary">.navbar-xs</code>
-                                <p class="text-sm mt-1">Collapses at 42.5rem</p>
+                                <p class="text-sm mt-1">Collapses at 42.5rem (425px)</p>
                             </article>
                         </div>
                         <div class="col-12 col-4-xs">
                             <article class="card p-2">
                                 <code class="text-bold text-primary">.navbar-sm</code>
-                                <p class="text-sm mt-1">Collapses at 57.6rem</p>
+                                <p class="text-sm mt-1">Collapses at 57.6rem (576px)</p>
                             </article>
                         </div>
                         <div class="col-12 col-4-xs">
                             <article class="card p-2">
                                 <code class="text-bold text-primary">.navbar-md</code>
-                                <p class="text-sm mt-1">Collapses at 76.8rem</p>
+                                <p class="text-sm mt-1">Collapses at 76.8rem (768px)</p>
                             </article>
                         </div>
                         <div class="col-12 col-4-xs">
                             <article class="card p-2">
                                 <code class="text-bold text-primary">.navbar-lg</code>
-                                <p class="text-sm mt-1">Collapses at 99.2rem</p>
+                                <p class="text-sm mt-1">Collapses at 99.2rem (992px)</p>
                             </article>
                         </div>
                         <div class="col-12 col-4-xs">
                             <article class="card p-2">
                                 <code class="text-bold text-primary">.navbar-xl</code>
-                                <p class="text-sm mt-1">Collapses at 120rem</p>
+                                <p class="text-sm mt-1">Collapses at 120rem (1200px)</p>
                             </article>
                         </div>
                         <div class="col-12 col-4-xs">
                             <article class="card p-2">
                                 <code class="text-bold text-primary">.navbar-xxl</code>
-                                <p class="text-sm mt-1">Collapses at 140rem</p>
+                                <p class="text-sm mt-1">Collapses at 140rem (1400px)</p>
                             </article>
                         </div>
                     </div>
@@ -214,89 +291,76 @@
                 </div>
 
                 <div class="card-body">
-                    <p class="mb-2">
-                        Alignment is controlled via classes on
-                        <code class="text-bold text-primary">.navbar-collapse</code>.
-                        On desktop, you can align navigation items left, center, or right.
-                    </p>
-
-                    <div class="row mt-2">
-                        <div class="col-12 col-4-xs">
-                            <article class="card p-2">
-                                <code class="text-bold text-primary">.nav-left</code>
-                                <p class="text-sm mt-1">Aligns items to the left.</p>
-                            </article>
-                        </div>
-
-                        <div class="col-12 col-4-xs">
-                            <article class="card p-2">
-                                <code class="text-bold text-primary">.nav-center</code>
-                                <p class="text-sm mt-1">Centers the navigation.</p>
-                            </article>
-                        </div>
-
-                        <div class="col-12 col-4-xs">
-                            <article class="card p-2">
-                                <code class="text-bold text-primary">.nav-right</code>
-                                <p class="text-sm mt-1">Aligns items to the right.</p>
-                            </article>
-                        </div>
-                    </div>
-
-                    <p class="my-2">
-                        When the navbar is collapsed (<code class="text-bold text-primary">.navbar-collapse.show</code>),
-                        use the <code class="text-bold text-primary">*-collapse</code> variants to control alignment
-                        inside the dropdown.
-                    </p>
-
-                    <div class="row mt-2">
-
-                        <div class="col-12 col-4-xs">
-                            <article class="card p-2">
-                                <code class="text-bold text-primary">.nav-left-collapse</code>
-                                <p class="text-sm mt-1">
-                                    Aligns items to the left <b>in collapsed mode</b>.
-                                </p>
-                            </article>
-                        </div>
-
-                        <div class="col-12 col-4-xs">
-                            <article class="card p-2">
-                                <code class="text-bold text-primary">.nav-center-collapse</code>
-                                <p class="text-sm mt-1">
-                                    Centers items <b>in collapsed mode</b>.
-                                </p>
-                            </article>
-                        </div>
-
-                        <div class="col-12 col-4-xs">
-                            <article class="card p-2">
-                                <code class="text-bold text-primary">.nav-right-collapse</code>
-                                <p class="text-sm mt-1">
-                                    Aligns items to the right <b>in collapsed mode</b>.
-                                </p>
-                            </article>
-                        </div>
-
-                    </div>
-                </div>
-            </article>
-
-            {# How it works #}
-            <article class="card p-2">
-                <div class="card-header">
-                    <h2>⚙️ How it works</h2>
-                </div>
-                <div class="card-body">
                     <p class="p-1">
-                        The script listens for clicks on
-                        <code class="text-bold text-primary">[data-js="collapse"]</code>, toggles the
-                        <code class="text-bold text-primary">.show</code> class on
-                        <code class="text-bold text-primary">.navbar-collapse</code>,
-                        and updates <code class="text-bold text-primary">aria-expanded</code>.
-                        Each <code class="text-bold text-primary">.navbar-*</code> class defines the breakpoint
-                        where the navbar switches to collapsed (burger) mode.
+                        Alignment is controlled via classes on
+                        <code class="text-bold text-primary">.navbar-body</code>.
+                        On desktop, you can align the content to the left, center, or right.
                     </p>
+
+                    <div class="row my-2">
+                        <div class="col-12 col-4-xs">
+                            <article class="card p-2">
+                                <code class="text-bold text-primary">.left</code><br>
+                                <code class="text-bold text-primary">.start</code>
+                                <p class="text-sm mt-1">Aligns the navbar content to the left.</p>
+                            </article>
+                        </div>
+
+                        <div class="col-12 col-4-xs">
+                            <article class="card p-2 h-100">
+                                <code class="text-bold text-primary">.center</code>
+                                <p class="text-sm mt-1">Centers the navbar content.</p>
+                            </article>
+                        </div>
+
+                        <div class="col-12 col-4-xs">
+                            <article class="card p-2">
+                                <code class="text-bold text-primary">.right</code><br>
+                                <code class="text-bold text-primary">.end</code>
+                                <p class="text-sm mt-1">Aligns the navbar content to the right.</p>
+                            </article>
+                        </div>
+                    </div>
+
+                    <p class="p-1">
+                        When the navbar is collapsed
+                        (<code class="text-bold text-primary">.navbar-body.show</code> on smaller screens),
+                        you can use the <code class="text-bold text-primary">bp-*</code> variants to change
+                        the alignment only in collapsed mode.
+                    </p>
+
+                    <div class="row my-2">
+
+                        <div class="col-12 col-4-xs">
+                            <article class="card p-2">
+                                <code class="text-bold text-primary">.bp-left</code><br>
+                                <code class="text-bold text-primary">.bp-start</code>
+                                <p class="text-sm mt-1">
+                                    Aligns items to the left <b>when collapsed</b>.
+                                </p>
+                            </article>
+                        </div>
+
+                        <div class="col-12 col-4-xs">
+                            <article class="card p-2 h-100">
+                                <code class="text-bold text-primary">.bp-center</code>
+                                <p class="text-sm mt-1">
+                                    Centers items <b>when collapsed</b>.
+                                </p>
+                            </article>
+                        </div>
+
+                        <div class="col-12 col-4-xs">
+                            <article class="card p-2">
+                                <code class="text-bold text-primary">.bp-right</code><br>
+                                <code class="text-bold text-primary">.bp-end</code>
+                                <p class="text-sm mt-1">
+                                    Aligns items to the right <b>when collapsed</b>.
+                                </p>
+                            </article>
+                        </div>
+
+                    </div>
                 </div>
             </article>
 
@@ -315,6 +379,11 @@
                             </tr>
                             </thead>
                             <tbody>
+
+                            <tr>
+                                <td><code class="text-bold text-primary">--navbar-bg-color</code></td>
+                                <td>Background color of the navbar.</td>
+                            </tr>
 
                             <tr>
                                 <td><code class="text-bold text-primary">--navbar-body-gap</code></td>

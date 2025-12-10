@@ -4,9 +4,9 @@
     .ml-sidebar-width-md {
         margin-left: var(--sidebar-width);
     }
-    /* showing the navbar aside in md */
+    /*!* showing the navbar aside in md *!*/
     .width-sidebar-md {
         width: var(--sidebar-width);
-        transform: translateX(0);
+        transform: translateX(0) !important;
     }
 }
