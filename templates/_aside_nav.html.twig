@@ -1,20 +1,17 @@
 <!-- aside -->
-<aside class="sidebar left width-sidebar-md" id="aside">
+<aside class="sidebar side-left width-sidebar-md" id="aside">
     {% set route = app.request.get('_route') %}
+    <nav class="side-body">
 
-    <!-- button close -->
-    <div class="d-flex jc-end m-1 d-none-md">
-        <button class="btn btn-primary close">Close</button>
-    </div>
+        <div class="d-flex jc-end d-none-md">
+            <button class="btn btn-primary close">Close</button>
+        </div>
 
-    <!-- link / logo -->
-    <div class="text-center text-primary fs-1 my-1">
-        <a class="no-underline" href="{{ url('app_main') }}">SimpleCSS</a>
-    </div>
+        <div class="text-center text-primary fs-1">
+            <a class="no-underline" href="{{ url('app_main') }}">SimpleCSS</a>
+        </div>
 
-    <!-- aside content -->
-    <nav>
-        <div class="collapse mb-half">
+        <div class="collapse">
             <button class="collapse-btn btn-primary"
                     data-js="collapse"
                     data-target="#menu-side-component"
@@ -78,7 +75,7 @@
                 </ul>
             </div>
         </div>
-        <div class="collapse mb-half">
+        <div class="collapse">
             <button class="collapse-btn btn-primary"
                     data-js="collapse"
                     data-target="#menu-side-layout"
@@ -103,7 +100,7 @@
                 </ul>
             </div>
         </div>
-        <div class="collapse mb-half">
+        <div class="collapse">
             <button class="collapse-btn btn-primary"
                     data-js="collapse"
                     data-target="#menu-side-utility"
@@ -149,7 +146,7 @@
                 </ul>
             </div>
         </div>
-        <div class="collapse mb-half">
+        <div class="collapse">
             <button class="collapse-btn btn-primary"
                     data-js="collapse"
                     data-target="#menu-side-abstract"
@@ -165,7 +162,7 @@
                 </ul>
             </div>
         </div>
-        <div class="collapse mb-half">
+        <div class="collapse">
             <button class="collapse-btn btn-primary"
                     data-js="collapse"
                     data-target="#menu-side-other"

@@ -1,7 +1,28 @@
 {% extends 'base.html.twig' %}
 
 {% block title %}Hello NavbarSideController!{% endblock %}
+ {% block stylesheets %}
+     <style>
+         body {
+             transition: margin-right .25s ease;
+         }
 
+         body:has(.sidebar.shrink-right.hide-shrink-right) {
+             margin-right: 0;
+         }
+
+         .shrink-right {
+             opacity: 1;
+             transition: opacity .25s ease;
+         }
+
+         .shrink-right.hide-shrink-right {
+             opacity: 0;
+             pointer-events: none;
+         }
+
+     </style>
+ {% endblock %}
 {% block body %}
     <div class="container-sm">
         <div class="d-flex fd-column gap-5">
@@ -13,20 +34,27 @@
                 </div>
             </article>
 
-            {# Examples #}
+            {# Example #}
             <article class="card p-2">
                 <div class="card-header">
                     <h2>💠 Example</h2>
                 </div>
                 <div class="card-body">
                     <!-- button open -->
-                    <button class="btn btn-primary"
-                            data-js="aside"
-                            data-target="#aside-right"
-                            aria-controls="aside-right-demo"
-                            aria-expanded="false">
-                        Open sidebar right
-                    </button>
+                    <div class="d-flex gap-5 ai-center">
+                        <button class="btn btn-primary"
+                                data-js="aside"
+                                data-target="#side-right"
+                                aria-controls="side-right"
+                                aria-expanded="false">
+                            Open sidebar side-right
+                        </button>
+
+                        <div class="form-control form-inline">
+                            <label for="push-side-right">With push</label>
+                            <input type="checkbox" id="push-side-right" role="switch">
+                        </div>
+                    </div>
                 </div>
             </article>
 
@@ -43,25 +71,41 @@
                         <div data-js="code" id="code-sidebar" class="container-code overflow-auto">
                             <button class="btn btn-primary" data-js="aside" data-target="#aside-right-demo"
                                     aria-controls="aside-right-demo" aria-expanded="false">
-                                Open sidebar right
+                                Open
                             </button>
 
-                            <aside class="sidebar-right" id="aside-right-demo">
-                                <div class="d-flex jc-end my-1">
-                                    <button class="btn btn-primary close">
-                                        Close
-                                    </button>
-                                </div>
-                                <nav>
-                                    <div class="collapse mb-half">
+                            <aside class="sidebar side-right" id="side-right-demo">
+                                <nav class="side-body">
+                                    <div class="d-flex jc-end">
+                                        <button class="btn btn-primary close">Close</button>
+                                    </div>
+                                    <div class="collapse">
                                         <button class="collapse-btn btn-primary"
                                                 data-js="collapse"
-                                                data-target="#collapse-aside-demo"
-                                                aria-controls="collapse-aside-demo"
+                                                data-target="#collapse1-demo"
+                                                aria-controls="collapse1-demo"
                                                 aria-expanded="false">
                                             Menu
                                         </button>
-                                        <div class="collapse-body show" id="collapse-aside-demo">
+                                        <div class="collapse-body show" id="collapse1-demo">
+                                            <ul class="list list-hover">
+                                                <li class="list-item">menu</li>
+                                                <li class="list-item">menu</li>
+                                                <li class="list-item">menu</li>
+                                                <li class="list-item">menu</li>
+                                                <li class="list-item">menu</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="collapse">
+                                        <button class="collapse-btn btn-primary"
+                                                data-js="collapse"
+                                                data-target="#collapse2-demo"
+                                                aria-controls="collapse2-demo"
+                                                aria-expanded="false">
+                                            Menu
+                                        </button>
+                                        <div class="collapse-body show" id="collapse2-demo">
                                             <ul class="list list-hover">
                                                 <li class="list-item">menu</li>
                                                 <li class="list-item">menu</li>
@@ -78,147 +122,265 @@
                 </div>
             </article>
 
-            {# Alignment #}
+            {# Example #}
             <article class="card p-2">
                 <div class="card-header">
-                    <h2>📐 Alignment</h2>
+                    <h2>💠 Example</h2>
                 </div>
                 <div class="card-body">
-                    <p class="mb-2">
-                        Sidebar side is controlled with utility classes on the container (usually an <code
-                            class="text-bold text-primary">&lt;aside&gt;</code>).
-                        The panel is off-canvas by default and becomes visible when the <code
-                            class="text-bold text-primary">.show</code> class is added.
-                    </p>
 
-                    <ul class="list-unstyled">
-                        <li>
-                            <code class="text-bold text-primary">.sidebar-left</code> – positions the sidebar on the
-                            left, translated outside the viewport and sliding in from the left when <code
-                                class="text-bold text-primary">.show</code> is added.
-                        </li>
-                        <li>
-                            <code class="text-bold text-primary">.sidebar-right</code> – positions the sidebar on the
-                            right, translated outside the viewport and sliding in from the right when <code
-                                class="text-bold text-primary">.show</code> is applied.
-                        </li>
-                    </ul>
-                </div>
-            </article>
-
-            {# How to use #}
-            <article class="card p-2">
-                <div class="card-header">
-                    <h2>🛠️ How to use</h2>
-                </div>
-                <div class="card-body">
                     <p class="p-1">
-                        Wrap your content in an <code class="text-bold text-primary">&lt;aside&gt;</code> with <code
-                            class="text-bold text-primary">.sidebar-left</code> or <code class="text-bold text-primary">.sidebar-right</code>
-                        and a unique <code class="text-bold text-primary">id</code>, trigger it with a button using
-                        <code class="text-bold text-primary">data-js="aside"</code> and <code
-                            class="text-bold text-primary">data-target="#your-id"</code>, and place a <code
-                            class="text-bold text-primary">.close</code> button inside the sidebar to hide it.
+                        Hidden for demo purposes.
+                        Click the button to reveal it, then use the 🔓 button to open or close it.
                     </p>
-                </div>
-            </article>
 
-            {# How it works #}
-            <article class="card p-2">
-                <div class="card-header">
-                    <h2>⚙️ How it works</h2>
-                </div>
-                <div class="card-body">
-                    <p class="p-1">
-                        The script listens for clicks on <code class="text-bold text-primary">[data-js="aside"][data-target]</code>
-                        and <code class="text-bold text-primary">.close</code>, toggles the <code
-                            class="text-bold text-primary">.show</code> class on the targeted sidebar, and updates <code
-                            class="text-bold text-primary">aria-expanded</code> on the trigger while CSS handles the
-                        fixed position, off-canvas <code class="text-bold text-primary">translateX()</code> and the
-                        0.25s slide animation.
-                    </p>
-                </div>
-            </article>
+                    <div class="d-flex gap-5 ai-center">
+                        <button class="btn btn-primary" id="reveal-shrink-right">
+                            Reveal sidebar shrink-right
+                        </button>
 
-            {# Variables #}
-            <article class="card p-2">
-                <div class="card-header">
-                    <h2>⚙️ Variables CSS</h2>
-                </div>
-                <div class="card-body">
-                    <div class="table-responsive">
-                        <table class="table">
-                            <thead>
-                            <tr class="text-left">
-                                <th>Variable</th>
-                                <th>Description</th>
-                            </tr>
-                            </thead>
-                            <tbody>
-
-                            <tr>
-                                <td><code class="text-bold text-primary">--sidebar-bg-color</code></td>
-                                <td>Background color of the sidebar.</td>
-                            </tr>
-
-                            <tr>
-                                <td><code class="text-bold text-primary">--sidebar-border-color</code></td>
-                                <td>Border color of the sidebar.</td>
-                            </tr>
-
-                            <tr>
-                                <td><code class="text-bold text-primary">--sidebar-border-radius</code></td>
-                                <td>Corner radius of the sidebar.</td>
-                            </tr>
-
-                            <tr>
-                                <td><code class="text-bold text-primary">--sidebar-border-style</code></td>
-                                <td>Border style of the sidebar.</td>
-                            </tr>
-
-                            <tr>
-                                <td><code class="text-bold text-primary">--sidebar-border-width</code></td>
-                                <td>Thickness of the sidebar border.</td>
-                            </tr>
-
-                            <tr>
-                                <td><code class="text-bold text-primary">--sidebar-padding</code></td>
-                                <td>Padding applied inside the sidebar.</td>
-                            </tr>
-
-                            <tr>
-                                <td><code class="text-bold text-primary">--sidebar-width</code></td>
-                                <td>Width of the sidebar.</td>
-                            </tr>
-
-                            </tbody>
-                        </table>
+                        <div class="form-control form-inline">
+                            <label for="push-shrink-right">With push</label>
+                            <input type="checkbox" id="push-shrink-right" role="switch">
+                        </div>
                     </div>
                 </div>
             </article>
 
+            {# HTML Code #}
+            <article class="card p-2">
+                <div class="card-header">
+                    <h2>💻 HTML Code</h2>
+                </div>
+                <div class="card-body">
+                    <div class="position-relative">
+                        <button class="btn btn-primary position-top-right z-1 mt-1 mr-1"
+                                onclick="copyCode('code-sidebar', this);">Copy
+                        </button>
+                        <div data-js="code" id="code-sidebar" class="container-code overflow-auto">
+                            <aside class="sidebar shrink-right" id="shrink-right-demo">
+                                <nav class="side-shrink">
+                                    <div class="side-header">
+                                        <button class="btn btn-dark side-item"
+                                                data-js="aside"
+                                                data-target="#shrink-right-demo"
+                                                aria-controls="shrink-right-demo"
+                                                aria-expanded="false">
+                                            <span class="side-icon">🔓</span>
+                                            <span class="side-text">Unlock</span>
+                                        </button>
+                                    </div>
+                                    <div class="side-body">
+                                        <button class="btn btn-dark side-item">
+                                            <span class="side-icon">⚡</span>
+                                            <span class="side-text">Power</span>
+                                        </button>
+                                        <button class="btn btn-dark side-item">
+                                            <span class="side-icon">⭐</span>
+                                            <span class="side-text">Star</span>
+                                        </button>
+                                        <button class="btn btn-dark side-item">
+                                            <span class="side-icon">💡</span>
+                                            <span class="side-text">Idea</span>
+                                        </button>
+                                        <button class="btn btn-dark side-item">
+                                            <span class="side-icon">🚀</span>
+                                            <span class="side-text">Boost</span>
+                                        </button>
+                                        <button class="btn btn-dark side-item">
+                                            <span class="side-icon">🔒</span>
+                                            <span class="side-text">Lock</span>
+                                        </button>
+                                        <button class="btn btn-dark side-item">
+                                            <span class="side-icon">📂</span>
+                                            <span class="side-text">Files</span>
+                                        </button>
+                                        <button class="btn btn-dark side-item">
+                                            <span class="side-icon">🧩</span>
+                                            <span class="side-text">Puzzle</span>
+                                        </button>
+                                        <button class="btn btn-dark side-item">
+                                            <span class="side-icon">🛠️</span>
+                                            <span class="side-text">Tools</span>
+                                        </button>
+                                        <button class="btn btn-dark side-item">
+                                            <span class="side-icon">🎛️</span>
+                                            <span class="side-text">Controls</span>
+                                        </button>
+                                    </div>
+
+                                    <div class="side-footer">
+                                        <button class="btn-lg btn-dark side-item">
+                                            <span class="side-icon">👤</span>
+                                            <span class="side-text">Profile</span>
+                                        </button>
+                                        <button class="btn-lg btn-dark side-item">
+                                            <span class="side-icon">🚪</span>
+                                            <span class="side-text">Logout</span>
+                                        </button>
+                                    </div>
+                                </nav>
+                            </aside>
+                        </div>
+                    </div>
+                </div>
+            </article>
+
+            {#            #}{# Alignment #}
+            {#            <article class="card p-2"> #}
+            {#                <div class="card-header"> #}
+            {#                    <h2>📐 Alignment</h2> #}
+            {#                </div> #}
+            {#                <div class="card-body"> #}
+            {#                    <p class="mb-2"> #}
+            {#                        Sidebar side is controlled with utility classes on the container (usually an <code #}
+            {#                            class="text-bold text-primary">&lt;aside&gt;</code>). #}
+            {#                        The panel is off-canvas by default and becomes visible when the <code #}
+            {#                            class="text-bold text-primary">.show</code> class is added. #}
+            {#                    </p> #}
+
+            {#                    <ul class="list-unstyled"> #}
+            {#                        <li> #}
+            {#                            <code class="text-bold text-primary">.sidebar-left</code> – positions the sidebar on the #}
+            {#                            left, translated outside the viewport and sliding in from the left when <code #}
+            {#                                class="text-bold text-primary">.show</code> is added. #}
+            {#                        </li> #}
+            {#                        <li> #}
+            {#                            <code class="text-bold text-primary">.sidebar-right</code> – positions the sidebar on the #}
+            {#                            right, translated outside the viewport and sliding in from the right when <code #}
+            {#                                class="text-bold text-primary">.show</code> is applied. #}
+            {#                        </li> #}
+            {#                    </ul> #}
+            {#                </div> #}
+            {#            </article> #}
+
+            {#            #}{# How to use #}
+            {#            <article class="card p-2"> #}
+            {#                <div class="card-header"> #}
+            {#                    <h2>🛠️ How to use</h2> #}
+            {#                </div> #}
+            {#                <div class="card-body"> #}
+            {#                    <p class="p-1"> #}
+            {#                        Wrap your content in an <code class="text-bold text-primary">&lt;aside&gt;</code> with <code #}
+            {#                            class="text-bold text-primary">.sidebar-left</code> or <code class="text-bold text-primary">.sidebar-right</code> #}
+            {#                        and a unique <code class="text-bold text-primary">id</code>, trigger it with a button using #}
+            {#                        <code class="text-bold text-primary">data-js="aside"</code> and <code #}
+            {#                            class="text-bold text-primary">data-target="#your-id"</code>, and place a <code #}
+            {#                            class="text-bold text-primary">.close</code> button inside the sidebar to hide it. #}
+            {#                    </p> #}
+            {#                </div> #}
+            {#            </article> #}
+
+            {#            #}{# How it works #}
+            {#            <article class="card p-2"> #}
+            {#                <div class="card-header"> #}
+            {#                    <h2>⚙️ How it works</h2> #}
+            {#                </div> #}
+            {#                <div class="card-body"> #}
+            {#                    <p class="p-1"> #}
+            {#                        The script listens for clicks on <code class="text-bold text-primary">[data-js="aside"][data-target]</code> #}
+            {#                        and <code class="text-bold text-primary">.close</code>, toggles the <code #}
+            {#                            class="text-bold text-primary">.show</code> class on the targeted sidebar, and updates <code #}
+            {#                            class="text-bold text-primary">aria-expanded</code> on the trigger while CSS handles the #}
+            {#                        fixed position, off-canvas <code class="text-bold text-primary">translateX()</code> and the #}
+            {#                        0.25s slide animation. #}
+            {#                    </p> #}
+            {#                </div> #}
+            {#            </article> #}
+
+            {#            #}{# Variables #}
+            {#            <article class="card p-2"> #}
+            {#                <div class="card-header"> #}
+            {#                    <h2>⚙️ Variables CSS</h2> #}
+            {#                </div> #}
+            {#                <div class="card-body"> #}
+            {#                    <div class="table-responsive"> #}
+            {#                        <table class="table"> #}
+            {#                            <thead> #}
+            {#                            <tr class="text-left"> #}
+            {#                                <th>Variable</th> #}
+            {#                                <th>Description</th> #}
+            {#                            </tr> #}
+            {#                            </thead> #}
+            {#                            <tbody> #}
+
+            {#                            <tr> #}
+            {#                                <td><code class="text-bold text-primary">--sidebar-bg-color</code></td> #}
+            {#                                <td>Background color of the sidebar.</td> #}
+            {#                            </tr> #}
+
+            {#                            <tr> #}
+            {#                                <td><code class="text-bold text-primary">--sidebar-border-color</code></td> #}
+            {#                                <td>Border color of the sidebar.</td> #}
+            {#                            </tr> #}
+
+            {#                            <tr> #}
+            {#                                <td><code class="text-bold text-primary">--sidebar-border-radius</code></td> #}
+            {#                                <td>Corner radius of the sidebar.</td> #}
+            {#                            </tr> #}
+
+            {#                            <tr> #}
+            {#                                <td><code class="text-bold text-primary">--sidebar-border-style</code></td> #}
+            {#                                <td>Border style of the sidebar.</td> #}
+            {#                            </tr> #}
+
+            {#                            <tr> #}
+            {#                                <td><code class="text-bold text-primary">--sidebar-border-width</code></td> #}
+            {#                                <td>Thickness of the sidebar border.</td> #}
+            {#                            </tr> #}
+
+            {#                            <tr> #}
+            {#                                <td><code class="text-bold text-primary">--sidebar-padding</code></td> #}
+            {#                                <td>Padding applied inside the sidebar.</td> #}
+            {#                            </tr> #}
+
+            {#                            <tr> #}
+            {#                                <td><code class="text-bold text-primary">--sidebar-width</code></td> #}
+            {#                                <td>Width of the sidebar.</td> #}
+            {#                            </tr> #}
+
+            {#                            </tbody> #}
+            {#                        </table> #}
+            {#                    </div> #}
+            {#                </div> #}
+            {#            </article> #}
+
         </div>
     </div>
 
-    <!-- aside -->
-    <aside class="sidebar right" id="aside-right">
-
-        <!-- button close -->
-        <div class="d-flex jc-end my-1">
-            <button class="btn btn-primary close">Close</button>
-        </div>
-
-        <!-- aside content -->
-        <nav>
-            <div class="collapse mb-half">
+    <!-- aside side-right -->
+    <aside class="sidebar side-right" id="side-right">
+        <nav class="side-body">
+            <div class="d-flex jc-end">
+                <button class="btn btn-primary close">Close</button>
+            </div>
+            <div class="collapse">
                 <button class="collapse-btn btn-primary"
                         data-js="collapse"
-                        data-target="#sidebar-3"
-                        aria-controls="sidebar-3"
+                        data-target="#collapse1"
+                        aria-controls="collapse1"
                         aria-expanded="false">
                     Menu
                 </button>
-                <div class="collapse-body show" id="sidebar-3">
+                <div class="collapse-body show" id="collapse1">
+                    <ul class="list list-hover">
+                        <li class="list-item">menu</li>
+                        <li class="list-item">menu</li>
+                        <li class="list-item">menu</li>
+                        <li class="list-item">menu</li>
+                        <li class="list-item">menu</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="collapse">
+                <button class="collapse-btn btn-primary"
+                        data-js="collapse"
+                        data-target="#collapse2"
+                        aria-controls="collapse2"
+                        aria-expanded="false">
+                    Menu
+                </button>
+                <div class="collapse-body show" id="collapse2">
                     <ul class="list list-hover">
                         <li class="list-item">menu</li>
                         <li class="list-item">menu</li>
@@ -230,4 +392,97 @@
             </div>
         </nav>
     </aside>
+
+    <!-- aside shrink-left -->
+    <aside class="sidebar shrink-right hide-shrink-right" id="shrink-right">
+        <nav class="side-shrink">
+            <div class="side-header">
+                <button class="btn btn-dark side-item"
+                        data-js="aside"
+                        data-target="#shrink-right"
+                        aria-controls="shrink-right"
+                        aria-expanded="false">
+                    <span class="side-icon">🔓</span>
+                    <span class="side-text">Unlock</span>
+                </button>
+            </div>
+            <div class="side-body">
+                <button class="btn btn-dark side-item">
+                    <span class="side-icon">⚡</span>
+                    <span class="side-text">Power</span>
+                </button>
+                <button class="btn btn-dark side-item">
+                    <span class="side-icon">⭐</span>
+                    <span class="side-text">Star</span>
+                </button>
+                <button class="btn btn-dark side-item">
+                    <span class="side-icon">💡</span>
+                    <span class="side-text">Idea</span>
+                </button>
+                <button class="btn btn-dark side-item">
+                    <span class="side-icon">🚀</span>
+                    <span class="side-text">Boost</span>
+                </button>
+                <button class="btn btn-dark side-item">
+                    <span class="side-icon">🔒</span>
+                    <span class="side-text">Lock</span>
+                </button>
+                <button class="btn btn-dark side-item">
+                    <span class="side-icon">📂</span>
+                    <span class="side-text">Files</span>
+                </button>
+                <button class="btn btn-dark side-item">
+                    <span class="side-icon">🧩</span>
+                    <span class="side-text">Puzzle</span>
+                </button>
+                <button class="btn btn-dark side-item">
+                    <span class="side-icon">🛠️</span>
+                    <span class="side-text">Tools</span>
+                </button>
+                <button class="btn btn-dark side-item">
+                    <span class="side-icon">🎛️</span>
+                    <span class="side-text">Controls</span>
+                </button>
+            </div>
+
+            <div class="side-footer">
+                <button class="btn-lg btn-dark side-item">
+                    <span class="side-icon">👤</span>
+                    <span class="side-text">Profile</span>
+                </button>
+                <button class="btn-lg btn-dark side-item">
+                    <span class="side-icon">🚪</span>
+                    <span class="side-text">Logout</span>
+                </button>
+            </div>
+        </nav>
+    </aside>
 {% endblock %}
+
+{% block javascripts %}
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const switchPush = document.getElementById('push-side-right');
+            const sideRight = document.getElementById('side-right');
+
+            const btnRevealShrink = document.getElementById('reveal-shrink-right');
+            const switchPushShrink = document.getElementById('push-shrink-right');
+            const shrinkRight = document.getElementById('shrink-right');
+
+            switchPush.addEventListener('change', function () {
+                sideRight.classList.toggle('push', this.checked);
+            });
+
+            btnRevealShrink.addEventListener('click', function () {
+                shrinkRight.classList.toggle('hide-shrink-right');
+            });
+
+            switchPushShrink.addEventListener('change', function () {
+                shrinkRight.classList.toggle('push', this.checked);
+            });
+
+        })
+    </script>
+{% endblock %}
+
+
