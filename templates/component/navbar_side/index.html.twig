@@ -43,6 +43,7 @@
                     <!-- button open -->
                     <div class="d-flex gap-5 ai-center">
                         <button class="btn btn-primary"
+                                id="open-side-right"
                                 data-js="aside"
                                 data-target="#side-right"
                                 aria-controls="side-right"
@@ -288,62 +289,92 @@
             {#                </div> #}
             {#            </article> #}
 
-            {#            #}{# Variables #}
-            {#            <article class="card p-2"> #}
-            {#                <div class="card-header"> #}
-            {#                    <h2>⚙️ Variables CSS</h2> #}
-            {#                </div> #}
-            {#                <div class="card-body"> #}
-            {#                    <div class="table-responsive"> #}
-            {#                        <table class="table"> #}
-            {#                            <thead> #}
-            {#                            <tr class="text-left"> #}
-            {#                                <th>Variable</th> #}
-            {#                                <th>Description</th> #}
-            {#                            </tr> #}
-            {#                            </thead> #}
-            {#                            <tbody> #}
+            {# Variables #}
+            <article class="card p-2">
+                <div class="card-header">
+                    <h2>⚙️ Variables CSS</h2>
+                </div>
+                <div class="card-body">
+                    <div class="table-responsive">
+                        <table class="table">
+                            <thead>
+                            <tr class="text-left">
+                                <th>Variable</th>
+                                <th>Description</th>
+                            </tr>
+                            </thead>
+                            <tbody>
 
-            {#                            <tr> #}
-            {#                                <td><code class="text-bold text-primary">--sidebar-bg-color</code></td> #}
-            {#                                <td>Background color of the sidebar.</td> #}
-            {#                            </tr> #}
+                            <tr>
+                                <td><code class="text-bold text-primary">--sidebar-bg-color</code></td>
+                                <td>Background color of the sidebar.</td>
+                            </tr>
 
-            {#                            <tr> #}
-            {#                                <td><code class="text-bold text-primary">--sidebar-border-color</code></td> #}
-            {#                                <td>Border color of the sidebar.</td> #}
-            {#                            </tr> #}
+                            <tr>
+                                <td><code class="text-bold text-primary">--sidebar-border-color</code></td>
+                                <td>Border color of the sidebar.</td>
+                            </tr>
 
-            {#                            <tr> #}
-            {#                                <td><code class="text-bold text-primary">--sidebar-border-radius</code></td> #}
-            {#                                <td>Corner radius of the sidebar.</td> #}
-            {#                            </tr> #}
+                            <tr>
+                                <td><code class="text-bold text-primary">--sidebar-border-radius</code></td>
+                                <td>Corner radius of the sidebar.</td>
+                            </tr>
 
-            {#                            <tr> #}
-            {#                                <td><code class="text-bold text-primary">--sidebar-border-style</code></td> #}
-            {#                                <td>Border style of the sidebar.</td> #}
-            {#                            </tr> #}
+                            <tr>
+                                <td><code class="text-bold text-primary">--sidebar-border-style</code></td>
+                                <td>Border style applied to the sidebar.</td>
+                            </tr>
 
-            {#                            <tr> #}
-            {#                                <td><code class="text-bold text-primary">--sidebar-border-width</code></td> #}
-            {#                                <td>Thickness of the sidebar border.</td> #}
-            {#                            </tr> #}
+                            <tr>
+                                <td><code class="text-bold text-primary">--sidebar-border-width</code></td>
+                                <td>Thickness of the sidebar border.</td>
+                            </tr>
 
-            {#                            <tr> #}
-            {#                                <td><code class="text-bold text-primary">--sidebar-padding</code></td> #}
-            {#                                <td>Padding applied inside the sidebar.</td> #}
-            {#                            </tr> #}
+                            <tr>
+                                <td><code class="text-bold text-primary">--sidebar-padding</code></td>
+                                <td>Inner spacing of the sidebar content.</td>
+                            </tr>
 
-            {#                            <tr> #}
-            {#                                <td><code class="text-bold text-primary">--sidebar-width</code></td> #}
-            {#                                <td>Width of the sidebar.</td> #}
-            {#                            </tr> #}
+                            <tr>
+                                <td><code class="text-bold text-primary">--sidebar-width</code></td>
+                                <td>Default width of the expanded sidebar.</td>
+                            </tr>
 
-            {#                            </tbody> #}
-            {#                        </table> #}
-            {#                    </div> #}
-            {#                </div> #}
-            {#            </article> #}
+                            <tr>
+                                <td><code class="text-bold text-primary">--sidebar-shrink-width</code></td>
+                                <td>Width of the sidebar when using the shrink layout.</td>
+                            </tr>
+
+                            <tr>
+                                <td><code class="text-bold text-primary">--sidebar-shrink-width-reduce</code></td>
+                                <td>Reduced width of the sidebar when fully collapsed.</td>
+                            </tr>
+
+                            <tr>
+                                <td><code class="text-bold text-primary">--sidebar-shrink-padding</code></td>
+                                <td>Padding applied to the sidebar in shrink mode.</td>
+                            </tr>
+
+                            <tr>
+                                <td><code class="text-bold text-primary">--sidebar-shrink-item-gap</code></td>
+                                <td>Spacing between items in the shrink sidebar.</td>
+                            </tr>
+
+                            <tr>
+                                <td><code class="text-bold text-primary">--sidebar-shrink-content-gap</code></td>
+                                <td>Vertical spacing between sidebar sections in shrink mode.</td>
+                            </tr>
+
+                            <tr>
+                                <td><code class="text-bold text-primary">--sidebar-transition-time</code></td>
+                                <td>Duration of sidebar expand and collapse animations.</td>
+                            </tr>
+
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </article>
 
         </div>
     </div>
@@ -464,6 +495,7 @@
         document.addEventListener('DOMContentLoaded', function () {
             const switchPush = document.getElementById('push-side-right');
             const sideRight = document.getElementById('side-right');
+            const btnOpenSideRight = document.getElementById('open-side-right');
 
             const btnRevealShrink = document.getElementById('reveal-shrink-right');
             const switchPushShrink = document.getElementById('push-shrink-right');
@@ -474,12 +506,21 @@
             });
 
             btnRevealShrink.addEventListener('click', function () {
+                if (sideRight.classList.contains('show')) {
+                    sideRight.classList.remove('show');
+                }
                 shrinkRight.classList.toggle('hide-shrink-right');
             });
 
             switchPushShrink.addEventListener('change', function () {
                 shrinkRight.classList.toggle('push', this.checked);
             });
+
+            btnOpenSideRight.addEventListener('click', function () {
+                if (shrinkRight.classList.contains('hide-shrink-right')) return;
+                shrinkRight.classList.toggle('hide-shrink-right');
+            });
+
 
         })
     </script>
